@@ -43,5 +43,7 @@ collections:
 
 
 # Extra plugins
-# gems:
+gems:
 #     - 'jekyll-lunr-js-search'
+    - jekyll-sitemap
+    - jemoji

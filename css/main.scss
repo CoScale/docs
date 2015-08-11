@@ -66,6 +66,11 @@ $brand-primary: #f5a153;
         }
     }
 
+    .footer {
+        text-align: center;
+        font-size: 12px;
+        color: #EEE;
+    }
 }
 @media (min-width: 768px) {
     .sidebar {
