@@ -64,7 +64,7 @@ title: Technologies
         <div class="panel panel-default">
             <div class="panel-heading">postgresql</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/postgres-logo.png" alt="postgresql" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/postgres-logo.png" alt="PostGreSQL" />
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@ title: Technologies
         <div class="panel panel-default">
             <div class="panel-heading">Cassandra</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/cassandra.jpg" alt="cassandra" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/cassandra.jpg" alt="Cassandra" />
             </div>
         </div>
     </div>
@@ -80,15 +80,15 @@ title: Technologies
         <div class="panel panel-default">
             <div class="panel-heading">ElasticSearch</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/elasticsearch.jpg" alt="elasticsearch" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/elasticsearch.jpg" alt="ElasticSearch" />
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
-            <div class="panel-heading">MSSQL</div>
+            <div class="panel-heading">MsSQL</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/mssql.jpg" alt="mssql" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/mssql.jpg" alt="MsSQL" />
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@ title: Technologies
         <div class="panel panel-default">
             <div class="panel-heading">MongoDB</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/mongodb.jpg" alt="mongodb" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/mongodb.jpg" alt="MongoDB" />
             </div>
         </div>
     </div>
@@ -149,74 +149,56 @@ title: Technologies
     </div>
 </div>
 
-## On our roadmap
-
+### Tools
 <div class="row technologies">
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
-            <div class="panel-heading">Magento</div>
+            <div class="panel-heading">Chef</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/magento.png" alt="Magento" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/chef.png" alt="Chef" />
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
-            <div class="panel-heading">Google Adwords</div>
+            <div class="panel-heading">Puppet</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/google_adwords.png" alt="google adwords" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/puppet.png" alt="Puppet" />
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
-            <div class="panel-heading">Pagerduty</div>
+            <div class="panel-heading">Saltstack</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/pagerduty.png" alt="Pagerduty" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/saltstack.png" alt="Saltstack" />
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
-            <div class="panel-heading">Mailchimp</div>
+            <div class="panel-heading">StatsD</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/mailchimp.png" alt="Mailchimp" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/statsd.png" alt="StatsD" />
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
-            <div class="panel-heading">Drupal</div>
+            <div class="panel-heading">Generic Script</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/drupal.png" alt="Drupal" />
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/genericscript.png" alt="Generic Script" />
             </div>
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
-            <div class="panel-heading">Atlassian Jira</div>
+            <div class="panel-heading">MongoDB</div>
             <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/jira.png" alt="Atlassian Jira" />
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">Facebook</div>
-            <div class="panel-body">
-                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/facebook.png" alt="Facebook" />
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">Much more in the pipeline!</div>
-            <div class="panel-body text-much-more">
-                ...
+                <img src="{{ site.baseurl }}/gfx/getting-started/technologies/mongodb.jpg" alt="mongodb" />
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="alert alert-info">If you can't find a technology, please send us a message and we will get back to you with more information.</div>
