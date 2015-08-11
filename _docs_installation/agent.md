@@ -16,7 +16,9 @@ The CoScale agent is the primary tool used to capture resource and application m
 For some plugins, some configuration is necessary. Read the instructions carefully.
 If necessary, apply the proposed changes to the server as shown in the instructions.
 If necessary, fill in the required fields. Press the save button when finished.
+
 <p class="text-center"><img class="img-responsive" src="{{ site.baseurl }}/gfx/installation/agent/plugin_configuration.png" alt="CoScale agent plugin configuration page" /></p>
+test
 Give your agent a reasonable name: i.e. ‘Webserver’. Press ‘Save agent’
 
 <div class="alert alert-warning">For the following steps you will need root or administrator access to the servers you will be installing the CoScale agent on.</div>
