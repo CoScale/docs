@@ -1,15 +1,14 @@
 ---
-layout: default
+layout: page
+title: Getting started
 ---
-
-# Getting started
 
 How to get started with the CoScale platform.
 
-## Installing the agent
+## 1. Installing the agent
 
-## Installing the Real User monitoring snippet
+## 2. Installing the Real User monitoring snippet
 
-## Third party resources
+## 3. Third party resources
 
-## Pushing custom metrics
+## 4. Custom metrics
