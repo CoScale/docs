@@ -4,24 +4,39 @@ layout: null
 ---
 @charset "utf-8";
 
-/* bootstrap */
-$icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: 'Open Sans', Arial, Geneva, sans-serif;
+/*
+* CoScale font and colors
+*/
 $brand-primary: #f5a153;
+$font-family-sans-serif: 'Open Sans', Arial, Geneva, sans-serif;
+$border-radius-base: 0px;
+$border-radius-large: 0px;
+$border-radius-small: 0px;
+
+/*
+* Bootstrap specific
+*/
+$icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap";
 
-#logo {
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
+/*
+* Custom class for more spacing between elements
+*/
 .spacing-top {
     margin-top: 20px;
 }
 
+/*
+* Sidebar menu
+*/
 .sidebar {
     display: none;
     max-width: 310px;
+
+    #logo {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
 
     /* Sidebar navigation */
     .nav-sidebar {
@@ -31,7 +46,7 @@ $brand-primary: #f5a153;
 
         // Accordion
         & li ul {
-        	display: none;
+            display: none;
             list-style: none;
             margin: 5px 0 20px 0;
 
@@ -41,7 +56,7 @@ $brand-primary: #f5a153;
         }
 
         & li.active ul {
-        	display: block;
+            display: block;
         }
 
         & > li > a {
@@ -212,7 +227,9 @@ $brand-primary: #f5a153;
     }
 }
 
-// Home page
+/*
+* Custom for homepage buttons
+*/
 .home-buttons {
     .btn {
         width: 100%;
@@ -227,7 +244,9 @@ $brand-primary: #f5a153;
     }
 }
 
-// Technologies page
+/*
+* Custom for technologies page
+*/
 .technologies {
     padding: 20px 0;
     div {
