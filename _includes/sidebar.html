@@ -1,19 +1,19 @@
 <p class="text-center">
-    <a href="/"><img id="logo" src="/gfx/logo.png" alt="CoScale logo" class="img-responsive" /></a>
+    <a href="{{ site.baseurl }}/"><img id="logo" src="{{ site.baseurl }}/gfx/logo.png" alt="CoScale logo" class="img-responsive" /></a>
 </p>
 
 {% assign current = page.url | downcase | split: '/' %}
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'index.html' %}class='active'{% endif %}><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+    <li {% if current[1] == 'index.html' %}class='active'{% endif %}><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
 </ul>
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'search.html' %}class='active'{% endif %}><a href="/search.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a></li>
+    <li {% if current[1] == 'search.html' %}class='active'{% endif %}><a href="{{ site.baseurl }}/search.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a></li>
 </ul>
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'getting_started' %}class='active'{% endif %}><a href="/getting_started/">
+    <li {% if current[1] == 'getting_started' %}class='active'{% endif %}><a href="{{ site.baseurl }}/getting_started/">
         <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Getting started</a>
         <ul>
             <li><a href="#">Quick start</a></li>
@@ -22,7 +22,7 @@
             <li><a href="#">Supported technologies</a></li>
         </ul>
     </li>
-    <li {% if current[1] == 'installation' %}class='active'{% endif %}><a href="/installation/">
+    <li {% if current[1] == 'installation' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/">
         <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Installation</a>
         <ul>
             <li><a href="#">How to install the CoScale agent</a></li>
@@ -30,7 +30,7 @@
             <li><a href="#">How to enable real user monitoring</a></li>
         </ul>
     </li>
-    <li {% if current[1] == 'usage' %}class='active'{% endif %}><a href="/usage/">
+    <li {% if current[1] == 'usage' %}class='active'{% endif %}><a href="{{ site.baseurl }}/usage/">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Usage</a>
         <ul>
             <li><a href="#">Building dashboards</a></li>
@@ -39,7 +39,7 @@
             <li><a href="#">Pushing events using CoScale commandline</a></li>
         </ul>
     </li>
-    <li {% if current[1] == 'use_cases' %}class='active'{% endif %}><a href="/use_cases/">
+    <li {% if current[1] == 'use_cases' %}class='active'{% endif %}><a href="{{ site.baseurl }}/use_cases/">
         <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Use cases</a>
         <ul>
             <li><a href="#">Getting business insights</a></li>
@@ -51,7 +51,7 @@
             <li><a href="#">Gathering data with StatsD</a></li>
         </ul>
     </li>
-    <li {% if current[1] == 'advanced' %}class='active'{% endif %}><a href="/advanced/">
+    <li {% if current[1] == 'advanced' %}class='active'{% endif %}><a href="{{ site.baseurl }}/advanced/">
         <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Advanced</a>
         <ul>
             <li><a href="#">Command line tool</a></li>
