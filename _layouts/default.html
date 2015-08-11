@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                {% include sidebar.html %}
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#search-query').lunrSearch({
+            indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+            results : '#search-results',  // selector for containing search results element
+            entries : '.entries',         // selector for search entries containing element (contained within results above)
+            template: '#search-results-template'  // selector for Mustache.js template
+        });
+    });
+    </script>
+
+</body>
+</html>

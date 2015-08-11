@@ -1,0 +1,46 @@
+# Site settings
+title: CoScale Support
+email: support@coscale.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://docs.coscale.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+# Style
+sass:
+    sass_dir: bower_components/bootstrap-sass/assets/stylesheets
+    style: compress
+
+# Exclude config files
+exclude:
+    - bower.json
+
+# Collections
+collections:
+    docs_getting_started:
+        output: true
+        permalink: /getting_started/
+    docs_installation:
+        output: true
+        permalink: /installation/
+    docs_usage:
+        output: true
+        permalink: /usage/
+    docs_use_cases:
+        output: true
+        permalink: /use_cases/
+    docs_advanced:
+        output: true
+        permalink: /advanced/
+
+
+# Extra plugins
+gems:
+    - 'jekyll-lunr-js-search'
