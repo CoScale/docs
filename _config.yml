@@ -9,7 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://docs.coscale.com" # the base hostname & protocol for your site
 twitter_username: coscale
 github_username:  coscale
-baseurl: /docs-test
+baseurl: /docs
 
 # Build settings
 markdown: kramdown
@@ -27,19 +27,19 @@ exclude:
 collections:
     docs_getting_started:
         output: true
-        permalink: /getting_started/
+        permalink: /getting_started/:name:output_ext
     docs_installation:
         output: true
-        permalink: /installation/
+        permalink: /installation/:name:output_ext
     docs_usage:
         output: true
-        permalink: /usage/
+        permalink: /usage/:name:output_ext
     docs_use_cases:
         output: true
-        permalink: /use_cases/
+        permalink: /use_cases/:name:output_ext
     docs_advanced:
         output: true
-        permalink: /advanced/
+        permalink: /advanced/:name:output_ext
 
 
 # Extra plugins

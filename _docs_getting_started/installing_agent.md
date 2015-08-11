@@ -1,4 +1,4 @@
 ---
 layout: default
-title: Installing agent
 ---
+Test
