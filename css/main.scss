@@ -5,7 +5,7 @@ layout: null
 @charset "utf-8";
 
 /* bootstrap */
-$icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 $font-family-sans-serif: 'Open Sans', Arial, Geneva, sans-serif;
 $brand-primary: #f5a153;
 @import "bootstrap";

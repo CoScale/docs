@@ -43,5 +43,5 @@ collections:
 
 
 # Extra plugins
-gems:
-    - 'jekyll-lunr-js-search'
+# gems:
+#     - 'jekyll-lunr-js-search'
