@@ -37,3 +37,5 @@ title: Technologies
 <div class="row technologies">
 <div class="col-sm-6"><a href="#" target="_blank"><img src="{{ site.baseurl }}/gfx/getting-started/technologies/rabbitmq.jpg" alt="rabbitmq" /></a></div>
 </div>
+
+<div class="alert alert-info">If you can't find a technology, please send us a message and we will get back to you with more information.</div>
