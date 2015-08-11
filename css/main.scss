@@ -249,11 +249,16 @@ $icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/font
 */
 .technologies {
     padding: 20px 0;
-    div {
+    .panel-body {
+        height: 120px;
         text-align: center;
+
+        &.text-much-more {
+            font-size: 48px;
+        }
     }
     img {
-        padding: 10px 0 30px 0;
-        height: 100px;
+        max-width:100%;
+        max-height:100%;
     }
 }
