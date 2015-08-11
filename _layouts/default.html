@@ -11,6 +11,8 @@
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 {{ content }}
+                <br /><br />
+                <div class="alert alert-info">Our documentation is a work in progress, please contact us if you have feedback or comments.</div>
             </div>
         </div>
     </div>
@@ -20,7 +22,7 @@
     <!-- <script src="{{ site.baseurl }}/js/search.min.js" type="text/javascript" charset="utf-8"></script> -->
     <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     $(function() {
         $('#search-query').lunrSearch({
             indexUrl: '/js/index.json',   // Url for the .json file containing search index data
@@ -29,7 +31,15 @@
             template: '#search-results-template'  // selector for Mustache.js template
         });
     });
-    </script>
+    </script> -->
 
+    <script type="text/javascript">
+        window.intercomSettings = {
+            app_id: "oyaxaugr",
+        };
+        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;
+        s.src='https://widget.intercom.io/widget/oyaxaugr';
+        var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    </script>
 </body>
 </html>

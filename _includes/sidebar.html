@@ -16,18 +16,19 @@
     <li {% if current[1] == 'getting_started' %}class='active'{% endif %}><a href="{{ site.baseurl }}/getting_started/">
         <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Getting started</a>
         <ul>
-            <li><a href="#">Quick start</a></li>
-            <li><a href="#">Supported platforms</a></li>
-            <li><a href="#">Supported third-parties</a></li>
-            <li><a href="#">Supported technologies</a></li>
+            <li><a href="{{ site.baseurl }}/getting_started/">Quick start</a></li>
+            <li><a href="{{ site.baseurl }}/getting_started/platforms.html">Supported platforms</a></li>
+            <li><a href="{{ site.baseurl }}/getting_started/technologies.html">Supported technologies</a></li>
+            <li><a href="{{ site.baseurl }}/getting_started/third-party.html">Supported third-parties</a></li>
         </ul>
     </li>
     <li {% if current[1] == 'installation' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/">
         <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Installation</a>
         <ul>
-            <li><a href="#">How to install the CoScale agent</a></li>
-            <li><a href="#">How to update the CoScale agent</a></li>
-            <li><a href="#">How to enable real user monitoring</a></li>
+            <li><a href="{{ site.baseurl }}/installation/agent.html">Infrastructure agent</a></li>
+            <li><a href="{{ site.baseurl }}/installation/real-user-monitoring.html">Real user monitoring</a></li>
+            <li><a href="{{ site.baseurl }}/installation/third-party.html">Third party services</a></li>
+            <li><a href="{{ site.baseurl }}/installation/custom-metrics.html">Custom metrics</a></li>
         </ul>
     </li>
     <li {% if current[1] == 'usage' %}class='active'{% endif %}><a href="{{ site.baseurl }}/usage/">

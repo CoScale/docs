@@ -217,3 +217,15 @@ $brand-primary: #f5a153;
         }
     }
 }
+
+// Technologies page
+.technologies {
+    padding: 20px 0;
+    div {
+        text-align: center;
+    }
+    img {
+        padding: 10px 0 30px 0;
+        height: 100px;
+    }
+}
