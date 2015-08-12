@@ -27,7 +27,7 @@ exclude:
 collections:
     docs_getting_started:
         output: true
-        permalink: /getting_started/:name:output_ext
+        permalink: /getting-started/:name:output_ext
     docs_installation:
         output: true
         permalink: /installation/:name:output_ext
@@ -36,7 +36,7 @@ collections:
         permalink: /usage/:name:output_ext
     docs_use_cases:
         output: true
-        permalink: /use_cases/:name:output_ext
+        permalink: /use-cases/:name:output_ext
     docs_advanced:
         output: true
         permalink: /advanced/:name:output_ext
@@ -46,4 +46,3 @@ collections:
 gems:
 #     - 'jekyll-lunr-js-search'
     - jekyll-sitemap
-    - jemoji

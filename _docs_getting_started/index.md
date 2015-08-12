@@ -7,18 +7,18 @@ Installing and integrating CoScale with your application is easy and straightfor
 
 ## Platform support
 
-Before you get started, take a look at our supported [platform]({{ site.baseurl }}/getting_started/platforms.html) and [technologies]({{ site.baseurl }}/getting_started/technologies.html) list.
+Before you get started, take a look at our supported [platform]({{ site.baseurl }}/getting-started/platforms.html) and [technologies]({{ site.baseurl }}/getting-started/technologies.html) list. It will provide you with an overview of services and platforms you can integrate into our service.
 
 {% include alert.html type="info" text="If you can't find a platform or technology, please send us a message and we will get back to you with more information." %}
 
 ## Getting started
 
-1. Installing Agent
+### 1. [Create your account]({{ site.baseurl }}/getting-started/create-account.html)
 
-2. Installing Real User monitoring snippet
+### 2. [Installing Agent]({{ site.baseurl }}/getting-started/install-agent.html)
 
-3. Configuring Third party resources
+### 3. [Installing Real User monitoring component]({{ site.baseurl }}/getting-started/install-rum.html)
 
-4. (Custom metrics)
+### 4. [Configuring Third party resources]({{ site.baseurl }}/getting-started/setup-third-party.html)
 
-<a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/getting-started/">Get started!</a>
+### 5. [(Custom metrics)]({{ site.baseurl }}/getting-started/pushing-metrics.html)
