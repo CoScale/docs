@@ -7,9 +7,9 @@ Installing and integrating CoScale with your application is easy and straightfor
 
 ## Platform support
 
-Before you get started, take a look at our supported [platform]({{ site.baseurl }}/installation/platforms.html) and [technologies]({{ site.baseurl }}/installation/technologies.html) list.
+Before you get started, take a look at our supported [platform]({{ site.baseurl }}/getting_started/platforms.html) and [technologies]({{ site.baseurl }}/getting_started/technologies.html) list.
 
-<div class="alert alert-info">If you can't find a platform or technology, please send us a message and we will get back to you with more information.</div>
+{% include alert.html type="info" text="If you can't find a platform or technology, please send us a message and we will get back to you with more information." %}
 
 ## Getting started
 

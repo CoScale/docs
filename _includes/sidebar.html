@@ -5,7 +5,7 @@
 {% assign current = page.url | downcase | split: '/' %}
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'index.html' %}class='active'{% endif %}><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+    <li {% if current[1] == 'index.html' %}class='active'{% endif %}><a href="{{ site.baseurl }}/"><i class="fa fa-fw fa-home"></i> Home</a></li>
 </ul>
 
 <!-- <ul class="nav nav-sidebar">
@@ -14,7 +14,7 @@
 
 <ul class="nav nav-sidebar">
     <li {% if current[1] == 'getting_started' %}class='active'{% endif %}><a href="{{ site.baseurl }}/getting_started/">
-        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Getting started</a>
+        <i class="fa fa-fw fa-play"></i> Getting started</a>
         <ul>
             <li><a href="{{ site.baseurl }}/getting_started/">Quick start</a></li>
             <li><a href="{{ site.baseurl }}/getting_started/platforms.html">Supported platforms</a></li>
@@ -23,7 +23,7 @@
         </ul>
     </li>
     <li {% if current[1] == 'installation' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/">
-        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Installation</a>
+        <i class="fa fa-fw fa-download"></i> Installation</a>
         <ul>
             <li><a href="{{ site.baseurl }}/installation/agent.html">Infrastructure agent</a></li>
             <li><a href="{{ site.baseurl }}/installation/real-user-monitoring.html">Real user monitoring</a></li>
@@ -32,7 +32,7 @@
         </ul>
     </li>
     <li {% if current[1] == 'usage' %}class='active'{% endif %}><a href="{{ site.baseurl }}/usage/">
-        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Usage</a>
+        <i class="fa fa-fw fa-cogs"></i> Usage</a>
         <ul>
             <li><a href="#">Building dashboards</a></li>
             <li><a href="#">Configuring alerts</a></li>
@@ -41,7 +41,7 @@
         </ul>
     </li>
     <li {% if current[1] == 'use_cases' %}class='active'{% endif %}><a href="{{ site.baseurl }}/use_cases/">
-        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Use cases</a>
+        <i class="fa fa-fw fa-list"></i> Use cases</a>
         <ul>
             <li><a href="#">Getting business insights</a></li>
             <li><a href="#">Cron job monitoring</a></li>
@@ -53,7 +53,7 @@
         </ul>
     </li>
     <li {% if current[1] == 'advanced' %}class='active'{% endif %}><a href="{{ site.baseurl }}/advanced/">
-        <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Advanced</a>
+        <i class="fa fa-fw fa-wrench"></i> Advanced</a>
         <ul>
             <li><a href="#">Command line tool</a></li>
             <li><a href="#">Using regular expressions in requests</a></li>
@@ -68,7 +68,7 @@
     </li>
 </ul>
 <ul class="nav nav-sidebar">
-    <li><a href=""><span class="glyphicon glyphicon-book" aria-hidden="true"></span> API Docs</a></li>
+    <li><a href=""><i class="fa fa-fw fa-book"></i> API Docs</a></li>
 </ul>
 
 <div class="footer">
