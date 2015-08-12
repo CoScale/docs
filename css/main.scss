@@ -17,7 +17,9 @@ $border-radius-small: 0px;
 * Bootstrap specific
 */
 $icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-@import "bootstrap";
+$fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "font-awesome/scss/font-awesome.scss";
 
 /*
 * Custom class for more spacing between elements
@@ -132,6 +134,10 @@ $icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/font
         padding: 10px 0;
     }
 
+    .fa-lg {
+        font-size: 1.8em;
+    }
+
     .highlight {
         padding: 10px 0;
 
@@ -236,10 +242,11 @@ $icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/font
         height: 200px;
         margin-bottom: 10px;
 
-        span {
+        i {
             font-size: 52px;
             display: block;
             padding: 30px 0 35px 0;
+            margin: 0 auto;
         }
     }
 }
