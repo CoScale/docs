@@ -9,7 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://docs.coscale.com" # the base hostname & protocol for your site
 twitter_username: coscale
 github_username:  coscale
-baseurl: /docs
+baseurl: /
 
 # Build settings
 markdown: kramdown
