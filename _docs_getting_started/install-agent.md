@@ -31,7 +31,7 @@ Give your agent a reasonable name: i.e. ‘Webserver’. Press ‘Save agent’
 
 You have now created an agent configuration which you can deploy on as many servers as you'd like.
 
-TODO: Add bash options and more advanced stuff
+<!-- TODO: Add bash options and more advanced stuff -->
 
 ## Installing the agent
 
@@ -52,7 +52,7 @@ To install the agent, do the following:
 
 Wait until the agent is detected. When at least one agent is detected, you can continue the installation by pressing the button.
 
-{% capture text %}Our agent requires port 443 to be open to outbound traffic. Checkout our <a href="{{ site.baseurl }}/advanced/security.html">security page</a> for more information.{% endcapture %}
+{% capture text %}Our agent requires port 443 to be open to outbound traffic. <!-- TODO: Checkout our <a href="{{ site.baseurl }}/advanced/security.html">security page</a> for more information. -->{% endcapture %}
 {% include alert.html type="info" text=text %}
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_install.png" alt="CoScale agent detection install widget" /></p>

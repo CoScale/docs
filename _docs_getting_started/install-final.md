@@ -3,11 +3,9 @@ layout: page
 title: Pushing custom metrics
 ---
 
-## Events
+## Events / Job monitoring / Custom metrics
+{% include alert.html type="info" text="Will be added soon, contact support for more information." %}
 
-## Job monitoring
-
-## Custom metrics
 
 ## That's it!
 Your application is now fully integrated with the CoScale platform. The CoScale team Thanks you for your trust and we hope you have a good experience using our platform. If you have questions, remarks or problems, please don't hesitate to contact our support and they will gladly help you.
