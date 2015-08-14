@@ -13,6 +13,9 @@ On this page you should pick a password and press the â€˜Activate your accountâ€
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-create-account/welcome_page.png" alt="CoScale welcome page" /></p>
 
-## You are now ready to get started
-After activating your account, you see a welcome message. Press the button to start configuring CoScale, you are now ready to install the agent on your servers, use the butten below to go to the second part of the integration.
+After activating your account, you see a welcome message.
+
+## Your account is now ready
+Press the button to go through to your application, take a look around our interface and already familiarize yourself with some of the components, like the sidebar for example. When you're done, click the button below to go to the next step of your integration.
+
 <a href="{{ site.baseurl }}/getting-started/install-rum.html" class="btn btn-primary btn-lg btn-block spacing-top">Step 2: Real user monitoring integration </a>

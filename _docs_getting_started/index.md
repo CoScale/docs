@@ -3,7 +3,7 @@ layout: page
 title: Getting started
 ---
 
-Integrating CoScale with your application is easy and straightforward process. This manual will guide you through installing the CoScale platform into your environment and help setup some important third party resources. If you have questions or problems, please don't hesitate to contact our support, as we will gladly help you. You can use the button in the sidebar to open support chat.
+Integrating CoScale with your application is easy and straightforward process. This manual will guide you through installing the CoScale platform into your environment and help setup some important third party resources. If you have questions or problems, please don't hesitate to contact our support, as we will gladly help you. You can use the button in the sidebar to contact them.
 
 ## Platform support
 
@@ -13,6 +13,6 @@ Before we get started, let's take a look at our supported [platforms]({{ site.ba
 
 ## Getting started
 
-Now it is time to get started, click the button below to get started with integration CoScale into your environment.
+Now it is time to get started, click the button below to go to the first step of your CoScale integration.
 
-<a href="{{ site.baseurl }}/getting-started/install-create-account.html" class="btn btn-primary btn-lg btn-block spacing-top">Step 1: Activating your account</a>
+<a href="{{ site.baseurl }}/getting-started/install-create-account.html" class="btn btn-primary btn-lg btn-block">Step 1: Activating your account</a>
