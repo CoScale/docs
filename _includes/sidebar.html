@@ -42,12 +42,12 @@
     </li> -->
     <li {% if current[1] == 'usage' %}class='active'{% endif %}><a href="{{ site.baseurl }}/usage/index">
         <i class="fa fa-fw fa-cogs"></i> Usage</a>
-        <!-- <ul>
-            <li><a href="#">Building dashboards</a></li>
-            <li><a href="#">Configuring alerts</a></li>
-            <li><a href="#">Managing a large infrastructure</a></li>
-            <li><a href="#">Pushing events using CoScale commandline</a></li>
-        </ul> -->
+        <ul>
+            <li><a href="{{ site.baseurl }}/usage/cli/index">Command line interface</a></li>
+            <li><a href="{{ site.baseurl }}/usage/events/index">Events</a></li>
+            <!-- <li><a href="#">Managing a large infrastructure</a></li>
+            <li><a href="#">Pushing events using CoScale commandline</a></li> -->
+        </ul>
     </li>
     <!--<li {% if current[1] == 'use_cases' %}class='active'{% endif %}><a href="{{ site.baseurl }}/use-cases/">
         <i class="fa fa-fw fa-list"></i> Use cases</a>
