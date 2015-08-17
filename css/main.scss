@@ -142,6 +142,10 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         font-size: 1.8em;
     }
 
+    table {
+        @extend .table;
+    }
+
     .highlight {
         padding: 10px 0;
 
