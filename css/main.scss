@@ -146,6 +146,10 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         @extend .table;
     }
 
+    &.swagger-section {
+        font-size: 1.2em;
+    }
+
     .highlight {
         padding: 10px 0;
 

@@ -1,0 +1,3242 @@
+# this is an example of the CoScale API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title:
+  description: 
+  version: "1.0.0"
+# the domain of the service
+host: api.coscale.com
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /api/v1
+produces:
+  - application/json
+paths:
+  /users/login/:
+    post:
+      description: |
+        Login to CoScale
+      parameters:
+        - name: email
+          in: query
+          description: User email.
+          required: true
+          type: string
+        - name: password
+          in: query
+          description: User password.
+          required: true
+          type: string
+          format: password
+      tags:
+        - Login
+      responses:
+        200:
+          description: A token that should be used as HTTPAuthorization on all following calls
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Token'
+        default:
+          description: Returns an error message
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid Credentials'
+
+  /users/apps/:
+    get:
+      description: |
+        Getting all applications for the current user
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+      tags:
+        - Apps
+      responses:
+        200:
+          description: All applications for the current user
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Apps'
+        401:
+          description: Token not valid
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid token'
+
+  /app/{appId}/:
+    get:
+      description: |
+        Base url to the models in the api
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+      tags:
+        - Apps
+      responses:
+        200:
+          description: All models are represented as a json dict.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/App Model'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+  /app/{appId}/servers/:
+    get:
+      description: |
+        Get all servers for the current application
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: List of all servers.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+    post:
+      description: |
+        Insert a new server.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: true
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: true
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: true
+          type: string
+        - name: description
+          in: query
+          description: The description of server
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new server
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: Returns a new server.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+  /app/{appId}/servers/{serverId}/:
+    get:
+      description: |
+        Get a specific (defined by its id) server for the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: Specific (defined by its id) server.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: Application/Server not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server'
+
+    put:
+      description: |
+        Modify an existing server.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: false
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: false
+          type: string
+        - name: description
+          in: query
+          description: The new description of the server
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The new name of the server
+          required: false
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: Returns the updated server.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: Application/Server not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server'
+
+    delete:
+      description: |
+        Delete a specific server from the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: Returns a success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: Application/Server not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server'
+
+  /app/{appId}/servers/{serverId}/attributes/:
+    get:
+      description: |
+        Get all attributes for the server.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: List of ServerAttributes.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerAttribute'
+        404:
+          description: Application/Server not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server'
+
+    post:
+      description: |
+        Create new attribute on server.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+        - name: key
+          in: query
+          description: Key for the attribute.
+          required: true
+          type: string
+        - name: value
+          in: query
+          description: Value for the attribute.
+          required: true
+          type: string
+        - name: source
+          in: query
+          description: Describes who added the attribute.
+          required: true
+          type: string
+        - name: locked
+          in: query
+          description: "If true, the attribute cannot be changed in the frontend."
+          required: true
+          type: boolean
+      tags:
+        - Servers
+      responses:
+        200:
+          description: Returns a server attribute.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerAttribute'
+        404:
+          description: TODO
+
+  /app/{appId}/servers/{serverId}/attributes/{attributeId}/:
+    get:
+      description: |
+        Get a specific attribute for the server.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the attribute
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: Server attribute.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerAttribute'
+        404:
+          description: TODO
+
+    put:
+      description: |
+        Update a specific server attribute.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the attribute
+          required: true
+          type: string
+        - name: key
+          in: query
+          description: Key for the attribute.
+          required: false
+          type: string
+        - name: value
+          in: query
+          description: Value for the attribute.
+          required: false
+          type: string
+        - name: source
+          in: query
+          description: Describes who added the attribute.
+          required: false
+          type: string
+        - name: locked
+          in: query
+          description: "If true, the attribute cannot be changed in the frontend."
+          required: false
+          type: boolean
+        - name: version
+          in: query
+          description: "1"
+          required: true
+          type: boolean
+      tags:
+        - Servers
+      responses:
+        200:
+          description: Server attribute.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerAttribute'
+        404:
+          description: TODO
+
+    delete:
+        description: |
+          Remove a specific server attribute.
+        parameters:
+          - name: HTTPAuthorization
+            in: header
+            description: HTTPAuthorization token
+            required: true
+            type: string
+          - name: appId
+            in: path
+            description: The uuid for the application
+            required: true
+            type: string
+          - name: serverId
+            in: path
+            description: The id of the server
+            required: true
+            type: string
+          - name: attributeId
+            in: path
+            description: The id of the attribute
+            required: true
+            type: string
+        tags:
+          - Servers
+        responses:
+          200:
+            description: Returns a success message.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Delete success'
+          404:
+            description: TODO
+
+  /app/{appId}/servers/{serverId}/children/:
+    get:
+      description: |
+        Get all child servers for a given server.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: List of Servers.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: TODO
+
+  /app/{appId}/servers/{serverId}/children/{childId}/:
+    post:
+      description: |
+        Add an existing server as a child to another server.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+        - name: childId
+          in: path
+          description: The id of the child you want to add
+          required: true
+          type: string
+      tags:
+        - Servers
+      responses:
+        200:
+          description: The child server.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: TODO
+
+    delete:
+        description: |
+          Delete a child server from parent server.
+        parameters:
+          - name: HTTPAuthorization
+            in: header
+            description: HTTPAuthorization token
+            required: true
+            type: string
+          - name: appId
+            in: path
+            description: The uuid for the application
+            required: true
+            type: string
+          - name: serverId
+            in: path
+            description: The id of the server
+            required: true
+            type: string
+          - name: childId
+            in: path
+            description: The id of the child
+            required: true
+            type: string
+        tags:
+          - Servers
+        responses:
+          200:
+            description: Returns a success message.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Delete success'
+          404:
+            description: TODO
+
+  /app/{appId}/servergroups/:
+    get:
+      description: |
+        Get all server groups for the current application
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Server groups
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroups'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+    post:
+      description: |
+        Insert a new server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: true
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: true
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: true
+          type: string
+        - name: description
+          in: query
+          description: The description of the new server group
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Returns a sever group.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroups'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+  /app/{appId}/servergroups/{groupId}/:
+    get:
+      description: |
+        Get a specific server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Server group.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroups'
+        404:
+          description: Application/ServerGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server group'
+
+    put:
+      description: |
+        Modify an existing server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: false
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: false
+          type: string
+        - name: description
+          in: query
+          description: The description of the new server group
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new server group
+          required: false
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Server group.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroups'
+        404:
+          description: Application/ServerGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server group'
+
+    delete:
+      description: |
+        Delete a specific server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: Application/ServerGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server group'
+
+  /app/{appId}/servergroups/{groupId}/servers/:
+    get:
+      description: |
+        Get all servers in the server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: List of servers.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: Application/ServerGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server group'
+
+  /app/{appId}/servergroups/{groupId}/servers/{serverId}/:
+    post:
+      description: |
+        Add an existing server to a server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Server.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+        404:
+          description: TODO
+
+    delete:
+      description: |
+        Delete a server from a server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: serverId
+          in: path
+          description: The id of the server
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: TODO
+
+  /app/{appId}/servergroups/{groupId}/servergroups/:
+    get:
+      description: |
+        Get all child server groups for a server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: List of ServerGroups.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroups'
+        404:
+          description: Application/ServerGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server group'
+
+  /app/{appId}/servergroups/{groupId}/servergroups/{childId}/:
+    post:
+      description: |
+        Add an existing server group to another server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: childId
+          in: path
+          description: The id of the child server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: The added server group.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroups'
+        404:
+          description: TODO
+
+    delete:
+      description: |
+        Delete a server group from another server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: childId
+          in: path
+          description: The id of the child server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: TODO
+
+  /app/{appId}/servergroups/{groupId}/attributes/:
+    get:
+      description: |
+        Get all attributes for a server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: List of ServerGroupAttribute.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroupAttribute'
+        404:
+          description: Application/ServerGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid server group'
+
+    post:
+      description: |
+        Create a new attribute on a server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: key
+          in: query
+          description: Key for the attribute.
+          required: true
+          type: string
+        - name: value
+          in: query
+          description: Value for the attribute.
+          required: true
+          type: string
+        - name: source
+          in: query
+          description: Describes who added the attribute.
+          required: true
+          type: string
+        - name: locked
+          in: query
+          description: "If true, the attribute cannot be changed in the frontend."
+          required: true
+          type: boolean
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: ServerGroupAttribute
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroupAttribute'
+        404:
+          description: TODO
+
+  /app/{appId}/servergroups/{groupId}/attributes/{attributeId}/:
+    get:
+      description: |
+        Get a specific attribute for a server group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the server group attribute
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: ServerGroupAttribute.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerGroupAttribute'
+        404:
+          description: TODO
+
+    put:
+      description: |
+        Update a specific server group attribute.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the server group attribute
+          required: true
+          type: string
+        - name: key
+          in: query
+          description: Key for the attribute.
+          required: false
+          type: string
+        - name: value
+          in: query
+          description: Value for the attribute.
+          required: false
+          type: string
+        - name: source
+          in: query
+          description: Describes who added the attribute.
+          required: false
+          type: string
+        - name: locked
+          in: query
+          description: "If true, the attribute cannot be changed in the frontend."
+          required: false
+          type: boolean
+        - name: version
+          in: query
+          description: TODO
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: ServerAttribute.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServerAttribute'
+        404:
+          description: TODO
+
+    delete:
+      description: |
+        Remove a specific server group attribute.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the server group
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the server group attribute
+          required: true
+          type: string
+      tags:
+        - Server groups
+      responses:
+        200:
+          description: Success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: TODO
+
+#############################################################
+
+
+
+
+  /app/{appId}/metrics/:
+    get:
+      description: |
+        Get all metrics for the current application
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: Metrics
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Metric'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+    post:
+      description: |
+        Create a new metric instance.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: true
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: true
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: true
+          type: string
+        - name: description
+          in: query
+          description: The description of the new metric instance
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new metric instance
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: Metric.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Metric'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+  /app/{appId}/metrics/{metricId}/:
+    get:
+      description: |
+        Get a specific (defined by its id) metric for the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: Specific (defined by its id) metric.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Metric'
+        404:
+          description: Application/Metric not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric'
+
+    put:
+      description: |
+        Updates existing metric
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: false
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: false
+          type: string
+        - name: description
+          in: query
+          description: The description of the new metric
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new metric
+          required: false
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: Returns the updated metric.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Metric'
+        404:
+          description: Application/Metric not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric'
+
+    delete:
+      description: |
+        Delete a specific metric for the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: Returns a success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: Application/Metric not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric'
+
+  /app/{appId}/metrics/{metricId}/attributes/:
+    get:
+      description: |
+        Get all attributes for a specific metric.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: MetricAttribute
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricAttribute'
+        404:
+          description: Application/Metric not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric'
+
+    post:
+      description: |
+        Create new metric attribute on specific metric.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: MetricAttribute
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricAttribute'
+        404:
+          description: Application/Metric not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric'
+
+  /app/{appId}/metrics/{metricId}/attributes/{attributeId}/:
+    get:
+      description: |
+        Get a specific metric attribute.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the metric attribute
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: MetricAttribute
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricAttribute'
+        404:
+          description: TODO
+
+    put:
+      description: |
+        Update an existing metric attribute.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the metric attribute
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: MetricAttribute
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricAttribute'
+        404:
+          description: TODO
+
+    delete:
+      description: |
+        Remove an existing metric attribute.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric
+          required: true
+          type: string
+        - name: attributeId
+          in: path
+          description: The id of the metric attribute
+          required: true
+          type: string
+      tags:
+        - Metrics
+      responses:
+        200:
+          description: Success message
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: TODO
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricTags'
+
+  /app/{appId}/metricgroups/:
+    get:
+      description: |
+        Get all metric groups for the current application
+      parameters:
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Metric groups
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricGroups'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+    post:
+      description: |
+        Create a new metric group
+      parameters:
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: true
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: true
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: true
+          type: string
+        - name: description
+          in: query
+          description: The description of the new metric group
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Returns new metric group.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricGroups'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+  /app/{appId}/metricgroups/{groupId}/:
+    get:
+      description: |
+        Get a specific (defined by its id) metric group for the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Specific (defined by its id) metric group
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricGroups'
+        404:
+          description: Application/MetricGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric group'
+
+    put:
+      description: |
+        Updates existing metric group
+      parameters:
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: false
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: false
+          type: string
+        - name: description
+          in: query
+          description: The description of the new metric group
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new metric group
+          required: false
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Returns the updated metric group.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricGroups'
+        404:
+          description: Application/MetricGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric group'
+
+    delete:
+      description: |
+        Delete a specific metric group for the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Returns a success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: Application/MetricGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric group'
+
+  /app/{appId}/metricgroups/{groupId}/metrics/:
+    get:
+      description: |
+        Get all servers in the metric group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: List of Metrics
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Metric'
+        404:
+          description: Application/MetricGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric group'
+
+  /app/{appId}/metricgroups/{groupId}/metrics/{metricId}/:
+    post:
+      description: |
+        Add an existing metric to a metric group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric from the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Metric
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Metric'
+        404:
+          description: TODO
+
+    delete:
+      description: |
+        Delete a metric from a metric group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+        - name: metricId
+          in: path
+          description: The id of the metric from the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Success message
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: TODO
+
+  /app/{appId}/metricgroups/{groupId}/metricgroups/:
+    get:
+      description: |
+        Get all child metric groups for a metric group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: List of MetricGroups
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricGroups'
+        404:
+          description: Application/MetricGroup not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid metric group'
+
+  /app/{appId}/metricgroups/{groupId}/metricgroups/{childId}/:
+    post:
+      description: |
+       Add an existing metric group to another metric group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+        - name: childId
+          in: path
+          description: The id of the metric from the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: "MetricGroup: the added metric group."
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricGroups'
+        404:
+          description: TODO
+
+    delete:
+      description: |
+        Delete a metric group from another metric group.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: groupId
+          in: path
+          description: The id of the metric group
+          required: true
+          type: string
+        - name: childId
+          in: path
+          description: The id of the metric from the metric group
+          required: true
+          type: string
+      tags:
+        - Metric groups
+      responses:
+        200:
+          description: Success message
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: TODO
+
+# Alerts
+  /app/{appId}/alerts/:
+    get:
+      description: |
+        Get all Alerts
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+      tags:
+        - Alerts
+      responses:
+        200:
+          description: List of Alerts
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Alert'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+  /app/{appId}/alerts/{alertId}/:
+    get:
+      description: |
+        Get a specific Alert.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: alertId
+          in: path
+          description: The id of the alert
+          required: true
+          type: string
+      tags:
+        - Alerts
+      responses:
+        200:
+          description: Specific (defined by its id) alert
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Alert'
+        404:
+          description: Application/Alert not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid event'
+
+  /app/{appId}/alerts/{alertId}/acknowledge/:
+    put:
+      description: |
+        Acknowledge an alert.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: alertId
+          in: path
+          description: The id of the alert
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
+          type: string
+      tags:
+        - Alerts
+      responses:
+        200:
+          description: Alert
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Alert'
+        404:
+          description: Application/Alert not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid event'
+
+  /app/{appId}/alerts/{alertId}/resolve/:
+    put:
+      description: |
+        Resolve an alert.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: alertId
+          in: path
+          description: The id of the alert
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
+          required: true
+          type: string
+      tags:
+        - Alerts
+      responses:
+        200:
+          description: Alert
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Alert'
+        404:
+          description: Application/Alert not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid event'
+
+# Events
+  /app/{appId}/events/:
+    get:
+      description: |
+        Get all events for the current application
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: List of Events
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Event'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+    post:
+      description: |
+        Create a new event.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: true
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: true
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: true
+          type: string
+        - name: description
+          in: query
+          description: The description of the new event
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new event
+          required: true
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: Request
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Event'
+        404:
+          description: Application not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid application'
+
+  /app/{appId}/events/{eventId}/:
+    get:
+      description: |
+        Get a specific (defined by its id) event for the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event
+          required: true
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: Specific (defined by its id) event
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Event'
+        404:
+          description: TODO
+
+    put:
+      description: |
+        Updates existing event
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application.
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
+          type: string
+        - name: unit
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: dataType
+          in: query
+          description: The dataType must have all letters uppercase
+          required: false
+          type: string
+        - name: source
+          in: query
+          description: It can be empty
+          required: false
+          type: string
+        - name: subject
+          in: query
+          description: The subject must have all letters uppercase
+          required: false
+          type: string
+        - name: description
+          in: query
+          description: The description of the new event
+          required: false
+          type: string
+        - name: name
+          in: query
+          description: The name of the new event
+          required: false
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: Returns the updated event.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Event'
+        404:
+          description: Application/Event not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid event'
+
+    delete:
+      description: |
+        Delete a specific event of a model for the current application.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event
+          required: true
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: Returns a success message.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: Application/Event not found
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Invalid event'
+
+  /app/{appId}/events/{eventId}/data/:
+    get:
+      description: |
+        Get data from start to stop for a given event. If timestamp = 0 : use the current timestamp. If the timestamp is negative: seconds since the current timestamp. <br>
+        The stop time is optional. Entering only a start time will give all events from that moment onwards.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event
+          required: true
+          type: string
+        - name: start
+          in: query
+          description: The start time of the event
+          required: true
+          type: string
+        - name: stop
+          in: query
+          description: The stop time of the event
+          required: false
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: List of EventData
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventData'
+        404:
+          description: TODO
+
+    post:
+      description: |
+        Create new EventData for a given event.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event
+          required: true
+          type: string
+        - name: start
+          in: query
+          description: The start time of the event
+          required: true
+          type: string
+        - name: stop
+          in: query
+          description: The stop time of the event
+          required: true
+          type: string
+        - name: message
+          in: query
+          description: The message of the event
+          required: false
+          type: string
+        - name: subject
+          in: query
+          description: The subject of the event
+          required: false
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: EventData
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventData'
+        404:
+          description: TODO
+
+  /app/{appId}/events/{eventId}//data/{eventDataId}/:
+    put:
+      description: |
+        Update EventData.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event
+          required: true
+          type: string
+        - name: eventDataId
+          in: path
+          description: The id of the data event
+          required: true
+          type: string
+        - name: message
+          in: query
+          description: The message of the event
+          required: false
+          type: string
+        - name: subject
+          in: query
+          description: The subject of the event
+          required: false
+          type: string
+        - name: timestamp
+          in: query
+          description: The timestamp of the event
+          required: false
+          type: integer
+          format: long
+        - name: version
+          in: query
+          description: Version of the update
+          required: true
+          type: integer
+          format: long
+      tags:
+        - Events
+      responses:
+        200:
+          description: EventData
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventData'
+        404:
+          description: TODO
+    delete:
+      description: |
+        Delete EventData.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event
+          required: true
+          type: string
+        - name: eventDataId
+          in: path
+          description: The id of the data event
+          required: true
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: Success message
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Delete success'
+        404:
+          description: TODO
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Data'
+
+# Datastore
+  /app/{appId}/data/:
+    post:
+      description: |
+        Insert data into the datastore. This data can span multiple servers and server groups. Data can never span multiple applications.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: The array of data
+          required: true
+          schema:
+            type: array
+            $ref: "#/definitions/Values"
+            $ref: "#/definitions/Data"
+      responses:
+        200:
+          description: TODO
+
+definitions:
+# Login
+  Token:
+    properties:
+      token:
+        type: string
+        description: "b356803a-2fe5-4c8b-9a19-9135c75f147e"
+
+  Invalid Credentials:
+    properties:
+      msg:
+        type: string
+        description: Invalid credentials
+
+# Get the apps
+  Apps:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "1"
+      version:
+        type: integer
+        format: long
+        description: "2"
+      appId:
+        type: string
+        description: "0005c2ca-8443-4761-8948-09d4f345ed1e"
+      state:
+        type: string
+        description: ENABLED
+
+  Invalid token:
+    properties:
+      msg:
+        type: string
+        description: No valid authorization token found.
+
+# Apps model
+  App Model:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "81"
+      version:
+        type: integer
+        format: long
+        description: "1"
+      state:
+        type: string
+        description: "ENABLED"
+      name:
+        type: string
+        description: My Application
+      appId:
+        type: string
+        description: "0005c2ca-8443-4761-8948-09d4f345ed1e"
+      ownerId:
+        type: integer
+        description: "83"
+      planId:
+        type: integer
+        description: "1"
+
+  Invalid application:
+    properties:
+      msg:
+        type: string
+        description: "Application '0005c2ca-8443-4761-8948-09d4f345ed1r' not found."
+
+# Server model
+  Server:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "Unique identifier."
+      name:
+        type: string
+        description: "Name for the server."
+      description:
+        type: string
+        description: "Description for the server."
+      type:
+        type: string
+        description: "Describes the type of server. Can be chosen by the user."
+      source:
+        type: string
+        description: "Describes who added the server. Can be chosen by the user."
+      state:
+        type: string
+        description: "ENABLED: capturing data, INACTIVE: notcapturing data, DISABLED: not capturing data and not shown on the dashboard."
+      version:
+        type: integer
+        format: long
+        description: "Automatically updated on each update to the instance."
+
+  ServerAttribute:
+    properties:
+      key:
+        type: string
+        description: "Key for the attribute. (Eg. Process)"
+      value:
+        type: string
+        description: "Value for the attribute. (Eg. apache)"
+      source:
+        type: string
+        description: "Describes who added the attribute. Can be chosen by the user."
+      locked:
+        type: boolean
+        description: "If true, the attribute cannot be changed in the frontend."
+
+  Invalid server:
+    properties:
+      msg:
+        type: string
+        description: "Server with id 15833 not found."
+
+  Invalid server group:
+    properties:
+      msg:
+        type: string
+        description: "ServerGroup with id 15833 not found."
+
+# Metric
+  Metric:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "Unique identifier."
+      name:
+        type: string
+        description: "Name for the metric."
+      description:
+        type: string
+        description: "Description for the metric."
+      dataType:
+        type: string
+        description: "The following data types are defined: LONG, DOUBLE, HISTOGRAM."
+      unit:
+        type: string
+        description: "The unit for the metric. This is shown on the axis in the widgets."
+      period:
+        type: integer
+        description: "The amount of time (in seconds) between 2 data points."
+      subject:
+        type: string
+        description: "A metric is defined on either a SERVER, GROUP or APPLICATION. This allows for metric per server, per server group or on the whole application."
+      source:
+        type: string
+        description: "Describes who added the event. Can be chosen by the user."
+      state:
+        type: string
+        description: "ENABLED: capturing data, INACTIVE: notcapturing data, DISABLED: not capturing data and not shown on the dashboard."
+      version:
+        type: integer
+        format: long
+        description: "Automatically updated on each update to the instance."
+
+  MetricAttribute:
+    properties:
+      key:
+        type: string
+        description: "Key for the attribute. (Eg. TAG)"
+      value:
+        type: string
+        description: "Value for the attribute. (Eg. CPU)"
+      source:
+        type: string
+        description: "Describes who added the attribute. Can be chosen by the user."
+      locked:
+        type: boolean
+        description: "If true, the attribute cannot be changed in the frontend."
+
+
+  Invalid metric:
+    properties:
+      msg:
+        type: string
+        description: "Metric with id 123 not found."
+
+  Invalid metric group:
+    properties:
+      msg:
+        type: string
+        description: "Metric with id 123 not found."
+
+# Event model
+  Event:
+    properties:
+        id:
+          type: integer
+          format: long
+          description: "Unique identifier."
+        name:
+          type: string
+          description: "Name for the event."
+        description:
+          type: string
+          description: "Description for the event."
+        type:
+          type: string
+          description: Describes the type of event. Can be chosen by the user
+        source:
+          type: string
+          description: "Describes who added the event. Can be chosen by the user."
+        state:
+          type: string
+          description: "ENABLED: capturing data, INACTIVE: notcapturing data, DISABLED: not capturing data and not shown on the dashboard."
+        version:
+          type: integer
+          format: long
+          description: "Automatically updated on each update to the instance."
+
+  EventData:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "Unique identifier."
+      timestamp:
+        type: integer
+        format: long
+        description: "Unix timestamp in milliseconds"
+      message:
+        type: string
+        description: "The message for the event data."
+      subject:
+        type: string
+        description: "The subject for the event data."
+      version:
+        type: integer
+        format: long
+        description: "Automatically updated on each update to the instance."
+
+  Invalid event:
+    properties:
+      msg:
+        type: string
+        description: "Event with id 123 not found."
+
+# Delete successful
+  Delete success:
+    properties:
+      msg:
+        type: string
+        description: "Delete successful!"
+
+# ServerGroups model
+  ServerGroups:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "Unique identifier"
+      name:
+        type: string
+        description: "Name for the server group"
+      description:
+        type: string
+        description: "Description for the server group"
+      type:
+        type: string
+        description: "Describes the type of the server group. Can be chosen by the user"
+      source:
+        type: string
+        description: "Describes who added the server group. Can be chosen by the user"
+      state:
+        type: string
+        description: "ENABLED: capturing data, INACTIVE: not capturing data, DISABLED: not capturing data and not shown on the dashboard"
+      version:
+        type: integer
+        format: long
+        description: "Automatically updated on each update to the instance"
+
+# Server group attribute
+  ServerGroupAttribute:
+    properties:
+      key:
+        type: string
+        description: "Key for the attribute."
+      value:
+        type: string
+        description: "Value for the attribute."
+      source:
+        type: string
+        description: "Describes who added the attribute. Can be chosen by the user."
+      locked:
+        type: boolean
+        description: "If true, the attribute cannot be changed in the frontend."
+
+# MetricGroups model
+  MetricGroups:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "Unique identifier"
+      name:
+        type: string
+        description: "Name for the metric group"
+      description:
+        type: string
+        description: "Description for the metric group"
+      type:
+        type: string
+        description: "Describes the type of the metric group. Can be chosen by the user"
+      source:
+        type: string
+        description: "Describes who added the metric group. Can be chosen by the user"
+      state:
+        type: string
+        description: "ENABLED: capturing data, INACTIVE: not capturing data, DISABLED: not capturing data and not shown on the dashboard"
+      version:
+        type: integer
+        format: long
+        description: "Automatically updated on each update to the instance"
+
+# Alert model
+  Alert:
+    properties:
+      id:
+        type: integer
+        format: long
+        description: "Unique identifier"
+      metricId:
+        type: integer
+        format: long
+        description: "Id of the metric that triggered the alert"
+      created:
+        type: string
+        format: dateTime
+        description: "When the alert was created. (Unix timestamp in milliseconds)"
+      lastOccurrence:
+        type: string
+        format: dateTime
+        description: "When the alert last occurred. (Unix timestamp in milliseconds)"
+      occurrences:
+        type: integer
+        description: "The number of times the alert occurred since it was created."
+      sent:
+        type: string
+        format: dateTime
+        description: "When the alert was sent to the primary contact (can be null, Unix timestamp in milliseconds)."
+      backup:
+        type: string
+        format: dateTime
+        description: "When the alert was sent to the backup contact (can be null, Unix timestamp in milliseconds)."
+      escalation:
+        type: string
+        format: dateTime
+        description: "When the alert was sent to the escalation contact (can be null, Unix timestamp in milliseconds)."
+      acknowledged:
+        type: string
+        format: dateTime
+        description: "When the alert was acknowledged."
+      acknowledgedBy:
+        type: integer
+        format: long
+        description: "The user id of the user that acknowledged the alert."
+      resolved:
+        type: string
+        format: dateTime
+        description: "When the alert was resolved."
+      resolvedBy:
+        type: integer
+        format: long
+        description: "The user id of the user that resolved the alert."
+      onApp:
+        type: boolean
+        description: "Whether the alert was triggered on the application. (Not yet used)"
+      groupId:
+        type: integer
+        format: long
+        description: "The server group id of the group that triggered the alert (null if the alert was not triggered on a group). (Not yet used)"
+      serverId:
+        type: integer
+        format: long
+        description: "The server id of the server that triggered the alert (null if the alert was not triggered on a server). Currently all alerts are triggered on a server."
+      aggregatedInto:
+        type: integer
+        format: long
+        description: "The parent Alert (not yet used)."
+
+  MetricTags:
+    properties:
+      CPU:
+        description: "Cpu related metrics"
+      CPU_IDLE:
+        description: "Cpu idle time"
+      CPU_NICE:
+        description: "Cpu nice time"
+      CPU_SYSTEM:
+        description: "Cpu system time"
+      CPU_USER:
+        description: "Cpu user time"
+      CPU_IO:
+        description: "Cpu iowait time"
+      DISK:
+        description: "Disk related metrics"
+      DISK_READ_BYTES_PER_S:
+        description: "Disk read bytes per second"
+      DISK_WRITE_BYTES_PER_S:
+        description: "Disk write bytes per second"
+      NETWORK:
+        description: "Network related metrics"
+      NETWORK_IN_BYTES_PER_S:
+        description: "Cpu related metrics"
+      NETWORK_OUT_BYTES_PER_S:
+        description: "Cpu related metrics"
+      MEM:
+        description: "Memory related metrics"
+      MEM_FREE:
+        description: "Free memory metric"
+
+  Data:
+    properties:
+      metricId:
+        type: integer
+        format: long
+        description: "The id of the metric"
+      subjectId:
+        type: string
+        description: "The subjectId is structured as follows: s<serverId> for a server, g<servergroupId> for a server group, a for the application."
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/Values'
+
+  Values:
+    properties:
+      timestamp:
+        type: string
+      data:
+        type: string
