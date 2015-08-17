@@ -18,4 +18,4 @@ After activating your account, you see a welcome message.
 ## Your account is now ready
 Press the button to go through to your application, take a look around our interface and already familiarize yourself with some of the components, like the sidebar for example. When you're done, click the button below to go to the next step of your integration.
 
-<a href="{{ site.baseurl }}/getting-started/install-rum.html" class="btn btn-primary btn-lg btn-block spacing-top">Step 2: Real user monitoring integration </a>
+<a href="{{ site.baseurl }}/getting-started/install-rum" class="btn btn-primary btn-lg btn-block spacing-top">Step 2: Real user monitoring integration </a>

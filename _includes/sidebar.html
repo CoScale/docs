@@ -13,22 +13,22 @@
 </ul> -->
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'getting-started' %}class='active'{% endif %}><a href="{{ site.baseurl }}/getting-started/">
+    <li {% if current[1] == 'getting-started' %}class='active'{% endif %}><a href="{{ site.baseurl }}/getting-started/index/">
         <i class="fa fa-fw fa-play"></i> Getting started</a>
         <ul>
             <li>
-                <a href="{{ site.baseurl }}/getting-started/">Quick start</a>
+                <a href="{{ site.baseurl }}/getting-started/index/">Quick start</a>
                 <ul>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-create-account.html">Creating a CoScale account</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-rum.html">Installing the Real user monitoring component</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-agent.html">Integrating the agents</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-third-party.html">Activating third party plugins</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-final.html">Pushing custom data</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-create-account">Creating a CoScale account</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-rum">Installing the Real user monitoring component</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-agent">Integrating the agents</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-third-party">Activating third party plugins</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-final">Pushing custom data</a></li>
                 </ul>
             </li>
-            <li><a href="{{ site.baseurl }}/getting-started/platforms.html">Supported platforms</a></li>
-            <li><a href="{{ site.baseurl }}/getting-started/technologies.html">Supported technologies</a></li>
-            <li><a href="{{ site.baseurl }}/getting-started/third-party.html">Supported third-parties</a></li>
+            <li><a href="{{ site.baseurl }}/getting-started/platforms">Supported platforms</a></li>
+            <li><a href="{{ site.baseurl }}/getting-started/technologies">Supported technologies</a></li>
+            <li><a href="{{ site.baseurl }}/getting-started/third-party">Supported third-parties</a></li>
         </ul>
     </li>
     <!-- <li {% if current[1] == 'installation' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/">
@@ -39,17 +39,17 @@
             <li><a href="{{ site.baseurl }}/installation/third-party.html">Third party services</a></li>
             <li><a href="{{ site.baseurl }}/installation/custom-metrics.html">Custom metrics</a></li>
         </ul>
-    </li>
-    <li {% if current[1] == 'usage' %}class='active'{% endif %}><a href="{{ site.baseurl }}/usage/">
+    </li> -->
+    <li {% if current[1] == 'usage' %}class='active'{% endif %}><a href="{{ site.baseurl }}/usage/index">
         <i class="fa fa-fw fa-cogs"></i> Usage</a>
-        <ul>
+        <!-- <ul>
             <li><a href="#">Building dashboards</a></li>
             <li><a href="#">Configuring alerts</a></li>
             <li><a href="#">Managing a large infrastructure</a></li>
             <li><a href="#">Pushing events using CoScale commandline</a></li>
-        </ul>
+        </ul> -->
     </li>
-    <li {% if current[1] == 'use_cases' %}class='active'{% endif %}><a href="{{ site.baseurl }}/use-cases/">
+    <!--<li {% if current[1] == 'use_cases' %}class='active'{% endif %}><a href="{{ site.baseurl }}/use-cases/">
         <i class="fa fa-fw fa-list"></i> Use cases</a>
         <ul>
             <li><a href="#">Getting business insights</a></li>

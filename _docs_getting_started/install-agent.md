@@ -6,7 +6,7 @@ title: Installing the agent
 ## Precautions
 Before we get started it is important to note that the following steps require root or administrator access to the servers that host your application. If you don't have access, please contact our support so they can provide alternatives and press the button to the right to skip this step for now.
 
-<a href="{{ site.baseurl }}/getting-started/install-third-party.html" class="btn btn-warning btn-lg pull-right">Skip this step</a>
+<a href="{{ site.baseurl }}/getting-started/install-third-party" class="btn btn-warning btn-lg pull-right">Skip this step</a>
 <br />
 
 ## Creating the agent
@@ -52,7 +52,7 @@ To install the agent, do the following:
 
 Wait until the agent is detected. When at least one agent is detected, you can continue the installation by pressing the button.
 
-{% capture text %}Our agent requires port 443 to be open to outbound traffic. <!-- TODO: Checkout our <a href="{{ site.baseurl }}/advanced/security.html">security page</a> for more information. -->{% endcapture %}
+{% capture text %}Our agent requires port 443 to be open to outbound traffic. <!-- TODO: Checkout our <a href="{{ site.baseurl }}/advanced/security">security page</a> for more information. -->{% endcapture %}
 {% include alert.html type="info" text=text %}
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_install.png" alt="CoScale agent detection install widget" /></p>
@@ -62,4 +62,4 @@ When you see this screen the agent is installed successfully. It will start down
 ## Time for the next step
 Now that we have installed the agent it is time to integrate with third-party components, click the button below to get started.
 
-<a href="{{ site.baseurl }}/getting-started/install-third-party.html" class="btn btn-primary btn-lg btn-block spacing-top">Step 4: Configuring Third party resources</a>
+<a href="{{ site.baseurl }}/getting-started/install-third-party" class="btn btn-primary btn-lg btn-block spacing-top">Step 4: Configuring Third party resources</a>

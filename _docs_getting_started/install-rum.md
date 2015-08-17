@@ -16,4 +16,4 @@ To find our snippet, go to 'Metrics' > 'Real user monitoring' in our sidebar, yo
 ## Now we wait
 It can take up to 24 hours before all pages our detected and added to our dashboard. We will send you an e-mail when we detect new pages inside your application. While we wait let us get on with the next step of installing our agent to provide infrastructure insights and server performance metrics.
 
-<a href="{{ site.baseurl }}/getting-started/install-agent.html" class="btn btn-primary btn-lg btn-block spacing-top">Step 3: Installing the agent</a>
+<a href="{{ site.baseurl }}/getting-started/install-agent" class="btn btn-primary btn-lg btn-block spacing-top">Step 3: Installing the agent</a>
