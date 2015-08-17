@@ -11,6 +11,14 @@ Before we get started, let's take a look at our supported [platforms]({{ site.ba
 
 {% include alert.html type="info" text="If you can't find a platform or technology, please send us a message and we will get back to you with more information." %}
 
+## Walkthrough steps
+
+* [Creating a CoScale account]({{ site.baseurl }}/getting-started/install-create-account.html)
+* [Installing the Real user monitoring component]({{ site.baseurl }}/getting-started/install-rum.html)
+* [Integrating the agents]({{ site.baseurl }}/getting-started/install-agent.html)
+* [Activating third party plugins]({{ site.baseurl }}/getting-started/install-third-party.html)
+* [Pushing custom data]({{ site.baseurl }}/getting-started/install-final.html)
+
 ## Getting started
 
 Now it is time to get started, click the button below to go to the first step of your CoScale integration.

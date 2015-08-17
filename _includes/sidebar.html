@@ -16,7 +16,16 @@
     <li {% if current[1] == 'getting-started' %}class='active'{% endif %}><a href="{{ site.baseurl }}/getting-started/">
         <i class="fa fa-fw fa-play"></i> Getting started</a>
         <ul>
-            <li><a href="{{ site.baseurl }}/getting-started/">Quick start</a></li>
+            <li>
+                <a href="{{ site.baseurl }}/getting-started/">Quick start</a>
+                <ul>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-create-account.html">Creating a CoScale account</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-rum.html">Installing the Real user monitoring component</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-agent.html">Integrating the agents</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-third-party.html">Activating third party plugins</a></li>
+                    <li><a href="{{ site.baseurl }}/getting-started/install-final.html">Pushing custom data</a></li>
+                </ul>
+            </li>
             <li><a href="{{ site.baseurl }}/getting-started/platforms.html">Supported platforms</a></li>
             <li><a href="{{ site.baseurl }}/getting-started/technologies.html">Supported technologies</a></li>
             <li><a href="{{ site.baseurl }}/getting-started/third-party.html">Supported third-parties</a></li>
