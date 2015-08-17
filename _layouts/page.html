@@ -15,12 +15,13 @@ layout: default
         {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
 
         {% capture num_parts %}{{ url_parts | number_of_words }}{% endcapture %}
-        {% if num_parts != "1" %}
-            <li><a href="{{previous}}/index">{{ first_word | capitalize | replace:'-', " " }}</a></li>
-        {% else %}
-            <li><a href="{{previous}}">{{ first_word | capitalize | replace:'-', " " }}</a></li>
+        {% if first_word != "index" %}
+            {% if num_parts != "1" %}
+                <li><a href="{{previous}}/index">{{ first_word | capitalize | replace:'-', " " }}</a></li>
+            {% else %}
+                <li><a href="{{previous}}">{{ first_word | capitalize | replace:'-', " " }}</a></li>
+            {% endif %}
         {% endif %}
-
         {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
     {% endfor %}
     {% endif %}

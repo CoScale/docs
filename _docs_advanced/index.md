@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Advanced
 ---
 
-# Advanced
+## [Windows]({{ site.baseurl }}/advanced/windows/index)
+Advanced Windows tutorials and manuals
