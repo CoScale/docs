@@ -32,6 +32,7 @@ From the IIS Manager select Logging and set the directory on the Ram drive, i.e.
 ## Clean-up log files
 
 1. Create a script for cleaning up the log files, script contents:
+
     {% highlight vbnet %}
 Set colArgs = WScript.Arguments.Named
 If colArgs.Exists("path") Then
@@ -75,5 +76,5 @@ Next
     `imdisk -d -m X:`
 
     or
-    
+
     `imdisk -D -m X:` (to force a removal)

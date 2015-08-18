@@ -9,6 +9,11 @@ title: Windows
 * Killing the Agent
 * [Export logs]({{ site.baseurl }}/advanced/windows/export-logs)
 
+## Plugins
+
+### IIS - Internet Information Services
+
+* [Configure IIS]({{ site.baseurl }}/advanced/windows/plugin-iis-configuration)
 
 ## Other
 
