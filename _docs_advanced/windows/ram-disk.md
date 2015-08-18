@@ -71,6 +71,9 @@ Next
 
 2. Delete ram disk:
     We can delete a Ram disk with one of the following commands:
+
     `imdisk -d -m X:`
+
     or
+    
     `imdisk -D -m X:` (to force a removal)
