@@ -3,7 +3,7 @@
 swagger: '2.0'
 info:
   title:
-  description: 
+  description:
   version: "1.0.0"
 # the domain of the service
 host: api.coscale.com
@@ -18,7 +18,7 @@ paths:
   /users/login/:
     post:
       description: |
-        Login to CoScale
+        Login to CoScale and receive authorization token
       parameters:
         - name: email
           in: query
@@ -76,7 +76,7 @@ paths:
   /app/{appId}/:
     get:
       description: |
-        Base url to the models in the api
+        Get app information
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2358,7 +2358,7 @@ paths:
   /app/{appId}/events/:
     get:
       description: |
-        Get all events for the current application
+        Get all event categories for the current application
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2388,7 +2388,7 @@ paths:
 
     post:
       description: |
-        Create a new event.
+        Create a new event category.
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2449,7 +2449,7 @@ paths:
   /app/{appId}/events/{eventId}/:
     get:
       description: |
-        Get a specific (defined by its id) event for the current application.
+        Get a specific event category (defined by its id).
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2480,7 +2480,7 @@ paths:
 
     put:
       description: |
-        Updates existing event
+        Update existing event category
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2550,7 +2550,7 @@ paths:
 
     delete:
       description: |
-        Delete a specific event of a model for the current application.
+        Delete a specific event category
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2586,8 +2586,10 @@ paths:
   /app/{appId}/events/{eventId}/data/:
     get:
       description: |
-        Get data from start to stop for a given event. If timestamp = 0 : use the current timestamp. If the timestamp is negative: seconds since the current timestamp. <br>
-        The stop time is optional. Entering only a start time will give all events from that moment onwards.
+        Get events from start to stop for a given event category. <br />
+        If timestamp is equal to 0: it uses the current timestamp. <br />
+        If timestamp is negative: seconds from the current timestamp. <br />
+        The stop time is optional. Entering only a start time will give all events from that time onwards.
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2628,7 +2630,7 @@ paths:
 
     post:
       description: |
-        Create new EventData for a given event.
+        Create new event for a given event category.
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2680,7 +2682,7 @@ paths:
   /app/{appId}/events/{eventId}//data/{eventDataId}/:
     put:
       description: |
-        Update EventData.
+        Update event.
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2737,7 +2739,7 @@ paths:
           description: TODO
     delete:
       description: |
-        Delete EventData.
+        Delete event.
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -2780,6 +2782,8 @@ paths:
     post:
       description: |
         Insert data into the datastore. This data can span multiple servers and server groups. Data can never span multiple applications.
+      tags:
+        - Metrics
       parameters:
         - name: HTTPAuthorization
           in: header
