@@ -5,8 +5,8 @@ title: Windows
 
 ## Agent
 
-* Restarting the Agent
-* Killing the Agent
+* [Restarting the Agent]({{ site.baseurl }}/advanced/windows/agent-restart)
+* [Killing the Agent]({{ site.baseurl }}/advanced/windows/agent-terminate)
 * [Export logs]({{ site.baseurl }}/advanced/windows/export-logs)
 
 ## Plugins
