@@ -7,6 +7,7 @@ title: Windows
 
 * Restarting the Agent
 * Killing the Agent
+* [Export logs]({{ site.baseurl }}/advanced/windows/export-logs)
 
 
 ## Other
