@@ -20,11 +20,6 @@ All installed agent plugins are digitally signed by CoScale. This signature is v
 
 The agent has a built-in access token (GUID) to authenticate with the CoScale platform. This token can always be revoked when necessary.
 
-## Proxies
-
-The CoScale agent allows to send data using a proxy. This can be configured by setting an environment variable HTTPS_PROXY. For linux systems this means adding and environment variable to /opt/coscale/agent/wrapper.sh. For windows systems a global environment variable HTTPS_PROXY must be set.
-
-
 ## Automatic provisioning
 
 On installation our agent creates an agent.conf file containing a UID. This UID is used to identify the server on our platform. When creating an image it is important to remove the agent.conf file. If you don’t the agent will push metrics for the previous server and not add a new one. You can find the file in “/opt/coscale/agent/etc” on Linux or “C:/Program Files (x86)/CoScale/Agent/” on Windows.
