@@ -9,8 +9,9 @@ Our agent can get its configuration values for plugins from environment values c
 
 ## How to get started
 
-1. Create a `/etc/default/coscale-agent` and add the following content
-    
+### 1. Create environment file
+Create a `/etc/default/coscale-agent` and add the following content
+
    {% highlight bash %}
 #!/bin/bash
 
@@ -23,6 +24,11 @@ CS_MYSQL_TABLE=product
 
    {% endhighlight %}
 
-2. In the plugin configuration you set the configuration settings to the variable names you created. In this example I'm configuring the MySQL database plugin with custom variables.
+### 2. Configure agent
+In the plugin configuration you set the configuration settings to the variable names you created. In this example I'm configuring the MySQL database plugin with custom variables.
 
 ![Environment values setup in MySQL plugin]({{ site.baseurl }}/gfx/usage/agent/environment-variables/env_var_mysql_setup.png)
+
+### 3. Restart the Agent
+
+[Restart the agent]({{ site.baseurl }}/usage/agent/commands#restart), afterwards the config will be read from file.
