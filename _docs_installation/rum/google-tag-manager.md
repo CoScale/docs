@@ -8,6 +8,7 @@ This manual will guide you through the process of adding the CoScale Real user m
 ## Requirements
 
 * The CoScale RUM snippet
+
     You can find it by going to your dashboard, selecting `Metrics` and then `Real user monitoring` in the sidebar. The instructions for adding RUM are in the top part of the page, you can find the snippet by clicking the `here` link.
 
 ## Adding it to Google Tag Manager
