@@ -17,8 +17,12 @@ title: Agent commands
 ## Restart
 
 ### Linux
+* Ubuntu / Debian: `service coscale-agent restart`
+* CentOS: `systemctl restart coscale-agent.service`
 
 ### Windows
+
+* All: [Restarting windows agent]({{ site.baseurl}}/advanced/windows/agent-restart)
 
 ## Uninstall
 
