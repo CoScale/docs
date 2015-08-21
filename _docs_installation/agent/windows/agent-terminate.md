@@ -3,6 +3,7 @@ layout: page
 title: Agent terminate
 ---
 
+## Terminate / kill CoScale agent
 Follow these steps to terminate / kill the CoScale agent.
 
 1. Open Task Manager
@@ -15,3 +16,8 @@ Follow these steps to terminate / kill the CoScale agent.
     * IIS plugin: plugin.exe
     * MS SQL Server plugin: sql
     * Resource plugin: ResourceMonitoring
+
+
+## Uninstall
+
+Go to `Control Panel`, `Programs` > `Uninstall a program`, right-click 'CoScale Agent' and select `Uninstall`.

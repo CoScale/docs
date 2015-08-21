@@ -8,11 +8,8 @@ title: Agent
 ### [Basic]({{ site.baseurl }}/getting-started/install-agent/)
 Basic agent installation without any special features.
 
-### [Configure with environment variables]({{ site.baseurl }}/installation/agent/environment-variables)
-Get plugin configuration through environment variables.
+### [Microsoft Windows]({{ site.baseurl }}/installation/agent/windows/index)
+Specific configuration and agent management for Microsoft Windows.
 
-
-## Usage
-
-### [Commands]({{ site.baseurl }}/installation/agent/commands)
-List of commands to help you install, restart or uninstall the agent.
+### [Linux / Unix]({{ site.baseurl }}/installation/agent/linux/index)
+Specific configuration and agent management for Unix based operation systems.

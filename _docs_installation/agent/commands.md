@@ -3,36 +3,16 @@ layout: page
 title: Agent commands
 ---
 
-## Install
-
-### Linux
-
-* Ubuntu / Debian: `sudo dpkg -i [filename]`
-* CentOS: `sudo rpm -iUvh [filename]`
-
-### Windows
-
-* All: `Doubleclick`
-
 ## Restart
+How to restart the CoScale agent.
 
-### Linux
-* Ubuntu / Debian: `service coscale-agent restart`
-* CentOS: `systemctl restart coscale-agent.service`
+### [Linux]({{ site.baseurl}}/installation/agent/linux/agent-restart)
 
-### Windows
-
-* All: [Restarting windows agent]({{ site.baseurl}}/advanced/windows/agent-restart)
+### [Windows]({{ site.baseurl}}/installation/agent/windows/agent-restart)
 
 ## Uninstall
+How to terminate or remove the CoScale agent.
 
-### Linux
+### [Linux]({{ site.baseurl}}/installation/agent/linux/agent-terminate)
 
-* Ubuntu / Debian: `sudo apt-get remove --purge coscale-agent`
-* CentOS: `sudo rpm -e coscale-agent-1.0-1.x86_64`
-
-### Windows
-
-* All: Go to `Control Panel`, `Programs` > `Uninstall a program`, right-click 'CoScale Agent' and select `Uninstall`.
-
-<!-- TODO: Add uninstall -->
+### [Windows]({{ site.baseurl}}/installation/agent/windows/agent-terminate)
