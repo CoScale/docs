@@ -33,4 +33,6 @@ title: Agent commands
 
 ### Windows
 
+* All: Go to `Control Panel`, `Programs` > `Uninstall a program`, right-click 'CoScale Agent' and select `Uninstall`.
+
 <!-- TODO: Add uninstall -->
