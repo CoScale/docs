@@ -44,11 +44,11 @@ Press ‘Download agent’, download the agent binary to your computer and then 
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_searching.png" alt="CoScale agent detection searching widget" /></p>
 
-To install the agent, do the following:
+To install the agent, choose your operation system and follow the instructions on the page:
 
-* Debian, Ubuntu: `sudo dpkg -i coscale-agent.deb`
-* RedHat, CentOS: `sudo rpm -iUvh coscale-agent.rpm`
-* Windows: double click the installer and follow the instructions
+* [Linux / Unix]({{ site.baseurl }}/installation/agent/linux/agent-install)
+* [Microsoft Windows]({{ site.baseurl }}/installation/agent/windows/agent-install)
+
 
 Wait until the agent is detected. When at least one agent is detected, you can continue the installation by pressing the button.
 

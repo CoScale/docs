@@ -13,3 +13,7 @@ Specific configuration and agent management for Microsoft Windows.
 
 ### [Linux / Unix]({{ site.baseurl }}/installation/agent/linux/index)
 Specific configuration and agent management for Unix based operation systems.
+
+## Advanced
+
+### [Environment flags]({{ site.baseurl}}/installation/agent/advanced)
