@@ -3,8 +3,8 @@ layout: page
 title: Automation
 ---
 
-## [Chef]({{ site.baseurl }}/usage/events/automation/chef)
+## [Chef]({{ site.baseurl }}/installation/events/automation/chef)
 
-## [Puppet]({{ site.baseurl }}/usage/events/automation/puppet)
+## [Puppet]({{ site.baseurl }}/installation/events/automation/puppet)
 
-## [Salt]({{ site.baseurl }}/usage/events/automation/salt)
+## [Salt]({{ site.baseurl }}/installation/events/automation/salt)

@@ -17,7 +17,7 @@ It provides easy to use methods for:
 
 
 ### Linux / Mac OS X
-![CoScale CLI installation]({{ site.baseurl }}/gfx/usage/cli/install.gif)
+![CoScale CLI installation]({{ site.baseurl }}/gfx/installation/cli/install.gif)
 
 1. `$ git clone https://github.com/CoScale/coscale-tools.git`
 1. [(Install Go Programming Language)](https://golang.org/doc/install)

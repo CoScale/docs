@@ -27,8 +27,8 @@ CS_MYSQL_TABLE=product
 ### 2. Configure agent
 In the plugin configuration you set the configuration settings to the variable names you created. In this example I'm configuring the MySQL database plugin with custom variables.
 
-![Environment values setup in MySQL plugin]({{ site.baseurl }}/gfx/usage/agent/environment-variables/env_var_mysql_setup.png)
+![Environment values setup in MySQL plugin]({{ site.baseurl }}/gfx/installation/agent/environment-variables/env_var_mysql_setup.png)
 
 ### 3. Restart the Agent
 
-[Restart the agent]({{ site.baseurl }}/usage/agent/commands#restart), afterwards the config will be read from file.
+[Restart the agent]({{ site.baseurl }}/installation/agent/commands#restart), afterwards the config will be read from file.
