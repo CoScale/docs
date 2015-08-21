@@ -5,6 +5,7 @@ title: Linux
 
 ## Agent
 
+* [Installing the Agent]({{ site.baseurl }}/installation/agent/linux/agent-install)
 * [Restarting the Agent]({{ site.baseurl }}/installation/agent/linux/agent-restart)
 * [Killing the Agent]({{ site.baseurl }}/installation/agent/linux/agent-terminate)
 * [Export logs]({{ site.baseurl }}/installation/agent/linux/export-logs)
