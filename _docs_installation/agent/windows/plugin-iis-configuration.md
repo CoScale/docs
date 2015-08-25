@@ -10,7 +10,7 @@ title: Configure IIS - Internet Information Services
 3. Double click the Logging icon.
 ![Logging icon location]({{ site.baseurl}}/gfx/installation/agent/windows/plugin-iis-configuration/select_logging.png)
 
-4. Select the W3C Format and click Select Fields…
+4. Select the W3C Format and click Select Fields
 
     ![W3C format selection]({{ site.baseurl}}/gfx/installation/agent/windows/plugin-iis-configuration/w3c_format.png)
 
