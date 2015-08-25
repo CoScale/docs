@@ -14,3 +14,5 @@ Documentation related to Command line interface provided by CoScale.
 
 ## [Events]({{ site.baseurl }}/installation/events/index)
 Documentation related to sending events to the CoScale platform.
+
+## [Other]({{ site.baseurl}}/installation/other/index)
