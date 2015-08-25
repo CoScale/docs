@@ -64,7 +64,7 @@ cp bin/coscale-cli /opt/coscale/cli
 echo "export PATH=\"${PATH}:/opt/coscale/cli\"" >> /root/.bashrc
 {% endhighlight %}
 
-## Optionally: Configure CLI
+## Configure CLI
 This will remove the need to pass along the app_id and accesstoken args everytime you can the `coscale-cli` command.
 
 {% highlight bash %}
