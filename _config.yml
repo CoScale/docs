@@ -22,6 +22,8 @@ sass:
 # Exclude config files
 exclude:
     - bower.json
+    - vendor
+    - Gemfile
 
 # Collections
 collections:
