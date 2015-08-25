@@ -12,17 +12,7 @@ It provides easy to use methods for:
 * Register events and event categories.
 * List, acknowledge and resolve your alerts.
 
-## Compilation
-<a href="https://github.com/CoScale/coscale-cli" target="_blank" class="btn btn-large btn-info"><i class="fa fa-3x fa-fw fa-github-square"></i> Github repository</a>
-
-
-### Linux / Mac OS X
-![CoScale CLI installation]({{ site.baseurl }}/gfx/installation/cli/install.gif)
-
-1. `$ git clone https://github.com/CoScale/coscale-tools.git`
-1. [(Install Go Programming Language)](https://golang.org/doc/install)
-1. `$ cd coscale-tools/cli`
-1. `sh build.sh`
+## [Installation and Configuration]({{ site.baseurl }}/installation/cli/installation/)
 
 ## Usage
     cli-cmd a tool for CoScale Api.
