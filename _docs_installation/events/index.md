@@ -8,7 +8,7 @@ Push events from command line with our easy to use [CLI]({{ site.baseurl }}/inst
 
 ## [Automation]({{ site.baseurl }}/installation/events/automation/index)
 
-Integrations with Salt, Puppet, and other automation tools.
+Integrations with [Salt]({{ site.baseurl }}/installation/events/automation/salt), [Puppet]({{ site.baseurl }}/installation/events/automation/puppet), and many other automation tools.
 
 ## [Wrappers]({{ site.baseurl}}/installation/events/wrappers/index)
 
