@@ -11,9 +11,11 @@ To install the CoScale command line interface we provide two different methods. 
 
 * CoScale APP_ID and accessToken
 
-## Download binary
+## 1. Install
 
-### Linux
+### Download binary
+
+#### Linux
 
 Follow this guide to install the CoScale CLI on Linux. It should work on most operating systems, if you experience any problems contact our support and they will assist you further.
 
@@ -29,15 +31,17 @@ chmod +x coscale-cli
 
 # Add dir to $PATH
 echo "export PATH=\"${PATH}:/opt/coscale/cli\"" >> /root/.bashrc
+source /root/.bashrc
+
 {% endhighlight %}
 
-### Windows / Mac OS X
+#### Windows / Mac OS X
 
 These are currently not supported, please contact our support for more information.
 
-## Compile yourself
+### Compile yourself
 
-### Linux / Mac OS X
+#### Linux / Mac OS X
 
 Follow this guide to compile the CoScale cli on your system.
 
@@ -64,10 +68,10 @@ cp bin/coscale-cli /opt/coscale/cli
 echo "export PATH=\"${PATH}:/opt/coscale/cli\"" >> /root/.bashrc
 {% endhighlight %}
 
-## Configure CLI
+## 2. Configure CLI
 This will remove the need to pass along the app_id and accesstoken args everytime you can the `coscale-cli` command.
 
 {% highlight bash %}
 # Create config file, don't forget to replace [appId] and [accessToken] with your own
-echo "{\"baseurl\":\"https://api.coscale.com\", \"appid\":\"[appId]\", \"accesstoken\":\"[accessToken]\"}" | gzip -c > api.conf
+echo "{\"baseurl\":\"https://api.coscale.com\", \"appid\":\"[appId]\", \"accesstoken\":\"[accessToken]\"}" | gzip -c > /opt/coscale/cli/api.conf
 {% endhighlight %}

@@ -40,6 +40,19 @@
     });
     </script> -->
 
+    <script type="text/javascript">
+        $(function (){
+            // Script to replace github repo url's with a link to latest release
+            // Usage:  <a target="_blank" href="https://github.com/CoScale/coscale-commandwrapper-script" class="js-github-release">
+            $('.js-github-release').each(function( key, element ) {
+                id = element.href.split("/").slice(3, 5).join('/');
+                $.getJSON("https://api.github.com/repos/" + id + "/releases/latest").done(function (json) {
+                    element.href = json.html_url;
+                });
+            });
+        });
+    </script>
+
     <!-- <script type="text/javascript">
         window.intercomSettings = {
             app_id: "oyaxaugr",
