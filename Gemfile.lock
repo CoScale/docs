@@ -143,5 +143,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  celluloid (~> 0.16.0)
   github-pages
   html-proofer
