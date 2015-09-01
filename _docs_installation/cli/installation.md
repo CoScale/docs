@@ -75,3 +75,7 @@ This will remove the need to pass along the app_id and accesstoken args everytim
 # Create config file, don't forget to replace [appId] and [accessToken] with your own
 echo "{\"baseurl\":\"https://api.coscale.com\", \"appid\":\"[appId]\", \"accesstoken\":\"[accessToken]\"}" | gzip -c > /opt/coscale/cli/api.conf
 {% endhighlight %}
+
+## 3. Test if everything works
+
+Run `coscale-cli event list`, it should return a json array. If it returns the CLI help, contact support.
