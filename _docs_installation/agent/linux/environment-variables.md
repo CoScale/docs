@@ -20,7 +20,7 @@ CS_MYSQL_HOST=localhost
 CS_MYSQL_PORT=3306
 CS_MYSQL_USER=user
 CS_MYSQL_PASSWORD=password
-CS_MYSQL_TABLE=product
+CS_MYSQL_DATABASE=product
 
    {% endhighlight %}
 
