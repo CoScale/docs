@@ -54,4 +54,4 @@ Adding a CoScale event category with custom attributes exitCode and executionTim
 
 Adding a CoScale event to "Example category" with name 'Event example', exitCode '0' and an executionTime of 10 seconds.
 
-`./coscale-cli event data --name "Example category" --message "Event example" --subject "a" --attribute "{\"exitCode\":0, \"executionTime\":10}"``
+`./coscale-cli event data --name "Example category" --message "Event example" --subject "a" --attribute "{\"exitCode\":0, \"executionTime\":10}"`
