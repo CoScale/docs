@@ -59,7 +59,7 @@ It provides easy to use methods for:
 
 Adding a CoScale event category with custom attributes exitCode and executionTime (in seconds).
 
-`./coscale-cli event new --name "Example category" --attributeDescriptions "[{\"name\":\"exitCode\", \"type\":\"integer\"}, {\"name\":\"executionTime\", \"type\":\"integer\", \"unit\":\"s\"}]" --source "CLI"`
+`./coscale-cli event new --name "Example category" --attributeDescriptions "[{\"name\":\"exitCode\", \"type\":\"integer\"}, {\"name\":\"executionTime\", \"type\":\"integer\", \"unit\":\"s\"}]"`
 
 Adding a CoScale event to "Example category" with name 'Event example', exitCode '0' and an executionTime of 10 seconds.
 
