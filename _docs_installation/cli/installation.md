@@ -22,7 +22,7 @@ Follow this guide to install the CoScale CLI on Linux. It should work on most op
 
 {% highlight bash %}
 # Create CoScale CLI dir
-mkdir /opt/coscale/cli
+mkdir -p /opt/coscale/cli
 
 # Download CLI into dir
 cd /opt/coscale/cli
@@ -59,7 +59,7 @@ cd coscale-cli
 sh build.sh
 
 # Create CoScale CLI dir
-mkdir /opt/coscale/cli
+mkdir -p /opt/coscale/cli
 
 # Copy CLI into dir
 cp bin/coscale-cli /opt/coscale/cli
