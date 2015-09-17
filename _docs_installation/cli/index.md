@@ -15,28 +15,37 @@ It provides easy to use methods for:
 ## [Installation and Configuration]({{ site.baseurl }}/installation/cli/installation/)
 
 ## Usage
-    cli-cmd a tool for CoScale Api.
+    coscale-cli a tool for CoScale Api.
 
     Usage:
-    alert <action> [--<field>='<data>']
+    ./coscale-cli <object> <action> [--<field>='<data>']
 
-    Actions for command "alert":
+    Actions for command "./coscale-cli":
 
-    list
-            alert list [--filter]
-    acknowledge
-            alert acknowledge (--id | --name)
-    resolve
-            alert resolve (--id | --name)
+    event
+            event <action> [--<field>='<data>']
+    server
+            server <action> [--<field>='<data>']
+    servergroup
+            servergroup <action> [--<field>='<data>']
+    metric
+            metric <action> [--<field>='<data>']
+    metricgroup
+            metricgroup <action> [--<field>='<data>']
+    data
+            data <action> [--<field>='<data>']
+    alert
+            alert <action> [--<field>='<data>']
+    check-config
+            check-config is used to check to api configuration file
 
 
     The json objects are returned formatted by default, but can be returned on 1 line by using:
     --rawOutput
 
-    The CoScale api configuration (authentication) by default will be taken from api.conf file,
-    placed in the same folder with the cli-cmd. api.conf file it is the same configuration file
-    used by the CoScale agent. If the api.conf file doesn't exists, the informations also can be
-    provided on the command line using:
+    By default the CoScale api credentials (authentication) will be taken from api.conf
+    located in the same directory as the coscale-cli binary. If the file does not exist,
+    the credentials can also be provided on the command line using:
     --api-url
         Base url for the api (optional, default = "https://api.coscale.com/").
     --app-id
@@ -44,7 +53,7 @@ It provides easy to use methods for:
     --access-token
         A valid access token for the given application.
 
-    Use "cli-cmd [object] <help>" for more information about a command.
+    Use "coscale-cli [object] <help>" for more information about a command.
 
 ## Examples
 
