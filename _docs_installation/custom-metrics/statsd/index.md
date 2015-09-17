@@ -18,7 +18,7 @@ Make sure you replace `[[app_id]]` and `[[accessToken]]` with your own credentia
 {% highlight javascript %}
 {
     port: 8126,
-    backends: ['CoScale'],
+    backends: ['coscale-statsd-plugin'],
     flushInterval: 10000,
 
     coscaleApiHost: 'https://api.coscale.com',
