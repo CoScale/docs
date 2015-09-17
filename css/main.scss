@@ -33,10 +33,11 @@ h2, h3, h4 {
         position: relative;
         display: inline-block;
         &:before {
-            content: "\2924";
+            content: "\1F517";
             position: absolute;
-            right: -30px;
+            right: -25px;
             top: -5px;
+            font-size: 16px;
         }
     }
 }
