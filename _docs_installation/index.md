@@ -14,7 +14,7 @@ The CoScale Real User Monitoring service or RUM is a Javascript snippet that pro
 ### [Events]({{ site.baseurl }}/installation/events/index)
 Events add context to your metrics and give insight into what is happening on your stack, saving you time researching problems and showing you the impact of your actions.
 
-### [Custom metrics]({{ site.baseurl }}/installation/custom/index)
+### [Custom metrics]({{ site.baseurl }}/installation/custom-metrics/index)
 CoScale custom metrics allow you to push your own data to our platform. Every application has specific parameters and events that give insight into the performance and workload. With our custom metrics system you can push those and compare them to all other metrics gathered by our platform.
 
 ## Tools
