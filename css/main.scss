@@ -176,6 +176,19 @@ body {
 
     table {
         @extend .table;
+
+        .current {
+            border: 2px solid #000;
+            border-width: 2px 0px;
+            font-weight: bold;
+        }
+
+        &.table-browsers {
+            tr td {
+                width: 10%;
+                text-align: center;
+            }
+        }
     }
 
     &.swagger-section {

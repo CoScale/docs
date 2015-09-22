@@ -50,8 +50,8 @@ argument | explanation
 
 ## Examples
 
-### Clean cache directory
-`/root/coscale-commandwrapper-script/cron.sh --category "System cron" --name "Cache clean-up" --live -- rm -rf /var/cache/website/*`
-
 ### Ping a production server 5 times
-`/root/coscale-commandwrapper-script/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -n 5 google.com`
+`./cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com`
+
+### Clean cache directory
+`./cron.sh --category "System cron" --name "Cache clean-up" --live -- rm -rf /tmp/cache/website/*`
