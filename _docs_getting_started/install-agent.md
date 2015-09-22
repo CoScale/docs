@@ -4,7 +4,7 @@ title: Installing the agent
 ---
 
 ## Precautions
-Before we get started it is important to note that the following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href="#" class="support">contact our support</a> so they can provide alternatives and press the button to the right to skip this step for now.
+Before we get started it is important to note that the following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href="mailto:info@coscale.com" class="support">contact our support</a> so they can provide alternatives and press the button to the right to skip this step for now.
 
 <a href="{{ site.baseurl }}/getting-started/install-third-party" class="btn btn-warning btn-lg pull-right">Skip this step</a>
 <br />
@@ -12,7 +12,7 @@ Before we get started it is important to note that the following steps require r
 ## Creating the agent
 The CoScale agent is the primary tool used to capture resource and application metrics from your servers. It is easy to configure and deploy. To start with the configuration go to your dashboard and use to sidebar navigation to go to `DataSources` and then `Manage` On this page, you will be configuring the agent(s) you want to install on your servers.
 
-{% include alert.html type="warning" text="We only support 64 bit operating systems, <a href=\"#\" class=\"support\">contact support</a> for more information" %}
+{% include alert.html type="warning" text="We only support 64 bit operating systems, <a href=\"mailto:info@coscale.com\" class=\"support\">contact support</a> for more information" %}
 
 
 To get started:

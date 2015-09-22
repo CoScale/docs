@@ -20,4 +20,4 @@ This document describes how the agent log file can be exported for debugging pur
 5. Click 'Save All Events in CoScale'
 ![Save all events]({{ site.baseurl}}/gfx/installation/agent/windows/export-logs/goto_custom.png)
 
-6. Save them in a .txt file and send them to your CoScale support agent
+6. Save them in a .txt file and send them to your CoScale <a href="mailto:info@coscale.com" class="support">support agent</a>.
