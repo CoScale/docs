@@ -21,25 +21,15 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "font-awesome/scss/font-awesome.scss";
 
+body {
+    background-color: #EEE;
+}
+
 /*
 * Custom class for more spacing between elements
 */
 .spacing-top {
     margin-top: 20px;
-}
-
-h2, h3, h4 {
-    a {
-        position: relative;
-        display: inline-block;
-        &:before {
-            content: "\1F517";
-            position: absolute;
-            right: -25px;
-            top: -5px;
-            font-size: 16px;
-        }
-    }
 }
 
 /*
@@ -136,9 +126,36 @@ h2, h3, h4 {
     }
 }
 
+.breadcrumb {
+    max-width: 1024px;
+    margin-bottom: 0px;
+    padding: 15px 15px;
+
+    li {
+        a {
+            color: #888;
+        }
+    }
+}
+
 .main {
     padding: 20px 40px;
     max-width: 1024px;
+    background-color: #fff;
+
+    h2, h3, h4 {
+        a {
+            position: relative;
+            display: inline-block;
+            &:before {
+                content: "\1F517";
+                position: absolute;
+                right: -25px;
+                top: -5px;
+                font-size: 16px;
+            }
+        }
+    }
 
     .page-header {
         margin-top: 0;
@@ -149,7 +166,8 @@ h2, h3, h4 {
     }
 
     p {
-        padding: 10px 0;
+        padding: 10px 2px;
+        line-height: 2em;
     }
 
     .fa-lg {
