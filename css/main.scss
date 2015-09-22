@@ -12,6 +12,7 @@ $font-family-sans-serif: 'Open Sans', Arial, Geneva, sans-serif;
 $border-radius-base: 0px;
 $border-radius-large: 0px;
 $border-radius-small: 0px;
+$grid-gutter-width: 0px;
 
 /*
 * Bootstrap specific
@@ -20,10 +21,6 @@ $icon-font-path: "{{ site.baseurl }}/bower_components/bootstrap-sass/assets/font
 $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "font-awesome/scss/font-awesome.scss";
-
-body {
-    background-color: #EEE;
-}
 
 /*
 * Custom class for more spacing between elements
@@ -37,12 +34,11 @@ body {
 */
 .sidebar {
     display: none;
-    max-width: 310px;
+    //max-width: 310px;
 
     #logo {
-        margin-top: 20px;
-        margin-bottom: 40px;
-        margin: 20px auto 40px auto;
+        margin: 20px auto 30px auto;
+        height: 140px;
     }
 
     /* Sidebar navigation */
@@ -127,7 +123,6 @@ body {
 }
 
 .breadcrumb {
-    max-width: 1024px;
     margin-bottom: 0px;
     padding: 15px 15px;
 
@@ -140,8 +135,7 @@ body {
 
 .main {
     padding: 20px 40px;
-    max-width: 1024px;
-    background-color: #fff;
+    max-width: 1200px;
 
     h2, h3, h4 {
         a {
