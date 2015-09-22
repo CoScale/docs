@@ -21,7 +21,7 @@
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 {{ content }}
                 <br /><br />
-                {% include alert.html type="warning" text="Our documentation is a work in progress, please contact us if you have feedback or comments." %}
+                {% include alert.html type="warning" text="Our documentation is a work in progress, please <a href=\"#\" class=\"support\">contact us</a> if you have feedback or comments." %}
             </div>
         </div>
     </div>
@@ -50,12 +50,16 @@
                     element.href = json.html_url;
                 });
             });
+
+            $('.support').click(function(){
+                Intercom('show');
+            });
         });
     </script>
 
     <script type="text/javascript">
         window.intercomSettings = {
-            app_id: "oyaxaugr",
+            app_id: "oyaxaugr"
         };
         (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;
         s.src='https://widget.intercom.io/widget/oyaxaugr';

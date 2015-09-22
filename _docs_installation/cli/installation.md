@@ -78,4 +78,4 @@ echo "{\"baseurl\":\"https://api.coscale.com\", \"appid\":\"[appId]\", \"accesst
 
 ## 3. Test if everything works
 
-Run `coscale-cli event list`, it should return a json array. If it returns the CLI help, contact support.
+Run `coscale-cli event list`, it should return a json array. If it returns the CLI help, <a href="#" class="support">contact support</a>.
