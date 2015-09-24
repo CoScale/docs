@@ -3,9 +3,12 @@ layout: page
 title: CLI Installation
 ---
 
-To install the CoScale command line interface we provide two different methods. The first method is to [download a binary](#download-binary) provided by CoScale and copy it to the right location. This method is advised as it requires no additional software installed. The other method is to [compile the tool](#compile-yourself) yourself. To complete the installation, you can [create a config file](#configure-cli) that will remove the need to enter app_id and accessToken every time you use the tool.
+To install the CoScale command line interface we provide two different methods. You can:
 
-{% include alert.html type="warning" text="You need root/sudo access." %}
+* [Download the binary](#download-binary) by using our install script. This method is advised as it requires no additional software installed.
+* [Compile from scratch](#compile-yourself) with the <a href="https://golang.org/" target="_BLANK">golang</a> compiler.
+
+{% include alert.html type="warning" text="You need root/sudo access to install the CoScale CLI." %}
 
 ## Prerequisite
 
@@ -17,23 +20,14 @@ To install the CoScale command line interface we provide two different methods. 
 
 #### Linux
 
-Follow this guide to install the CoScale CLI on Linux. It should work on most operating systems, if you experience any problems contact our support and they will assist you further.
+Use the following one-liner to install the CoScale CLI on Linux in /opt/coscale/cli.
 
+`bash -c \"eval $(curl -L https://raw.githubusercontent.com/CoScale/coscale-cli/master/install.sh)\"`
 
-{% highlight bash %}
-# Create CoScale CLI dir
-mkdir -p /opt/coscale/cli
+You are now ready to use our CLI tool, try executing the command `coscale-cli`.
 
-# Download CLI into dir
-cd /opt/coscale/cli
-curl -L https://github.com/CoScale/coscale-cli/releases/download/0.1/coscale-cli-linux > coscale-cli
-chmod +x coscale-cli
+<small>The script should work on most UNIX based operating systems, if you experience any problems <a href="mailto:support@coscale.com" class="support">contact our support</a> and they will assist you further.</small>
 
-# Add dir to $PATH
-echo "export PATH=\"${PATH}:/opt/coscale/cli\"" >> /root/.bashrc
-source /root/.bashrc
-
-{% endhighlight %}
 
 #### Windows / Mac OS X
 
@@ -64,8 +58,8 @@ mkdir -p /opt/coscale/cli
 # Copy CLI into dir
 cp bin/coscale-cli /opt/coscale/cli
 
-# Add dir to $PATH
-echo "export PATH=\"${PATH}:/opt/coscale/cli\"" >> /root/.bashrc
+# Create symlink
+ln -v -s /opt/coscale/cli/coscale-cli /usr/bin/coscale-cli
 {% endhighlight %}
 
 ## 2. Configure CLI
