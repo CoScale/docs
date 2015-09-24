@@ -138,6 +138,7 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
     max-width: 1200px;
 
     h2, h3, h4 {
+        margin-bottom: 15px;
         a {
             position: relative;
             display: inline-block;
@@ -160,7 +161,7 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
     }
 
     p {
-        padding: 10px 2px;
+        padding: 0 2px;
         line-height: 2em;
     }
 
