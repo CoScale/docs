@@ -4,7 +4,7 @@ title: Bash script wrapper
 ---
 
 ## Prerequisite
-* [Command line tool]({{ site.baseurl }}/installation/cli/installation)
+* [CoScale CLI installed]({{ site.baseurl }}/installation/cli/installation)
 
 ## Install
 
