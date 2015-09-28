@@ -3,19 +3,22 @@ layout: page
 title: Bash script wrapper
 ---
 
-<a href="https://github.com/CoScale/coscale-commandwrapper-script" target="_blank" class="btn btn-large btn-info"><i class="fa fa-3x fa-fw fa-github-square"></i> Github repository</a>
-
 ## Prerequisite
-* [CoScale Command line tool]({{ site.baseurl }}/installation/cli/installation)
+* [Command line tool]({{ site.baseurl }}/installation/cli/installation)
 
 ## Install
 
-Get the <a target="_blank" href="https://github.com/CoScale/coscale-commandwrapper-script" class="js-github-release">latest release</a> and unzip.
 
-or
+{% highlight bash %}
+# You can always choose another directory, just make sure you enter the correct path in the examples
+cd /opt/coscale/
 
-Git clone repository:
-`git clone https://github.com/CoScale/coscale-commandwrapper-script.git`.
+# Download the latest version from Github
+wget https://raw.githubusercontent.com/CoScale/coscale-commandwrapper-script/master/cron.sh
+
+# Allow users to access the file
+chmod +rwxrwxrwx /opt/coscale/cron.sh
+{% endhighlight %}
 
 ## How to use
 
@@ -23,13 +26,15 @@ In this example we will use a script that pings our server 5 times.
 
 1. Create a script for your job and add the commands you want to run
 
-    `touch /root/cron/test-website.sh`
+    `touch /home/testuser/test-website.sh`
 
-    `echo "ping -n 5 google.com" > /root/cron/test-website.sh`
+    `echo "ping -n 5 google.com" > /home/testuser/test-website.sh`
+
+    `chmod +x /home/testuser/test-website.sh`
 
 2. Add to command to your cron service and put the CoScale cron wrapper in front of it. Don't forget to replace `[[category]]` and `[[name]]` with your own.
 
-    `*/5 * * * * /root/coscale-commandwrapper-script/cron.sh --category "[[category]]" --name "[[name]]" --live -- /root/cron/test-website.sh`
+    `*/5 * * * * sudo -u testuser /opt/coscale/cron.sh --category "[[category]]" --name "[[name]]" --live -- /home/testuser/test-website.sh`
 
 ## Arguments
 
@@ -51,7 +56,7 @@ argument | explanation
 ## Examples
 
 ### Ping a production server 5 times
-`./cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com`
+`sudo -u testuser /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com`
 
 ### Clean cache directory
-`./cron.sh --category "System cron" --name "Cache clean-up" --live -- rm -rf /tmp/cache/website/*`
+`sudo -u testuser /opt/coscale/cron.sh --category "System cron" --name "Cache clean-up" --live -- rm -rf /tmp/cache/website/*`
