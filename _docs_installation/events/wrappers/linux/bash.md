@@ -67,11 +67,11 @@ Your crontab might look something like this:
 # Other examples
 */5 * * * * /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com  
 */5 * * * * /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- /root/test-website-job.sh
-*/5 * * * * /root/test-website.sh >> /root/three.log 2>&1
+*/5 * * * * /root/test-website.sh
 
-*/5 * * * * sudo -u vagrant /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com  
-*/5 * * * * sudo -u vagrant /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- /home/vagrant/test-website-job2.sh
-*/5 * * * * sudo -u vagrant /home/vagrant/test-website2.sh >>
+*/5 * * * * sudo -u testuser /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com  
+*/5 * * * * sudo -u testuser /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- /home/testuser/test-website-job2.sh
+*/5 * * * * sudo -u testuser /home/testuser/test-website2.sh
 
 {% endhighlight %}
 
