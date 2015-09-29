@@ -11,6 +11,11 @@ Basic RUM installation without any special features.
 ### [Google Tag Manager]({{ site.baseurl }}/installation/rum/google-tag-manager)
 Adding RUM component with Google Tag Manager
 
+## Advanced
+
+### [Tags and markers]({{ site.baseurl }}/installation/rum/tags-markers)
+Group pages with tags and measure the performance of certain parts of your javascript application with markers.
+
 ## Information
 
 ### Browser support
