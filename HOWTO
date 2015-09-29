@@ -1,0 +1,8 @@
+sudo apt-get install bundle 
+sudo apt-get install ruby-dev
+sudo gem install bundler
+bundle install
+
+# Run documentation locally
+bundle exec jekyll serve
+
