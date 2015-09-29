@@ -137,6 +137,10 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
     padding: 20px 40px;
     max-width: 1200px;
 
+    h2 {
+        margin-top: 20px;
+    }
+
     h2, h3, h4 {
         margin-bottom: 15px;
         a {
@@ -161,8 +165,16 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
     }
 
     p {
-        padding: 0 2px;
+        padding: 3px 15px;
         line-height: 2em;
+    }
+
+    .table {
+        margin: 5px 15px;
+    }
+
+    .alert {
+        margin: 5px 15px;
     }
 
     .fa-lg {
