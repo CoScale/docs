@@ -5,6 +5,9 @@ title: StatsD
 ## Description
 The CoScale plugin for StatsD will push all metrics available in the StatsD daemon to the CoScale infrastructure every minute.
 
+## Prerequisite
+* [CoScale Agent installed]({{ site.baseurl }}/installation/agent/index)
+
 ## Installation
 <a href="https://github.com/CoScale/coscale-statsd-plugin" target="_blank" class="btn btn-large btn-info"><i class="fa fa-3x fa-fw fa-github-square"></i> Github repository</a>
 
