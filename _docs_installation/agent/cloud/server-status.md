@@ -29,7 +29,7 @@ Open it with your favorite text editor and add the following content.
 #
 # Command to disable the server on the CoScale platform on shutdown
 #
-/opt/coscale/cli/coscale-cli server update --name=$(hostname) --state=DISABLED
+/opt/coscale/cli/coscale-cli server update --name=$(hostname) --state=INACTIVE
 {% endhighlight %}
 
 Make the script executable: `chmod +x /etc/rc0.d/K5coscale`
