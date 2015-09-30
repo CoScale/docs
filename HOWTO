@@ -1,8 +1,12 @@
-# Requirements
+
+## Requirements
 sudo apt-get install ruby-dev node
 sudo gem install bundler
 bundle install
 
-# Run documentation locally
+## Run documentation locally
 bundle exec jekyll serve
+
 # Open http://localhost:4000
+
+## After making your changes merge develop to gh-pages to deploy

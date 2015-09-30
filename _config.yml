@@ -24,6 +24,7 @@ exclude:
     - bower.json
     - vendor
     - Gemfile
+    - auto_merge.sh
 
 # Collections
 collections:
