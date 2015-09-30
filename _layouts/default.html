@@ -32,7 +32,7 @@
                         {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
 
                         {% capture num_parts %}{{ url_parts | number_of_words }}{% endcapture %}
-                        {% if first_word != "index" %}
+                        {% if first_word != "index" and first_word != "index.html" %}
                             {% if num_parts != "1" %}
                                 <li><a href="{{previous}}/index">{{ first_word | capitalize | replace:'-', " " }}</a></li>
                             {% else %}
