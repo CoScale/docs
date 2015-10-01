@@ -16,11 +16,11 @@ Create a `/etc/default/coscale-agent` and add the following content
 #!/bin/bash
 
 # You can choose your own variable names and content, you can add as many as you like
-CS_MYSQL_HOST=localhost
-CS_MYSQL_PORT=3306
-CS_MYSQL_USER=user
-CS_MYSQL_PASSWORD=password
-CS_MYSQL_DATABASE=product
+export CS_MYSQL_HOST=localhost
+export CS_MYSQL_PORT=3306
+export CS_MYSQL_USER=user
+export CS_MYSQL_PASSWORD=password
+export CS_MYSQL_DATABASE=product
 
    {% endhighlight %}
 
