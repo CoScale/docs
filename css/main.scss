@@ -46,7 +46,8 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         margin-right: -21px; /* 20px padding + 1px border */
         margin-bottom: 20px;
         margin-left: -20px;
-
+        color: #fff;
+        
         // Accordion
         & li ul {
             display: none;
