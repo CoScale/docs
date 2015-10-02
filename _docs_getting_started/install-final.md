@@ -6,10 +6,8 @@ title: Pushing custom metrics
 ## [Events / Job monitoring]({{ site.baseurl }}/installation/events/index)
 Annotate your metrics to get a more complete view of your application. Push marketing campaigns, software deploys, infrastructure upgrades, .. and get more insight in the effects of actions.
 
-## Custom metrics
-Monitor application specific metrics that matter to your stack. We provide both API integration as script polling so you can easily integratie your own custom metrics.
-{% include alert.html type="info" text="Documentation will be added soon,  <a href=\"mailto:info@coscale.com\" class=\"support\">contact support</a> for more information." %}
-
+## [Custom metrics]({{ site.baseurl }}/installation/custom-metrics/index/)
+Monitor application specific metrics that matter to your stack. We provide [API integration]({{ site.baseurl }}/installation/cli/index/), [script polling]({{ site.baseurl }}/installation/custom-metrics/generic-script/index/) and [StatsD]({{ site.baseurl }}/installation/custom-metrics/statsd/index/) so you can easily add your own custom metrics to the CoScale platform.
 
 ## That's it!
 Your application is now fully integrated with the CoScale platform. The CoScale team thanks you for your trust and we hope you have a good experience using our platform. If you have questions, remarks or problems, please don't hesitate to <a href="mailto:info@coscale.com" class="support">contact our support</a> and they will gladly help you.

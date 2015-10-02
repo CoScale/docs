@@ -4,13 +4,13 @@ title: Installing the agent
 ---
 
 ## Precautions
-Before we get started it is important to note that the following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href="mailto:info@coscale.com" class="support">contact our support</a> so they can provide alternatives and press the button to the right to skip this step for now.
+Before we get started with installing the agent it is important to note that the following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href="mailto:info@coscale.com" class="support">contact our support</a> so they can provide alternatives and press the button to the right to skip this step for now.
 
 <a href="{{ site.baseurl }}/getting-started/install-third-party" class="btn btn-warning btn-lg pull-right">Skip this step</a>
 <br />
 
 ## Creating the agent
-The CoScale agent is the primary tool used to capture resource and application metrics from your servers. It is easy to configure and deploy. To start with the configuration go to your dashboard and use to sidebar navigation to go to `DataSources` and then `Manage` On this page, you will be configuring the agent(s) you want to install on your servers.
+The CoScale agent is the primary tool used to capture resource and application metrics from your servers. It is easy to configure and deployed in minutes. To start with the configuration go to your dashboard and use to sidebar navigation to go to `DataSources` and then `Manage`. On this page, you will be configuring the agent(s) you want to install on your servers.
 
 {% include alert.html type="warning" text="We only support 64 bit operating systems, <a href=\"mailto:info@coscale.com\" class=\"support\">contact support</a> for more information" %}
 
@@ -26,15 +26,10 @@ To get started:
 <p class="text-center"><img class="img-responsive" src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_configuration.png" alt="CoScale agent configuration page" /></p>
 
 For some plugins, some configuration is necessary. Read the instructions carefully.
-If necessary, apply the proposed changes to the server as shown in the instructions.
-If necessary, fill in the required fields. Press the save button when finished.
+If necessary, apply the proposed changes to the server as shown in the instructions and fill in the required fields. Press the save button when finished.
 
 <p class="text-center"><img class="img-responsive" src="{{ site.baseurl }}/gfx/getting-started/install-agent/plugin_configuration.png" alt="CoScale agent plugin configuration page" /></p>
-Give your agent a reasonable name: i.e. ‘Webserver’. Press ‘Save agent’
-
-You have now created an agent configuration which you can deploy on as many servers as you'd like.
-
-<!-- TODO: Add bash options and more advanced stuff -->
+Give your agent a reasonable name: i.e. ‘Webserver’. Then press the ‘Save agent’ button, a download link will appear with the installation files for your operating system. You have now created an agent configuration which you can deploy on as many servers as you'd like.
 
 ## Installing the agent
 
@@ -55,7 +50,7 @@ To install the agent, choose your operation system and follow the instructions o
 
 Wait until the agent is detected. When at least one agent is detected, you can continue the installation by pressing the button.
 
-{% capture text %}Our agent requires port 443 to be open to outbound traffic. <!-- TODO: Checkout our <a href="{{ site.baseurl }}/advanced/security">security page</a> for more information. -->{% endcapture %}
+{% capture text %}Our agent requires port 443 to be open to outbound traffic. Checkout our <a href="{{ site.baseurl }}/advanced/technical-info/">security page</a> for more information. {% endcapture %}
 {% include alert.html type="info" text=text %}
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_install.png" alt="CoScale agent detection install widget" /></p>
