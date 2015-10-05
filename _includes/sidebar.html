@@ -1,7 +1,3 @@
-<p class="text-center">
-    <a href="{{ site.baseurl }}/"><img id="logo" src="{{ site.baseurl }}/gfx/logo.png" alt="CoScale logo" class="img-responsive" /></a>
-</p>
-
 {% assign current = page.url | downcase | split: '/' %}
 
 <ul class="nav nav-sidebar">
@@ -80,8 +76,10 @@
     <li><a href="{{ site.baseurl }}/api/"><i class="fa fa-fw fa-book"></i> API Docs</a></li>
 </ul>
 
+<ul class="nav nav-sidebar">
+    <li><a href="mailto:info@coscale.com" class="support"><i class="fa fa-fw fa-question-circle"></i> Contact support</a></li>
+</ul>
 
-<a href="mailto:info@coscale.com" class="btn btn-info btn-block text-center support">Contact support</a>
 
 
 <div class="footer spacing-top">

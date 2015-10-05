@@ -14,6 +14,9 @@ $border-radius-large: 0px;
 $border-radius-small: 0px;
 $grid-gutter-width: 0px;
 
+$breadcrumb-separator: " »";
+$breadcrumb-bg: white;
+
 /*
 * Bootstrap specific
 */
@@ -29,25 +32,21 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
     margin-top: 20px;
 }
 
+#logo {
+    padding: 10px 10px 0 10px;
+}
+
 /*
 * Sidebar menu
 */
 .sidebar {
-    display: none;
-    //max-width: 310px;
-
-    #logo {
-        margin: 20px auto 30px auto;
-        height: 140px;
-    }
+    margin-top: 30px;
 
     /* Sidebar navigation */
     .nav-sidebar {
-        margin-right: -21px; /* 20px padding + 1px border */
         margin-bottom: 20px;
-        margin-left: -20px;
-        color: #fff;
-        
+        color: #333;
+
         // Accordion
         & li ul {
             display: none;
@@ -55,6 +54,9 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 
             li {
                 padding: 5px 0px 5px 8px;
+                a {
+                    color: #333;
+                }
 
                 ul {
                     margin-left: -30px;
@@ -69,7 +71,7 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         & > li > a {
             padding-right: 20px;
             padding-left: 20px;
-            color: #EEE;
+            color: #333;
 
             &:hover {
                 color: #000;
@@ -83,8 +85,9 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         & > .active > a,
         & > .active > a:hover,
         & > .active > a:focus {
-            color: #fff;
-            background-color: #f5a153;
+            color: #f5a153;
+            //color: #fff;
+            //background-color: #f5a153;
         }
     }
 
@@ -94,21 +97,6 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         color: #EEE;
     }
 }
-@media (min-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 0px;
-        bottom: 0;
-        left: 0;
-        z-index: 1000;
-        display: block;
-        padding: 20px;
-        overflow-x: hidden;
-        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-        background-color: black;
-        border-right: 1px solid #eee;
-    }
-}
 
 
 
@@ -116,16 +104,12 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 /*
 * Main content
 */
-@media (min-width: 768px) {
-    .main {
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-}
-
 .breadcrumb {
     margin-bottom: 0px;
-    padding: 15px 15px;
+    //padding: 15px 15px;
+    margin-top: 30px;
+
+    text-align: right;
 
     li {
         a {
@@ -135,8 +119,8 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 }
 
 .main {
-    padding: 20px 40px;
-    max-width: 1200px;
+    padding-left: 30px;
+    margin-top: 50px;
 
     h2 {
         margin-top: 20px;
@@ -147,13 +131,8 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         a {
             position: relative;
             display: inline-block;
-            &:before {
-                content: "\1F517";
-                position: absolute;
-                right: -25px;
-                top: -5px;
-                font-size: 16px;
-            }
+            padding-right: 20px;
+            background: transparent url(/gfx/link.png) no-repeat top right;
         }
     }
 
