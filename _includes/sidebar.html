@@ -13,8 +13,8 @@
 </ul> -->
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'getting-started' %}class='active'{% endif %}><a href="{{ site.baseurl }}/getting-started/index/">
-        <i class="fa fa-fw fa-play"></i> Getting started</a>
+    <li {% if current[1] == 'getting-started' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/getting-started/index/"><i class="fa fa-fw fa-play"></i> Getting started</a>
         <ul>
             <li>
                 <a href="{{ site.baseurl }}/getting-started/index/">Quick start</a>
@@ -31,32 +31,21 @@
             <li><a href="{{ site.baseurl }}/getting-started/third-party">Supported third-parties</a></li>
         </ul>
     </li>
-    <!-- <li {% if current[1] == 'installation' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/">
-        <i class="fa fa-fw fa-download"></i> Installation</a>
+</ul>
+<ul class="nav nav-sidebar">
+    <li {% if current[1] == 'installation' and current[2] == 'agent' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'rum' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'events' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/events/index"><i class="fa fa-fw fa-flag"></i> Events</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'custom-metrics' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'tools' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/installation/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
         <ul>
-            <li><a href="{{ site.baseurl }}/installation/agent.html">Infrastructure agent</a></li>
-            <li><a href="{{ site.baseurl }}/installation/real-user-monitoring.html">Real user monitoring</a></li>
-            <li><a href="{{ site.baseurl }}/installation/third-party.html">Third party services</a></li>
-            <li><a href="{{ site.baseurl }}/installation/custom-metrics.html">Custom metrics</a></li>
-        </ul>
-    </li> -->
-    <li {% if current[1] == 'installation' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/index">
-        <i class="fa fa-fw fa-download"></i> Installation</a>
-        <ul>
-            <li><a href="{{ site.baseurl }}/installation/agent/index">Agent</a></li>
-            <li><a href="{{ site.baseurl }}/installation/rum/index">Real user monitoring</a></li>
-            <li><a href="{{ site.baseurl }}/installation/events/index">Events</a></li>
-            <li><a href="{{ site.baseurl }}/installation/custom-metrics/index">Custom metrics</a></li>
-            <li>
-                Tools
-                <ul>
-                    <li><a href="{{ site.baseurl }}/installation/cli/index">Command line interface</a></li>
-                    <li><a href="{{ site.baseurl }}/installation/other/index">Other</a></li>
-                </ul>
-            </li>
-
+            <li><a href="{{ site.baseurl }}/installation/cli/index">Command line interface</a></li>
+            <li><a href="{{ site.baseurl }}/installation/other/index">Other</a></li>
         </ul>
     </li>
+</ul>
+<ul class="nav nav-sidebar">
     <!--<li {% if current[1] == 'use_cases' %}class='active'{% endif %}><a href="{{ site.baseurl }}/use-cases/">
         <i class="fa fa-fw fa-list"></i> Use cases</a>
         <ul>
@@ -70,7 +59,7 @@
         </ul>
     </li>-->
     <li {% if current[1] == 'advanced' %}class='active'{% endif %}><a href="{{ site.baseurl }}/advanced/index">
-        <i class="fa fa-fw fa-wrench"></i> Advanced</a>
+        <i class="fa fa-fw fa-cogs"></i> Advanced</a>
         <ul>
             <li><a href="{{ site.baseurl }}/advanced/technical-info">Technical information / Security</a></li>
             <li><a href="{{ site.baseurl }}/advanced/firewall-proxy">Firewall / Proxy</a></li>
