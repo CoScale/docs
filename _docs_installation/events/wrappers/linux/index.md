@@ -87,7 +87,6 @@ argument | explanation
 `--`                        | Everything after this argument will be read as the command you want to execute. Make sure you escape " and '.
 
 ## Notes
-* Always run the script with `sudo -u testuser [script]` in crontab
 * Make sure to escape ' and " characters as they may cause problems.
 * The command is always executed, even when CoScale services are having difficulties.
 * Exit code from the script is the same as your command
