@@ -13,11 +13,11 @@ Before we get started, let's take a look at our supported [platforms]({{ site.ba
 
 ## Walkthrough steps
 
-* [Creating a CoScale account]({{ site.baseurl }}/getting-started/install-create-account)
-* [Installing the Real user monitoring component]({{ site.baseurl }}/getting-started/install-rum)
-* [Integrating the agents]({{ site.baseurl }}/getting-started/install-agent)
-* [Activating third party plugins]({{ site.baseurl }}/getting-started/install-third-party)
-* [Pushing custom data]({{ site.baseurl }}/getting-started/install-final)
+1. [Creating a CoScale account]({{ site.baseurl }}/getting-started/install-create-account)
+1. [Installing the Real user monitoring component]({{ site.baseurl }}/getting-started/install-rum)
+1. [Integrating the agents]({{ site.baseurl }}/getting-started/install-agent)
+1. [Activating third party plugins]({{ site.baseurl }}/getting-started/install-third-party)
+1. [Pushing custom data]({{ site.baseurl }}/getting-started/install-final)
 
 ## Getting started
 

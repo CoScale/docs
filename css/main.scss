@@ -58,7 +58,7 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
             display: none;
             margin: 5px 0 20px 0;
 
-            li {
+            li, ol {
                 padding: 5px 0px 5px 8px;
                 a {
                     color: #333;
@@ -159,6 +159,10 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
     p {
         padding: 3px 15px;
         line-height: 2em;
+    }
+
+    img {
+        max-width: 100%;
     }
 
     .table {
