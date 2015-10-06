@@ -16,8 +16,8 @@ Specific configuration and agent management for Microsoft Windows.
 
 ## Extra
 
-### [Cloud enviroments]({{ site.baseurl }}/installation/agent/cloud/index)
-Specific configuration and agent management for Cloud based providors like Amazon Web Services and Microsoft Azure.
+### [Cloud environments]({{ site.baseurl }}/installation/agent/cloud/index)
+Specific configuration and agent management for Cloud based providers like Amazon Web Services and Microsoft Azure.
 
 ## Advanced
 

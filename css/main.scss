@@ -183,6 +183,15 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         font-size: 1.2em;
     }
 
+    .list-index {
+        list-style: none;
+        margin-bottom: 0;
+        margin-top: 10px;
+        li {
+            padding: 5px 5px 5px 0;
+        }
+    }
+
     .highlight {
         padding: 10px 0;
 

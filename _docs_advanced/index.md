@@ -3,7 +3,7 @@ layout: page
 title: Advanced
 ---
 
-## [Technical information / Security]({{ site.baseurl }}/advanced/technical-info)
+## [Privacy / Security]({{ site.baseurl }}/advanced/security)
 Information about how are agent works and security measures we take to ensure your data stays safe and available.
 
 ## [Firewall / Proxy]({{ site.baseurl }}/advanced/firewall-proxy)
