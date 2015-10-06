@@ -50,7 +50,7 @@ To install the agent, choose your operation system and follow the instructions o
 
 Wait until the agent is detected. When at least one agent is detected, you can continue the installation by pressing the button.
 
-{% capture text %}Our agent requires port 443 to be open to outbound traffic. Checkout our <a href="{{ site.baseurl }}/advanced/technical-info/">security page</a> for more information. {% endcapture %}
+{% capture text %}Our agent requires port 443 to be open to outbound traffic. Checkout our <a href="{{ site.baseurl }}/advanced/security/">security page</a> for more information. {% endcapture %}
 {% include alert.html type="info" text=text %}
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_install.png" alt="CoScale agent detection install widget" /></p>
