@@ -103,6 +103,13 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
     }
 }
 
+@media(min-width:768px) {
+    .sidebar {
+        position: fixed;
+        top: 105px;
+    }
+}
+
 /*
 * Main content
 */
