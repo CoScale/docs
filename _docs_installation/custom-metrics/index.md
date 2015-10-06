@@ -11,6 +11,7 @@ By running a script or executable every minute the CoScale agent gathers metrics
 ## Pushing metrics with our CLI
 *Not yet available, <a href="mailto:info@coscale.com" class="support">contact our support</a> to get more information.*
 
-## Third party integrations
 
-* [StatsD]({{ site.baseurl }}/installation/custom-metrics/statsd/index)
+## Third party
+
+### [StatsD]({{ site.baseurl }}/installation/custom-metrics/statsd/index)

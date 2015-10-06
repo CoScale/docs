@@ -32,7 +32,13 @@
     <li {% if current[1] == 'installation' and current[2] == 'agent' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a></li>
     <li {% if current[1] == 'installation' and current[2] == 'rum' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a></li>
     <li {% if current[1] == 'installation' and current[2] == 'events' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/events/index"><i class="fa fa-fw fa-flag"></i> Events</a></li>
-    <li {% if current[1] == 'installation' and current[2] == 'custom-metrics' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'custom-metrics' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/installation/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a>
+        <ul>
+            <li><a href="{{ site.baseurl }}/installation/custom-metrics/generic-script/index">Generic script</a></li>
+            <li><a href="{{ site.baseurl }}/installation/custom-metrics/statsd/index">StatsD</a></li>
+        </ul>
+    </li>
     <li {% if current[1] == 'installation' and current[2] == 'tools' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/installation/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
         <ul>
