@@ -195,6 +195,10 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 
         .container {
             width: auto;
+
+            ul, ol {
+                padding: 10px 0px 10px 10px
+            }
         }
 
         h2, h3, h4 {
