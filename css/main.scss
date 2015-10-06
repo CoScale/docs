@@ -7,7 +7,11 @@ layout: null
 /*
 * CoScale font and colors
 */
-$brand-primary: #f5a153;
+$brand-primary: #d47855;
+$brand-success: #9cc064;
+$brand-info:    #6999cc;
+$brand-warning: #f0ad4e;
+$brand-danger:  #d9534f;
 $font-family-sans-serif: 'Open Sans', Arial, Geneva, sans-serif;
 $border-radius-base: 0px;
 $border-radius-large: 0px;
@@ -99,9 +103,6 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         color: #EEE;
     }
 }
-
-
-
 
 /*
 * Main content
