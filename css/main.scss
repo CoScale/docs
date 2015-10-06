@@ -190,8 +190,18 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         }
     }
 
-    &.swagger-section {
+    .swagger-section {
         font-size: 1.2em;
+
+        .container {
+            width: auto;
+        }
+
+        h2, h3, h4 {
+            a {
+                background: none;
+            }
+        }
     }
 
     .list-index {
