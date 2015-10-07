@@ -6,15 +6,15 @@ title: Real user monitoring
 ## Installation
 
 ### [Basic]({{ site.baseurl }}/getting-started/install-rum/)
-Basic RUM installation without any special features.
+A quick how to guide on integrating the RUM component javascript into your application.
 
 ### [Google Tag Manager]({{ site.baseurl }}/installation/rum/google-tag-manager)
-Adding RUM component with Google Tag Manager
+Step by step instructions on how to add the RUM component javascript to <a href="https://www.google.com/tagmanager/" target="_BLANK">Google Tag manager</a>.
 
 ## Advanced
 
 ### [Tags and markers]({{ site.baseurl }}/installation/rum/tags-markers)
-Group pages with tags and measure the performance of certain parts of your javascript application with markers.
+Group pages with [tags]({{ site.baseurl }}/installation/rum/tags-markers/#tags) to get an easy overview and measure the performance of certain parts of your front-end application with [markers]({{ site.baseurl }}//installation/rum/tags-markers/#markers).
 
 ## Information
 
