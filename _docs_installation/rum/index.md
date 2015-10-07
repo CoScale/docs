@@ -20,7 +20,7 @@ Group pages with tags and measure the performance of certain parts of your javas
 
 ### Browser support
 
-Our snippet is fully supported by 81,43% and partially 66,31% supported on all popular browsers. (<a href="http://caniuse.com/" target="_BLANK">source sep 2015</a>)
+Our snippet is fully supported by 66,31% and partially 81,43% supported on all popular browsers. (<a href="http://caniuse.com/" target="_BLANK">source sep 2015</a>)
 
 <table class="table table-hover table-browsers">
     <thead>
