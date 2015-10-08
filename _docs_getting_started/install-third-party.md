@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Third party resources
+description: Instructions on how to activate third party resources and services inside your CoScale dashboard.
 ---
 
 CoScale integrates with third party resources to provide valuable insights into external metrics of your application. We integrate with [many different services]({{ site.baseurl }}/getting-started/third-party), so you can get an overview of your entire application without having to check multiple tools. You can find a list of all our active integrations by selecting `Datasources` > `Third party` in the sidebar.

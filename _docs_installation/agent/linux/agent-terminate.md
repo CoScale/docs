@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Agent terminate
+description: Terminating and uninstalling the CoScale agent on Linux.
 ---
 
 ## Terminate / kill CoScale agent

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Integrate Real User Monitoring (RUM)
+description: Instructions on how to install and configure the CoScale Real User Monitoring component inside your application.
 ---
 
 The CoScale Real User Monitoring service, or RUM for short, is a Javascript snippet that provides insight into the performance on the users computer and devices. It tells you what is happening with your application after the webpage has left your infrastructure. We monitor API calls, static resources like Javascript and CSS, and external services like Google Analytics and Facebook. We measure how long they take to load and the impact on the pageload time of your website.

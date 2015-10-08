@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Third party
+description: List of third party integrations supported by the CoScale platform.
 ---
 
 ## Supported

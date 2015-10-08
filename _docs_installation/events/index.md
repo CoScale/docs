@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Events
+description: Information on the different methods you can use to push events to the CoScale platform.
 ---
 
 Events are used to annotate data inside the CoScale platform, they provide you with an overview of what happened with your application and can speed up debugging. We suggest pushing marketing campaigns, software deploys and infrastructure changes to our platform.

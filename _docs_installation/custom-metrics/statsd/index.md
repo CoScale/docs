@@ -1,6 +1,7 @@
 ---
 layout: page
 title: StatsD
+description: Integration and installation of StatsD to push metrics to the CoScale platform.
 ---
 ## Description
 The CoScale plugin for StatsD will push all metrics available in the StatsD daemon to the CoScale infrastructure every minute.

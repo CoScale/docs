@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Real user monitoring
+description: Overview of information on how to configure, maintain the CoScale real user monitoring component.
 ---
 
 ## Installation

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Google Tag Manager
+description: Information on how to install the CoScale real user monitoring component using Google tag manager.
 ---
 
 This manual will guide you through the process of adding the CoScale Real user monitoring component to Google Tags and publishing the changes to your website.

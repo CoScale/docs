@@ -1,6 +1,7 @@
 ---
 layout: page
 title: RAM Disk
+description: How to set up a RAM Disk on Microsoft Windows for saving log files in memory.
 ---
 
 ## Installing RAM disk

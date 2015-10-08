@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Other
+description: Extra guides to help during installation in other documents.
 ---
 
 ## [API authentication and requirements]({{ site.baseurl}}/installation/other/api-authentication)

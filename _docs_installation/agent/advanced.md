@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Advanced configuration
+description: Advanced configuration of the CoScale agent by using environment variables.
 ---
 
 ## Environment flags

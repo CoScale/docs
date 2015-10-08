@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Google Tag Manager
+description: Information on how to track groups of webpages and the performance of certain parts of your front-end application.
 ---
 
 ## Tags
-By adding the following Javascript to a page with the RUM component installed you can group pages together. You can use this to monitor a certain group of pages to get an overall insight into the performance. 
+By adding the following Javascript to a page with the RUM component installed you can group pages together. You can use this to monitor a certain group of pages to get an overall insight into the performance.
 
 {% highlight javascript %}
 // Add this anywhere on the page, if you have multiple on the same page the last one will be used

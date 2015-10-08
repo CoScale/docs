@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Agent restart
+description: Restarting the CoScale agent on Linux.
 ---
 
 Follow these steps to restart the CoScale agent.

@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Windows
+title: Microsoft Windows
+description: Information for agent maintenance on the Microsoft Windows operating system.
+
 ---
 
 ## Agent

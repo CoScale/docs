@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Firewall / Proxy
+description: Information about CoScale agent firewall settings and proxy configuration.
 ---
 
 ## Firewall

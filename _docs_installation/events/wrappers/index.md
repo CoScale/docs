@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Wrappers
+description: List of wrappers available to monitor crons with CoScale platform.
 ---
 
 ## Description

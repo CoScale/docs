@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Technologies
+description: List of technologies supported by the CoScale platform.
 ---
 
 ## Supported

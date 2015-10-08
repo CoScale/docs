@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CLI Installation
+description: Instructions on how to install the CoScale command line interface.
 ---
 
 To install the CoScale command line interface we provide two different methods. You can:

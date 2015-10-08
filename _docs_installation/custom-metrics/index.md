@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Custom metrics
+description: Information on how to push custom metrics to the CoScale platform.
 ---
 
 Custom metrics allow you to monitor certain aspects of your application that would otherwise stay hidden to you. CoScale provides a couple of ways of integrating these metrics into our platform. CoScale can pull metrics from [scripts or binary executables]({{ site.baseurl }}/installation/custom-metrics/generic-script/index), or you can push metrics to CoScale with the help from our CLI tool. We also provide integration with third party tools, like [StatsD]({{ site.baseurl }}/installation/custom-metrics/statsd/index).

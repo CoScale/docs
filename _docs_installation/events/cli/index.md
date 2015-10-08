@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Pushing events from command line interface
+description: Information on how to push events with the CoScale command line interface tool.
 ---
 
 ## Prerequisites

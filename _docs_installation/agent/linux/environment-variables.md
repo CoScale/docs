@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Environment variables configuration
+description: Configure the CoScale agent and plugins using environment variables.
 ---
 
 Our agent can get its configuration values for plugins from environment values configured on the server. This allows you to use the same agent for a lot of servers without having to generate a new agent for different configuration setups. An example where this might be used is with database plugin where the status user password isn't the same on all machines.

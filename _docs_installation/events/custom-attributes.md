@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Custom Attributes
+description: Information on how to use the custom attributes together with the CoScale events.
 ---
 CoScale allows you to push custom attributes together with your events. When defining an event category you can configure these parameters so that every event added after will be required to set them. These extra parameters are then shown in our event flags and can be used to color the event in our 'Event overview' widget. This gives meaning to your events and allows you to quickly see if one is not performing as expected.
 

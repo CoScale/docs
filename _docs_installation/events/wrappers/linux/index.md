@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Linux script wrapper
+description: Information on how to install the CoScale cron wrapper to monitor the performance of your crons.
 ---
 
 ## Prerequisite

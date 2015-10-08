@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Salt
+description: Information on how to configure Salt to push events to the CoScale platform.
 ---
 ## Description
 The CoScale plugin for Salt will push events to the CoScale infrastructure every time your make a configuration chance.

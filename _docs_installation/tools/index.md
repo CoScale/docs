@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Tools
+description: List of tools available to integrate with and manage the CoScale platform.
 ---
 
 ## [Command line interface]({{ site.baseurl }}/installation/cli/index)

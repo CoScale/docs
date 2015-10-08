@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Generic script
+description: Information on how to use the CoScale generic script plugin.
 ---
 ## Description
 The CoScale agent can poll a script or executable every minute to gather multiple custom metrics.

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Agent
+description: Overview of information on how to configure, install and maintain the CoScale agent.
 ---
 
 ## Installation

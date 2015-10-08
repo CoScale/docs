@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CLI (command line interface)
+description: Information on the CoScale command line interface with instructions for installation.
 ---
 
 The CoScale command line interface is an interface to the CoScale API.

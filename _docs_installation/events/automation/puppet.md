@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Puppet
+description: Information on how to configure Puppet to push events to the CoScale platform.
+
 ---
 
 ## Description

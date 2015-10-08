@@ -1,6 +1,7 @@
 ---
 layout: page
 title: API authentication
+description: Information on where to find your CoScale application id and access token.
 ---
 
 ## Finding your `app_id`

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Getting started
+description: Manual to guide you through installing the CoScale platform into your environment and help setup some important third party resources.
 ---
 
 Integrating CoScale with your application is easy and straightforward process. This manual will guide you through installing the CoScale platform into your environment and help setup some important third party resources. If you have questions or problems, please don't hesitate to <a href="mailto:info@coscale.com" class="support">contact our support</a>, as we will gladly help you.

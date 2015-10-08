@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Export logs
+description: How to export CoScale agent logs for debugging and support on Microsoft Windows.
 ---
 
 This document describes how the agent log file can be exported for debugging purposes.

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Agent restart
+description: Restarting the CoScale agent on Microsoft Windows.
 ---
 
 Follow these steps to restart the CoScale agent.

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Installation
+description: Information on the different parts of the CoScale platform and it's components.
 ---
 
 ## Datasources

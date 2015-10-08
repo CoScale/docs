@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Pushing server status to CoScale on boot and shutdown
+description: Automatically push server status to CoScale platform.
 ---
 
 ## Prerequisite

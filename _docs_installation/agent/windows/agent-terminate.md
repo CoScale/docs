@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Agent terminate
+description: Terminating and uninstalling the CoScale agent on Microsoft Windows.
+
 ---
 
 ## Terminate / kill CoScale agent

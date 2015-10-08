@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Chef
+description: Information on how to configure Chef to push events to the CoScale platform.
 ---
 ## Description
 The CoScale plugin for Chef will push events to the CoScale infrastructure every time your make a configuration chance.

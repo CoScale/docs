@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Creating an account
+description: Step by step guide on how to activate your CoScale account.
 ---
 ## Activating your account
 By now you should have received an invitation e-mail. (<a href="http://www.coscale.com/free-trial" target="_blank">Click here if you haven't.</a>) The e-mail contains a link to activate your account. Press the link or copy paste it into in your preferred browser to get started with the activation. You should see a login page similar to the screenshot below.

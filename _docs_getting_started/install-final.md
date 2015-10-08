@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Pushing custom metrics
+description: Extra information on how to push custom events and metrics to the CoScale platform.
 ---
 
 ## [Pushing events and cron jobs]({{ site.baseurl }}/installation/events/index)

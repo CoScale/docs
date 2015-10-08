@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Technical info / Security
+description: Information about how are agent works and security measures we take to ensure your data stays safe and available.
 ---
 
 This document contains more technical information about how the CoScale agent works, security measures and network requirements.

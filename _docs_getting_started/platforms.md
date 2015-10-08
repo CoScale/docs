@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Platforms
+description: List of operating systems and services supported by the CoScale platform.
 ---
 
 ## Linux

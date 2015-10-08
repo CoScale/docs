@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Linux
+description: Information for agent maintenance on the Linux operating system.
 ---
 
 ## Agent

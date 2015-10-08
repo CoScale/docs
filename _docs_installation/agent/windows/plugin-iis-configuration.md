@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Configure IIS - Internet Information Services
+description: Information on how to configure IIS Internet Information Services on Microsoft Windows.
 ---
 
 1. Open "Internet Information Services (IIS) Manager"
