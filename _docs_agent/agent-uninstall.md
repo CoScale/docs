@@ -1,11 +1,24 @@
 ---
 layout: page
-title: Agent terminate
-description: Terminating and uninstalling the CoScale agent on Microsoft Windows.
-
+title: Uninstalling and stopping the CoScale agent
+description: Terminating and uninstalling the CoScale agent.
 ---
 
-## Terminate / kill CoScale agent
+## Unix
+
+### Terminate / stop
+* Ubuntu / Debian: `sudo service coscale-agent stop`
+* CentOS 6.6: `sudo systemctl stop coscale-agent.service`
+* CentOS 5.3: `sudo initctl stop coscale-agent`
+
+### Uninstall
+
+* Ubuntu / Debian: `sudo apt-get remove --purge coscale-agent`
+* CentOS: `sudo rpm -e coscale-agent-1.0-1.x86_64`
+
+## Windows
+
+### Terminate / stop
 Follow these steps to terminate / kill the CoScale agent.
 
 1. Open Task Manager
@@ -20,6 +33,6 @@ Follow these steps to terminate / kill the CoScale agent.
     * Resource plugin: ResourceMonitoring
 
 
-## Uninstall
+### Uninstall
 
 Go to `Control Panel`, `Programs` > `Uninstall a program`, right-click 'CoScale Agent' and select `Uninstall`.

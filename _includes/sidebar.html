@@ -9,41 +9,21 @@
 </ul> -->
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'getting-started' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/getting-started/index/"><i class="fa fa-fw fa-play"></i> Getting started</a>
-        <ul>
-            <li>
-                <a href="{{ site.baseurl }}/getting-started/index/">Quick start</a>
-                <ol>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-create-account">Creating a CoScale account</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-rum">Installing RUM</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-agent">Integrating the agents</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-third-party">Activating third party plugins</a></li>
-                    <li><a href="{{ site.baseurl }}/getting-started/install-final">Pushing custom data</a></li>
-                </ol>
-            </li>
-            <li><a href="{{ site.baseurl }}/getting-started/platforms">Supported platforms</a></li>
-            <li><a href="{{ site.baseurl }}/getting-started/technologies">Supported technologies</a></li>
-            <li><a href="{{ site.baseurl }}/getting-started/third-party">Supported third-parties</a></li>
-        </ul>
-    </li>
-</ul>
-<ul class="nav nav-sidebar">
-    <li {% if current[1] == 'installation' and current[2] == 'agent' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a></li>
-    <li {% if current[1] == 'installation' and current[2] == 'rum' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a></li>
-    <li {% if current[1] == 'installation' and current[2] == 'events' %}class='active'{% endif %}><a href="{{ site.baseurl }}/installation/events/index"><i class="fa fa-fw fa-flag"></i> Events</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'agent' %}class='active'{% endif %}><a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'rum' %}class='active'{% endif %}><a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a></li>
+    <li {% if current[1] == 'installation' and current[2] == 'events' %}class='active'{% endif %}><a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag"></i> Events</a></li>
     <li {% if current[1] == 'installation' and current[2] == 'custom-metrics' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/installation/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a>
+        <a href="{{ site.baseurl }}/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a>
         <ul>
-            <li><a href="{{ site.baseurl }}/installation/custom-metrics/generic-script/index">Generic script</a></li>
-            <li><a href="{{ site.baseurl }}/installation/custom-metrics/statsd/index">StatsD</a></li>
+            <li><a href="{{ site.baseurl }}/custom-metrics/generic-script/index">Generic script</a></li>
+            <li><a href="{{ site.baseurl }}/custom-metrics/statsd/index">StatsD</a></li>
         </ul>
     </li>
     <li {% if current[1] == 'installation' and current[2] == 'tools' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/installation/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
+        <a href="{{ site.baseurl }}/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
         <ul>
-            <li><a href="{{ site.baseurl }}/installation/cli/index">Command line interface</a></li>
-            <li><a href="{{ site.baseurl }}/installation/other/index">Other</a></li>
+            <li><a href="{{ site.baseurl }}/tools/cli/index">Command line interface</a></li>
+            <li><a href="{{ site.baseurl }}/other/index">Other</a></li>
         </ul>
     </li>
 </ul>

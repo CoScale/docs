@@ -6,15 +6,15 @@ description: Overview of information on how to configure, maintain the CoScale r
 
 ## Installation
 
-### [Basic]({{ site.baseurl }}/getting-started/install-rum/)
-A quick how to guide on integrating the RUM component javascript into your application.
+### [Installing Real User Monitoring in your code]({{ site.baseurl }}/rum/install)
+A quick how to guide on installing and configuring the CoScale Real user monitoring component for monitoring your front-end performance.
 
-### [Google Tag Manager]({{ site.baseurl }}/installation/rum/google-tag-manager)
+### [Integrating Real User Monitoring with Google Tag Manager]({{ site.baseurl }}/rum/google-tag-manager)
 Step by step instructions on how to add the RUM component javascript to <a href="https://www.google.com/tagmanager/" target="_BLANK">Google Tag manager</a>.
 
 ## Advanced
 
-### [Tags and markers]({{ site.baseurl }}/installation/rum/tags-markers)
+### [Tags and markers]({{ site.baseurl }}/rum/tags-markers)
 Group pages with [tags]({{ site.baseurl }}/installation/rum/tags-markers/#tags) to get an easy overview and measure the performance of certain parts of your front-end application with [markers]({{ site.baseurl }}//installation/rum/tags-markers/#markers).
 
 ## Information

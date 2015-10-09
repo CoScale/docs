@@ -15,6 +15,4 @@ To find our snippet, go to 'Datasources' > 'Real user monitoring' in our sidebar
 <p class="text-center"><img class="" src="{{ site.baseurl }}/gfx/getting-started/install-rum/rum_install.png" alt="CoScale RUM installation instructions" /></p>
 
 ## Now we wait
-It can take up to 24 hours before all pages our detected and added to our dashboard. While we wait let us get on with the next step of installing our agent as it will provide infrastructure insights and server performance metrics.
-
-<a href="{{ site.baseurl }}/getting-started/install-agent" class="btn btn-primary btn-lg btn-block spacing-top">Step 3: Installing the agent</a>
+It can take up to 24 hours before all pages our detected and added to our dashboard.

@@ -28,12 +28,24 @@ exclude:
 
 # Collections
 collections:
-    docs_getting_started:
+    docs_agent:
         output: true
-        permalink: /getting-started/:path/
-    docs_installation:
+        permalink: /agent/:path/
+    docs_rum:
         output: true
-        permalink: /installation/:path/
+        permalink: /rum/:path/
+    docs_custom_metrics:
+        output: true
+        permalink: /custom-metrics/:path/
+    docs_events:
+        output: true
+        permalink: /events/:path/
+    docs_other:
+        output: true
+        permalink: /other/:path/
+    docs_tools:
+        output: true
+        permalink: /tools/:path/
     docs_advanced:
         output: true
         permalink: /advanced/:path/

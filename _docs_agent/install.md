@@ -7,9 +7,6 @@ description: Instructions on how to install and configure the CoScale agent.
 ## Precautions
 Before we get started with installing the agent it is important to note that the following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href="mailto:info@coscale.com" class="support">contact our support</a> so they can provide alternatives and press the button to the right to skip this step for now.
 
-<a href="{{ site.baseurl }}/getting-started/install-third-party" class="btn btn-warning btn-lg pull-right">Skip this step</a>
-<br />
-
 ## Creating the agent
 The CoScale agent is the primary tool used to capture resource and application metrics from your servers. It is easy to configure and deployed in minutes. To start with the configuration go to your dashboard and use to sidebar navigation to go to `DataSources` and then `Manage`. On this page, you will be configuring the agent(s) you want to install on your servers.
 
@@ -57,8 +54,3 @@ Wait until the agent is detected. When at least one agent is detected, you can c
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_install.png" alt="CoScale agent detection install widget" /></p>
 
 When you see this screen the agent is installed successfully. It will start downloading all configured plugins, check the configuration and start sending data to our platform. You can get an overview of installed agents on the `Datasources` > `Installed` page, accessible through the sidebar. Any configuration problems we detect will be shown here. To get more information, click on the service.
-
-## Time for the next step
-Now that we have installed the agent it is time to integrate with third-party components, click the button below to get started.
-
-<a href="{{ site.baseurl }}/getting-started/install-third-party" class="btn btn-primary btn-lg btn-block spacing-top">Step 4: Configuring Third party resources</a>

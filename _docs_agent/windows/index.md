@@ -5,13 +5,6 @@ description: Information for agent maintenance on the Microsoft Windows operatin
 
 ---
 
-## Agent
-
-* [Installing the Agent]({{ site.baseurl }}/installation/agent/windows/agent-install)
-* [Restarting the Agent]({{ site.baseurl }}/installation/agent/windows/agent-restart)
-* [Killing the Agent]({{ site.baseurl }}/installation/agent/windows/agent-terminate)
-* [Export logs]({{ site.baseurl }}/installation/agent/windows/export-logs)
-
 ## Plugins
 
 ### IIS - Internet Information Services
