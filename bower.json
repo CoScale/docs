@@ -17,6 +17,7 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "font-awesome": "~4.4.0",
-    "swagger-ui": "~2.1.1"
+    "swagger-ui": "~2.1.1",
+    "lunr.js": "~0.5.12"
   }
 }
