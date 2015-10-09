@@ -14,6 +14,6 @@ The CoScale agent allows to send data using a proxy. This can be configured by s
 
     `export https_proxy=http://[ip]:[port]/`
 
-    After please [restart]({{ site.baseurl }}/installation/agent/linux/agent-restart/) the agent.
+    After please [restart]({{ site.baseurl }}/agent/agent-restart) the agent.
 
 * For Microsoft Windows a global environment variable HTTPS_PROXY must be set.

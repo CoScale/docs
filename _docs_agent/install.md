@@ -40,11 +40,7 @@ Press ‘Download agent’, download the agent binary to your computer and then 
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_searching.png" alt="CoScale agent detection searching widget" /></p>
 
-To install the agent, choose your operation system and follow the instructions on the page:
-
-* [Linux / Unix]({{ site.baseurl }}/installation/agent/linux/agent-install)
-* [Microsoft Windows]({{ site.baseurl }}/installation/agent/windows/agent-install)
-
+Go to [agent install]({{ site.baseurl }}/agent/agent-install) page, to find the install instructions for your operating system.
 
 Wait until the agent is detected. When at least one agent is detected, you can continue the installation by pressing the button.
 

@@ -13,7 +13,7 @@ It provides easy to use methods for:
 * Register events and event categories.
 * List, acknowledge and resolve your alerts.
 
-## [Installation and Configuration]({{ site.baseurl }}/installation/cli/installation/)
+## [Installation and Configuration]({{ site.baseurl }}/tools/cli/installation/)
 
 ## Usage
     coscale-cli a tool for CoScale Api.

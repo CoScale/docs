@@ -5,7 +5,7 @@ description: Automatically push server status to CoScale platform.
 ---
 
 ## Prerequisite
-* [CoScale CLI installed]({{ site.baseurl }}/installation/cli/installation)
+* [CoScale CLI installed]({{ site.baseurl }}/tools/cli/installation)
 
 ## Configuration
 

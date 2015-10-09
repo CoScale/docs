@@ -6,7 +6,7 @@ description: Information on how to push events with the CoScale command line int
 
 ## Prerequisites
 
-* [CoScale Command line tool]({{ site.baseurl }}/installation/cli/installation)
+* [CoScale Command line tool]({{ site.baseurl }}/tools/cli/installation)
 
 ## Quick tutorial
 

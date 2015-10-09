@@ -8,7 +8,7 @@ CoScale allows you to push custom attributes together with your events. When def
 <img src="{{ site.baseurl}}/gfx/installation/events/custom-attributes/automation_job_overview.png" alt="Event overview" class="img-responsive" />
 
 ## Creating the category
-When creating a category through the [API]({{ site.baseurl }}/api/) or with our [CLI]({{ site.baseurl }}/installation/cli/index) you can add an extra optional parameter called `attributeDescriptions`. This parameter should contain a JSON array with information on which extra attributes the events should set.
+When creating a category through the [API]({{ site.baseurl }}/api/) or with our [CLI]({{ site.baseurl }}/tools/cli/index) you can add an extra optional parameter called `attributeDescriptions`. This parameter should contain a JSON array with information on which extra attributes the events should set.
 
 ### Parameters
 

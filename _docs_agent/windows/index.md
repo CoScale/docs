@@ -9,8 +9,8 @@ description: Information for agent maintenance on the Microsoft Windows operatin
 
 ### IIS - Internet Information Services
 
-* [Configure IIS]({{ site.baseurl }}/installation/agent/windows/plugin-iis-configuration)
+* [Configure IIS]({{ site.baseurl }}/agent/windows/plugin-iis-configuration)
 
 ## Other
 
-* [RAM disk]({{ site.baseurl }}/installation/agent/windows/ram-disk)
+* [RAM disk]({{ site.baseurl }}/agent/windows/ram-disk)

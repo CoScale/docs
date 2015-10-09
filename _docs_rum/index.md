@@ -15,7 +15,7 @@ Step by step instructions on how to add the RUM component javascript to <a href=
 ## Advanced
 
 ### [Tags and markers]({{ site.baseurl }}/rum/tags-markers)
-Group pages with [tags]({{ site.baseurl }}/installation/rum/tags-markers/#tags) to get an easy overview and measure the performance of certain parts of your front-end application with [markers]({{ site.baseurl }}//installation/rum/tags-markers/#markers).
+Group pages with [tags]({{ site.baseurl }}/rum/tags-markers/#tags) to get an easy overview and measure the performance of certain parts of your front-end application with [markers]({{ site.baseurl }}/rum/tags-markers/#markers).
 
 ## Information
 

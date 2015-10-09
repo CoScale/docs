@@ -32,4 +32,4 @@ In the plugin configuration you set the configuration settings to the variable n
 
 ### 3. Restart the Agent
 
-[Restart the agent]({{ site.baseurl }}/installation/agent/commands#restart), afterwards the config will be read from file.
+[Restart the agent]({{ site.baseurl }}/agent/agent-restart), afterwards the config will be read from file.

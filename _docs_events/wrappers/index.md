@@ -12,4 +12,4 @@ CoScale command wrappers or cron wrappers are scripts that automatically send ev
 
 ## Available scripts
 
-### [Linux]({{ site.baseurl }}/installation/events/wrappers/linux/index)
+### [Linux]({{ site.baseurl }}/events/wrappers/linux/index)
