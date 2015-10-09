@@ -4,10 +4,6 @@
     <li {% if current[1] == 'index.html' %}class='active'{% endif %}><a href="{{ site.baseurl }}/"><i class="fa fa-fw fa-home"></i> Home</a></li>
 </ul>
 
-<!-- <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'search.html' %}class='active'{% endif %}><a href="{{ site.baseurl }}/search.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a></li>
-</ul> -->
-
 <ul class="nav nav-sidebar">
     <li {% if current[1] == 'installation' and current[2] == 'agent' %}class='active'{% endif %}><a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a></li>
     <li {% if current[1] == 'installation' and current[2] == 'rum' %}class='active'{% endif %}><a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a></li>
@@ -41,7 +37,13 @@
     <li><a href="{{ site.baseurl }}/api/"><i class="fa fa-fw fa-book"></i> API Docs</a></li>
 </ul>
 
-<ul class="nav nav-sidebar">
+
+<form method="get" action="{{ site.baseurl}}/search.html">
+    <input class="search-input form-control" type="search" name="q" placeholder="Search"/>
+    <input id="search-button" type="submit" class="hidden" />
+</form>
+
+<ul class="nav nav-sidebar spacing-top">
     <li><a href="mailto:info@coscale.com" class="support"><i class="fa fa-fw fa-question-circle"></i> Contact support</a></li>
 </ul>
 
