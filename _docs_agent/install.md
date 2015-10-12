@@ -23,7 +23,7 @@ To get started:
 
 <p class="text-center"><img class="img-responsive" src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_configuration.png" alt="CoScale agent configuration page" /></p>
 
-For some plugins, some configuration is necessary. Read the instructions carefully.
+For some plugins, configuration is necessary. Read and follow the instructions carefully.
 If necessary, apply the proposed changes to the server as shown in the instructions and fill in the required fields. Press the save button when finished.
 
 <p class="text-center"><img class="img-responsive" src="{{ site.baseurl }}/gfx/getting-started/install-agent/plugin_configuration.png" alt="CoScale agent plugin configuration page" /></p>
@@ -49,4 +49,12 @@ Wait until the agent is detected. When at least one agent is detected, you can c
 
 <p class="text-center"><img src="{{ site.baseurl }}/gfx/getting-started/install-agent/agent_detection_install.png" alt="CoScale agent detection install widget" /></p>
 
-When you see this screen the agent is installed successfully. It will start downloading all configured plugins, check the configuration and start sending data to our platform. You can get an overview of installed agents on the `Datasources` > `Installed` page, accessible through the sidebar. Any configuration problems we detect will be shown here. To get more information, click on the service.
+When you see this screen the agent is installed successfully. It will start downloading all configured plugins, check the configuration and start sending data to our platform.
+
+You can get an overview of installed agents on the `Datasources` > `Installed` page, accessible through the sidebar. Any configuration problems we detect will be shown here.
+
+To get more information about the agent, you can always click the service, as it will provide you with the latest log and status of all the plugins.
+
+## Agent successfully installed
+
+The agent is now installed and running on your system, if necessary repeat this process for all your servers.
