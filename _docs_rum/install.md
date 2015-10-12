@@ -8,11 +8,11 @@ The CoScale Real User Monitoring service, or RUM for short, is a Javascript snip
 
 {% include alert.html type="info" text="The snippet will have little to no impact on webpage performance, it uses the browser API to retrieve data and will run after the page is loaded." %}
 
-To install the RUM service we need to add a javascript snippet just before the `</head>` tag on your website. It is best to add it the default template, so you can get a complete oversight of your application. In doubt, <a href="mailto:info@coscale.com" class="support">contact our support</a> so they can assist you in choosing the best location for the snippet.
+To install the RUM service we need to add a javascript snippet just before the `</head>` tag on your website. It is best to add it the default template of the website, this way you get a complete oversight of your application. If you are unsure where to place the snippet please <a href="mailto:info@coscale.com" class="support">contact our support</a> so they can assist you in choosing the best location for the snippet.
 
-To find our snippet, go to 'Datasources' > 'Real user monitoring' in our sidebar, you can now follow the instructions on the screen, it will direct you to the RUM component installation page containing the instructions to integrate with your website. After installing the script our service should detect incoming traffic within minutes, but it does depend on the amount of traffic the website receives.
+To find the CoScale RUM snippet, go to 'Datasources' > 'Real user monitoring' in our sidebar and follow the instructions on the screen. After installing the script our service will detect incoming traffic within minutes, but it does depend on the amount of traffic the website receives. 
 
 <p class="text-center"><img class="" src="{{ site.baseurl }}/gfx/getting-started/install-rum/rum_install.png" alt="CoScale RUM installation instructions" /></p>
 
 ## Now we wait
-It can take up to 24 hours before all pages our detected and added to our dashboard.
+That was it, now we wait as it can take up to 24 hours before all pages are detected and added to our dashboard.
