@@ -10,9 +10,17 @@ The CoScale Real User Monitoring service, or RUM for short, is a Javascript snip
 
 To install the RUM service we need to add a javascript snippet just before the `</head>` tag on your website. It is best to add it the default template of the website, this way you get a complete oversight of your application. If you are unsure where to place the snippet please <a href="mailto:info@coscale.com" class="support">contact our support</a> so they can assist you in choosing the best location for the snippet.
 
-To find the CoScale RUM snippet, go to 'Datasources' > 'Real user monitoring' in our sidebar and follow the instructions on the screen. After installing the script our service will detect incoming traffic within minutes, but it does depend on the amount of traffic the website receives. 
+To find the CoScale RUM snippet, go to 'Datasources' > 'Real user monitoring' in our sidebar and follow the instructions on the screen. After installing the script our service will detect incoming traffic within minutes, but it does depend on the amount of traffic the website receives.
 
 <p class="text-center"><img class="" src="{{ site.baseurl }}/gfx/getting-started/install-rum/rum_install.png" alt="CoScale RUM installation instructions" /></p>
 
-## Now we wait
 That was it, now we wait as it can take up to 24 hours before all pages are detected and added to our dashboard.
+
+## Extra
+Increase the visibility of your front-end performance by using tags and markers.
+
+### [Tags]({{ site.baseurl }}/rum/tags)
+Tags allow you to group pages to get an overview on their overall performance.
+
+### [Markers]({{ site.baseurl }}/rum/markers)
+Markers show performance of front-end heavy applications by measuring the time between start and stop command.
