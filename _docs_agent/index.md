@@ -32,6 +32,6 @@ A quick how to guide on installing and configuring the CoScale agent for integra
 
     Advanced environment flags you can use to customize the agent hostname, auto updating functionality and log level.
 
-* [Firewall / Proxy]({{ site.baseurl }}/advanced/firewall-proxy)
+* [Firewall / Proxy]({{ site.baseurl }}/agent/firewall-proxy)
 
     Information about CoScale agent firewall settings and proxy configuration.
