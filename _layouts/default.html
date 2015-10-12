@@ -64,13 +64,19 @@
         function search(value) {
             var results = idx.search(value);
 
-            var div = $("#search-results").empty();
-            div.append( `<h2>Search results</h2>`);
-            $.each(results, function( index, value ) {
-                page = find_entry(value.ref);
-                div.append('<h3><a href="' + page.id + '">' + page.title + '</a></h3>');
-                div.append('<p>' + page.description + '</p>');
-            });
+            var noResultDiv =  $("#search-noresults").addClass('hide');
+            var resultDiv = $("#search-results").empty();
+            resultDiv.append( `<h2>Search results</h2>`);
+
+            if (results.length > 0) {
+                $.each(results, function( index, value ) {
+                    page = find_entry(value.ref);
+                    resultDiv.append('<h3><a href="' + page.id + '">' + page.title + '</a></h3>');
+                    resultDiv.append('<p>' + page.description + '</p>');
+                });
+            } else {
+                noResultDiv.removeClass('hide');
+            }
         }
 
         function find_entry(ref) {
