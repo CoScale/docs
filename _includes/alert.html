@@ -1,10 +1,14 @@
 
 <div class="alert alert-{{include.type}}">
-    {% if include.type == 'info' %}
-        <i class="fa fa-lg fa-info-circle fa-pull-left"></i>
-    {% elsif include.type == 'warning' %}
-        <i class="fa fa-lg fa-exclamation-triangle fa-pull-left"></i>
-    {% endif %}
+    <div class="icon">
+        {% if include.type == 'info' %}
+            <i class="fa fa-lg fa-info-circle fa-pull-left"></i>
+        {% elsif include.type == 'warning' %}
+            <i class="fa fa-lg fa-exclamation-triangle fa-pull-left"></i>
+        {% endif %}
+    </div>
 
-    {{ include.text }}
+    <div class="text">
+        {{ include.text }}
+    </div>
 </div>

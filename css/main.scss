@@ -221,6 +221,22 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
         }
     }
 
+    .alert {
+        display: table;
+        width: 90%;
+        margin: 15px auto;
+
+        .icon {
+            display:table-cell;
+            vertical-align: middle;
+        }
+
+        .text {
+            padding-left: 5px;
+            display:table-cell;
+        }
+    }
+
     .highlight {
         padding: 10px 0;
 
