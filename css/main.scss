@@ -29,6 +29,11 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "font-awesome/scss/font-awesome.scss";
 
+
+body {
+    margin-bottom: 50px;
+}
+
 /*
 * Custom class for more spacing between elements
 */
