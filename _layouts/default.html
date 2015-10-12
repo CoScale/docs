@@ -70,8 +70,8 @@
             div.append( `<h2>Search results</h2>`);
             $.each(results, function( index, value ) {
                 page = find_entry(value.ref);
-                div.append( `<h3><a href="' + page.id + '">` + page.title + `</a></h3>` )
-                div.append( `<p>` + page.description + `</p>` )
+                div.append('<h3><a href="' + page.id + '">' + page.title + '</a></h3>');
+                div.append('<p>' + page.description + '</p>');
             });
         }
 
