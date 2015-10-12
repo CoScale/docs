@@ -66,7 +66,7 @@ body {
             li, ol {
                 padding: 5px 0px 5px 8px;
                 a {
-                    color: #333;
+
                 }
 
                 ul {
@@ -97,6 +97,7 @@ body {
         & > .active > a:hover,
         & > .active > a:focus {
             color: #f5a153;
+            background-color: #eee;
             //color: #fff;
             //background-color: #f5a153;
         }

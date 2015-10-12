@@ -5,17 +5,57 @@
 </ul>
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'installation' and current[2] == 'agent' %}class='active'{% endif %}><a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a></li>
-    <li {% if current[1] == 'installation' and current[2] == 'rum' %}class='active'{% endif %}><a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a></li>
-    <li {% if current[1] == 'installation' and current[2] == 'events' %}class='active'{% endif %}><a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag"></i> Events</a></li>
-    <li {% if current[1] == 'installation' and current[2] == 'custom-metrics' %}class='active'{% endif %}>
+    <li {% if current[1] == 'agent' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a>
+        <ul>
+            <li><a href="{{ site.baseurl }}/agent/install">Installation</a></li>
+            <li>
+                Advanced
+                <ul>
+                    <li><a href="{{ site.baseurl }}/agent/linux/index">Linux / Unix</a></li>
+                    <li><a href="{{ site.baseurl }}/agent/windows/index">Microsoft Windows</a></li>
+                    <li><a href="{{ site.baseurl }}/agent/cloud/index">Cloud environments</a></li>
+                    <li><a href="{{ site.baseurl }}/agent/advanced">Environment flags</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li {% if current[1] == 'rum' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a>
+        <ul>
+            <li><a href="{{ site.baseurl }}/rum/install">Installation</a></li>
+            <li><a href="{{ site.baseurl }}/agent/install">Google Tag Manager</a></li>
+            <li>
+                Advanced
+                <ul>
+                    <li><a href="{{ site.baseurl }}/rum/tags">Tags</a></li>
+                    <li><a href="{{ site.baseurl }}/rum/markers">Markers</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li {% if current[1] == 'events' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag"></i> Events</a>
+        <ul>
+            <li><a href="/events/cli/index">Using command line interface</a></li>
+            <li><a href="/events/automation/index">Automation</a></li>
+            <li><a href="/events/wrappers/index">Wrappers</a></li>
+            <li>
+                Advanced
+                <ul>
+                    <li><a href="/events/custom-attributes">Custom Attributes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li {% if current[1] == 'custom-metrics' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a>
         <ul>
             <li><a href="{{ site.baseurl }}/custom-metrics/generic-script/index">Generic script</a></li>
             <li><a href="{{ site.baseurl }}/custom-metrics/statsd/index">StatsD</a></li>
         </ul>
     </li>
-    <li {% if current[1] == 'installation' and current[2] == 'tools' %}class='active'{% endif %}>
+    <li {% if current[1] == 'tools' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
         <ul>
             <li><a href="{{ site.baseurl }}/tools/cli/index">Command line interface</a></li>
