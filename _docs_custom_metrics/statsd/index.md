@@ -1,36 +1,64 @@
 ---
 layout: page
 title: StatsD
-description: Integration and installation of StatsD to push metrics to the CoScale platform.
+description: Integration and installation of CoScale StatsD plugin to push metrics to the CoScale platform.
 ---
 ## Description
 The CoScale plugin for StatsD will push all metrics available in the StatsD daemon to the CoScale infrastructure every minute.
 
 ## Prerequisite
 * [CoScale Agent installed]({{ site.baseurl }}/agent/index)
+* [StatsD daemon installed]({{ site.baseurl }}/custom-metrics/statsd/installation)
+
 
 ## Installation
-<a href="https://github.com/CoScale/coscale-statsd-plugin" target="_blank" class="btn btn-large btn-info"><i class="fa fa-3x fa-fw fa-github-square"></i> Github repository</a>
+<a href="https://github.com/CoScale/coscale-statsd-plugin" target="_blank" class="btn btn-large btn-info pull-right"><i class="fa fa-3x fa-fw fa-github-square"></i> Github repository</a>
 
-1. Clone repository to your StatsD `node_modules` directory
-    `git clone https://github.com/CoScale/coscale-statsd-plugin.git`
-2. Change your `config.js` to include the CoScale backend (example below).
-3. Restart StatsD daemon
+Clone the coscale-statsd-plugin repository to your StatsD directory
 
-### Config
-Make sure you replace `[[app_id]]` and `[[accessToken]]` with your own credentials.
+{% highlight bash %}
+# Go to directory
+
+# Debian / Ubuntu
+cd /usr/share/statsd/node_modules/
+
+
+# Clone repository
+sudo git clone https://github.com/CoScale/coscale-statsd-plugin.git
+{% endhighlight %}
+
+Now open `/etc/statsd/localConfig.js` with your favorite editor and add the following, make sure you don't forget to change your `app_id` and `accesstoken`.
+
+{% highlight javascript %}
+backends: ['coscale-statsd-plugin'],
+flushInterval: 10000,
+
+coscaleApiHost: 'https://api.coscale.com',
+coscaleAppId: '[[app_id]]',
+coscaleAccessToken: '[[accessToken]]'
+{% endhighlight %}
+
+It should look something like:
 {% highlight javascript %}
 {
-    port: 8126,
-    backends: ['coscale-statsd-plugin'],
-    flushInterval: 10000,
+  graphitePort: 2003
+, graphiteHost: "localhost"
+, port: 8125
+, backends: ['coscale-statsd-plugin']
+, flushInterval: 10000
 
-    coscaleApiHost: 'https://api.coscale.com',
-    coscaleAppId: '[[app_id]]',
-    coscaleAccessToken: '[[accessToken]]'
+, coscaleApiHost: 'https://api.coscale.com'
+, coscaleAppId: '[[app_id]]'
+, coscaleAccessToken: '[[accessToken]]'
 }
 {% endhighlight %}
 
-## Integrations
+Now restart the StatsD daemon
+{% highlight bash %}
+# Debian / Ubuntu
+sudo service statsd restart
+{% endhighlight %}
+
+## Integrating with your application.
 
 StatsD has many libraries available to push your own data right from application code. You can find a full list <a href="https://github.com/etsy/statsd/wiki" target="_BLANK">here</a>.
