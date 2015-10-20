@@ -4,8 +4,9 @@ title: CLI Installation
 description: Instructions on how to install the CoScale command line interface.
 ---
 
-To install the CoScale command line interface we provide two different methods. You can:
+To install the CoScale command line interface we provide three different methods. You can:
 
+* [Install the agent]({{ site.baseurl}}/agent/install) which will download the CLI tool automatically
 * [Download the binary](#download-binary) by using our install script. This method is advised as it requires no additional software installed.
 * [Compile from scratch](#compile-yourself) with the <a href="https://golang.org/" target="_BLANK">golang</a> compiler.
 
