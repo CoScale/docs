@@ -36,7 +36,7 @@ In this example we will use a script that pings our server 5 times.
 
 2. Add to command to your crontab (`crontab -e`) and put the CoScale cron wrapper in front of it. Don't forget to replace `[[category]]` and `[[name]]` with your own.
 
-    `*/5 * * * * sudo -u testuser /opt/coscale/cron.sh --category "[[category]]" --name "[[name]]" --live -- /home/testuser/test-website.sh`
+    `*/5 * * * * /opt/coscale/cron.sh --category "[[category]]" --name "[[name]]" --live -- /home/testuser/test-website.sh`
 
 Your crontab might look something like this:
 
@@ -64,16 +64,16 @@ Your crontab might look something like this:
 #
 # m h  dom mon dow   command
 
-*/5 * * * * sudo -u testuser /opt/coscale/cron.sh --category "Monitoring website" --name "ping" --live -- /home/testuser/test-website.sh
+*/5 * * * * /opt/coscale/cron.sh --category "Monitoring website" --name "ping" --live -- /home/testuser/test-website.sh
 
 # Other examples
 */5 * * * * /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com  
 */5 * * * * /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- /root/test-website-job.sh
 */5 * * * * /root/test-website.sh
 
-*/5 * * * * sudo -u testuser /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com  
-*/5 * * * * sudo -u testuser /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- /home/testuser/test-website-job2.sh
-*/5 * * * * sudo -u testuser /home/testuser/test-website2.sh
+*/5 * * * * /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com  
+*/5 * * * * /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- /home/testuser/test-website-job2.sh
+*/5 * * * * /home/testuser/test-website2.sh
 
 {% endhighlight %}
 
@@ -97,7 +97,7 @@ argument | explanation
 ## Examples
 
 ### Ping a production server 5 times
-`sudo -u testuser /opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com`
+`/opt/coscale/cron.sh --category "Monitoring" --name "Ping production" --live -- ping -c 5 google.com`
 
 ### Clean cache directory
-`sudo -u testuser /opt/coscale/cron.sh --category "System cron" --name "Cache clean-up" --live -- rm -rf /tmp/cache/website/*`
+`/opt/coscale/cron.sh --category "System cron" --name "Cache clean-up" --live -- rm -rf /tmp/cache/website/*`
