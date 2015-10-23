@@ -5,8 +5,9 @@ description: Information on how to install the CoScale cron wrapper to monitor t
 ---
 
 ## Prerequisite
-* [CoScale CLI installed]({{ site.baseurl }}/tools/cli/index) or [Agent installed]({{ site.baseurl }}/agent/install)
+* [CoScale CLI installed]({{ site.baseurl }}/tools/cli/installation/)
 
+    Note: The CoScale CLI is automatically installed by the agent
 
 ## Install
 
