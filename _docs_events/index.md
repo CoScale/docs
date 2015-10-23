@@ -15,9 +15,9 @@ Push events from command line with our easy to use [CLI]({{ site.baseurl }}/tool
 
 Integrations with [Salt]({{ site.baseurl }}/events/automation/salt), [Puppet]({{ site.baseurl }}/events/automation/puppet), and many other automation tools.
 
-### [Wrappers]({{ site.baseurl}}/events/wrappers/index)
+### [Cronjob monitoring / Cron wrappers]({{ site.baseurl}}/events/wrappers/index)
 
-Script wrappers to monitor cronjobs and push events with timerange and execution result parameters.
+Monitor cronjobs by pushing events with time spent and exitcode parameters.
 
 ## Advanced
 
