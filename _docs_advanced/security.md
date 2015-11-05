@@ -10,7 +10,7 @@ This document contains more technical information about how the CoScale agent wo
 The CoScale agent is a downloadable software component for different Operating Systems and Software. CoScale analyzes log files or connects to the Software’s management interface. For example, in the case of Apache web server, the access.log file is parsed and the default Apache server-status page is fetched and parsed for getting general info. CoScale does not interfere with your application stack, CoScale does not do binary instrumentation or we do not dynamically generate and inject code into other processes.
 
 ## Data storage
-CoScale is using dedicated servers. Most of the servers are in a data center in Roubaix, France. CoScale uses standard best practices to maintain a firewall for our servers and to protect our servers from unauthorized login.
+CoScale is using dedicated servers. All of our production servers are in a data center in Roubaix, France (<a href="https://www.ovh.co.uk/aboutus/certifications.xml" target="_blank">Certifications</a>). CoScale uses standard best practices to maintain a firewall for our servers and to protect our servers from unauthorized login.
 All data is stored in a cluster of PostgreSQL and Cassandra databases. Metric data is not stored encrypted. CoScale data is backed up nightly.
 
 ## Security & Firewall
