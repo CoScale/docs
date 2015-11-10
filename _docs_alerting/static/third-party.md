@@ -18,10 +18,11 @@ When the CoScale monitoring service triggers an alert is it possible to send the
 
 2. **Add the e-mail to CoScale**
 
-    Now that you have your third party email it is time to add it to a CoScale notification scheme, you can add it to a new scheme or to an existing one.
+    Now that you have your third party email it is time to add it to a CoScale notification scheme.
 
     <img src="/gfx/installation/alerting/static/third-party/alert_notifications.png" alt="Alert view" class="img-responsive" />
 
+    First go to <a href="/alerts/manage/" class="dashboard-link">`Alerts > Manage`</a> here you can choose to add the third party email to a new or an existing scheme.
     To add it to a new one: click the `Create notification scheme` button and add the e-mail in the `Main contact(s)` field. To add it to an existing one: click the `Edit` button next to the scheme you want to edit and do the same
 
     <img src="/gfx/installation/alerting/static/third-party/alert_email.png" alt="Where to fill in the e-mail address" class="img-responsive" />

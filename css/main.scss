@@ -245,6 +245,34 @@ body {
         }
     }
 
+    .dashboard-link {
+        &:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+
+        &.active {
+            &:hover {
+                cursor: auto;
+                background: #e28263;
+            }
+
+            background-color: #f09d3e;
+            border: 1px solid #e28263;
+            color: #fff;
+            cursor: pointer;
+            padding: 2px 10px;
+            border-radius: 5px;
+            font-weight: normal;
+            transition: background-color .25s ease-out;
+
+            code {
+                background-color: transparent;
+                color: #fff;
+            }
+        }
+    }
+
     .highlight {
         padding: 10px 0;
 

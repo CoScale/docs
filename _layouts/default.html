@@ -54,6 +54,7 @@
     </div>
 
     <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/js-cookie/src/js.cookie.js"></script>
     <script src="{{ site.baseurl }}/bower_components/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <script src="{{ site.baseurl }}/search.js" type="text/javascript" charset="utf-8"></script>
@@ -105,6 +106,15 @@
 
             return false;
         });
+
+        var app_id = Cookies.get('APP_ID');
+        if (app_id) {
+            $('.dashboard-link').each(function( index ) {
+                $(this).addClass('active');
+                $(this).attr("href", "https://app.coscale.com/app/" + app_id + $(this).attr("href"));
+            });
+        }
+
 
         $(".js-search-button").click(function() {
             this.form.submit();
