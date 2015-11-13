@@ -8,7 +8,7 @@ description: Instructions on how to install and configure the CoScale agent.
 Before we get started with installing the agent it is important to note that the following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href="mailto:info@coscale.com" class="js-support">contact our support</a> so they can provide alternatives and press the button to the right to skip this step for now.
 
 ## Creating the agent
-The CoScale agent is the primary tool used to capture resource and application metrics from your servers. It is easy to configure and deployed in minutes. To start with the configuration go to your dashboard and use to sidebar navigation to go to `DataSources` and then `Manage`. On this page, you will be configuring the agent(s) you want to install on your servers.
+The CoScale agent is the primary tool used to capture resource and application metrics from your servers. It is easy to configure and deployed in minutes. To start with the configuration go to your dashboard and use to sidebar navigation to go to <a href="#" db-href="/datasources/agentnew/" class="js-dashboard-link">`DataSources > CoScale agent > Manage`</a>. On this page, you will be configuring the agent(s) you want to install on your servers.
 
 {% include alert.html type="warning" text="We only support 64 bit operating systems, <a href=\"mailto:info@coscale.com\" class=\"js-support\">contact support</a> for more information" %}
 
@@ -51,7 +51,7 @@ Wait until the agent is detected. When at least one agent is detected, you can c
 
 When you see this screen the agent is installed successfully. It will start downloading all configured plugins, check the configuration and start sending data to our platform.
 
-You can get an overview of installed agents on the `Datasources` > `Installed` page, accessible through the sidebar. Any configuration problems we detect will be shown here.
+You can get an overview of installed agents on the <a href="#" db-href="/datasources/agentinstalled/" class="js-dashboard-link">`DataSources > CoScale agent > Installed`</a> page, accessible through the sidebar. Any configuration problems we detect will be shown here.
 
 To get more information about the agent, you can always click the service, as it will provide you with the latest log and status of all the plugins.
 
