@@ -101,7 +101,7 @@
             }
         };
 
-        $('.support').click(function(){
+        $('.js-support').click(function(){
             Intercom('show');
 
             return false;
@@ -109,7 +109,7 @@
 
         var app_id = Cookies.get('APP_ID');
         if (app_id) {
-            $('.dashboard-link').each(function( index ) {
+            $('.js-dashboard-link').each(function( index ) {
                 $(this).addClass('active');
                 $(this).attr("href", "https://app.coscale.com/app/" + app_id + $(this).attr("href"));
             });

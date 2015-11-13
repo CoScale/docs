@@ -28,7 +28,7 @@ Use the following one-liner to install the CoScale CLI on Linux in /opt/coscale/
 
 You are now ready to use our CLI tool, try executing the command `coscale-cli`.
 
-<small>The script should work on most UNIX based operating systems, if you experience any problems <a href="mailto:support@coscale.com" class="support">contact our support</a> and they will assist you further.</small>
+<small>The script should work on most UNIX based operating systems, if you experience any problems <a href="mailto:support@coscale.com" class="js-support">contact our support</a> and they will assist you further.</small>
 
 
 #### Windows / Mac OS X
@@ -74,4 +74,4 @@ echo "{\"baseurl\":\"https://api.coscale.com\", \"appid\":\"[appId]\", \"accesst
 
 ## 3. Test if everything works
 
-Run `coscale-cli event list`, it should return a json array. If it returns the CLI help, <a href="mailto:info@coscale.com" class="support">contact support</a>.
+Run `coscale-cli event list`, it should return a json array. If it returns the CLI help, <a href="mailto:info@coscale.com" class="js-support">contact support</a>.

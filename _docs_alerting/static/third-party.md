@@ -14,7 +14,7 @@ When the CoScale monitoring service triggers an alert is it possible to send the
     * <a href="http://victorops.force.com/knowledgebase/articles/Integration/Generic-Email-Integration" target="_blanc">VictorOps</a>
     * <a href="https://www.opsgenie.com/docs/alert-creation/creating-alerts-via-email" target="_blanc">OpsGenie</a>
 
-    If you cannot find your favorite third party tool, please don't hesitate to <a href="mailto:info@coscale.com" class="support">contact us</a> for more information and support.
+    If you cannot find your favorite third party tool, please don't hesitate to <a href="mailto:info@coscale.com" class="js-support">contact us</a> for more information and support.
 
 2. **Add the e-mail to CoScale**
 
@@ -22,7 +22,7 @@ When the CoScale monitoring service triggers an alert is it possible to send the
 
     <img src="/gfx/installation/alerting/static/third-party/alert_notifications.png" alt="Alert view" class="img-responsive" />
 
-    First go to <a href="/alerts/manage/" class="dashboard-link">`Alerts > Manage`</a> here you can choose to add the third party email to a new or an existing scheme.
+    First go to <a href="/alerts/manage/" class="js-dashboard-link">`Alerts > Manage`</a> here you can choose to add the third party email to a new or an existing scheme.
     To add it to a new one: click the `Create notification scheme` button and add the e-mail in the `Main contact(s)` field. To add it to an existing one: click the `Edit` button next to the scheme you want to edit and do the same
 
     <img src="/gfx/installation/alerting/static/third-party/alert_email.png" alt="Where to fill in the e-mail address" class="img-responsive" />

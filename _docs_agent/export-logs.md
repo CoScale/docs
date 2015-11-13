@@ -27,4 +27,4 @@ description: How to export CoScale agent logs for debugging and support on Linux
 5. Click 'Save All Events in CoScale'
 ![Save all events]({{ site.baseurl}}/gfx/installation/agent/windows/export-logs/goto_custom.png)
 
-6. Save them in a .txt file and send them to your CoScale <a href="mailto:info@coscale.com" class="support">support agent</a>.
+6. Save them in a .txt file and send them to your CoScale <a href="mailto:info@coscale.com" class="js-support">support agent</a>.

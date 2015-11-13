@@ -10,7 +10,7 @@ Custom metrics allow you to monitor certain aspects of your application that wou
 By running a script or executable every minute the CoScale agent gathers metrics from your application and pushes those to the platform. We provide some example scripts and guide your in configuring it for your application.
 
 ## Pushing metrics with our CLI
-*Not yet available, <a href="mailto:info@coscale.com" class="support">contact our support</a> to get more information.*
+*Not yet available, <a href="mailto:info@coscale.com" class="js-support">contact our support</a> to get more information.*
 
 
 ## Third party
