@@ -16,7 +16,7 @@ A quick how to guide on installing and configuring the CoScale agent for integra
 
 ## Extra
 
-* [Linux / Unix]({{ site.baseurl }}/agent/linux/index)
+* [GNU Linux / Unix]({{ site.baseurl }}/agent/linux/index)
 
     Specific configuration and agent management for Unix based operation systems.
 
