@@ -10,7 +10,7 @@ The CoScale agent is the primary tool used to capture resource and application m
 {% include alert.html type="warning" text="The following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href=\"mailto:info@coscale.com\" class=\"js-support\">contact support</a> so they can provide alternatives." %}
 
 ## Creating the agent
-To start with the configuration, go to your dashboard and use the sidebar to navigate to <a href="#" db-href="/datasources/agentnew/" class="js-dashboard-link">`DataSources > CoScale agent > Manage`</a>. On this page you can  configure the agent(s) you want to install on your servers. There is no limit on the amount of agents you can create.
+To start with the configuration, go to your dashboard and use the sidebar to navigate to <a href="http://app.coscale.com" db-href="/datasources/agentnew/" class="js-dashboard-link">`DataSources > CoScale agent > Manage`</a>. On this page you can  configure the agent(s) you want to install on your servers. There is no limit on the amount of agents you can create.
 
 ### Step 1: Select your operating system
 
@@ -46,7 +46,7 @@ After installing the agent it will check the configuration of all the selected p
 
 ## Checking the installation
 
-You can get an overview of installed agents on the <a href="#" db-href="/datasources/agentinstalled/" class="js-dashboard-link">`DataSources > CoScale agent > Installed`</a> page, accessible through the sidebar. Any configuration problems we detect will be shown here.
+You can get an overview of installed agents on the <a href="http://app.coscale.com" db-href="/datasources/agentinstalled/" class="js-dashboard-link">`DataSources > CoScale agent > Installed`</a> page, accessible through the sidebar. Any configuration problems we detect will be shown here.
 
 To get more information about the agent, you can always click the service icon, it will provide you with the latest log and status of all the plugins.
 
