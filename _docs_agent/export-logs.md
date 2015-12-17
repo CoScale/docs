@@ -4,13 +4,13 @@ title: Export logs
 description: How to export CoScale agent logs for debugging and support on Linux.
 ---
 
-## Unix based operating systems
+## Unix
 
 * Debian: `/var/log/coscale-agent.log`
 * Ubuntu: `/var/log/upstart/coscale-agent.log`
 * Centos: `sudo journalctl -u coscale-agent.service`
 
-## Microsoft windows
+## Microsoft Windows
 
 1. Launch Event Viewer
 ![Event viewer]({{ site.baseurl}}/gfx/installation/agent/windows/export-logs/event_viewer.png)
