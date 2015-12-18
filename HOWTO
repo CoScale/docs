@@ -24,4 +24,9 @@ Ex: `<a href="mailto:info@coscale.com" class="js-support">contact us</a>`
 When APP_ID cookie is set links with js-dashboard-link will be replaced with an url to the page in href.
 When no APP_ID is available these links will be disabled.
 
-Ex: `<a href="http://app.coscale.com" db-href="/alerts/manage/" class="js-dashboard-link">Alerts > Manage</a>`
+Ex: `<a href="http://app.coscale.com" db-href="/alerts/manage/" class="js-dashboard-link">`Alerts > Manage`</a>`
+
+
+### Include responsive image
+
+`<img src="{{ site.baseurl}}/gfx/installation/events/custom-attributes/automation_job_overview.png" alt="Event overview" class="img-responsive" />`
