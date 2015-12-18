@@ -5,6 +5,12 @@
 </ul>
 
 <ul class="nav nav-sidebar">
+    <li {% if current[1] == 'dashboard' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/dashboard/index"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
+    </li>
+</ul>
+
+<ul class="nav nav-sidebar">
     <li {% if current[1] == 'agent' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a>
         <ul>
@@ -50,7 +56,7 @@
         </ul>
     </li>
     <li {% if current[1] == 'alerting' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-bell"></i> Alerting</a>
+        <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-warning"></i> Alerting</a>
         <ul>
             <!-- <li><a href="{{ site.baseurl }}/alerting/static">Static</a></li> -->
             <!-- <li><a href="{{ site.baseurl }}/alerting/anomaly">Anomaly detection</a></li> -->
