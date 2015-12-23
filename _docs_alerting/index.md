@@ -4,9 +4,10 @@ title: Alerting
 description: Overview of CoScale alerting systems
 ---
 
-<!-- ## Anomaly detection
+## Anomaly detection
 
-* [Researching an anomaly]({{ site.baseurl }}/alerting/anomaly/research/) -->
+* [What is anomaly detection]({{ site.baseurl }}/alerting/anomaly/index/)
+* [How does our anomaly detection work (video)]({{ site.baseurl }}/alerting/anomaly/video/)
 
 ## Static alerts
 

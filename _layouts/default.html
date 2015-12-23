@@ -62,6 +62,34 @@
     <script type="text/javascript">
     $(function (){
 
+        //
+        // Support links
+        //
+        $('.js-support').click(function(){
+            Intercom('show');
+
+            return false;
+        });
+
+        //
+        // Application links
+        //
+        var app_id = Cookies.get('APP_ID');
+        if (app_id) {
+            $('.js-dashboard-link').each(function( index ) {
+                $(this).addClass('active');
+                $(this).attr("target", "_blank");
+                $(this).attr("href", "https://app.coscale.com/app/" + app_id + $(this).attr("db-href"));
+            });
+        } else {
+            $('.js-dashboard-link').click(function(event) {
+                event.preventDefault();
+            });
+        }
+
+        //
+        //  Search functionality
+        //
         function search(value) {
             var results = idx.search(value);
 
@@ -100,25 +128,6 @@
                 }
             }
         };
-
-        $('.js-support').click(function(){
-            Intercom('show');
-
-            return false;
-        });
-
-        var app_id = Cookies.get('APP_ID');
-        if (app_id) {
-            $('.js-dashboard-link').each(function( index ) {
-                $(this).addClass('active');
-                $(this).attr("target", "_blank");
-                $(this).attr("href", "https://app.coscale.com/app/" + app_id + $(this).attr("db-href"));
-            });
-        } else {
-            $('.js-dashboard-link').click(function(event) {
-                event.preventDefault();
-            });
-        }
 
         $(".js-search-button").click(function() {
             this.form.submit();
