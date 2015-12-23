@@ -16,7 +16,7 @@ description: Terminating and uninstalling the CoScale agent.
 * Ubuntu / Debian: `sudo apt-get remove --purge coscale-agent`
 * CentOS: `sudo rpm -e coscale-agent-1.0-1.x86_64`
 
-## Windows
+## Microsoft Windows
 
 ### Terminate / stop
 Follow these steps to terminate / kill the CoScale agent.
