@@ -9,6 +9,12 @@ The CoScale agent is the primary tool used to capture resource and application m
 
 {% include alert.html type="warning" text="The following steps require root or administrator access to the servers that host your application. If you don't have access, please <a href=\"mailto:info@coscale.com\" class=\"js-support\">contact support</a> so they can provide alternatives." %}
 
+In the video below you can see a quick walkthrough on how to configure and install the CoScale agent. For further instructions you can check the documentation below the video.
+
+<div id="video" class="embed-responsive embed-responsive-16by9">
+    <iframe class="js-video embed-responsive-item" src="https://www.youtube-nocookie.com/embed/8b5mk3wHFdE?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## Creating the agent
 To start with the configuration, go to your dashboard and use the sidebar to navigate to <a href="http://app.coscale.com" db-href="/datasources/agentnew/" class="js-dashboard-link">`DataSources > CoScale agent > Manage`</a>. On this page you can  configure the agent(s) you want to install on your servers. There is no limit on the amount of agents you can create.
 
