@@ -10,14 +10,15 @@ The CoScale Real User Monitoring service, or RUM for short, is a Javascript snip
 
 To install the RUM service we need to add a javascript snippet just before the `</head>` tag on your website. It is best to add it the default template of the website, this way you get a complete oversight of your application. If you are unsure where to place the snippet please <a href="mailto:info@coscale.com" class="js-support">contact our support</a> so they can assist you in choosing the best location for the snippet.
 
-If you want to add the rum javascript snippet using Google tag manager, refer to the instructions <a href="{{ site.baseurl }}/rum/google-tag-manager/">here</a>.
+{% capture text %}If you want to add the rum javascript snippet using Google tag manager, refer to the instructions <a href="{{ site.baseurl }}/rum/google-tag-manager/">here</a>. {% endcapture %}
+{% include alert.html type="info" text=text %}
 
 To find the CoScale RUM snippet, go to <a href="#" db-href="/datasources/rum/" class="js-dashboard-link">`Datasources > Real user monitoring`</a> in our sidebar and follow the instructions on the screen. After installing the script our service will detect incoming traffic within minutes, but it does depend on the amount of traffic the website receives.
 
-That was it, now we wait as it can take up to 24 hours before all pages are detected and added to our dashboard. You can check and manage the detected domains and pages by going to <a href="#" db-href="/metrics/rum/" class="js-dashboard-link">`Metrics > Real user monitoring`</a>
+That was it, now we wait as it can take up to 24 hours before all pages are detected and added to our dashboard. You can check and manage the detected pages by going to <a href="#" db-href="/metrics/rum/" class="js-dashboard-link">`Metrics > Real user monitoring`</a>
 
 ## Extra
-Increase the visibility of your front-end performance by using tags and markers.
+Our Real User Monitoring component has some extra functionality you can use to Tag pages together or measure the performance of certain parts of your front-end application. You can find more information about these features by clicking the links below.
 
 ### [Tags]({{ site.baseurl }}/rum/tags)
 Tags allow you to group pages to get an overview on their overall performance.
