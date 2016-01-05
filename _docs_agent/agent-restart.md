@@ -12,7 +12,7 @@ Follow these steps to restart the CoScale agent.
 * CentOS 6.6: `sudo systemctl restart coscale-agent.service`
 * CentOS 5.3: `sudo initctl restart coscale-agent`
 
-## Windows
+## Microsoft Windows
 
 1. Open Task Manager
 
