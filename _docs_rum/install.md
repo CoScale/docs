@@ -13,9 +13,9 @@ To install the RUM service we need to add a javascript snippet just before the `
 {% capture text %}If you want to add the rum javascript snippet using Google tag manager, refer to the instructions <a href="{{ site.baseurl }}/rum/google-tag-manager/">here</a>. {% endcapture %}
 {% include alert.html type="info" text=text %}
 
-To find the CoScale RUM snippet, go to <a href="#" db-href="/datasources/rum/" class="js-dashboard-link">`Datasources > Real user monitoring`</a> in our sidebar and follow the instructions on the screen. After installing the script our service will detect incoming traffic within minutes, but it does depend on the amount of traffic the website receives.
+To find the CoScale RUM snippet, go to <a href="http://app.coscale.com" db-href="/datasources/rum/" class="js-dashboard-link">`Datasources > Real user monitoring`</a> in our sidebar and follow the instructions on the screen. After installing the script our service will detect incoming traffic within minutes, but it does depend on the amount of traffic the website receives.
 
-That was it, now we wait as it can take up to 24 hours before all pages are detected and added to our dashboard. You can check and manage the detected pages by going to <a href="#" db-href="/metrics/rum/" class="js-dashboard-link">`Metrics > Real user monitoring`</a>
+That was it, now we wait as it can take up to 24 hours before all pages are detected and added to our dashboard. You can check and manage the detected pages by going to <a href="http://app.coscale.com" db-href="/metrics/rum/" class="js-dashboard-link">`Metrics > Real user monitoring`</a>
 
 ## Extra
 Our Real User Monitoring component has some extra functionality you can use to Tag pages together or measure the performance of certain parts of your front-end application. You can find more information about these features by clicking the links below.
