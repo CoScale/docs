@@ -27,6 +27,12 @@
             </li>
         </ul>
     </li>
+    <li {% if current[1] == 'plugins' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/plugins/index"><i class="fa fa-fw fa-server"></i> Agent</a>
+        <ul>
+            <li><a href="{{ site.baseurl }}/plugins/apache">Apache</a></li>
+        </ul>
+    </li>
     <li {% if current[1] == 'rum' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a>
         <ul>

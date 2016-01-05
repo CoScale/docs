@@ -31,6 +31,9 @@ collections:
     docs_agent:
         output: true
         permalink: /agent/:path/
+    docs_plugins:
+        output: true
+        permalink: /plugins/:path/
     docs_rum:
         output: true
         permalink: /rum/:path/
