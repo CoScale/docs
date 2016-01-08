@@ -9,3 +9,5 @@ Here we list our various plugins. Each link contains an overview of the metrics 
 ### [Apache]({{ site.baseurl }}/plugins/apache)
 
 ### [Cassandra]({{ site.baseurl }}/plugins/cassandra)
+
+### [CouchDb]({{ site.baseurl }}/plugins/couchdb)
