@@ -26,7 +26,7 @@ The metric name that will be used to store the data.
 
 #### Regex
 The regex that will be used to match against each entry in the log file.
-{% include alert.html type="info" text="The regex will match against every log entry seperatly" %}
+{% include alert.html type="info" text="The regex will match against every log entry separately" %}
 
 #### Regex group name
 This field is required in case that the chosen data type is average, histogram, minimum or maximum. This is required to know which part of the matched regex we should use to calculate the average, histogram, minimum or maximum.
@@ -37,7 +37,7 @@ The unit for the calculated data, we ask for this for cosmetic purposes so when 
 ### Possible Use cases and examples
 
 #### Errors count
-You can use the log plugin to get the count of errors logged in the log file. For example if the error log entry looks like this `2016-01-11 15:48:33,327 - [error] The error discription`, your configuration will be as follows:
+You can use the log plugin to get the count of errors logged in the log file. For example if the error log entry looks like this `2016-01-11 15:48:33,327 - [error] The error description`, your configuration will be as follows:
 
 * DataType: Count
 * Regex: `.*[error].*`
