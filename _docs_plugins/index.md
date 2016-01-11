@@ -11,3 +11,5 @@ Here we list our various plugins. Each link contains an overview of the metrics 
 ### [Cassandra]({{ site.baseurl }}/plugins/cassandra)
 
 ### [CouchDb]({{ site.baseurl }}/plugins/couchdb)
+
+### [Log]({{ site.baseurl }}/plugins/log)
