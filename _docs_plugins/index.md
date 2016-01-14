@@ -12,4 +12,8 @@ Here we list our various plugins. Each link contains an overview of the metrics 
 
 ### [CouchDb]({{ site.baseurl }}/plugins/couchdb)
 
+### [ElasticSearch]({{ site.baseurl }}/plugins/elasticsearch)
+
+### [HAProxy]({{ site.baseurl }}/plugins/haproxy)
+
 ### [Log]({{ site.baseurl }}/plugins/log)

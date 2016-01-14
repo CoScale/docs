@@ -4,7 +4,7 @@ title: CouchDb plugin metrics
 description: Information on the metrics collected by the CoScale CouchDb plugin.
 ---
 
-The CoScale Apache plugin collects the following metrics:
+The CoScale CouchDb plugin collects the following metrics:
 
 |               Metric name                |       Metric unit       |
 |------------------------------------------|-------------------------|
