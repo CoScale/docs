@@ -16,4 +16,6 @@ Here we list our various plugins. Each link contains an overview of the metrics 
 
 ### [HAProxy]({{ site.baseurl }}/plugins/haproxy)
 
+### [HHVM]({{ site.baseurl }}/plugins/hhvm)
+
 ### [Log]({{ site.baseurl }}/plugins/log)
