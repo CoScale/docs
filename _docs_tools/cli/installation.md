@@ -24,16 +24,26 @@ To install the CoScale command line interface we provide three different methods
 
 Use the following one-liner to install the CoScale CLI on Linux in /opt/coscale/cli.
 
-`bash -c \"eval $(curl -L https://raw.githubusercontent.com/CoScale/coscale-cli/master/install.sh)\"`
+`bash -c "eval $(curl -L https://raw.githubusercontent.com/CoScale/coscale-cli/master/install.sh)"`
 
 You are now ready to use our CLI tool, try executing the command `coscale-cli`.
 
 <small>The script should work on most UNIX based operating systems, if you experience any problems <a href="mailto:support@coscale.com" class="js-support">contact our support</a> and they will assist you further.</small>
 
 
-#### Windows / Mac OS X
+#### Windows
 
-These are currently not supported, please contact our support for more information.
+Visit the CoScale Cli github [latest release](https://github.com/CoScale/coscale-cli/releases/latest) and download the attached `coscale-cli.exe` binary.
+
+Once downloaded you can use our CLI tool by executing `coscale-cli` in the same folder as the download.  
+Add the location of our CLI tool to your PATH variable to run it from anywhere.
+
+
+#### Mac OS X
+
+Mac OS X is currently not supported, please contact our support for more information.
+
+
 
 ### Compile yourself
 
