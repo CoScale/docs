@@ -35,3 +35,8 @@ A quick how to guide on installing and configuring the CoScale agent for integra
 * [Firewall / Proxy]({{ site.baseurl }}/agent/firewall-proxy)
 
     Information about CoScale agent firewall settings and proxy configuration.
+
+* [Custom templates]({{ site.baseurl }}/agent/custom-template)
+
+    Specific configuration for custom templates.
+   
