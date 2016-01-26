@@ -2,8 +2,8 @@
 # as a demonstration of an API spec in YAML
 swagger: '2.0'
 info:
-  title:
-  description:
+  title: ""
+  description: ""
   version: "1.0.0"
 # the domain of the service
 host: api.coscale.com
@@ -21,12 +21,12 @@ paths:
         Login to CoScale and receive authorization token
       parameters:
         - name: email
-          in: query
+          in: formData
           description: User email.
           required: true
           type: string
         - name: password
-          in: query
+          in: formData
           description: User password.
           required: true
           type: string
@@ -150,32 +150,32 @@ paths:
           required: true
           type: string
         - name: unit
-          in: query
+          in: formData
           description: It can be empty
           required: false
           type: string
         - name: dataType
-          in: query
+          in: formData
           description: The dataType must have all letters uppercase
           required: true
           type: string
         - name: source
-          in: query
+          in: formData
           description: It can be empty
           required: true
           type: string
         - name: subject
-          in: query
+          in: formData
           description: The subject must have all letters uppercase
           required: true
           type: string
         - name: description
-          in: query
+          in: formData
           description: The description of server
           required: false
           type: string
         - name: name
-          in: query
+          in: formData
           description: The name of the new server
           required: true
           type: string
@@ -251,37 +251,37 @@ paths:
           required: true
           type: string
         - name: version
-          in: query
+          in: formData
           description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
           required: true
           type: string
         - name: unit
-          in: query
+          in: formData
           description: It can be empty
           required: false
           type: string
         - name: dataType
-          in: query
+          in: formData
           description: The dataType must have all letters uppercase
           required: false
           type: string
         - name: source
-          in: query
+          in: formData
           description: It can be empty
           required: false
           type: string
         - name: subject
-          in: query
+          in: formData
           description: The subject must have all letters uppercase
           required: false
           type: string
         - name: description
-          in: query
+          in: formData
           description: The new description of the server
           required: false
           type: string
         - name: name
-          in: query
+          in: formData
           description: The new name of the server
           required: false
           type: string
@@ -392,22 +392,22 @@ paths:
           required: true
           type: string
         - name: key
-          in: query
+          in: formData
           description: Key for the attribute.
           required: true
           type: string
         - name: value
-          in: query
+          in: formData
           description: Value for the attribute.
           required: true
           type: string
         - name: source
-          in: query
+          in: formData
           description: Describes who added the attribute.
           required: true
           type: string
         - name: locked
-          in: query
+          in: formData
           description: "If true, the attribute cannot be changed in the frontend."
           required: true
           type: boolean
@@ -485,27 +485,27 @@ paths:
           required: true
           type: string
         - name: key
-          in: query
+          in: formData
           description: Key for the attribute.
           required: false
           type: string
         - name: value
-          in: query
+          in: formData
           description: Value for the attribute.
           required: false
           type: string
         - name: source
-          in: query
+          in: formData
           description: Describes who added the attribute.
           required: false
           type: string
         - name: locked
-          in: query
+          in: formData
           description: "If true, the attribute cannot be changed in the frontend."
           required: false
           type: boolean
         - name: version
-          in: query
+          in: formData
           description: "1"
           required: true
           type: boolean
@@ -708,32 +708,32 @@ paths:
           required: true
           type: string
         - name: unit
-          in: query
+          in: formData
           description: It can be empty
           required: false
           type: string
         - name: dataType
-          in: query
+          in: formData
           description: The dataType must have all letters uppercase
           required: true
           type: string
         - name: source
-          in: query
+          in: formData
           description: It can be empty
           required: true
           type: string
         - name: subject
-          in: query
+          in: formData
           description: The subject must have all letters uppercase
           required: true
           type: string
         - name: description
-          in: query
+          in: formData
           description: The description of the new server group
           required: false
           type: string
         - name: name
-          in: query
+          in: formData
           description: The name of the new server group
           required: true
           type: string
@@ -809,37 +809,37 @@ paths:
           required: true
           type: string
         - name: version
-          in: query
+          in: formData
           description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
           required: true
           type: string
         - name: unit
-          in: query
+          in: formData
           description: It can be empty
           required: false
           type: string
         - name: dataType
-          in: query
+          in: formData
           description: The dataType must have all letters uppercase
           required: false
           type: string
         - name: source
-          in: query
+          in: formData
           description: It can be empty
           required: false
           type: string
         - name: subject
-          in: query
+          in: formData
           description: The subject must have all letters uppercase
           required: false
           type: string
         - name: description
-          in: query
+          in: formData
           description: The description of the new server group
           required: false
           type: string
         - name: name
-          in: query
+          in: formData
           description: The name of the new server group
           required: false
           type: string
@@ -1168,22 +1168,22 @@ paths:
           required: true
           type: string
         - name: key
-          in: query
+          in: formData
           description: Key for the attribute.
           required: true
           type: string
         - name: value
-          in: query
+          in: formData
           description: Value for the attribute.
           required: true
           type: string
         - name: source
-          in: query
+          in: formData
           description: Describes who added the attribute.
           required: true
           type: string
         - name: locked
-          in: query
+          in: formData
           description: "If true, the attribute cannot be changed in the frontend."
           required: true
           type: boolean
@@ -1261,27 +1261,27 @@ paths:
           required: true
           type: string
         - name: key
-          in: query
+          in: formData
           description: Key for the attribute.
           required: false
           type: string
         - name: value
-          in: query
+          in: formData
           description: Value for the attribute.
           required: false
           type: string
         - name: source
-          in: query
+          in: formData
           description: Describes who added the attribute.
           required: false
           type: string
         - name: locked
-          in: query
+          in: formData
           description: "If true, the attribute cannot be changed in the frontend."
           required: false
           type: boolean
         - name: version
-          in: query
+          in: formData
           description: TODO
           required: true
           type: string
@@ -1383,34 +1383,39 @@ paths:
           description: The uuid for the application
           required: true
           type: string
-        - name: unit
-          in: query
-          description: It can be empty
-          required: false
-          type: string
-        - name: dataType
-          in: query
-          description: The dataType must have all letters uppercase
-          required: true
-          type: string
-        - name: source
-          in: query
-          description: It can be empty
-          required: true
-          type: string
-        - name: subject
-          in: query
-          description: The subject must have all letters uppercase
+        - name: name
+          in: formData
+          description: The name of the new metric instance
           required: true
           type: string
         - name: description
-          in: query
+          in: formData
           description: The description of the new metric instance
+          required: true
+          type: string
+        - name: dataType
+          in: formData
+          description: The dataType must have all letters uppercase
+          required: true
+          type: string
+        - name: subject
+          in: formData
+          description: The subject must have all letters uppercase
+          required: true
+          type: string
+        - name: unit
+          in: formData
+          description: It can be empty
           required: false
           type: string
-        - name: name
-          in: query
-          description: The name of the new metric instance
+        - name: period
+          in: formData
+          description: The period in which the metric will be inserted in s
+          required: false
+          type: string
+        - name: source
+          in: formData
+          description: The source of the event eg. "API"
           required: true
           type: string
       tags:
@@ -1484,41 +1489,42 @@ paths:
           description: The id of the metric
           required: true
           type: string
-        - name: version
-          in: query
-          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+        - name: name
+          in: formData
+          description: The name of the new metric
           required: true
           type: string
-        - name: unit
-          in: query
-          description: It can be empty
+        - name: description
+          in: formData
+          description: The description of the new metric
           required: false
           type: string
         - name: dataType
-          in: query
+          in: formData
           description: The dataType must have all letters uppercase
           required: false
           type: string
+        - name: unit
+          in: formData
+          description: It can be empty
+          required: false
+          type: string
         - name: source
-          in: query
+          in: formData
           description: It can be empty
           required: false
           type: string
         - name: subject
-          in: query
+          in: formData
           description: The subject must have all letters uppercase
           required: false
           type: string
-        - name: description
-          in: query
-          description: The description of the new metric
-          required: false
-          type: string
-        - name: name
-          in: query
-          description: The name of the new metric
-          required: false
-          type: string
+        - name: version
+          in: formData
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
+          type: integer
+          format: long
       tags:
         - Metrics
       responses:
@@ -1625,6 +1631,26 @@ paths:
           description: The id of the metric
           required: true
           type: string
+        - name: key
+          in: formData
+          description: The name of the attribute
+          required: true
+          type: string
+        - name: value
+          in: formData
+          description: The value of the attribute
+          required: true
+          type: string
+        - name: source
+          in: formData
+          description: The source of the event eg. "API"
+          required: true
+          type: string
+        - name: locked
+          in: formData
+          description: The attribute can not be changed through the UI when locked
+          required: true
+          type: boolean
       tags:
         - Metrics
       responses:
@@ -1702,6 +1728,32 @@ paths:
           description: The id of the metric attribute
           required: true
           type: string
+        - name: key
+          in: formData
+          description: The name of the attribute
+          required: false
+          type: string
+        - name: value
+          in: formData
+          description: The value of the attribute
+          required: false
+          type: string
+        - name: source
+          in: formData
+          description: The source of the event eg. "API"
+          required: false
+          type: string
+        - name: locked
+          in: formData
+          description: The attribute can not be changed through the UI when locked
+          required: false
+          type: boolean
+        - name: version
+          in: formData
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
+          type: integer
+          format: long
       tags:
         - Metrics
       responses:
@@ -1759,14 +1811,14 @@ paths:
       description: |
         Get all metric groups for the current application
       parameters:
-        - name: appId
-          in: path
-          description: The uuid for the application
-          required: true
-          type: string
         - name: HTTPAuthorization
           in: header
           description: HTTPAuthorization token
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application
           required: true
           type: string
       tags:
@@ -1789,46 +1841,47 @@ paths:
       description: |
         Create a new metric group
       parameters:
-        - name: appId
-          in: path
-          description: The uuid for the application
-          required: true
-          type: string
         - name: HTTPAuthorization
           in: header
           description: HTTPAuthorization token
           required: true
           type: string
-        - name: unit
-          in: query
-          description: It can be empty
-          required: false
-          type: string
-        - name: dataType
-          in: query
-          description: The dataType must have all letters uppercase
+        - name: appId
+          in: path
+          description: The uuid for the application
           required: true
-          type: string
-        - name: source
-          in: query
-          description: It can be empty
-          required: true
-          type: string
-        - name: subject
-          in: query
-          description: The subject must have all letters uppercase
-          required: true
-          type: string
-        - name: description
-          in: query
-          description: The description of the new metric group
-          required: false
           type: string
         - name: name
-          in: query
+          in: formData
           description: The name of the new metric group
           required: true
           type: string
+        - name: description
+          in: formData
+          description: The description of the new metric group
+          required: true
+          type: string
+        - name: type
+          in: formData
+          description: The type of the new metric group
+          required: true
+          type: string
+        - name: subject
+          in: formData
+          description: The subject type of the new metric group
+          required: true
+          type: string
+        - name: source
+          in: formData
+          description: The source of the new metric group eg. "API"
+          required: true
+          type: string
+        - name: parentId
+          in: formData
+          description: Optional parent id of the metric group.
+          required: false
+          type: integer
+          format: long
       tags:
         - Metric groups
       responses:
@@ -1885,6 +1938,11 @@ paths:
       description: |
         Updates existing metric group
       parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token
+          required: true
+          type: string
         - name: appId
           in: path
           description: The uuid for the application
@@ -1895,45 +1953,35 @@ paths:
           description: The id of the metric group
           required: true
           type: string
-        - name: HTTPAuthorization
-          in: header
-          description: HTTPAuthorization token
+        - name: name
+          in: formData
+          description: The name of the metric group
           required: true
           type: string
-        - name: version
-          in: query
-          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
-          required: true
-          type: string
-        - name: unit
-          in: query
-          description: It can be empty
+        - name: description
+          in: formData
+          description: The description of the metric group
           required: false
           type: string
-        - name: dataType
-          in: query
-          description: The dataType must have all letters uppercase
+        - name: type
+          in: formData
+          description: The type of the metric group
           required: false
           type: string
         - name: source
-          in: query
-          description: It can be empty
+          in: formData
+          description: The source of the metric group eg. "API"
           required: false
           type: string
-        - name: subject
-          in: query
-          description: The subject must have all letters uppercase
+        - name: state
+          in: formData
+          description: "The state of the metric group: ENABLED, INACTIVE, DISABLED"
           required: false
           type: string
-        - name: description
-          in: query
-          description: The description of the new metric group
-          required: false
-          type: string
-        - name: name
-          in: query
-          description: The name of the new metric group
-          required: false
+        - name: version
+          in: formData
+          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          required: true
           type: string
       tags:
         - Metric groups
@@ -2293,7 +2341,7 @@ paths:
           required: true
           type: string
         - name: version
-          in: query
+          in: formData
           description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
           required: true
           type: string
@@ -2334,7 +2382,7 @@ paths:
           required: true
           type: string
         - name: version
-          in: query
+          in: formData
           description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
           required: true
           type: string
@@ -2400,34 +2448,29 @@ paths:
           description: The uuid for the application
           required: true
           type: string
-        - name: unit
-          in: query
-          description: It can be empty
-          required: false
-          type: string
-        - name: dataType
-          in: query
-          description: The dataType must have all letters uppercase
-          required: true
-          type: string
-        - name: source
-          in: query
-          description: It can be empty
-          required: true
-          type: string
-        - name: subject
-          in: query
-          description: The subject must have all letters uppercase
+        - name: name
+          in: formData
+          description: The name of the new event
           required: true
           type: string
         - name: description
-          in: query
+          in: formData
           description: The description of the new event
           required: false
           type: string
-        - name: name
-          in: query
-          description: The name of the new event
+        - name: attributeDescriptions
+          in: formData
+          description: "The attributeDescriptions of the new event"
+          required: false
+          type: string
+        - name: icon
+          in: formData
+          description: The icon of the new event
+          required: false
+          type: string
+        - name: source
+          in: formData
+          description: The source of the event eg. "API"
           required: true
           type: string
       tags:
@@ -2497,41 +2540,37 @@ paths:
           description: The id of the event
           required: true
           type: string
-        - name: version
-          in: query
-          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
-          required: true
-          type: string
-        - name: unit
-          in: query
-          description: It can be empty
-          required: false
-          type: string
-        - name: dataType
-          in: query
-          description: The dataType must have all letters uppercase
-          required: false
-          type: string
-        - name: source
-          in: query
-          description: It can be empty
-          required: false
-          type: string
-        - name: subject
-          in: query
-          description: The subject must have all letters uppercase
+        - name: name
+          in: formData
+          description: The name of the event
           required: false
           type: string
         - name: description
-          in: query
-          description: The description of the new event
+          in: formData
+          description: The description of the event
           required: false
           type: string
-        - name: name
-          in: query
-          description: The name of the new event
+        - name: attributeDescriptions
+          in: formData
+          description: The attributeDescriptions of the event
           required: false
           type: string
+        - name: source
+          in: formData
+          description: The source of the event eg. "API"
+          required: false
+          type: string
+        - name: subject
+          in: formData
+          description: The subject must have all letters uppercase
+          required: false
+          type: string
+        - name: version
+          in: formData
+          description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
+          required: true
+          type: integer
+          format: long
       tags:
         - Events
       responses:
@@ -2647,25 +2686,27 @@ paths:
           description: The id of the event
           required: true
           type: string
-        - name: start
-          in: query
+        - name: message
+          in: formData
+          description: The message of the event
+          required: true
+          type: string
+        - name: timestamp
+          in: formData
           description: The start time of the event
           required: true
-          type: string
-        - name: stop
-          in: query
-          description: The stop time of the event
-          required: true
-          type: string
-        - name: message
-          in: query
-          description: The message of the event
+          type: integer
+          format: long
+        - name: stopTime
+          in: formData
+          description: The stop time of the event. Leave empty for an "unfinished event".
           required: false
-          type: string
+          type: integer
+          format: long
         - name: subject
-          in: query
+          in: formData
           description: The subject of the event
-          required: false
+          required: true
           type: string
       tags:
         - Events
@@ -2679,7 +2720,7 @@ paths:
         404:
           description: TODO
 
-  /app/{appId}/events/{eventId}//data/{eventDataId}/:
+  /app/{appId}/events/{eventId}/data/{eventDataId}/:
     put:
       description: |
         Update event.
@@ -2705,23 +2746,23 @@ paths:
           required: true
           type: string
         - name: message
-          in: query
+          in: formData
           description: The message of the event
           required: false
           type: string
         - name: subject
-          in: query
+          in: formData
           description: The subject of the event
           required: false
           type: string
         - name: timestamp
-          in: query
+          in: formData
           description: The timestamp of the event
           required: false
           type: integer
           format: long
         - name: version
-          in: query
+          in: formData
           description: Version of the update
           required: true
           type: integer
@@ -2835,6 +2876,9 @@ definitions:
       appId:
         type: string
         description: "0005c2ca-8443-4761-8948-09d4f345ed1e"
+      alias:
+        type: string
+        description: "(null)"
       state:
         type: string
         description: ENABLED
@@ -2856,9 +2900,6 @@ definitions:
         type: integer
         format: long
         description: "1"
-      state:
-        type: string
-        description: "ENABLED"
       name:
         type: string
         description: My Application
@@ -2868,6 +2909,20 @@ definitions:
       ownerId:
         type: integer
         description: "83"
+      state:
+        type: string
+        description: "ENABLED"
+      invoiceYearly:
+        type: boolean
+        description: "true"
+      startType:
+        type: integer
+        format: long
+        description: "1446716711"
+      endTimeFreeTrial:
+        type: integer
+        format: long
+        description: "1449308711"
       planId:
         type: integer
         description: "1"
@@ -3009,9 +3064,12 @@ definitions:
         description:
           type: string
           description: "Description for the event."
+        attributeDescription:
+          type: string
+          description: "AttributeDescription for the event."
         type:
           type: string
-          description: Describes the type of event. Can be chosen by the user
+          description: "Describes the type of event. Can be chosen by the user."
         source:
           type: string
           description: "Describes who added the event. Can be chosen by the user."
@@ -3025,11 +3083,26 @@ definitions:
 
   EventData:
     properties:
+      gid:
+        type: string
+        description: "Unique global identifier."
       id:
         type: integer
         format: long
         description: "Unique identifier."
+      applicationId:
+        type: integer
+        format: long
+        description: "Id of the application"
       timestamp:
+        type: integer
+        format: long
+        description: "Unix timestamp in milliseconds"
+      stopTime:
+        type: integer
+        format: long
+        description: "Unix timestamp in milliseconds"
+      updateTime:
         type: integer
         format: long
         description: "Unix timestamp in milliseconds"
@@ -3039,10 +3112,17 @@ definitions:
       subject:
         type: string
         description: "The subject for the event data."
+      attribute:
+        type: string
+        description: "The attributes of the event data."
       version:
         type: integer
         format: long
         description: "Automatically updated on each update to the instance."
+      eventId:
+        type: integer
+        format: long
+        description: "Id of the event category."
 
   Invalid event:
     properties:
@@ -3244,3 +3324,4 @@ definitions:
         type: string
       data:
         type: string
+
