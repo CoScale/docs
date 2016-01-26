@@ -114,6 +114,25 @@ body {
     .sidebar {
         position: fixed;
         top: 105px;
+        height: 100%;
+        overflow: auto;
+    }
+    .sidebar::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    .sidebar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    .sidebar::-webkit-scrollbar-thumb {
+        background: #bbb;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb:window-inactive {
+        background: #bbb;
     }
     #logo img {
         position: fixed;
