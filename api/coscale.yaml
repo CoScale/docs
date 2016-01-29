@@ -18,7 +18,7 @@ paths:
   /users/login/:
     post:
       description: |
-        Login to CoScale and receive authorization token
+        Login to CoScale and receive authorization token.
       parameters:
         - name: email
           in: formData
@@ -35,22 +35,20 @@ paths:
         - Login
       responses:
         200:
-          description: A token that should be used as HTTPAuthorization on all following calls
+          description: A token that should be used as HTTPAuthorization on all following calls.
           schema:
             type: array
             items:
               $ref: '#/definitions/Token'
-        default:
-          description: Returns an error message
+        400:
+          description: Invalid credentials.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid Credentials'
+            $ref: '#/definitions/InvalidCredentials'
 
   /users/apps/:
     get:
       description: |
-        Getting all applications for the current user
+        Getting all applications for the current user.
       parameters:
         - name: HTTPAuthorization
           in: header
@@ -61,79 +59,79 @@ paths:
         - Apps
       responses:
         200:
-          description: All applications for the current user
+          description: All applications for the current user.
           schema:
             type: array
             items:
               $ref: '#/definitions/Apps'
         401:
-          description: Token not valid
+          description: Token not valid.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid token'
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/:
     get:
       description: |
-        Get app information
+        Get app information.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
       tags:
         - Apps
       responses:
         200:
-          description: All models are represented as a json dict.
+          description: The application model.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/App Model'
+            $ref: '#/definitions/AppModel'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servers/:
     get:
       description: |
-        Get all servers for the current application
+        Get all servers for the current application.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
       tags:
         - Servers
       responses:
         200:
-          description: List of all servers.
+          description: A list of all servers.
           schema:
             type: array
             items:
               $ref: '#/definitions/Server'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -141,59 +139,49 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
-        - name: unit
+        - name: name
           in: formData
-          description: It can be empty
-          required: false
-          type: string
-        - name: dataType
-          in: formData
-          description: The dataType must have all letters uppercase
-          required: true
-          type: string
-        - name: source
-          in: formData
-          description: It can be empty
-          required: true
-          type: string
-        - name: subject
-          in: formData
-          description: The subject must have all letters uppercase
+          description: The name of the new server.
           required: true
           type: string
         - name: description
           in: formData
-          description: The description of server
-          required: false
+          description: The description of the new server.
+          required: true
           type: string
-        - name: name
+        - name: type
           in: formData
-          description: The name of the new server
+          description: The type of the new server.
+          required: true
+          type: string
+        - name: source
+          in: formData
+          description: "The source of the new server (Eg. API)."
           required: true
           type: string
       tags:
         - Servers
       responses:
         200:
-          description: Returns a new server.
+          description: The new server.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Server'
+            $ref: '#/definitions/Server'
         404:
           description: Application not found
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servers/{serverId}/:
     get:
@@ -202,17 +190,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
       tags:
@@ -227,9 +215,11 @@ paths:
         404:
           description: Application/Server not found
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server'
+            $ref: '#/definitions/InvalidServer'
+        401:
+          description: Token not valid
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     put:
       description: |
@@ -237,53 +227,48 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
-        - name: version
+        - name: name
           in: formData
-          description: The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned.
+          description: The new name of the server.
           required: true
           type: string
-        - name: unit
+        - name: description
           in: formData
-          description: It can be empty
+          description: The new description of the server.
           required: false
           type: string
-        - name: dataType
+        - name: type
           in: formData
-          description: The dataType must have all letters uppercase
+          description: The type of the server.
           required: false
           type: string
         - name: source
           in: formData
-          description: It can be empty
+          description: The source of the server (Eg. API).
           required: false
           type: string
-        - name: subject
+        - name: state
           in: formData
-          description: The subject must have all letters uppercase
+          description: "The state of the server (ENABLED, INACTIVE, DISABLED)."
           required: false
           type: string
-        - name: description
+        - name: version
           in: formData
-          description: The new description of the server
-          required: false
-          type: string
-        - name: name
-          in: formData
-          description: The new name of the server
-          required: false
+          description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
+          required: true
           type: string
       tags:
         - Servers
@@ -295,11 +280,13 @@ paths:
             items:
               $ref: '#/definitions/Server'
         404:
-          description: Application/Server not found
+          description: Application/Server not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server'
+            $ref: '#/definitions/InvalidServer'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -307,17 +294,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
       tags:
@@ -326,15 +313,15 @@ paths:
         200:
           description: Returns a success message.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Delete success'
+            $ref: '#/definitions/DeleteSuccess'
         404:
           description: Application/Server not found
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server'
+            $ref: '#/definitions/InvalidServer'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servers/{serverId}/attributes/:
     get:
@@ -343,17 +330,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
       tags:
@@ -368,9 +355,11 @@ paths:
         404:
           description: Application/Server not found
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server'
+            $ref: '#/definitions/InvalidServer'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -378,17 +367,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
         - name: key
@@ -415,13 +404,17 @@ paths:
         - Servers
       responses:
         200:
-          description: Returns a server attribute.
+          description: Returns the server attribute.
           schema:
-            type: array
-            items:
               $ref: '#/definitions/ServerAttribute'
         404:
-          description: TODO
+          description: Application/Server not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servers/{serverId}/attributes/{attributeId}/:
     get:
@@ -430,22 +423,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the attribute
+          description: The id of the attribute.
           required: true
           type: string
       tags:
@@ -454,11 +447,15 @@ paths:
         200:
           description: Server attribute.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ServerAttribute'
+            $ref: '#/definitions/ServerAttribute'
         404:
-          description: TODO
+          description: Application/Server/Attribute not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     put:
       description: |
@@ -466,22 +463,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the attribute
+          description: The id of the attribute.
           required: true
           type: string
         - name: key
@@ -506,20 +503,25 @@ paths:
           type: boolean
         - name: version
           in: formData
-          description: "1"
+          description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
           required: true
-          type: boolean
+          type: integer
+          format: long
       tags:
         - Servers
       responses:
         200:
-          description: Server attribute.
+          description: The updated server attribute.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ServerAttribute'
+            $ref: '#/definitions/ServerAttribute'
         404:
-          description: TODO
+          description: Application/Server/Attribute not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
         description: |
@@ -527,22 +529,22 @@ paths:
         parameters:
           - name: HTTPAuthorization
             in: header
-            description: HTTPAuthorization token
+            description: HTTPAuthorization token.
             required: true
             type: string
           - name: appId
             in: path
-            description: The uuid for the application
+            description: The uuid for the application.
             required: true
             type: string
           - name: serverId
             in: path
-            description: The id of the server
+            description: The id of the server.
             required: true
             type: string
           - name: attributeId
             in: path
-            description: The id of the attribute
+            description: The id of the attribute.
             required: true
             type: string
         tags:
@@ -553,9 +555,15 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/definitions/Delete success'
+                $ref: '#/definitions/DeleteSuccess'
           404:
-            description: TODO
+            description: Application/Server/Attribute not found.
+            schema:
+              $ref: '#/definitions/InvalidApplication'
+          401:
+            description: Token not valid.
+            schema:
+              $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servers/{serverId}/children/:
     get:
@@ -564,30 +572,36 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
       tags:
         - Servers
       responses:
         200:
-          description: List of Servers.
+          description: A list of Servers.
           schema:
             type: array
             items:
               $ref: '#/definitions/Server'
         404:
-          description: TODO
+          description: Application/Server not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servers/{serverId}/children/{childId}/:
     post:
@@ -596,22 +610,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
         - name: childId
           in: path
-          description: The id of the child you want to add
+          description: The id of the child you want to add.
           required: true
           type: string
       tags:
@@ -624,7 +638,13 @@ paths:
             items:
               $ref: '#/definitions/Server'
         404:
-          description: TODO
+          description: Application/Server not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
         description: |
@@ -632,22 +652,22 @@ paths:
         parameters:
           - name: HTTPAuthorization
             in: header
-            description: HTTPAuthorization token
+            description: HTTPAuthorization token.
             required: true
             type: string
           - name: appId
             in: path
-            description: The uuid for the application
+            description: The uuid for the application.
             required: true
             type: string
           - name: serverId
             in: path
-            description: The id of the server
+            description: The id of the server.
             required: true
             type: string
           - name: childId
             in: path
-            description: The id of the child
+            description: The id of the child.
             required: true
             type: string
         tags:
@@ -658,40 +678,48 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/definitions/Delete success'
+                $ref: '#/definitions/DeleteSuccess'
           404:
-            description: TODO
+            description: Application/Server not found.
+            schema:
+              $ref: '#/definitions/InvalidApplication'
+          401:
+            description: Token not valid.
+            schema:
+              $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/:
     get:
       description: |
-        Get all server groups for the current application
+        Get all server groups for the current application.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: Server groups
+          description: A list of server groups.
           schema:
             type: array
             items:
               $ref: '#/definitions/ServerGroups'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -699,59 +727,55 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
-        - name: unit
+        - name: name
           in: formData
-          description: It can be empty
-          required: false
-          type: string
-        - name: dataType
-          in: formData
-          description: The dataType must have all letters uppercase
-          required: true
-          type: string
-        - name: source
-          in: formData
-          description: It can be empty
-          required: true
-          type: string
-        - name: subject
-          in: formData
-          description: The subject must have all letters uppercase
+          description: The name of the new server group.
           required: true
           type: string
         - name: description
           in: formData
-          description: The description of the new server group
+          description: The description of the new server group.
           required: false
           type: string
-        - name: name
+        - name: type
           in: formData
-          description: The name of the new server group
+          description: The type of the new server group.
           required: true
           type: string
+        - name: source
+          in: formData
+          description: "The source of the new server group (Eg: API)."
+          required: true
+          type: string
+        - name: parentId
+          in: formData
+          description: An optional parent server group of this new server group.
+          required: false
+          type: integer
+          format: long
       tags:
         - Server groups
       responses:
         200:
-          description: Returns a sever group.
+          description: Returns the new sever group.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ServerGroups'
+            $ref: '#/definitions/ServerGroups'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/{groupId}/:
     get:
@@ -760,34 +784,34 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: Server group.
+          description: The requested server group.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ServerGroups'
+            $ref: '#/definitions/ServerGroups'
         404:
-          description: Application/ServerGroup not found
+          description: Application/ServerGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     put:
       description: |
@@ -795,69 +819,61 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
+          type: string
+        - name: name
+          in: formData
+          description: The name of the server group.
+          required: false
+          type: string
+        - name: description
+          in: formData
+          description: The description of the server group.
+          required: false
+          type: string
+        - name: source
+          in: formData
+          description: "The source of the server group (Eg. API)."
+          required: false
+          type: string
+        - name: type
+          in: formData
+          description: The type of the server group.
+          required: false
           type: string
         - name: version
           in: formData
           description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
           required: true
           type: string
-        - name: unit
-          in: formData
-          description: It can be empty
-          required: false
-          type: string
-        - name: dataType
-          in: formData
-          description: The dataType must have all letters uppercase
-          required: false
-          type: string
-        - name: source
-          in: formData
-          description: It can be empty
-          required: false
-          type: string
-        - name: subject
-          in: formData
-          description: The subject must have all letters uppercase
-          required: false
-          type: string
-        - name: description
-          in: formData
-          description: The description of the new server group
-          required: false
-          type: string
-        - name: name
-          in: formData
-          description: The name of the new server group
-          required: false
-          type: string
       tags:
         - Server groups
       responses:
         200:
-          description: Server group.
+          description: The modified server group.
           schema:
             type: array
             items:
               $ref: '#/definitions/ServerGroups'
         404:
-          description: Application/ServerGroup not found
+          description: Application/ServerGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -865,17 +881,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
       tags:
@@ -884,15 +900,15 @@ paths:
         200:
           description: Success message.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Delete success'
+            $ref: '#/definitions/DeleteSuccess'
         404:
-          description: Application/ServerGroup not found
+          description: Application/ServerGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/{groupId}/servers/:
     get:
@@ -901,34 +917,36 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: List of servers.
+          description: A list of servers.
           schema:
             type: array
             items:
               $ref: '#/definitions/Server'
         404:
-          description: Application/ServerGroup not found
+          description: Application/Server not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/{groupId}/servers/{serverId}/:
     post:
@@ -937,35 +955,41 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: Server.
+          description: All servers in the server group.
           schema:
             type: array
             items:
               $ref: '#/definitions/Server'
         404:
-          description: TODO
+          description: Application not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -973,22 +997,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: serverId
           in: path
-          description: The id of the server
+          description: The id of the server.
           required: true
           type: string
       tags:
@@ -997,11 +1021,15 @@ paths:
         200:
           description: Success message.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Delete success'
+            $ref: '#/definitions/DeleteSuccess'
         404:
-          description: TODO
+          description: Application/Server not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/{groupId}/servergroups/:
     get:
@@ -1010,34 +1038,36 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: List of ServerGroups.
+          description: A list of ServerGroups.
           schema:
             type: array
             items:
               $ref: '#/definitions/ServerGroups'
         404:
-          description: Application/ServerGroup not found
+          description: Application/ServerGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/{groupId}/servergroups/{childId}/:
     post:
@@ -1046,35 +1076,41 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: childId
           in: path
-          description: The id of the child server group
+          description: The id of the child server group.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: The added server group.
+          description: All server groups in the parent server group.
           schema:
             type: array
             items:
               $ref: '#/definitions/ServerGroups'
         404:
-          description: TODO
+          description: Application/ServerGroup not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -1082,22 +1118,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: childId
           in: path
-          description: The id of the child server group
+          description: The id of the child server group.
           required: true
           type: string
       tags:
@@ -1106,11 +1142,15 @@ paths:
         200:
           description: Success message.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Delete success'
+            $ref: '#/definitions/DeleteSuccess'
         404:
-          description: TODO
+          description: Application/ServerGroup not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/{groupId}/attributes/:
     get:
@@ -1119,34 +1159,36 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: List of ServerGroupAttribute.
+          description: A list of ServerGroupAttributes.
           schema:
             type: array
             items:
               $ref: '#/definitions/ServerGroupAttribute'
         404:
-          description: Application/ServerGroup not found
+          description: Application/ServerGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid server group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -1154,17 +1196,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: key
@@ -1191,13 +1233,19 @@ paths:
         - Server groups
       responses:
         200:
-          description: ServerGroupAttribute
+          description: The new ServerGroupAttribute.
           schema:
             type: array
             items:
               $ref: '#/definitions/ServerGroupAttribute'
         404:
-          description: TODO
+          description: Application/ServerGroup not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/servergroups/{groupId}/attributes/{attributeId}/:
     get:
@@ -1206,35 +1254,39 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the server group attribute
+          description: The id of the server group attribute.
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: ServerGroupAttribute.
+          description: The requested ServerGroupAttribute.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ServerGroupAttribute'
+            $ref: '#/definitions/ServerGroupAttribute'
         404:
-          description: TODO
+          description: Application/ServerGroup/Attribute not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     put:
       description: |
@@ -1242,22 +1294,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the server group attribute
+          description: The id of the server group attribute.
           required: true
           type: string
         - name: key
@@ -1282,20 +1334,24 @@ paths:
           type: boolean
         - name: version
           in: formData
-          description: TODO
+          description: "The version attribute is always required and should be the same as the current version in the api, otherwise an error will be returned."
           required: true
           type: string
       tags:
         - Server groups
       responses:
         200:
-          description: ServerAttribute.
+          description: The updated ServerAttribute.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ServerAttribute'
+              $ref: '#/definitions/ServerGroupAttribute'
         404:
-          description: TODO
+          description: Application/ServerGroup/Attribute not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -1303,22 +1359,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the server group
+          description: The id of the server group.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the server group attribute
+          description: The id of the server group attribute.
           required: true
           type: string
       tags:
@@ -1327,11 +1383,15 @@ paths:
         200:
           description: Success message.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Delete success'
+            $ref: '#/definitions/DeleteSuccess'
         404:
-          description: TODO
+          description: Application/ServerGroup/Attribute not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
 #############################################################
 
@@ -1341,33 +1401,35 @@ paths:
   /app/{appId}/metrics/:
     get:
       description: |
-        Get all metrics for the current application
+        Get all metrics for the current application.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
       tags:
         - Metrics
       responses:
         200:
-          description: Metrics
+          description: A list of metrics.
           schema:
             type: array
             items:
               $ref: '#/definitions/Metric'
         404:
-          description: Application not found
+          description: Application/Metric not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -1375,64 +1437,64 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: name
           in: formData
-          description: The name of the new metric instance
+          description: The name of the new metric instance.
           required: true
           type: string
         - name: description
           in: formData
-          description: The description of the new metric instance
+          description: The description of the new metric instance.
           required: true
           type: string
         - name: dataType
           in: formData
-          description: The dataType must have all letters uppercase
+          description: The dataType must have all letters uppercase.
           required: true
           type: string
         - name: subject
           in: formData
-          description: The subject must have all letters uppercase
+          description: The subject must have all letters uppercase.
           required: true
           type: string
         - name: unit
           in: formData
-          description: It can be empty
+          description: It can be empty.
           required: false
           type: string
         - name: period
           in: formData
-          description: The period in which the metric will be inserted in s
+          description: The period in which the metric will be inserted in s.
           required: false
           type: string
         - name: source
           in: formData
-          description: The source of the event eg. "API"
+          description: The source of the metric (Eg. API).
           required: true
           type: string
       tags:
         - Metrics
       responses:
         200:
-          description: Metric.
+          description: The new metric.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Metric'
+             $ref: '#/definitions/Metric'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metrics/{metricId}/:
     get:
@@ -1441,82 +1503,82 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
       tags:
         - Metrics
       responses:
         200:
-          description: Specific (defined by its id) metric.
+          description: A specific (defined by its id) metric.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Metric'
+            $ref: '#/definitions/Metric'
         404:
-          description: Application/Metric not found
+          description: Application/Metric not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     put:
       description: |
-        Updates existing metric
+        Update an existing metric.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
         - name: name
           in: formData
-          description: The name of the new metric
+          description: The name of the new metric.
           required: true
           type: string
         - name: description
           in: formData
-          description: The description of the new metric
+          description: The description of the new metric.
           required: false
           type: string
         - name: dataType
           in: formData
-          description: The dataType must have all letters uppercase
+          description: The dataType must have all letters uppercase.
           required: false
           type: string
         - name: unit
           in: formData
-          description: It can be empty
+          description: It can be empty.
           required: false
           type: string
         - name: source
           in: formData
-          description: It can be empty
+          description: It can be empty.
           required: false
           type: string
         - name: subject
           in: formData
-          description: The subject must have all letters uppercase
+          description: The subject must have all letters uppercase.
           required: false
           type: string
         - name: version
@@ -1531,15 +1593,15 @@ paths:
         200:
           description: Returns the updated metric.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Metric'
+            $ref: '#/definitions/Metric'
         404:
-          description: Application/Metric not found
+          description: Application/Metric not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -1547,17 +1609,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
       tags:
@@ -1568,13 +1630,15 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Delete success'
+              $ref: '#/definitions/DeleteSuccess'
         404:
-          description: Application/Metric not found
+          description: Application/Metric not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metrics/{metricId}/attributes/:
     get:
@@ -1583,34 +1647,36 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
       tags:
         - Metrics
       responses:
         200:
-          description: MetricAttribute
+          description: A list of MetricAttributes.
           schema:
             type: array
             items:
               $ref: '#/definitions/MetricAttribute'
         404:
-          description: Application/Metric not found
+          description: Application/Metric not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -1618,54 +1684,54 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
         - name: key
           in: formData
-          description: The name of the attribute
+          description: The name of the attribute.
           required: true
           type: string
         - name: value
           in: formData
-          description: The value of the attribute
+          description: The value of the attribute.
           required: true
           type: string
         - name: source
           in: formData
-          description: The source of the event eg. "API"
+          description: The source of the event (Eg. API).
           required: true
           type: string
         - name: locked
           in: formData
-          description: The attribute can not be changed through the UI when locked
+          description: The attribute can not be changed through the UI when locked.
           required: true
           type: boolean
       tags:
         - Metrics
       responses:
         200:
-          description: MetricAttribute
+          description: The new MetricAttribute.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/MetricAttribute'
+            $ref: '#/definitions/MetricAttribute'
         404:
-          description: Application/Metric not found
+          description: Application/Metric not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metrics/{metricId}/attributes/{attributeId}/:
     get:
@@ -1674,35 +1740,39 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the metric attribute
+          description: The id of the metric attribute.
           required: true
           type: string
       tags:
         - Metrics
       responses:
         200:
-          description: MetricAttribute
+          description: The requested MetricAttribute.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/MetricAttribute'
+            $ref: '#/definitions/MetricAttribute'
         404:
-          description: TODO
+          description: Application/Metric/Attribute not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     put:
       description: |
@@ -1710,42 +1780,42 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the metric attribute
+          description: The id of the metric attribute.
           required: true
           type: string
         - name: key
           in: formData
-          description: The name of the attribute
+          description: The name of the attribute.
           required: false
           type: string
         - name: value
           in: formData
-          description: The value of the attribute
+          description: The value of the attribute.
           required: false
           type: string
         - name: source
           in: formData
-          description: The source of the event eg. "API"
+          description: The source of the metric (eg. API).
           required: false
           type: string
         - name: locked
           in: formData
-          description: The attribute can not be changed through the UI when locked
+          description: The attribute can not be changed through the UI when locked.
           required: false
           type: boolean
         - name: version
@@ -1758,13 +1828,19 @@ paths:
         - Metrics
       responses:
         200:
-          description: MetricAttribute
+          description: The updated MetricAttribute.
           schema:
             type: array
             items:
               $ref: '#/definitions/MetricAttribute'
         404:
-          description: TODO
+          description: Application/Metric/Attribute not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -1772,108 +1848,112 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric
+          description: The id of the metric.
           required: true
           type: string
         - name: attributeId
           in: path
-          description: The id of the metric attribute
+          description: The id of the metric attribute.
           required: true
           type: string
       tags:
         - Metrics
       responses:
         200:
-          description: Success message
+          description: Success message.
           schema:
             type: array
             items:
-              $ref: '#/definitions/Delete success'
+              $ref: '#/definitions/DeleteSuccess'
         404:
-          description: TODO
+          description: Application/Metric/Attribute not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/MetricTags'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metricgroups/:
     get:
       description: |
-        Get all metric groups for the current application
+        Get all metric groups for the current application.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
       tags:
         - Metric groups
       responses:
         200:
-          description: Metric groups
+          description: A list of metric groups.
           schema:
             type: array
             items:
               $ref: '#/definitions/MetricGroups'
         404:
-          description: Application not found
+          description: Application/MetricGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
-        Create a new metric group
+        Create a new metric group.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: name
           in: formData
-          description: The name of the new metric group
+          description: The name of the new metric group.
           required: true
           type: string
         - name: description
           in: formData
-          description: The description of the new metric group
+          description: The description of the new metric group.
           required: true
           type: string
         - name: type
           in: formData
-          description: The type of the new metric group
+          description: The type of the new metric group.
           required: true
           type: string
         - name: subject
           in: formData
-          description: The subject type of the new metric group
+          description: The subject type of the new metric group.
           required: true
           type: string
         - name: source
           in: formData
-          description: The source of the new metric group eg. "API"
+          description: The source of the new metric group (eg. API).
           required: true
           type: string
         - name: parentId
@@ -1886,17 +1966,17 @@ paths:
         - Metric groups
       responses:
         200:
-          description: Returns new metric group.
+          description: Returns the new metric group.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/MetricGroups'
+            $ref: '#/definitions/MetricGroups'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metricgroups/{groupId}/:
     get:
@@ -1905,77 +1985,77 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
       tags:
         - Metric groups
       responses:
         200:
-          description: Specific (defined by its id) metric group
+          description: Specific (defined by its id) metric group.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/MetricGroups'
+            $ref: '#/definitions/MetricGroups'
         404:
-          description: Application/MetricGroup not found
+          description: Application/MetricGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     put:
       description: |
-        Updates existing metric group
+        Updates existing metric group.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
         - name: name
           in: formData
-          description: The name of the metric group
+          description: The name of the metric group.
           required: true
           type: string
         - name: description
           in: formData
-          description: The description of the metric group
+          description: The description of the metric group.
           required: false
           type: string
         - name: type
           in: formData
-          description: The type of the metric group
+          description: The type of the metric group.
           required: false
           type: string
         - name: source
           in: formData
-          description: The source of the metric group eg. "API"
+          description: The source of the metric group (eg. API).
           required: false
           type: string
         - name: state
           in: formData
-          description: "The state of the metric group: ENABLED, INACTIVE, DISABLED"
+          description: "The state of the metric group: ENABLED, INACTIVE, DISABLED."
           required: false
           type: string
         - name: version
@@ -1989,15 +2069,15 @@ paths:
         200:
           description: Returns the updated metric group.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/MetricGroups'
+            $ref: '#/definitions/MetricGroups'
         404:
-          description: Application/MetricGroup not found
+          description: Application/MetricGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -2005,17 +2085,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
       tags:
@@ -2026,49 +2106,53 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Delete success'
+              $ref: '#/definitions/DeleteSuccess'
         404:
-          description: Application/MetricGroup not found
+          description: Application/MetricGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metricgroups/{groupId}/metrics/:
     get:
       description: |
-        Get all servers in the metric group.
+        Get all metrics in the metric group.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
       tags:
         - Metric groups
       responses:
         200:
-          description: List of Metrics
+          description: A list of Metrics.
           schema:
             type: array
             items:
               $ref: '#/definitions/Metric'
         404:
-          description: Application/MetricGroup not found
+          description: Application/MetricGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metricgroups/{groupId}/metrics/{metricId}/:
     post:
@@ -2077,35 +2161,41 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric from the metric group
+          description: The id of the metric from the metric group.
           required: true
           type: string
       tags:
         - Metric groups
       responses:
         200:
-          description: Metric
+          description: Returns all metrics in the group.
           schema:
             type: array
             items:
               $ref: '#/definitions/Metric'
         404:
-          description: TODO
+          description: Application/MetricGroup/Metric not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -2113,22 +2203,22 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
         - name: metricId
           in: path
-          description: The id of the metric from the metric group
+          description: The id of the metric from the metric group.
           required: true
           type: string
       tags:
@@ -2139,9 +2229,15 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Delete success'
+              $ref: '#/definitions/DeleteSuccess'
         404:
-          description: TODO
+          description: Application/MetricGroup/Metric not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metricgroups/{groupId}/metricgroups/:
     get:
@@ -2150,34 +2246,36 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
       tags:
         - Metric groups
       responses:
         200:
-          description: List of MetricGroups
+          description: A list of metric groups.
           schema:
             type: array
             items:
               $ref: '#/definitions/MetricGroups'
         404:
-          description: Application/MetricGroup not found
+          description: Application/MetricGroup not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid metric group'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/metricgroups/{groupId}/metricgroups/{childId}/:
     post:
@@ -2186,35 +2284,41 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
         - name: childId
           in: path
-          description: The id of the metric from the metric group
+          description: The id of the metric from the metric group.
           required: true
           type: string
       tags:
         - Metric groups
       responses:
         200:
-          description: "MetricGroup: the added metric group."
+          description: A list of child metric groups."
           schema:
             type: array
             items:
               $ref: '#/definitions/MetricGroups'
         404:
-          description: TODO
+          description: Application/MetricGroup not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
@@ -2222,57 +2326,63 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: groupId
           in: path
-          description: The id of the metric group
+          description: The id of the metric group.
           required: true
           type: string
         - name: childId
           in: path
-          description: The id of the metric from the metric group
+          description: The id of the metric from the metric group.
           required: true
           type: string
       tags:
         - Metric groups
       responses:
         200:
-          description: Success message
+          description: Success message.
           schema:
             type: array
             items:
-              $ref: '#/definitions/Delete success'
+              $ref: '#/definitions/DeleteSuccess'
         404:
-          description: TODO
+          description: Application/MetricGroup not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
 # Alerts
   /app/{appId}/alerts/:
     get:
       description: |
-        Get all Alerts
+        Get all Alerts.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
       tags:
         - Alerts
       responses:
         200:
-          description: List of Alerts
+          description: A list of Alerts.
           schema:
             type: array
             items:
@@ -2280,9 +2390,11 @@ paths:
         404:
           description: Application not found
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/alerts/{alertId}/:
     get:
@@ -2291,34 +2403,34 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: alertId
           in: path
-          description: The id of the alert
+          description: The id of the alert.
           required: true
           type: string
       tags:
         - Alerts
       responses:
         200:
-          description: Specific (defined by its id) alert
+          description: Specific (defined by its id) alert.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Alert'
+            $ref: '#/definitions/Alert'
         404:
-          description: Application/Alert not found
+          description: Application/Alert not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid event'
+            $ref: '#/definitions/InvalidAlert'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/alerts/{alertId}/acknowledge/:
     put:
@@ -2327,17 +2439,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: alertId
           in: path
-          description: The id of the alert
+          description: The id of the alert.
           required: true
           type: string
         - name: version
@@ -2349,17 +2461,17 @@ paths:
         - Alerts
       responses:
         200:
-          description: Alert
+          description: The acknowledged alert.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Alert'
+            $ref: '#/definitions/Alert'
         404:
-          description: Application/Alert not found
+          description: Application/Alert not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid event'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/alerts/{alertId}/resolve/:
     put:
@@ -2368,17 +2480,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: alertId
           in: path
-          description: The id of the alert
+          description: The id of the alert.
           required: true
           type: string
         - name: version
@@ -2390,49 +2502,51 @@ paths:
         - Alerts
       responses:
         200:
-          description: Alert
+          description: The resolved alert.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Alert'
+            $ref: '#/definitions/Alert'
         404:
-          description: Application/Alert not found
+          description: Application/Alert not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid event'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
 # Events
   /app/{appId}/events/:
     get:
       description: |
-        Get all event categories for the current application
+        Get all event categories for the current application.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
       tags:
         - Events
       responses:
         200:
-          description: List of Events
+          description: A list of Events.
           schema:
             type: array
             items:
               $ref: '#/definitions/Event'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -2440,54 +2554,56 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: name
           in: formData
-          description: The name of the new event
+          description: The name of the new event.
           required: true
           type: string
         - name: description
           in: formData
-          description: The description of the new event
+          description: The description of the new event.
           required: false
           type: string
         - name: attributeDescriptions
           in: formData
-          description: "The attributeDescriptions of the new event"
+          description: "The attributeDescriptions of the new event."
           required: false
           type: string
         - name: icon
           in: formData
-          description: The icon of the new event
+          description: The icon of the new event.
           required: false
           type: string
         - name: source
           in: formData
-          description: The source of the event eg. "API"
+          description: The source of the event (eg. API).
           required: true
           type: string
       tags:
         - Events
       responses:
         200:
-          description: Request
+          description: The new event.
           schema:
             type: array
             items:
               $ref: '#/definitions/Event'
         404:
-          description: Application not found
+          description: Application not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid application'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/events/{eventId}/:
     get:
@@ -2496,38 +2612,7 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
-          required: true
-          type: string
-        - name: appId
-          in: path
-          description: The uuid for the application
-          required: true
-          type: string
-        - name: eventId
-          in: path
-          description: The id of the event
-          required: true
-          type: string
-      tags:
-        - Events
-      responses:
-        200:
-          description: Specific (defined by its id) event
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Event'
-        404:
-          description: TODO
-
-    put:
-      description: |
-        Update existing event category
-      parameters:
-        - name: HTTPAuthorization
-          in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
@@ -2537,32 +2622,67 @@ paths:
           type: string
         - name: eventId
           in: path
-          description: The id of the event
+          description: The id of the event.
+          required: true
+          type: string
+      tags:
+        - Events
+      responses:
+        200:
+          description: Specific (defined by its id) event.
+          schema:
+            $ref: '#/definitions/Event'
+        404:
+          description: Application/Event not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
+
+    put:
+      description: |
+        Update existing event category.
+      parameters:
+        - name: HTTPAuthorization
+          in: header
+          description: HTTPAuthorization token.
+          required: true
+          type: string
+        - name: appId
+          in: path
+          description: The uuid for the application.
+          required: true
+          type: string
+        - name: eventId
+          in: path
+          description: The id of the event.
           required: true
           type: string
         - name: name
           in: formData
-          description: The name of the event
+          description: The name of the event.
           required: false
           type: string
         - name: description
           in: formData
-          description: The description of the event
+          description: The description of the event.
           required: false
           type: string
         - name: attributeDescriptions
           in: formData
-          description: The attributeDescriptions of the event
+          description: The attributeDescriptions of the event.
           required: false
           type: string
         - name: source
           in: formData
-          description: The source of the event eg. "API"
+          description: The source of the event (eg. API).
           required: false
           type: string
         - name: subject
           in: formData
-          description: The subject must have all letters uppercase
+          description: The subject must have all letters uppercase.
           required: false
           type: string
         - name: version
@@ -2577,33 +2697,33 @@ paths:
         200:
           description: Returns the updated event.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Event'
+            $ref: '#/definitions/Event'
         404:
-          description: Application/Event not found
+          description: Application/Event not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid event'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     delete:
       description: |
-        Delete a specific event category
+        Delete a specific event category.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: eventId
           in: path
-          description: The id of the event
+          description: The id of the event.
           required: true
           type: string
       tags:
@@ -2614,13 +2734,15 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Delete success'
+              $ref: '#/definitions/DeleteSuccess'
         404:
-          description: Application/Event not found
+          description: Application/Event not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Invalid event'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/events/{eventId}/data/:
     get:
@@ -2632,40 +2754,46 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: eventId
           in: path
-          description: The id of the event
+          description: The id of the event.
           required: true
           type: string
         - name: start
           in: query
-          description: The start time of the event
+          description: The start time of the event.
           required: true
           type: string
         - name: stop
           in: query
-          description: The stop time of the event
+          description: The stop time of the event.
           required: false
           type: string
       tags:
         - Events
       responses:
         200:
-          description: List of EventData
+          description: A list of EventData.
           schema:
             type: array
             items:
               $ref: '#/definitions/EventData'
         404:
-          description: TODO
+          description: Application/Event not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
     post:
       description: |
@@ -2673,27 +2801,27 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: eventId
           in: path
-          description: The id of the event
+          description: The id of the event.
           required: true
           type: string
         - name: message
           in: formData
-          description: The message of the event
+          description: The message of the event.
           required: true
           type: string
         - name: timestamp
           in: formData
-          description: The start time of the event
+          description: The start time of the event.
           required: true
           type: integer
           format: long
@@ -2703,67 +2831,87 @@ paths:
           required: false
           type: integer
           format: long
+        - name: attribute
+          in: formData
+          description: The attributes of the event data. This is a JSON string that must match the attribute descriptions of the event.
+          required: false
+          type: string
         - name: subject
           in: formData
-          description: The subject of the event
+          description: The subject of the event.
           required: true
           type: string
       tags:
         - Events
       responses:
         200:
-          description: EventData
+          description: The new event data.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/EventData'
+            $ref: '#/definitions/EventData'
         404:
-          description: TODO
+          description: Application/Event not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
   /app/{appId}/events/{eventId}/data/{eventDataId}/:
     put:
       description: |
-        Update event.
+        Update an event.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: eventId
           in: path
-          description: The id of the event
+          description: The id of the event.
           required: true
           type: string
         - name: eventDataId
           in: path
-          description: The id of the data event
+          description: The id of the data event.
           required: true
           type: string
         - name: message
           in: formData
-          description: The message of the event
+          description: The message of the event.
           required: false
           type: string
         - name: subject
           in: formData
-          description: The subject of the event
+          description: The subject of the event.
           required: false
           type: string
         - name: timestamp
           in: formData
-          description: The timestamp of the event
+          description: The start time of the event.
           required: false
           type: integer
           format: long
+        - name: timestamp
+          in: formData
+          description: The stop time of the event.
+          required: false
+          type: integer
+          format: long
+        - name: attribute
+          in: formData
+          description: The attributes of the event data. This is a JSON string that must match the attribute descriptions of the event.
+          required: false
+          type: string
         - name: version
           in: formData
-          description: Version of the update
+          description: Version of the update.
           required: true
           type: integer
           format: long
@@ -2771,52 +2919,56 @@ paths:
         - Events
       responses:
         200:
-          description: EventData
+          description: The updated event data.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/EventData'
+            $ref: '#/definitions/EventData'
         404:
-          description: TODO
+          description: Application/Event not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
     delete:
       description: |
-        Delete event.
+        Delete an event.
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: eventId
           in: path
-          description: The id of the event
+          description: The id of the event.
           required: true
           type: string
         - name: eventDataId
           in: path
-          description: The id of the data event
+          description: The id of the data event.
           required: true
           type: string
       tags:
         - Events
       responses:
         200:
-          description: Success message
+          description: Success message.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Delete success'
+            $ref: '#/definitions/DeleteSuccess'
         404:
-          description: TODO
+          description: Application/Event not found.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Data'
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
 # Datastore
   /app/{appId}/data/:
@@ -2828,17 +2980,17 @@ paths:
       parameters:
         - name: HTTPAuthorization
           in: header
-          description: HTTPAuthorization token
+          description: HTTPAuthorization token.
           required: true
           type: string
         - name: appId
           in: path
-          description: The uuid for the application
+          description: The uuid for the application.
           required: true
           type: string
         - name: body
           in: body
-          description: The array of data
+          description: The array of data.
           required: true
           schema:
             type: array
@@ -2846,7 +2998,17 @@ paths:
             $ref: "#/definitions/Data"
       responses:
         200:
-          description: TODO
+          description: Success message.
+          schema:
+            $ref: '#/definitions/InsertSuccess'
+        404:
+          description: Application not found.
+          schema:
+            $ref: '#/definitions/InvalidApplication'
+        401:
+          description: Token not valid.
+          schema:
+            $ref: '#/definitions/InvalidToken'
 
 definitions:
 # Login
@@ -2854,13 +3016,13 @@ definitions:
     properties:
       token:
         type: string
-        description: "b356803a-2fe5-4c8b-9a19-9135c75f147e"
+        description: "A HTTPAuthorization token that can be used to authorize most other API calls."
 
-  Invalid Credentials:
+  InvalidCredentials:
     properties:
       msg:
         type: string
-        description: Invalid credentials
+        description: "The user does not exist or the password is incorrect."
 
 # Get the apps
   Apps:
@@ -2868,70 +3030,70 @@ definitions:
       id:
         type: integer
         format: long
-        description: "1"
+        description: "A unique identifier of the app."
       version:
         type: integer
         format: long
-        description: "2"
+        description: "The version of the app."
       appId:
         type: string
-        description: "0005c2ca-8443-4761-8948-09d4f345ed1e"
+        description: "A unique uuid for the app."
       alias:
         type: string
-        description: "(null)"
+        description: "An alias that's used for this app."
       state:
         type: string
-        description: ENABLED
+        description: "The state of the app (ENABLED, INACTIVE, DISABLED)."
 
-  Invalid token:
+  InvalidToken:
     properties:
       msg:
         type: string
         description: No valid authorization token found.
 
 # Apps model
-  App Model:
+  AppModel:
     properties:
       id:
         type: integer
         format: long
-        description: "81"
+        description: "A unique identifier of the app."
       version:
         type: integer
         format: long
-        description: "1"
+        description: "The version of the app."
       name:
         type: string
-        description: My Application
+        description: "The name of the app."
       appId:
         type: string
-        description: "0005c2ca-8443-4761-8948-09d4f345ed1e"
+        description: "A unique identifier for the app."
       ownerId:
         type: integer
-        description: "83"
+        description: "The id of the user that owns the app."
       state:
         type: string
-        description: "ENABLED"
+        description: "The state of the app (ENABLED, INACTIVE, DISABLED)."
       invoiceYearly:
         type: boolean
-        description: "true"
+        description: "Weather a yearly or a monthly plan has been selected."
       startType:
         type: integer
         format: long
-        description: "1446716711"
+        description: "A unix timestamp of the starttime of the app."
       endTimeFreeTrial:
         type: integer
         format: long
-        description: "1449308711"
+        description: "A Unix timestamp of the end time of the free trial."
       planId:
         type: integer
-        description: "1"
+        description: "The id of the billing plan (can be null)"
 
-  Invalid application:
+  InvalidApplication:
     properties:
       msg:
         type: string
-        description: "Application '0005c2ca-8443-4761-8948-09d4f345ed1r' not found."
+        description: "The application was not found."
 
 # Server model
   Server:
@@ -2975,17 +3137,17 @@ definitions:
         type: boolean
         description: "If true, the attribute cannot be changed in the frontend."
 
-  Invalid server:
+  InvalidServer:
     properties:
       msg:
         type: string
-        description: "Server with id 15833 not found."
+        description: "The requested server was not found."
 
-  Invalid server group:
+  InvalidServerGroup:
     properties:
       msg:
         type: string
-        description: "ServerGroup with id 15833 not found."
+        description: "The requested server group was not found."
 
 # Metric
   Metric:
@@ -3039,17 +3201,17 @@ definitions:
         description: "If true, the attribute cannot be changed in the frontend."
 
 
-  Invalid metric:
+  InvalidMetric:
     properties:
       msg:
         type: string
-        description: "Metric with id 123 not found."
+        description: "The requested metric was not found."
 
-  Invalid metric group:
+  InvalidMetricGroup:
     properties:
       msg:
         type: string
-        description: "Metric with id 123 not found."
+        description: "The requested metric group was not found."
 
 # Event model
   Event:
@@ -3124,18 +3286,39 @@ definitions:
         format: long
         description: "Id of the event category."
 
-  Invalid event:
+  InvalidEvent:
     properties:
       msg:
         type: string
-        description: "Event with id 123 not found."
+        description: "The requested event was not found."
 
-# Delete successful
-  Delete success:
+# DeleteSuccessful
+  DeleteSuccess:
     properties:
       msg:
         type: string
-        description: "Delete successful!"
+        description: "The delete action completed successfully."
+
+# InsertSuccessful
+  InsertSuccess:
+    properties:
+      msg:
+        type: string
+        description: "The insert action completed successfully."
+
+# Version out of date
+  VersionOutdated:
+    properties:
+      msg:
+        type: string
+        description: "The supplied version is lower than the current version."
+
+# Field is missing
+  FieldMissing:
+    properties:
+      msg:
+        type: string
+        description: "Not all required properties are filled in."
 
 # ServerGroups model
   ServerGroups:
@@ -3219,39 +3402,39 @@ definitions:
         format: long
         description: "Id of the metric that triggered the alert"
       created:
-        type: string
-        format: dateTime
+        type: integer
+        format: long
         description: "When the alert was created. (Unix timestamp in milliseconds)"
       lastOccurrence:
-        type: string
-        format: dateTime
+        type: integer
+        format: long
         description: "When the alert last occurred. (Unix timestamp in milliseconds)"
       occurrences:
         type: integer
         description: "The number of times the alert occurred since it was created."
       sent:
-        type: string
-        format: dateTime
+        type: integer
+        format: long
         description: "When the alert was sent to the primary contact (can be null, Unix timestamp in milliseconds)."
       backup:
-        type: string
-        format: dateTime
+        type: integer
+        format: long
         description: "When the alert was sent to the backup contact (can be null, Unix timestamp in milliseconds)."
       escalation:
-        type: string
-        format: dateTime
+        type: integer
+        format: long
         description: "When the alert was sent to the escalation contact (can be null, Unix timestamp in milliseconds)."
       acknowledged:
-        type: string
-        format: dateTime
+        type: integer
+        format: long
         description: "When the alert was acknowledged."
       acknowledgedBy:
         type: integer
         format: long
         description: "The user id of the user that acknowledged the alert."
       resolved:
-        type: string
-        format: dateTime
+        type: integer
+        format: long
         description: "When the alert was resolved."
       resolvedBy:
         type: integer
@@ -3259,7 +3442,14 @@ definitions:
         description: "The user id of the user that resolved the alert."
       onApp:
         type: boolean
-        description: "Whether the alert was triggered on the application. (Not yet used)"
+        description: "Whether the alert was triggered on the application."
+      config: 
+        type: string
+        description: "The config of the alert trigger."
+      autoresolveMailSent:
+        type: integer
+        format: long
+        description: "When the alert was automatically resolved and an enail was sent. (can be null, Unix timestamp in milliseconds)."
       groupId:
         type: integer
         format: long
@@ -3268,10 +3458,20 @@ definitions:
         type: integer
         format: long
         description: "The server id of the server that triggered the alert (null if the alert was not triggered on a server). Currently all alerts are triggered on a server."
-      aggregatedInto:
+      aggregatedIntoId:
         type: integer
         format: long
         description: "The parent Alert (not yet used)."
+      version:
+        type: integer
+        format: long
+        description: "Automatically updated on each update to the instance"
+
+  InvalidAlert:
+    properties:
+      msg:
+        type: string
+        description: "The requested alert was not found."
 
   MetricTags:
     properties:
