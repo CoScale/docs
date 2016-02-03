@@ -7,6 +7,9 @@ description: Overview of information on how to configure, install and maintain t
 ## [Installing the agent]({{ site.baseurl }}/agent/install)
 A quick how to guide on installing and configuring the CoScale agent for integration with your infrastructure.
 
+## [Plugins]({{ site.baseurl }}/agent/plugins/index)
+Overview of all plugins with more information about the metrics gathered and special features.
+
 ## Commands and information
 
 * [Installing the Agent]({{ site.baseurl }}/agent/agent-install)
@@ -39,4 +42,3 @@ A quick how to guide on installing and configuring the CoScale agent for integra
 * [Custom templates]({{ site.baseurl }}/agent/custom-template)
 
     Specific configuration for custom templates.
-   
