@@ -4,11 +4,22 @@ title: Agent
 description: Overview of information on how to configure, install and maintain the CoScale agent.
 ---
 
-## [Installing the agent]({{ site.baseurl }}/agent/install)
-A quick how to guide on installing and configuring the CoScale agent for integration with your infrastructure.
+<a href="{{ site.baseurl }}/agent/install" class="btn btn-primary btn-lg pull-right">How to create and install the Agent</a>
+The CoScale lightweight agent is used to monitor server infrastructure and services, it uses log parsing and global status pages to gather its data and pushes the data to the CoScale platform through HTTPS calls. Below you can find a list of supported plugins and more advanced features.
 
-## [Plugins]({{ site.baseurl }}/agent/plugins/index)
+## Plugins
 Overview of all plugins with more information about the metrics gathered and special features.
+
+<div class="row">
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/apache">Apache</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cassandra">Cassandra</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchdb">CouchDb</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/elasticsearch">ElasticSearch</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/haproxy">HAProxy</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/hhvm">HHVM</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/iis">IIS</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/log">Log</a></div>
+</div>
 
 ## Commands and information
 
