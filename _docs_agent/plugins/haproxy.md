@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HAProxy plugin metrics
+title: HAProxy plugin
 description: Information on the metrics collected by the CoScale HAProxy plugin.
 ---
 

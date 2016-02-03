@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ElasticSearch plugin metrics
+title: ElasticSearch plugin
 description: Information on the metrics collected by the CoScale ElasticSearch plugin.
 ---
 

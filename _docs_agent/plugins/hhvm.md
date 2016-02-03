@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HHVM plugin metrics
+title: HHVM plugin
 description: Information on the metrics collected by the CoScale HHVM plugin.
 ---
 

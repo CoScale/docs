@@ -23,7 +23,6 @@ The CoScale lightweight agent is used to monitor server infrastructure and servi
 * [Uninstalling the agent]({{ site.baseurl }}/agent/agent-uninstall#microsoft-windows)
 * [Exporting logs for support]({{ site.baseurl }}/agent/export-logs#microsoft-windows)
 
-* [Configure IIS]({{ site.baseurl }}/agent/windows/plugin-iis-configuration)
 * [RAM disk]({{ site.baseurl }}/agent/windows/ram-disk)
 
 ## Plugins

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Apache plugin metrics
+title: Apache plugin
 description: Information on the metrics collected by the CoScale Apache plugin.
 ---
 
