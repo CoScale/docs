@@ -4,12 +4,12 @@ title: Custom agent
 description: Specific configuration for custom agents.
 ---
 
-{% include alert.html type="warning" text="This is a future feature and does not yet work on CoScale version 2.10.x" %}
+Custom agents allow you to configure new agents on the fly using a configuration file. This is advanced functionality and requires some knowledge of the CoScale system to setup. If you're stuck or need help, don't hesitate to contact our support.
 
-## Creation
 
-A custom agent is created similarly to a regular agent.
-Follow the [Regular instructions]({{ site.baseurl }}/agent/install/), but check "I will manage my plugins on my servers instead of through the UI." and don't enable any plugins.
+A custom agent is created similarly to a regular agent. Follow the regular instructions on <a href="http://app.coscale.com" db-href="/agent/install/" class="js-dashboard-link">`Agent > Install`</a>, but check "I will manage my plugins on my servers instead of through the UI." and don't enable any plugins.
+
+![Manage my plugins on my servers instead of through the UI checkbox]({{ site.baseurl }}/gfx/agent/agent_manage_plugins.png)
 
 
 ## Configuration
@@ -19,13 +19,14 @@ This file contains a JSON string similar to what the CoScale API sends. Use this
 
 ### Constructing your configuration
 
-#### 1. Configure a [regular agent]({{ site.baseurl }}//agent/install/) with the plugins you want and save it with a clear name.
-
-   This will give you an initial configuration which you can change when deploying specific agents.
+1. Configure a [regular agent]({{ site.baseurl }}/agent/install/) with the plugins you want and save it with a clear name.
 
 
-#### 2. Perform an api call to get the configuration of your agents. <small>(This call is not available in our CLI tool)</small>
-   
+    This will give you an initial configuration which you can change when deploying specific agents.
+
+
+2. Perform an API call to get the configuration of your agents. <small>(This call is not available in our CLI tool)</small>
+
    First get an authorization token by logging in. This can be done using our [API documentation]({{ site.baseurl }}/api/#!/Login/post_users_login) or by performing the call yourself, for example using curl:
 
    `curl -d "email=[EMAIL]&password=[PASSWORD]" "http://app.coscale.com/api/v1/users/login/"`
