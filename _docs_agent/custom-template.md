@@ -62,6 +62,6 @@ This file contains a JSON string similar to what the CoScale API sends. Use this
 
 #### 4. [Restart]({{ site.baseurl }}/agent/agent-restart/) the agent.
 
-   If everything went well, your custom agent should now be running a RESOURCES and an APACHE plugin.
+   If everything went well, your custom agent should now be running the plugins configured in the `/opt/coscale/agent/plugins.conf` file. <a href="mailto:info@coscale.com" class="js-support">Contact us</a> if you have any issues.
 
    {% include alert.html type="warning" text="If this server previously had an agent installed, it is important to first run the new agent again with an empty configuration!" %}
