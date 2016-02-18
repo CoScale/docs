@@ -13,6 +13,11 @@ The generic script plugin has **2** modes: **configuration** mode and **data ret
 ## Prerequisite
 * [CoScale Agent installed]({{ site.baseurl }}/agent/index)
 
+{% include alert.html type="warning" text="Scripts have a maximum runtime of 5 seconds." %}
+
+## Prerequisite
+* [CoScale Agent installed]({{ site.baseurl }}/agent/index)
+
 ## Examples
 A couple of examples of scripts for the generic script plugin can be found in this GitHub repository:
 
