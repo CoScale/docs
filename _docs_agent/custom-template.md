@@ -27,7 +27,7 @@ This file contains a JSON string similar to what the CoScale API sends. Use this
 
 2. Perform an API call to get the configuration of your agents. <small>(This call is not available in our CLI tool)</small>
 
-   First get an authorization token by logging in. This can be done using our [API documentation]({{ site.baseurl }}/api/#!/Login/post_users_login) or by performing the call yourself, for example using curl:
+   First get an authorization token by logging in. This can be done using our <a href="{{ site.baseurl }}/api/#!/Login/post_users_login" data-proofer-ignore>API documentation</a> or by performing the call yourself, for example using curl:
 
    `curl -d "email=[EMAIL]&password=[PASSWORD]" "https://app.coscale.com/api/v1/users/login/"`
 
