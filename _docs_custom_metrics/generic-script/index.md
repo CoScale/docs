@@ -10,6 +10,8 @@ The generic script plugin has **2** modes: **configuration** mode and **data ret
 
 {% include alert.html type="warning" text="Scripts have a maximum runtime of 5 seconds." %}
 
+{% include alert.html type="warning" text="Scripts have a maximum runtime of 5 seconds." %}
+
 ## Prerequisite
 * [CoScale Agent installed]({{ site.baseurl }}/agent/index)
 
