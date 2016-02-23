@@ -21,6 +21,7 @@ A couple of examples of scripts for the generic script plugin can be found in th
 ## Details
 
 To get the agent to execute your generic script you will need to add the path of your script in the configuration of the plugin. The simplest way to do this is via the "Agents" page in the application.
+<<<<<<< 4bdd5723ec033f46b5f3b1627dd14bae383e5578
 
 Each configuration line added in the configuration dialog will be executed asynchronously. Here are a couple of examples of configurations:
 
@@ -37,6 +38,24 @@ Every time the agent is restarted it will execute `<script> -c` to get the confi
 
 This is an **example** output of a script in **configuration mode**:
 
+=======
+
+Each configuration line added in the configuration dialog will be executed asynchronously. Here are a couple of examples of configurations:
+
+- `/home/coscale/scripts/bash-script.sh`
+- `python /srv/scripts/pythonScript.py`
+- `powershell.exe C:\scripts\powershell-script.ps1`
+
+### Configuration mode
+Every time the agent is restarted it will execute `<script> -c` to get the configuration of your script. This will determine what metrics that will be created for you for when your data is retrieved.
+
+**Note:** The `<script> -c` should return within 1 second, otherwise it will be killed.
+
+**Note:** The script should return exit code 0, otherwise the output is not be parsed and a failure log entry will be made.
+
+This is an **example** output of a script in **configuration mode**:
+
+>>>>>>> Update the documentation for the generic script plugin
 {% highlight json %}
 {
     "maxruntime": 1000,
