@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CouchDb plugin metrics
+title: CouchDb plugin
 description: Information on the metrics collected by the CoScale CouchDb plugin.
 ---
 

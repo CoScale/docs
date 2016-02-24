@@ -13,90 +13,26 @@
 <ul class="nav nav-sidebar">
     <li {% if current[1] == 'agent' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a>
-        <ul>
-            <li><a href="{{ site.baseurl }}/agent/install">Installation</a></li>
-            <li>
-                Advanced
-                <ul>
-                    <li><a href="{{ site.baseurl }}/agent/linux/index">Linux / Unix</a></li>
-                    <li><a href="{{ site.baseurl }}/agent/windows/index">Microsoft Windows</a></li>
-                    <li><a href="{{ site.baseurl }}/agent/cloud/index">Cloud environments</a></li>
-                    <li><a href="{{ site.baseurl }}/agent/advanced">Environment flags</a></li>
-                    <li><a href="{{ site.baseurl }}/agent/firewall-proxy">Firewall / Proxy</a></li>
-                    <li><a href="{{ site.baseurl }}/agent/custom-template">Custom Agent</a></li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li {% if current[1] == 'plugins' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/plugins/index"><i class="fa fa-fw fa-server"></i> Plugins</a>
-        <ul>
-            <li><a href="{{ site.baseurl }}/plugins/apache">Apache</a></li>
-            <li><a href="{{ site.baseurl }}/plugins/cassandra">Cassandra</a></li>
-            <li><a href="{{ site.baseurl }}/plugins/couchdb">CouchDb</a></li>
-            <li><a href="{{ site.baseurl }}/plugins/elasticsearch">ElasticSearch</a></li>
-            <li><a href="{{ site.baseurl }}/plugins/haproxy">HAProxy</a></li>
-            <li><a href="{{ site.baseurl }}/plugins/hhvm">HHVM</a></li>
-            <li><a href="{{ site.baseurl }}/plugins/iis">IIS</a></li>
-            <li><a href="{{ site.baseurl }}/plugins/log">Log</a></li>
-        </ul>
     </li>
     <li {% if current[1] == 'rum' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a>
-        <ul>
-            <li><a href="{{ site.baseurl }}/rum/install">Installation</a></li>
-            <li><a href="{{ site.baseurl }}/rum/google-tag-manager">Google Tag Manager</a></li>
-            <li>
-                Advanced
-                <ul>
-                    <li><a href="{{ site.baseurl }}/rum/tags">Tags</a></li>
-                    <li><a href="{{ site.baseurl }}/rum/markers">Markers</a></li>
-                </ul>
-            </li>
-        </ul>
     </li>
     <li {% if current[1] == 'events' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag"></i> Events</a>
-        <ul>
-            <li><a href="/events/cli/index">Using command line interface</a></li>
-            <li><a href="/events/automation/index">Automation</a></li>
-            <li><a href="/events/wrappers/index">Wrappers</a></li>
-            <li>
-                Advanced
-                <ul>
-                    <li><a href="/events/custom-attributes">Custom Attributes</a></li>
-                </ul>
-            </li>
-        </ul>
     </li>
     <li {% if current[1] == 'alerting' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-warning"></i> Alerting</a>
-        <ul>
-            <!-- <li><a href="{{ site.baseurl }}/alerting/static">Static</a></li> -->
-        <li><a href="{{ site.baseurl }}/alerting/anomaly/index">Anomaly detection</a></li>
-        </ul>
     </li>
     <li {% if current[1] == 'custom-metrics' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a>
-        <ul>
-            <li><a href="{{ site.baseurl }}/custom-metrics/generic-script/index">Generic script</a></li>
-            <li><a href="{{ site.baseurl }}/custom-metrics/statsd/index">StatsD</a></li>
-        </ul>
     </li>
     <li {% if current[1] == 'tools' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
-        <ul>
-            <li><a href="{{ site.baseurl }}/tools/cli/index">Command line interface</a></li>
-            <li><a href="{{ site.baseurl }}/other/index">Other</a></li>
-        </ul>
     </li>
 </ul>
 <ul class="nav nav-sidebar">
     <li {% if current[1] == 'advanced' %}class='active'{% endif %}><a href="{{ site.baseurl }}/advanced/index">
         <i class="fa fa-fw fa-cogs"></i> Advanced</a>
-        <ul>
-            <li><a href="{{ site.baseurl }}/advanced/security">Privacy / Security</a></li>
-        </ul>
     </li>
 </ul>
 

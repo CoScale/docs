@@ -9,6 +9,8 @@ The generic script plugin enabled on the CoScale agent allows a customer to sele
 
 The generic script plugin has 2 modes: configuration mode and data retrieval mode. Our plugin will first run the configuration mode to get the metrics which should be created. Afterwards it will run every minute in data retrieval model to get the data.
 
+{% include alert.html type="warning" text="Scripts have a maximum runtime of 5 seconds." %}
+
 ## Prerequisite
 * [CoScale Agent installed]({{ site.baseurl }}/agent/index)
 

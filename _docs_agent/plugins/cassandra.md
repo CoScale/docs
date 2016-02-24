@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cassandra plugin metrics
+title: Cassandra plugin
 description: Information on the metrics collected by the CoScale Cassandra plugin.
 ---
 
@@ -29,4 +29,3 @@ The CoScale Cassandra plugin collects the following metrics:
 | Cassandra %s total batches replayed             |                         |
 | Cassandra %s total blocked tasks                |                         |
 | Cassandra %s core threads                       |                         |
-

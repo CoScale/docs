@@ -23,29 +23,6 @@
                 </div>
             </div>
             <div class="col-sm-8 col-md-8 col-lg-9">
-                {% capture url_parts %} {{ page.url | replace:'/', " " }}{% endcapture %}
-                {% capture num_parts %}{{ url_parts | number_of_words }}{% endcapture %}
-                {% assign previous="" %}
-                <ol class="breadcrumb">
-                    {% if num_parts != "0" or num_parts != "-1" %}
-                    <li><a href="/">Home</a></li>
-                    {% for unused in site.breadcrumb_list limit:num_parts %}
-                    {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
-                    {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
-
-                    {% capture num_parts %}{{ url_parts | number_of_words }}{% endcapture %}
-                    {% if first_word != "index" and first_word != "index.html" %}
-                    {% if num_parts != "1" %}
-                    <li><a href="{{previous}}/index">{{ first_word | capitalize | replace:'-', " " }}</a></li>
-                    {% else %}
-                    <li><a href="{{previous}}">{{ first_word | capitalize | replace:'-', " " }}</a></li>
-                    {% endif %}
-                    {% endif %}
-                    {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
-                    {% endfor %}
-                    {% endif %}
-                </ol>
-
                 <div class="main">
                     {{ content }}
                 </div>
@@ -66,7 +43,7 @@
         // Support links
         //
         $('.js-support').click(function(){
-            zE.activate();
+            Intercom('show');
 
             return false;
         });
@@ -146,8 +123,13 @@
 
     </script>
 
-    <!-- Start of coscalesupport Zendesk Widget script -->
-    <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","coscalesupport.zendesk.com");/*]]>*/</script>
-    <!-- End of coscalesupport Zendesk Widget script -->
+    <script type="text/javascript">
+    window.intercomSettings = {
+        app_id: "oyaxaugr"
+    };
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;
+    s.src='https://widget.intercom.io/widget/oyaxaugr';
+    var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    </script>
 </body>
 </html>
