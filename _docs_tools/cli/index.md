@@ -58,10 +58,50 @@ It provides easy to use methods for:
 
 ## Examples
 
-Adding a CoScale event category with custom attributes exitCode and executionTime (in seconds).
+#### Working with [events]({{ %site.baseurl% }}/events/index/)
+Creating a basic CoScale event category called "Releases":
 
-`./coscale-cli event new --name "Example category" --attributeDescriptions "[{\"name\":\"exitCode\", \"type\":\"integer\"}, {\"name\":\"executionTime\", \"type\":\"integer\", \"unit\":\"s\"}]"`
+    ./coscale-cli event new --name "Releases"
 
-Adding a CoScale event to "Example category" with name 'Event example', exitCode '0' and an executionTime of 10 seconds.
 
-`./coscale-cli event data --name "Example category" --message "Event example" --subject "a" --attribute "{\"exitCode\":0, \"executionTime\":10}"`
+Adding a CoScale event about to the "Releases" event category:
+
+    ./coscale-cli event newdata --name "Releases" --message "V2.3.4" --subject "a"
+
+
+Adding the current time as stoptime to the V2.3.4 release event. The dataid is the id that we got from newdata command.
+
+    ./coscale-cli event updatedata --name "Releases" --dataid "4674066" --stopTime 0
+
+
+Adding a second event about release V2.3.3 that happened on February first 2016.
+
+    ./coscale-cli event newdata --name "Releases" --message "V2.3.3" --subject "a" --timestamp "1454328000" --stopTime "1454328000"
+
+
+Creating a more advanced CoScale event category called "Daily backups". Each event we add will have extra attributes describing the size of the backup and the exitcode of our backup tool.
+
+    ./coscale-cli event new --name "Daily backups" --description "All info about our daily backups" --attributeDescriptions '[{"name":"backup size","type":"integer","unit":"b"},{"name":"exitcode","type":"integer"}]'
+
+Adding a backup event that started 1 hour ago, on server with id 4821, that was about 1 GB big and finished successfully. 
+
+    ./coscale-cli event newdata --name "Daily backups" --message "backup on 1 Feb 2016" --subject "s4821" --timestamp -7200 --stopTime 0 --attribute '{"backup size":1000000000,"exitcode":0}'
+
+
+
+#### Working with servers
+Adding a server that will not run a CoScale agent, but can be used to attach events to.
+
+    ./coscale-cli server new --name "cron server" --description "Server that that runs cron jobs"
+
+
+
+#### Working with alerts
+Viewing all unresolved alerts.
+
+    ./coscale-cli alert list --filter unresolved
+
+Resolving an alert from the list. The id is the id of an alert we got from the list command.
+
+    ./coscale-cli alert resolve --id 347482
+
