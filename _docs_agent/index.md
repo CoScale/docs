@@ -37,6 +37,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/iis"><img src="/gfx/agent/iis.png" alt="IIS icon"> IIS</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/log"><img src="/gfx/agent/log_plugin.png" alt="Log icon"> Log</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/custom-metrics/generic-script/index/"><img src="/gfx/agent/genericscript.png" alt="Script icon"> Generic Script</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/magento"><img src="/gfx/agent/magento.png" alt="Magento icon"> Magento</a></div>
 </div>
 
 ## Extra
