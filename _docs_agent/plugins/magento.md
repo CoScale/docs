@@ -9,8 +9,6 @@ This plugin connects to the [CoScale Magento extension](https://www.magentocomme
 
 The metrics contain business metrics, such as the number of products, orders, abondoned carts, but also technical metrics such as Magento caching metrics. The events contain Magento admin actions such as page cache flushes, reindexing, etc.
 
-{% include alert.html type="warning" text="The CoScale Magento extension is still in BETA and should be used with caution on production systems. <a href=\"mailto:info@coscale.com\" class=\"js-support\">contact support</a> for more information" %}
-
 ## Installing the Magento CoScale extension.
 Magento requires an extension in order to expose metrics to the CoScale platform. This extension can be added through Magento Connect.
 
