@@ -20,6 +20,8 @@ Group pages with tags to measure the performance of similar pages.
 ### [Markers]({{ site.baseurl }}/rum/markers)
 Measure the performance of certain parts of your front-end application.
 
+### [Metrics]({{ site.baseurl }}/rum/metrics)
+What RUM metrics we collect and how they are measured
 
 ## Information
 
