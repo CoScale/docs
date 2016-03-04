@@ -8,18 +8,24 @@ Events are used to annotate data inside the CoScale platform, they provide you w
 
 ## Pushing events to CoScale
 
-### [Using command line interface]({{ site.baseurl }}/events/cli/index)
-Push events from command line with our easy to use [CLI]({{ site.baseurl }}/tools/cli/index).
+* [Using command line interface]({{ site.baseurl }}/events/cli/index)
 
-### [Automation]({{ site.baseurl }}/events/automation/index)
+    Push events from command line with our easy to use [CLI]({{ site.baseurl }}/tools/cli/index).
 
-Integrations with [Salt]({{ site.baseurl }}/events/automation/salt), [Puppet]({{ site.baseurl }}/events/automation/puppet), and many other automation tools.
+* [Automation]({{ site.baseurl }}/events/automation/index)
 
-### [Cronjob monitoring / Cron wrappers]({{ site.baseurl}}/events/wrappers/index)
+    Integrations with [Salt]({{ site.baseurl }}/events/automation/salt), [Puppet]({{ site.baseurl }}/events/automation/puppet), and many other automation tools.
 
-Monitor cronjobs by pushing events with time spent and exitcode parameters.
+* [Cronjob monitoring / Cron wrappers]({{ site.baseurl}}/events/wrappers/index)
+
+    Monitor cronjobs by pushing events with time spent and exitcode parameters.
+
+* [Manually through the dashboard]({{ site.baseurl }}/dashboard/events/)
+
+    You can manually create an event in our dashboard through the event page and graphs widgets.
 
 ## Advanced
 
-### [Custom Attributes]({{ site.baseurl }}/events/custom-attributes)
-CoScale allows you to push custom attributes together with your events, which you can then use to visualize the performance and success of your events.
+* [Custom Attributes]({{ site.baseurl }}/events/custom-attributes)
+
+    CoScale allows you to push custom attributes together with your events, which you can then use to visualize the performance and success of your events.
