@@ -34,6 +34,12 @@ body {
     margin-bottom: 50px;
 }
 
+.container,
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 /*
 * Custom class for more spacing between elements
 */
@@ -239,6 +245,10 @@ body {
                 background: none;
             }
         }
+    }
+
+    .swagger-section .swagger-ui-wrap ul#resources li.resource div.heading ul.options {
+        margin-top: 32px !important;
     }
 
     .list-index {

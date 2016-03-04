@@ -88,12 +88,10 @@ Adding a backup event that started 1 hour ago, on server with id 4821, that was 
     ./coscale-cli event newdata --name "Daily backups" --message "backup on 1 Feb 2016" --subject "s4821" --timestamp -7200 --stopTime 0 --attribute '{"backup size":1000000000,"exitcode":0}'
 
 
-
 #### Working with servers
 Adding a server that will not run a CoScale agent, but can be used to attach events to.
 
     ./coscale-cli server new --name "cron server" --description "Server that that runs cron jobs"
-
 
 
 #### Working with alerts

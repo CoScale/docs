@@ -1,16 +1,12 @@
 {% assign current = page.url | downcase | split: '/' %}
 
 <ul class="nav nav-sidebar">
-    <li {% if current[1] == 'index.html' %}class='active'{% endif %}><a href="{{ site.baseurl }}/"><i class="fa fa-fw fa-home"></i> Home</a></li>
-</ul>
-
-<ul class="nav nav-sidebar">
+    <li {% if current[1] == 'index.html' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/"><i class="fa fa-fw fa-home"></i> Home</a>
+    </li>
     <li {% if current[1] == 'dashboard' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/dashboard/index"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
     </li>
-</ul>
-
-<ul class="nav nav-sidebar">
     <li {% if current[1] == 'agent' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a>
     </li>
@@ -29,17 +25,13 @@
     <li {% if current[1] == 'tools' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
     </li>
-</ul>
-<ul class="nav nav-sidebar">
     <li {% if current[1] == 'advanced' %}class='active'{% endif %}><a href="{{ site.baseurl }}/advanced/index">
         <i class="fa fa-fw fa-cogs"></i> Advanced</a>
     </li>
+    <li>
+        <a href="{{ site.baseurl }}/api/"><i class="fa fa-fw fa-book"></i> API Docs</a>
+    </li>
 </ul>
-
-<ul class="nav nav-sidebar">
-    <li><a href="{{ site.baseurl }}/api/"><i class="fa fa-fw fa-book"></i> API Docs</a></li>
-</ul>
-
 
 <form method="get" action="{{ site.baseurl}}/search.html">
     <input class="js-search-input form-control" type="search" name="q" placeholder="Search"/>
@@ -50,8 +42,6 @@
     <li><a href="mailto:info@coscale.com" class="js-support"><i class="fa fa-fw fa-question-circle"></i> Contact support</a></li>
 </ul>
 
-
-
 <div class="footer spacing-top">
-    <p>Copyright 2015 | CoScale</p>
+    <p>Copyright 2016 | CoScale</p>
 </div>
