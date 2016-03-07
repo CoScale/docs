@@ -29,6 +29,12 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "font-awesome/scss/font-awesome.scss";
 
+/**
+ * Change the display property of the alert block because otherwise the layout of it breaks when you add it to tables.
+ */
+.main .alert {
+    display: block !important;
+}
 
 body {
     margin-bottom: 50px;
