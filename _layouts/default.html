@@ -116,7 +116,7 @@
                 e.preventDefault();
                 this.form.submit();
             }
-        }).val(searchParameter);
+        }).val(searchParameter.replace("+", " "));
 
         search(searchParameter);
     });
