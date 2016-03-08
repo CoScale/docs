@@ -24,6 +24,12 @@ Events are used to annotate data inside the CoScale platform, they provide you w
 
     You can manually create an event in our dashboard through the event page and graphs widgets.
 
+## Forensic events
+
+* [Forensics]({{ site.baseurl }}/events/forensics)
+
+	Forensics are special events inserted by our agent to give more information when something might be going on on your server.
+
 ## Advanced
 
 * [Custom Attributes]({{ site.baseurl }}/events/custom-attributes)
