@@ -30,7 +30,10 @@ There are multiple types of process forensics:
 
 * **Memory forensics:** For Linux this metric is called `Used memory` and for Windows this metric is called `Used Physical Memory`. These list the top 10 processes and how much memory they use in %.
 
-* **Network forensics:** For Linux these metrics are called `Outgoing traffic on all interfaces` and `Incoming traffic on all interfaces`, for Windows these metrics are called `Total Bytes Sent Per Sec` and `Total Bytes Received Per Sec`. These list processes currently sending or receiving network traffic in b/s.
+* **Network forensics:** For Windows these metrics are called `Total Bytes Sent Per Sec` and `Total Bytes Received Per Sec`. These list processes currently sending or receiving network traffic in b/s.
+
+  *Network forensics are currently not enabled on Linux. These will be added in the future.*
+  <!---Linux: Outgoing traffic on all interfaces and Incoming traffic on all interfaces-->
 
 {% include alert.html type="info" text="Take a look at your &quot;Server Metrics&quot; dashboard, we configured all process forensics for you there." %}
 
