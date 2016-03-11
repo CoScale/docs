@@ -14,19 +14,15 @@ Before we can add events to the dashboard we need to make sure we have a categor
     </div>
 
     <div class="col-md-8">
-{% markdown %}
-## Adding events
+        <h2>Adding events</h2>
 
-### Through sidebar
-Go to the event page in the sidebar (Screenshot below). When you hover over a category a button will appear called `Add event`. Click the button to add an event to this category.
-<img src="{{ site.baseurl}}/gfx/dashboard/events/add_event_page.png" alt="Event page" class="img-responsive pull-right" />
+        <h3>Through sidebar</h3>
+        Go to the event page in the sidebar (Screenshot below). When you hover over a category a button will appear called `Add event`. Click the button to add an event to this category.
+        <img src="{{ site.baseurl}}/gfx/dashboard/events/add_event_page.png" alt="Event page" class="img-responsive pull-right" />
 
-### On graph
-You can also add events to graphs by clicking on a line in the graph, the detail about the line will pup-up. In the view you can click the `Add event` button.
-<img src="{{ site.baseurl}}/gfx/dashboard/events/add_event_graph.png" alt="Event page" class="img-responsive" />
-
-
-{% endmarkdown %}
+        <h3>On graph</h3>
+        You can also add events to graphs by clicking on a line in the graph, the detail about the line will pup-up. In the view you can click the `Add event` button.
+        <img src="{{ site.baseurl}}/gfx/dashboard/events/add_event_graph.png" alt="Event page" class="img-responsive" />
     </div>
 
 </div>
