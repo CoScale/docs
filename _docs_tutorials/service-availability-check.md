@@ -72,7 +72,7 @@ If you are having problems with customizing the service availability script, or 
         <p>Don't forget to deploy the service availability script to your server to the same <strong>path</strong> as provided in the configuration of the Generic script plugin.</p>
 
         <p>
-            Generally you should only have one server running the Generic script plugin with the service availability script. This does mean that if your server goes down, your availability check will also not work anymore , so you should have some backup system in place for these situations.
+            Generally you should only have one server running the Generic script plugin with the service availability script. This does mean that if your server goes down, your availability check will also not work anymore, so you should have some backup system in place for these situations.
         </p>
     </li>
 </ol>
