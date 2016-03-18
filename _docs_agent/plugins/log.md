@@ -10,8 +10,6 @@ The log plugin can collect data from any logs on your server.
 
 When configuring the log plugin you will have to specify the following attributes:
 
-
-
 <table>
     <thead>
         <tr>
