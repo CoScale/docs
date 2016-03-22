@@ -92,7 +92,7 @@ The number 15824 represents the response size. If we wanted to calculate the ave
 
 Now if you configure your plugin like this:
 
-<img src ="{{ site.baseurl }}/gfx/agent/plugins/log/example-log-plugin-configuration.png" />
+<img alt="Log plugin configuration screenshot" src="{{ site.baseurl }}/gfx/agent/plugins/log/example-log-plugin-configuration.png" />
 
 the log plugin will read the average response size from your logs and insert the data into CoScale to the metric __Response size per second__.
 

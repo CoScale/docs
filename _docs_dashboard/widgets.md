@@ -30,15 +30,15 @@ Widgets are your main visualization tools inside CoScale, we support a wide rang
 
 ## Types
 <ul class="list-inline">
-    <li><a href="#chart"><i class="fa fa-line-chart fa-fw"></i> Chart</a></li>
-    <li><a href="#table"><i class="fa fa-table fa-fw"></i> Table</a></li>
-    <li><a href="#errors"><i class="fa fa-bug fa-fw"></i> Errors</a></li>
-    <li><a href="#tile"><i class="fa fa-square-o fa-fw"></i> Tile</a></li>
-    <li><a href="#heatmap"><i class="fa fa-th fa-fw"></i> Heatmap</a></li>
-    <li><a href="#pie-chart"><i class="fa fa-pie-chart fa-fw"></i> Pie chart</a></li>
-    <li><a href="#gauge"><i class="fa fa-tachometer fa-fw"></i> Gauge</a></li>
-    <li><a href="#event-overview"><i class="fa fa-list fa-fw"></i> Event overview</a></li>
-    <li><a href="#anomaly-timeline"><i class="fa fa-list-alt fa-fw"></i> Anomaly timeline</a></li>
+    <li><i class="fa fa-line-chart fa-fw"></i> Chart</li>
+    <li><i class="fa fa-table fa-fw"></i> Table</li>
+    <li><i class="fa fa-bug fa-fw"></i> Errors</li>
+    <li><i class="fa fa-square-o fa-fw"></i> Tile</li>
+    <li><i class="fa fa-th fa-fw"></i> Heatmap</li>
+    <li><i class="fa fa-pie-chart fa-fw"></i> Pie chart</li>
+    <li><i class="fa fa-tachometer fa-fw"></i> Gauge</li>
+    <li><i class="fa fa-list fa-fw"></i> Event overview</li>
+    <li><i class="fa fa-list-alt fa-fw"></i> Anomaly timeline</li>
 </ul>
 
 <div class="row">

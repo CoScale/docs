@@ -15,15 +15,15 @@ Dashboards are your primary tool to visualize all the data that CoScale collects
 CoScale supports a number of widgets to visualize your data. Below you can find a short list of possibilities and options that you can set for the widgets.
 
 <ul class="list-inline">
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#chart"><i class="fa fa-line-chart fa-fw"></i> Chart</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#table"><i class="fa fa-table fa-fw"></i> Table</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#errors"><i class="fa fa-bug fa-fw"></i> Errors</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#tile"><i class="fa fa-square-o fa-fw"></i> Tile</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#heatmap"><i class="fa fa-th fa-fw"></i> Heatmap</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#pie-chart"><i class="fa fa-pie-chart fa-fw"></i> Pie chart</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#gauge"><i class="fa fa-tachometer fa-fw"></i> Gauge</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#event-overview"><i class="fa fa-list fa-fw"></i> Event overview</a></li>
-    <li><a href="{{ site.baseurl }}/dashboard/widgets/#anomaly-timeline"><i class="fa fa-list-alt fa-fw"></i> Anomaly timeline</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-line-chart fa-fw"></i> Chart</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-table fa-fw"></i> Table</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-bug fa-fw"></i> Errors</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-square-o fa-fw"></i> Tile</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-th fa-fw"></i> Heatmap</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-pie-chart fa-fw"></i> Pie chart</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-tachometer fa-fw"></i> Gauge</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-list fa-fw"></i> Event overview</a></li>
+    <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-list-alt fa-fw"></i> Anomaly timeline</a></li>
 </ul>
 
 ## Metrics
