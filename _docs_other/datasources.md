@@ -35,6 +35,15 @@ description: An overview of all CoScale datasources.
         font-size: 0.8em;
     }
 
+    .datasources .technology > a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        right: 0;
+        font-size: 0.8em;
+    }
+
     .datasources fieldset {
     	border: 1px solid black;
         display: inline-block;
@@ -101,6 +110,8 @@ description: An overview of all CoScale datasources.
     }
 </style>
 
+<p>Below you can find an overview on what CoScale can monitor on your platform. When available you can click the name of the components to get documentation on how to integrate with a certain service or application. Some parts are missing documentation, but if you have questions or remarks, please don't hesitate to <a href="mailto:info@coscale.com" class="js-support">contact us</a>.</p>
+
 <div class="datasources">
     <div>
         <fieldset>
@@ -140,7 +151,7 @@ description: An overview of all CoScale datasources.
 
     <div>
         <fieldset>
-            <legend align="center"><h2>Users (RUM)</h2></legend>
+            <legend align="center"><a href="{{site.baseurl}}/rum/install"><h2>Users (RUM)</h2></a></legend>
             <span class="mute">Data collection of your visitors' experience including pageload time, resources API calls, backend and frontend.</span>
 
             <div class="technology">
@@ -180,7 +191,7 @@ description: An overview of all CoScale datasources.
             <span class="mute">Data collection from your servers.</span>
 
             <fieldset class="dotted">
-                <legend align="center"><h3>CoScale agent</h3></legend>
+                <legend align="center"><a href="{{site.baseurl}}/agent/install"><h3>CoScale agent</h3></a></legend>
                 <span class="mute">Data collection from many services running on your machine.</span>
 
                 <div>
@@ -204,7 +215,7 @@ description: An overview of all CoScale datasources.
 
                         <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/genericscript.png"/>
-                            <span>Generic Script</span>
+                            <a href="{{ site.baseurl }}/custom-metrics/generic-script/index/"><span>Generic Script</span></a>
                         </div>
 
                         <div class="technology">
@@ -214,10 +225,10 @@ description: An overview of all CoScale datasources.
 
                         <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/log_plugin.png"/>
-                            <span>
+                            <a href="{{ site.baseurl }}/agent/plugins/log"><span>
                                 Log Plugin
                                 <i class="fa fa-linux error"></i>
-                            </span>
+                            </span></a>
                         </div>
                     </fieldset>
                 </div>
@@ -229,20 +240,20 @@ description: An overview of all CoScale datasources.
 
                         <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/apache.png"/>
-                            <span>Apache</span>
+                            <a href="{{ site.baseurl }}/agent/plugins/apache"><span>Apache</span></a>
                         </div>
 
                         <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/haproxy.png"/>
-                            <span>HaProxy</span>
+                            <a href="{{ site.baseurl }}/agent/plugins/haproxy"><span>HaProxy</span></a>
                         </div>
 
                         <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/iis.png"/>
-                            <span>
+                            <a href="{{ site.baseurl }}/agent/plugins/iis"><span>
                                 IIS
                                 <i class="fa fa-windows error"></i>
-                            </span>
+                            </span></a>
                         </div>
 
                         <div class="technology">
@@ -300,20 +311,20 @@ description: An overview of all CoScale datasources.
 
                          <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/cassandra.png"/>
-                            <span>Cassandra</span>
+                            <a href="{{ site.baseurl }}/agent/plugins/cassandra"><span>Cassandra</span></a>
                         </div>
 
                          <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/couchdb.png"/>
-                            <span>
+                            <a href="{{ site.baseurl }}/agent/plugins/couchdb"><span>
                                 CouchDb
                                 <i class="fa fa-linux error"></i>
-                            </span>
+                            </span></a>
                         </div>
 
                          <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/elasticsearch.png"/>
-                            <span>Elasticsearch</span>
+                            <a href="{{ site.baseurl }}/agent/plugins/elasticsearch"><span>Elasticsearch</span></a>
                         </div>
 
                         <div class="technology">
@@ -346,7 +357,7 @@ description: An overview of all CoScale datasources.
 
                          <div class="technology">
                             <img src="{{ site.baseurl}}/gfx/agent/magento.png"/>
-                            <span>Magento</span>
+                            <a href="{{ site.baseurl }}/agent/plugins/magento"><span>Magento</span></a>
                         </div>
 
                          <div class="technology">
@@ -396,27 +407,27 @@ description: An overview of all CoScale datasources.
 
                     <div class="technology">
                         <img src="{{ site.baseurl}}/gfx/agent/PUPPET.png"/>
-                        <span>Puppet</span>
+                        <a href="{{ site.baseurl }}/events/automation/puppet"><span>Puppet</span></a>
                     </div>
 
                     <div class="technology">
                         <img src="{{ site.baseurl}}/gfx/agent/CHEF.png"/>
-                        <span>Chef</span>
+                        <a href="{{ site.baseurl }}/events/automation/chef"><span>Chef</span></a>
                     </div>
 
                     <div class="technology">
                         <img src="{{ site.baseurl}}/gfx/agent/SALT.png"/>
-                        <span>Salt</span>
+                        <a href="{{ site.baseurl }}/events/automation/salt"><span>Salt</span></a>
                     </div>
 
                     <div class="technology">
                         <img src="{{ site.baseurl}}/gfx/agent/CRON.png"/>
-                        <span>Cron jobs</span>
+                        <a href="{{ site.baseurl }}/events/wrappers/linux/index/"><span>Cron jobs</span></a>
                     </div>
 
                     <div class="technology">
                         <img src="{{ site.baseurl}}/gfx/agent/CLI.png"/>
-                        <span>Coscale CLI</span>
+                        <a href="{{ site.baseurl }}/tools/cli/index/"><span>Coscale CLI</span></a>
                     </div>
                 </fieldset>
             </div>
