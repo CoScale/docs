@@ -7,7 +7,6 @@ description: Integration and installation of CoScale StatsD plugin to push metri
 The CoScale plugin for StatsD will push all metrics available in the StatsD daemon to the CoScale infrastructure every minute.
 
 ## Prerequisite
-* [CoScale Agent installed]({{ site.baseurl }}/agent/index)
 * [StatsD daemon installed]({{ site.baseurl }}/custom-metrics/statsd/installation)
 
 
