@@ -10,8 +10,11 @@ Dashboards are your primary tool to visualize all the data that CoScale collects
 
 * [Add events and event categories]({{ site.baseurl }}/dashboard/events/)
 
+## Dashboard
 
-## Widgets
+* [Sharing]({{ site.baseurl }}/dashboard/sharing)
+
+### Widgets
 CoScale supports a number of widgets to visualize your data. Below you can find a short list of possibilities and options that you can set for the widgets.
 
 <ul class="list-inline">
