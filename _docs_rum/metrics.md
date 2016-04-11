@@ -10,7 +10,7 @@ For the collection of RUM metrics we use the browser <a href="https://www.w3.org
 
 To correctly understand what our measurements are based on you first need to look at the complete picture of the Navigation Timing:
 
-<img src="{{ site.baseurl }}/gfx/rum/navigation-timing-api-chart.jpg" />
+<img alt="Navigation timing screenshot" src="{{ site.baseurl }}/gfx/rum/navigation-timing-api-chart.jpg" />
 
 All of the metrics we collect are part of, or the sum of specific components in the Navigation Timing flow.
 
@@ -34,28 +34,24 @@ The timing collected for the "resources" are also network timings.
 
 The sum of all the network timings together make up the backend time.
 
-<img src="{{ site.baseurl }}/gfx/rum/rum-backend-time-metric.jpg" />
+<img alt="RUM back-end time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-backend-time-metric.jpg" />
 
 ##Connection time
 
-<img src="{{ site.baseurl }}/gfx/rum/rum-connection-time-metric.jpg" />
+<img alt="RUM connection time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-connection-time-metric.jpg" />
 
 ##Download time
 
-<img src="{{ site.baseurl }}/gfx/rum/rum-download-time-metric.jpg" />
+<img alt="RUM download time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-download-time-metric.jpg" />
 
 ##First byte time
 
-<img src="{{ site.baseurl }}/gfx/rum/rum-first-byte-time-metric.jpg" />
+<img alt="RUM first byte time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-first-byte-time-metric.jpg" />
 
 ##Load event start
 
-<img src="{{ site.baseurl }}/gfx/rum/rum-load-event-start-metric.jpg" />
+<img alt="RUM load event start screenshot" src="{{ site.baseurl }}/gfx/rum/rum-load-event-start-metric.jpg" />
 
 ##Load event end
 
-<img src="{{ site.baseurl }}/gfx/rum/rum-load-event-end-metric.jpg" />
-
-
-
-
+<img alt="RUM load event end screenshot" src="{{ site.baseurl }}/gfx/rum/rum-load-event-end-metric.jpg" />

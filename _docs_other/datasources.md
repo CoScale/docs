@@ -119,27 +119,27 @@ description: An overview of all CoScale datasources.
             <span class="mute">Data collection of your business metrics and business indicators.</span>
 
             <div class="technology">
-                <img src="{{ site.baseurl}}/gfx/agent/google-analytics.png"/>
+                <img alt="Google Analytics icon" src="{{ site.baseurl}}/gfx/agent/google-analytics.png"/>
                 <span>Google Analytics</span>
             </div>
 
             <div class="technology">
-                <img src="{{ site.baseurl}}/gfx/agent/aweber.png"/>
+                <img alt="Aweber icon" src="{{ site.baseurl}}/gfx/agent/aweber.png"/>
                 <span>Aweber</span>
             </div>
 
             <div class="technology">
-                <img src="{{ site.baseurl}}/gfx/agent/campaign-monitor.png"/>
+                <img alt="Campaign monitor icon" src="{{ site.baseurl}}/gfx/agent/campaign-monitor.png"/>
                 <span>Campaign Monitor</span>
             </div>
 
             <div class="technology">
-                <img src="{{ site.baseurl}}/gfx/agent/constant-contact.png"/>
+                <img alt="Constant contact icon" src="{{ site.baseurl}}/gfx/agent/constant-contact.png"/>
                 <span>Constant Contact</span>
             </div>
 
             <div class="technology">
-                <img src="{{ site.baseurl}}/gfx/agent/mailchimp.png"/>
+                <img alt="Mailchimp icon" src="{{ site.baseurl}}/gfx/agent/mailchimp.png"/>
                 <span>Mailchimp</span>
             </div>
         </fieldset>
@@ -200,13 +200,13 @@ description: An overview of all CoScale datasources.
                         <span class="mute">Plugins for generic monitoring.</span>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/coscale.png"/>
+                            <img alt="CoScale resources icon" src="{{ site.baseurl}}/gfx/agent/coscale.png"/>
                             <span>CoScale Resources</span>
                             <div class="mute" style="position: absolute; top: 70px; left: -15px; width: 125%">CPU, Disk, Memory, Network</div>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/collectd.png"/>
+                            <img alt="CollectD icon" src="{{ site.baseurl}}/gfx/agent/collectd.png"/>
                             <span>
                                 CollectD
                                 <i class="fa fa-linux error"></i>
@@ -214,17 +214,17 @@ description: An overview of all CoScale datasources.
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/genericscript.png"/>
+                            <img alt="Generic script icon" src="{{ site.baseurl}}/gfx/agent/genericscript.png"/>
                             <a href="{{ site.baseurl }}/custom-metrics/generic-script/index/"><span>Generic Script</span></a>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/jmx.png"/>
+                            <img alt="JMX icon" src="{{ site.baseurl}}/gfx/agent/jmx.png"/>
                             <span>JMX</span>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/log_plugin.png"/>
+                            <img alt="Log plugin icon" src="{{ site.baseurl}}/gfx/agent/log_plugin.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/log"><span>
                                 Log Plugin
                                 <i class="fa fa-linux error"></i>
@@ -239,17 +239,17 @@ description: An overview of all CoScale datasources.
                         <span class="mute">Plugins for web services.</span>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/apache.png"/>
+                            <img alt="Apache icon" src="{{ site.baseurl}}/gfx/agent/apache.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/apache"><span>Apache</span></a>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/haproxy.png"/>
+                            <img alt="HAProxy icon" src="{{ site.baseurl}}/gfx/agent/haproxy.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/haproxy"><span>HaProxy</span></a>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/iis.png"/>
+                            <img alt="IIS icon" src="{{ site.baseurl}}/gfx/agent/iis.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/iis"><span>
                                 IIS
                                 <i class="fa fa-windows error"></i>
@@ -257,12 +257,12 @@ description: An overview of all CoScale datasources.
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/jboss.png"/>
+                            <img alt="JBoss icon" src="{{ site.baseurl}}/gfx/agent/jboss.png"/>
                             <span>JBoss</span>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/varnish.png"/>
+                            <img alt="Varnish icon" src="{{ site.baseurl}}/gfx/agent/varnish.png"/>
                             <span>
                                 Varnish
                                 <i class="fa fa-linux error"></i>
@@ -277,12 +277,12 @@ description: An overview of all CoScale datasources.
                         <span class="mute">Plugins for relational databases.</span>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/mysql.png"/>
+                            <img alt="MySQL icon" src="{{ site.baseurl}}/gfx/agent/mysql.png"/>
                             <span>MySql</span>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/mssql.png"/>
+                            <img alt="MsSQL icon" src="{{ site.baseurl}}/gfx/agent/mssql.png"/>
                             <span>
                                 MSSQL
                                 <i class="fa fa-windows error"></i>
@@ -290,7 +290,7 @@ description: An overview of all CoScale datasources.
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/oracle.png"/>
+                            <img alt="Oracle icon" src="{{ site.baseurl}}/gfx/agent/oracle.png"/>
                             <span>
                                 Oracle
                                 <i class="fa fa-linux error"></i>
@@ -298,7 +298,7 @@ description: An overview of all CoScale datasources.
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/postgresql.png"/>
+                            <img alt="PostgreSQL icon" src="{{ site.baseurl}}/gfx/agent/postgresql.png"/>
                             <span>PostgreSQL</span>
                         </div>
                     </fieldset>
@@ -310,12 +310,12 @@ description: An overview of all CoScale datasources.
                         <span class="mute">Plugins for NoSQL databases.</span>
 
                          <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/cassandra.png"/>
+                            <img alt="Cassandra icon" src="{{ site.baseurl}}/gfx/agent/cassandra.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/cassandra"><span>Cassandra</span></a>
                         </div>
 
                          <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/couchdb.png"/>
+                            <img alt="CouchDb icon" src="{{ site.baseurl}}/gfx/agent/couchdb.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/couchdb"><span>
                                 CouchDb
                                 <i class="fa fa-linux error"></i>
@@ -323,17 +323,17 @@ description: An overview of all CoScale datasources.
                         </div>
 
                          <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/elasticsearch.png"/>
+                            <img alt="Elasticsearch icon" src="{{ site.baseurl}}/gfx/agent/elasticsearch.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/elasticsearch"><span>Elasticsearch</span></a>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/mongodb.png"/>
+                            <img alt="MongoDB icon" src="{{ site.baseurl}}/gfx/agent/mongodb.png"/>
                             <span>MongoDB</span>
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/redis.png"/>
+                            <img alt="Redis icon" src="{{ site.baseurl}}/gfx/agent/redis.png"/>
                             <span>
                                 Redis
                                 <i class="fa fa-linux error"></i>
@@ -341,7 +341,7 @@ description: An overview of all CoScale datasources.
                         </div>
 
                         <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/riak.png"/>
+                            <img alt="Riak icon" src="{{ site.baseurl}}/gfx/agent/riak.png"/>
                             <span>
                                 Riak
                                 <i class="fa fa-linux error"></i>
@@ -356,17 +356,17 @@ description: An overview of all CoScale datasources.
                         <span class="mute">Plugins for additional services.</span>
 
                          <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/magento.png"/>
+                            <img alt="Magento icon" src="{{ site.baseurl}}/gfx/agent/magento.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/magento"><span>Magento</span></a>
                         </div>
 
                          <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/memcached.png"/>
+                            <img alt="Memcached icon" src="{{ site.baseurl}}/gfx/agent/memcached.png"/>
                             <span>Memcached</span>
                         </div>
 
                          <div class="technology">
-                            <img src="{{ site.baseurl}}/gfx/agent/rabbitmq.png"/>
+                            <img alt="RabbitMQ icon" src="{{ site.baseurl}}/gfx/agent/rabbitmq.png"/>
                             <span>RabbitMQ</span>
                         </div>
                     </fieldset>
@@ -379,22 +379,22 @@ description: An overview of all CoScale datasources.
                     <span class="mute">Data collection from thirdparty resources.</span>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/amazon-aws.png"/>
+                        <img alt="AWS icon" src="{{ site.baseurl}}/gfx/agent/amazon-aws.png"/>
                         <span>Amazon</span>
                     </div>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/pingdom.png"/>
+                        <img alt="Pingdom icon" src="{{ site.baseurl}}/gfx/agent/pingdom.png"/>
                         <span>Pingdom</span>
                     </div>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/rollbar.png"/>
+                        <img alt="Rollbar icon" src="{{ site.baseurl}}/gfx/agent/rollbar.png"/>
                         <span>Rollbar</span>
                     </div>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/sentry.png"/>
+                        <img alt="Sentry icon" src="{{ site.baseurl}}/gfx/agent/sentry.png"/>
                         <span>Sentry</span>
                     </div>
                 </fieldset>
@@ -406,27 +406,27 @@ description: An overview of all CoScale datasources.
                     <span class="mute">Data collection from automated jobs.</span>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/PUPPET.png"/>
+                        <img alt="Puppet icon" src="{{ site.baseurl}}/gfx/agent/PUPPET.png"/>
                         <a href="{{ site.baseurl }}/events/automation/puppet"><span>Puppet</span></a>
                     </div>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/CHEF.png"/>
+                        <img alt="Chef icon" src="{{ site.baseurl}}/gfx/agent/CHEF.png"/>
                         <a href="{{ site.baseurl }}/events/automation/chef"><span>Chef</span></a>
                     </div>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/SALT.png"/>
+                        <img alt="Salt icon" src="{{ site.baseurl}}/gfx/agent/SALT.png"/>
                         <a href="{{ site.baseurl }}/events/automation/salt"><span>Salt</span></a>
                     </div>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/CRON.png"/>
+                        <img alt="Cron icon" src="{{ site.baseurl}}/gfx/agent/CRON.png"/>
                         <a href="{{ site.baseurl }}/events/wrappers/linux/index/"><span>Cron jobs</span></a>
                     </div>
 
                     <div class="technology">
-                        <img src="{{ site.baseurl}}/gfx/agent/CLI.png"/>
+                        <img alt="CLI icon" src="{{ site.baseurl}}/gfx/agent/CLI.png"/>
                         <a href="{{ site.baseurl }}/tools/cli/index/"><span>Coscale CLI</span></a>
                     </div>
                 </fieldset>

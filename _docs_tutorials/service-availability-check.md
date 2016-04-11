@@ -26,7 +26,7 @@ If you are having problems with customizing the service availability script, or 
             <strong>Create a new agent</strong>, or you can also <strong>edit</strong> an existing one that you might have. The process is the same.
         </p>
 
-        <img src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/agent1.png " style="margin-bottom: 15px;"/>
+        <img alt="Create new agent screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/agent1.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Select Generic Script plugin -->
@@ -40,7 +40,7 @@ If you are having problems with customizing the service availability script, or 
             Now go to the <strong>Plugin step</strong> and add the <a target="_blank" href="{{ site.baseurl }}/custom-metrics/generic-script/index/">Generic script plugin</a>. A dialog will appear with the configuration steps for this plugin. What to fill in will be explained in the next step.
         </p>
 
-        <img src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/agent2.png " style="margin-bottom: 15px;"/>
+        <img alt="Generic script screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/agent2.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Configuring Generic Script plugin -->
@@ -53,7 +53,7 @@ If you are having problems with customizing the service availability script, or 
             <li>Fill in the <strong>path to the script</strong> in the input box that appears and click <strong>Finish</strong>.</li>
         </ul>
 
-        <img src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/agent3.png " style="margin-bottom: 15px;"/>
+        <img alt="Generic script walkthrough screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/agent3.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Finish agent configuration -->
@@ -99,23 +99,23 @@ If you are having problems with customizing the service availability script, or 
     <li>
         <p>Create a new <strong>notification scheme</strong></p>
 
-        <img src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts1.png " style="margin-bottom: 15px;"/>
+        <img alt="Create notification scheme screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts1.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Notification settings -->
     <li>
-        <p>Fill in the <strong>name</strong> & <strong>add the emails for the main recipients</strong>.</p>
+        <p>Fill in the <strong>name</strong> and <strong>add the emails for the main recipients</strong>.</p>
 
         <p>The rest of the form is not required but it is worth considering if configuring the optional steps might be beneficial in your situation.</p>
 
-        <img src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts2.png " style="margin-bottom: 15px;"/>
+        <img alt="Alert schema screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts2.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Alert block -->
     <li>
         <p>Now you will see a new alert block. Continue by clicking on the <strong>add new alert</strong> button.</p>
 
-        <img src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts3.png " style="margin-bottom: 15px;"/>
+        <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts3.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Fill in the form -->
@@ -141,7 +141,7 @@ If you are having problems with customizing the service availability script, or 
             <li><strong>Auto resolving</strong> is turned on by default and we recommend to leave it on.</li>
         </ul>
 
-        <img src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts4.png " style="margin-bottom: 15px;"/>
+        <img alt="Setup alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts4.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Repeat -->
@@ -149,4 +149,3 @@ If you are having problems with customizing the service availability script, or 
         <strong>Repeat</strong> the process of creating an alert for each service for which you wish to receive alerts when it becomes unavailable.
     </li>
 </ol>
-

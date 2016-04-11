@@ -6,7 +6,7 @@ description: Overview of CoScale dashboard widgets
 
 Widgets are your main visualization tools inside CoScale, we support a wide range of different kinds and allow many customization options. To add widgets and see the array of possibilities you can click the 'Add widget' button inside our dashboards.
 
-<img src="{{ site.baseurl }}/gfx/dashboard/widgets/add_widget.png" alt="" class="img-responsive" />
+<img src="{{ site.baseurl }}/gfx/dashboard/widgets/add_widget.png" alt=" screenshot" class="imgs are your main visualization tools inside CoScale, we support a wide range of different kinds and allow many customization options. To add widgets and see the array of possibilities you can click the 'Add widget' button inside our dashboa-responsive" />
 
 ## Settings
 
@@ -24,7 +24,7 @@ Widgets are your main visualization tools inside CoScale, we support a wide rang
 
     </div>
     <div class="col-sm-5">
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/hamburger_menu.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/hamburger_menu.png" alt="class="col-s screenshot" class="img-responsive" />
     </div>
 </div>
 
@@ -44,41 +44,41 @@ Widgets are your main visualization tools inside CoScale, we support a wide rang
 <div class="row">
     <div class="col-sm-12">
         <h3>Chart</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/chart.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/chart.png" alt="Chart screenshot" class="img-responsive" />
     </div>
 
     <div class="col-sm-12">
         <h3>Table</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/table.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/table.png" alt="Table screenshot" class="img-responsive" />
     </div>
 
     <div class="col-sm-6">
         <h3>Heatmap</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/heatmap.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/heatmap.png" alt="Heatmap screenshot" class="img-responsive" />
     </div>
 
     <div class="col-sm-6">
         <h3>Pie chart</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/pie-chart.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/pie-chart.png" alt="Pie chart screenshot" class="img-responsive" />
     </div>
 
     <div class="col-sm-6">
         <h3>Gauge</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/gauge.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/gauge.png" alt="Gauge screenshot" class="img-responsive" />
     </div>
 
     <div class="col-sm-6">
         <h3>Tile</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/tile.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/tile.png" alt="Tile screenshot" class="img-responsive" />
     </div>
 
     <div class="col-sm-12">
         <h3>Event overview</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/event-overview.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/event-overview.png" alt="Event overview screenshot" class="img-responsive" />
     </div>
 
     <div class="col-sm-12">
         <h3>Anomaly timeline</h3>
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/anomaly-timeline.png" alt="" class="img-responsive" />
+        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/anomaly-timeline.png" alt="Anomaly timeline screenshot" class="img-responsive" />
     </div>
 </div>
