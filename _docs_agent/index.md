@@ -49,3 +49,5 @@ Overview of all plugins with more information about the metrics gathered and spe
     Information about CoScale agent firewall settings and proxy configuration.
 * [Custom templates]({{ site.baseurl }}/agent/custom-template)
     Specific configuration for config management systems.
+* [Refine webrequests]({{ site.baseurl }}/agent/webrequest-method)
+    Specific configuration for tracking web requests by their HTTP method.
