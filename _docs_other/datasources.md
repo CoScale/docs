@@ -420,10 +420,10 @@ description: An overview of all CoScale datasources.
                         <a href="{{ site.baseurl }}/events/automation/salt"><span>Salt</span></a>
                     </div>
 
-                    <div class="technology">
+                    <!-- <div class="technology">
                         <img alt="Cron icon" src="{{ site.baseurl}}/gfx/agent/CRON.png"/>
                         <a href="{{ site.baseurl }}/events/wrappers/linux/index/"><span>Cron jobs</span></a>
-                    </div>
+                    </div> -->
 
                     <div class="technology">
                         <img alt="CLI icon" src="{{ site.baseurl}}/gfx/agent/CLI.png"/>
