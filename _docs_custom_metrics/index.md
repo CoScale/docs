@@ -10,12 +10,12 @@ Custom metrics allow you to monitor certain aspects of your application that wou
 
     By running a script or executable every minute the CoScale agent gathers metrics from your application and pushes those to the platform. We provide some example scripts and guide your in configuring it for your application.
 
-    Pros:
+    **Pros**:
 
     * Language agnostic
     * Easy to setup
 
-    Cons:
+    **Cons**:
 
     * Works best with minute data
     * Script cannot run longer than 5 seconds
@@ -24,51 +24,52 @@ Custom metrics allow you to monitor certain aspects of your application that wou
 
     Our CLI allows you to push multiple metrics at the same time from the command line. You can use it together with bash scripts to get your custom data inside CoScale. our CLI is installed automatically with our agent, or you can also install it manually if you don't have an agent installed.
 
-    Pros:
+    **Pros**:
 
     * Can be integrated with existing scripts
     * Good for long duration commands
 
-    Cons:
+    **Cons**:
 
     * Might be too low-level for some situations.
 
+* [Pulling metrics with Agent Log plugin]({{ site.baserurl }}/agent/plugins/log/)
 
-* [CoScale API]({{ site.baseurl }}/api/)
-    
-    Our API provides you with the tools to manage data using your favorite programming language. At the moment you will need to write your own code to manage the whole procedure of communicating with the API. We are investigating possibilities in creating SDKs for the most popular languages.
+    The CoScale agent supports retrieving data from existing log files using a regular expression.
 
-    Pros:
+    **Pros**:
 
-    * Fine grained control
+    * Language agnostic
+    * Use existing log files
+    * Quick to setup
 
     Cons:
 
-    * Requires heavy code integration
+    * Works best with minute data
+    * Inefficient when you have a lot of custom metrics
 
 * [StatsD]({{ site.baseurl }}/custom-metrics/statsd/index)
 
     If you are using StatsD you can integrate the CoScale StatsD plugin and it will push all metrics available in the StatsD daemon to the CoScale infrastructure every minute
 
-    Pros:
+    **Pros**:
 
     * Language agnostic
-    * Libraries available for all popular [languages](https://github.com/etsy/statsd/wiki) 
+    * Libraries available for all popular [languages](https://github.com/etsy/statsd/wiki)
 
-    Cons:
+    **Cons**:
 
     * Daemon on machine
     * Code integration
 
-* CollectD
+* [CoScale API]({{ site.baseurl }}/api/)
 
-    If you are using CollectD then you can enabled the CollectD CoScale agent plugin and it will push the data to CoScale.
+    Our API provides you with the tools to manage data using your favorite programming language. At the moment you will need to write your own code to manage the whole procedure of communicating with the API. We are investigating possibilities in creating SDKs for the most popular languages.
 
-    Pros:
+    **Pros**:
 
-    * Huge library of [existing scripts](https://collectd.org/wiki/index.php/Table_of_Plugins)
+    * Fine grained control
 
-    Cons:
+    **Cons**:
 
-    * Daemon on machine
-
+    * Requires heavy code integration
