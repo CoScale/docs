@@ -4,7 +4,7 @@ title: Generic script plugin
 description: Information on how to use the CoScale generic script plugin.
 ---
 ## Description
-Once you have an [agent]({{ site.baseurl }}/agent/index) running on your server you can add the generic script plugin to gather custom metrics. The plugin executes a script once every minute to gather data from it and sends it to CoScale.
+Once you have an [agent]({{ site.baseurl }}/agent/index) running on your server you can add the generic script plugin to gather custom metrics and events. The plugin executes a script once every minute to gather data from it and sends it to CoScale.
 
 The generic script plugin has **2** modes: **configuration** mode and **data retrieval** mode. Our plugin will first run the configuration mode to get the metrics which should be created. Afterwards it will run every minute in data retrieval mode to get the data.
 
@@ -58,6 +58,14 @@ This is an **example** output of a script in **configuration mode**:
         "unit": "",
         "tags": "MYTAG1,MYTAG2",
         "calctype": "Instant"
+    }],
+    "events": [{
+        "id": 1,
+        "name": "First event",
+        "description": "Description for first event",
+        "attributeDescriptions": [
+            {"name":"firstAttribute", "type":"integer", "unit":"#"}
+        ]
     }]
 }
 {% endhighlight %}
@@ -66,16 +74,17 @@ This is an **example** output of a script in **configuration mode**:
 
 | Parameter     | Description                                                                                                                                          |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `id`          | Id of the metric, this should be the same as when the script is run in **data retrieval** mode.                                                      |
-| `calctype`    | There are currently 3 available options for the `calctype`:                                                                                          |
-|               |     - Difference: Metric result will be the difference between value from a minute ago and the current value.                                        |
-|               |     - Instant: Metric result will be a new value every minute.                                                                                       |
-|               |     - Average: Metric result will be average over time.                                                                                              |
-| `maxruntime`  | Maximum amount of time in milliseconds the script is allowed to run in data retrieval mode. If runtime exceeds this value the script will be stopped.|
-|               | The maximum value for this is 5000. Your script can only take 5 seconds to run or it will be killed by the agent.                                    |
-| `datatype`    | The data type of created metric. Only `"DOUBLE"` is supported at this moment                                                                         |
-| `groups`      | The metric group that this metric should be added to. Groups inside other groups needs to be separated by a `/`                                      |
-| `tags`        | You can add a tag to add extra meaning to a metric (i.e. CPU_LOAD). Set as empty string to ignore this.                                              |
+| `id`                    | Id of the metric / event, this should be the same as when the script is run in **data retrieval** mode.                                                      |
+| `calctype`              | There are currently 3 available options for the `calctype`:                                                                                          |
+|                         |     - Difference: Metric result will be the difference between value from a minute ago and the current value.                                        |
+|                         |     - Instant: Metric result will be a new value every minute.                                                                                       |
+|                         |     - Average: Metric result will be average over time.                                                                                              |
+| `maxruntime`            | Maximum amount of time in milliseconds the script is allowed to run in data retrieval mode. If runtime exceeds this value the script will be stopped.|
+|                         | The maximum value for this is 5000. Your script can only take 5 seconds to run or it will be killed by the agent.                                    |
+| `datatype`              | The data type of created metric. Only `"DOUBLE"` is supported at this moment                                                                         |
+| `groups`                | The metric group that this metric should be added to. Groups inside other groups needs to be separated by a `/`                                      |
+| `tags`                  | You can add a tag to add extra meaning to a metric (i.e. CPU_LOAD). Set as empty string to ignore this. 
+| `attributeDescriptions` | The [attribute descriptions]({{ site.baseurl }}/events/custom-attributes/) of the event.                                                              |
 
 ### Data retrieval mode
 Once the agent has been started, the Generic Script plugin will gather data once every minute by calling `<script> -d`.
@@ -87,4 +96,22 @@ Given the above configuration, the following output is an example of the script 
 {% highlight bash %}
 M1 8.5
 M2 12345.6
+E1 -300 0 "65.5" "{"firstAttribute":66}"
 {% endhighlight %}
+
+#### Parameters for metrics
+
+| Parameter                   | Description                                                |
+|-----------------------------|------------------------------------------------------------|
+| `M1`                        | 'M' + the id of the metric that data will be inserted for. |
+| `8.5`                       | The value of this metric at this moment.                   |
+
+#### Parameters for events
+
+| Parameter                   | Description                                                                    |
+|-----------------------------|--------------------------------------------------------------------------------|
+| `E1`                        | 'E' + the id of the event that data will be inserted for.                      |
+| `-300`                      | The event start time. This can be the time ago in seconds or a unix timestamp. |
+| `0`                         | The event end time. This can be the time ago in seconds or a unix timestamp.   |
+| `"65.5"`                    | The message/content of the eventData. The quotes are required.             |
+| `"{"firstAttribute":66}"` | All [attributes]({{ site.baseurl }}/events/custom-attributes/) for this event. The outer quotes are required.             |
