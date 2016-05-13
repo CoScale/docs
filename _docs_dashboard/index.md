@@ -8,6 +8,7 @@ Dashboards are your primary tool to visualize all the data that CoScale collects
 
 ## General
 
+* [Basic features]({{ site.baseurl }}/dashboard/basic/)
 * [Add events and event categories]({{ site.baseurl }}/dashboard/events/)
 
 ## Dashboard
