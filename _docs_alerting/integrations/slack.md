@@ -8,7 +8,7 @@ description: Tutorial on how to integrate alerting with slack
 </p>
 
 <p>
-    <img src="{{ site.baseurl }}/gfx/alerting/integrations/slack/slackContactMethod.png"/>
+    <img alt="Add slack screenshot" src="{{ site.baseurl }}/gfx/alerting/integrations/slack/slackContactMethod.png"/>
 </p>
 
 <h3>Slack URL integration setup</h3>
@@ -24,7 +24,7 @@ description: Tutorial on how to integrate alerting with slack
 </p>
 
 <p>
-    <img src="{{ site.baseurl }}/gfx/alerting/integrations/slack/02-slack-configure-integration_0.png"/>
+    <img alt="Slack menu screenshot" src="{{ site.baseurl }}/gfx/alerting/integrations/slack/02-slack-configure-integration_0.png"/>
 </p>
 
 <p>
@@ -32,7 +32,7 @@ description: Tutorial on how to integrate alerting with slack
 </p>
 
 <p>
-    <img src="{{ site.baseurl }}/gfx/alerting/integrations/slack/03-slack-filter-search-incoming.png"/>
+    <img alt="Slack configuration search screenshot" src="{{ site.baseurl }}/gfx/alerting/integrations/slack/03-slack-filter-search-incoming.png"/>
 </p>
 
 <p>
@@ -44,7 +44,7 @@ description: Tutorial on how to integrate alerting with slack
 </p>
 
 <p>
-    <img src="{{ site.baseurl }}/gfx/alerting/integrations/slack/04-slack-channel-general.png"/>
+    <img alt="Slack configuration channel screenshot" src="{{ site.baseurl }}/gfx/alerting/integrations/slack/04-slack-channel-general.png"/>
 </p>
 
 <p>
@@ -52,13 +52,9 @@ description: Tutorial on how to integrate alerting with slack
 </p>
 
 <p>
-    <img src="{{ site.baseurl }}/gfx/alerting/integrations/slack/05-slack-add-incoming-webhooks-integration.png"/>
+    <img alt="Slack configuration settings screenshot" src="{{ site.baseurl }}/gfx/alerting/integrations/slack/05-slack-add-incoming-webhooks-integration.png"/>
 </p>
 
 <p>
     Remember to click on Save Settings and you should be all set with the Incoming Webhook configured and waiting for your message.
 </p>
-
-
-
-

@@ -12,7 +12,7 @@ Before you can start creating alerts we must create a notification scheme. You w
         Go to the alerts manage page and click the create notification scheme button.
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/notificationScheme/createScheme.png"/>
+            <img alt="Add notification scheme buttons screenshot" src="{{ site.baseurl }}/gfx/alerting/notificationScheme/createScheme.png"/>
         </p>
 
     </li>
@@ -25,7 +25,7 @@ Before you can start creating alerts we must create a notification scheme. You w
         <p>The rest of the form is not required but might be beneficial for your situation so it is worth considering also filling backup and escalation contacts.</p>
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/notificationScheme/schemeDialog.png"/>
+            <img alt="Add contact screenshot" src="{{ site.baseurl }}/gfx/alerting/notificationScheme/schemeDialog.png"/>
         </p>
     </li>
 
@@ -39,7 +39,7 @@ Before you can start creating alerts we must create a notification scheme. You w
         </p>
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/notificationScheme/addingContact.png"/>
+            <img alt="Contact information screenshot" src="{{ site.baseurl }}/gfx/alerting/notificationScheme/addingContact.png"/>
         </p>
     </li>
 
@@ -47,7 +47,7 @@ Before you can start creating alerts we must create a notification scheme. You w
         Once you are done filling in the form click save and you will see a notification scheme block appear on the page.
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/notificationScheme/notificationSchemeBlock.png"/>
+            <img alt="Result screenshot" src="{{ site.baseurl }}/gfx/alerting/notificationScheme/notificationSchemeBlock.png"/>
         </p>
     </li>
 </ol>

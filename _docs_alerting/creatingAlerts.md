@@ -10,7 +10,7 @@ description: Steps on how to add alerts to a notification scheme.
         </p>
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/createAlert/addAlert.png"/>
+            <img alt="Add alert button screenshot" src="{{ site.baseurl }}/gfx/alerting/createAlert/addAlert.png"/>
         </p>
     </li>
 
@@ -54,11 +54,11 @@ description: Steps on how to add alerts to a notification scheme.
         </ul>
 
         <p>
-            The widget with the red line is a visual representation of when the alert should be triggered. 
+            The widget with the red line is a visual representation of when the alert should be triggered.
         </p>
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/createAlert/alertDialog.png"/>
+            <img alt="Alert setup screenshot" src="{{ site.baseurl }}/gfx/alerting/createAlert/alertDialog.png"/>
         </p>
     </li>
 
@@ -68,7 +68,7 @@ description: Steps on how to add alerts to a notification scheme.
         </p>
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/createAlert/alertCreated.png"/>
+            <img alt="Alert created screenshot" src="{{ site.baseurl }}/gfx/alerting/createAlert/alertCreated.png"/>
         </p>
     </li>
 
@@ -78,7 +78,7 @@ description: Steps on how to add alerts to a notification scheme.
         </p>
 
         <p>
-            <img src="{{ site.baseurl }}/gfx/alerting/createAlert/editAlert.png"/>
+            <img alt="Edit alert button screenshot" src="{{ site.baseurl }}/gfx/alerting/createAlert/editAlert.png"/>
         </p>
     </li>
 
