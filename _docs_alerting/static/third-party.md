@@ -12,7 +12,7 @@ When the CoScale monitoring service triggers an alert is it possible to send the
 
     * <a href="https://www.pagerduty.com/docs/guides/email-integration-guide/" target="_blanc">PagerDuty</a>
     * <a href="http://victorops.force.com/knowledgebase/articles/Integration/Generic-Email-Integration" target="_blanc">VictorOps</a>
-    * <a href="https://www.opsgenie.com/docs/alert-creation/creating-alerts-via-email" target="_blanc">OpsGenie</a>
+    * <a href="https://www.opsgenie.com/docs/integrations/creating-alerts-via-email" target="_blanc">OpsGenie</a>
 
     If you cannot find your favorite third party tool, please don't hesitate to <a href="mailto:info@coscale.com" class="js-support">contact us</a> for more information and support.
 
