@@ -132,3 +132,38 @@ Our snippet is fully supported by 66,31% and partially 81,43% supported on all p
     </tbody>
 </table>
 <span class="text-success">Green version are fully supported</span>, <span class="text-warning">yellow may lack some required features</span> and <span class="text-danger">red is not supported</span>.
+
+### iOS & Android Support for Navigation and Resource Timing
+
+<table class="table table-hover table-browsers">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>iOS 7 UIWebView</th>
+            <th>iOS 8 WKWebView</th>
+            <th>Android 4.3 Webkit Webview</th>
+            <th>Android 4.4 Chromium Webview</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="">Navigation Timing</td>
+            <td class="danger">No</td>
+            <td class="success">Yes</td>
+            <td class="success">Yes</td>
+            <td class="success">Yes</td>
+        </tr>
+        <tr>
+            <td class="">Resource Timing</td>
+            <td class="danger">No</td>
+            <td class="danger">No</td>
+            <td class="danger">No</td>
+            <td class="success">Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<span>**Navigation Timing** is an API that measures client performance and gives access to the full timing information related to the page, from when the browser opened the connection to when it resolved the DNS name to when it finished loading the page.</span>.
+
+<span>The **Resource Timing** API allows you to collect complete timing information related to resources in a document. It enables you to measure user latency, which is crucial to benchmark web pages. Using the Resource Timing API allows us to retrieve and analyze a detailed profile of all the network timing data for every resource on the page.</span>
