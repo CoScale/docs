@@ -18,4 +18,10 @@ Afterwards we can add events to the category we created.
 
 `coscale-cli event data --name "Marketing" --message "Start campaign: Focus on other products" --subject a`
 
+Parameters subject details:
+
+* a: Application wide events
+* g<serverGroupId>: Server group event
+* s<serverId>: Server event
+
 You can add as many categories and events as you'd like and you can also include variables to customize your events.
