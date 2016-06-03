@@ -21,3 +21,7 @@ The CoScale Apache plugin collects the following metrics:
 | Apache total number of accesses  |                         |
 | Apache total bytes transferred   |  Amount of bytes        |
 | Apache CPULoad                   |  Percent                |
+
+## Notes
+
+* `ExtendedStatus` has to be `On` for global statistics
