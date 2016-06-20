@@ -4,17 +4,16 @@ title: Alerting
 description: Overview of CoScale alerting systems
 ---
 
-Creating alerts for your application is a very easy procedure. 
+Creating alerts for your application is a very easy procedure, follow the steps below to get started.
 
-Part 1: [Creating a notification scheme]({{ site.baseurl }}/alerting/notificationScheme)
-
-Part 2: [Adding alerts to a notification scheme]({{ site.baseurl }}/alerting/creatingAlerts)
+1. [Creating a notification scheme]({{ site.baseurl }}/alerting/notificationScheme)
+2. [Adding alerts to a notification scheme]({{ site.baseurl }}/alerting/creatingAlerts)
 
 
 ## Third party alert integrations
 
-
-Slack: [integrating alerts into Slack]({{ site.baseurl }}/alerting/integrations/slack)
+* [Sending alerts to Slack]({{ site.baseurl }}/alerting/integrations/slack)
+* [Integration with third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
 
 ## Anomaly detection
 
@@ -24,4 +23,3 @@ Slack: [integrating alerts into Slack]({{ site.baseurl }}/alerting/integrations/
 ## Static alerts
 
 <!-- * [Forecast alerts]({{ site.baseurl }}/alerting/static/forecast/) -->
-* [Integration with third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
