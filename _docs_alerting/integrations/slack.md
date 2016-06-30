@@ -6,7 +6,7 @@ description: Tutorial on how to integrate alerting with slack
 
 To integrate alerts with slack all you need to do is add a contact to an alert and set the **contact method** to **Slack** and add the **Slack webhook url**. Follow the instructions below to get your webhook url.
 
-<img alt="" src="{{ site.baseurl }}/gfx/alerting/integrations/slack/slackContactMethod.png" class="img-responsive" />
+<img alt="" src="{{ site.baseurl }}/gfx/alerting/integrations/slack/slackContactMethod.png" class="img-responsive" alt="Screenshot of dropdown location in dashboard" />
 
 ### How to get a Slack webhook url
 
