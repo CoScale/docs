@@ -54,7 +54,7 @@ CoScale provides some custom images for the services that require configuration.
     </tr>
 </table>
 
-    * You can find a list of custom Docker images on [Docker Hub](https://hub.docker.com/u/coscale/).
+*You can find a list of custom Docker images on [Docker Hub](https://hub.docker.com/u/coscale/).
 
 
 ### Install the CoScale agent on your machine running the Docker containers.
