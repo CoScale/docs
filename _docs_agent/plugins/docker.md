@@ -23,7 +23,7 @@ CoScale provides some custom images for the services that require configuration.
     <tr>
         <th>No configuration required</th>
         <th>Some setup required (custom image available*)</th>
-        <th>Not tested yet</th>
+        <th>Custom image coming soon</th>
     </tr>
     <tr>
         <td>
