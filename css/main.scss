@@ -17,6 +17,7 @@ $border-radius-base: 0px;
 $border-radius-large: 0px;
 $border-radius-small: 0px;
 $grid-gutter-width: 30px;
+$navbar-height: 65px;
 
 $breadcrumb-separator: " »";
 $breadcrumb-bg: white;
@@ -38,6 +39,10 @@ $fa-font-path: "{{ site.baseurl }}/bower_components/font-awesome/fonts/";
 
 body {
     margin-bottom: 50px;
+}
+
+.navbar-brand {
+    padding: 14.5px 15px;
 }
 
 .container,
