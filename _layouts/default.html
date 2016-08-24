@@ -14,15 +14,72 @@
     })(window,document,'script','dataLayer','GTM-NQ47L2');</script>
     <!-- End Google Tag Manager -->
 
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="{{ site.baseurl }}/gfx/logo_white.png" alt="CoScale logo" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li {% if current[1] == 'index.html' %}class='active'{% endif %}>
+                        <a href="{{ site.baseurl }}/"><i class="fa fa-fw fa-home hidden-xs hidden-sm"></i> Home</a>
+                    </li>
+
+                    <li {% if current[1] == 'dashboard' %}class='active'{% endif %}>
+                        <a href="{{ site.baseurl }}/installation.html"><i class="fa fa-fw fa-desktop hidden-xs hidden-sm"></i> Installation</a>
+                    </li>
+
+                    <li {% if current[1] == 'dashboard' %}class='active'{% endif %}>
+                        <a href="{{ site.baseurl }}/dashboard/index"><i class="fa fa-fw fa-mouse-pointer hidden-xs hidden-sm"></i> Usage</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-upload hidden-xs hidden-sm" aria-hidden="true"></i> Datasources <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li {% if current[1] == 'agent' %}class='active'{% endif %}>
+                                <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server hidden-xs hidden-sm"></i> Agent</a>
+                            </li>
+                            <li {% if current[1] == 'rum' %}class='active'{% endif %}>
+                                <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe hidden-xs hidden-sm"></i> Real user monitoring</a>
+                            </li>
+                            <li {% if current[1] == 'events' %}class='active'{% endif %}>
+                                <a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag hidden-xs hidden-sm"></i> Events</a>
+                            </li>
+                            <li {% if current[1] == 'custom-metrics' %}class='active'{% endif %}>
+                                <a href="{{ site.baseurl }}/custom-metrics/index"><i class="fa fa-fw fa-area-chart hidden-xs hidden-sm"></i> Custom metrics</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li {% if current[1] == 'alerting' %}class='active'{% endif %}>
+                        <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-warning hidden-xs hidden-sm"></i> Alerting</a>
+                    </li>
+
+                    <li {% if current[1] == 'tools' %}class='active'{% endif %}>
+                        <a href="{{ site.baseurl }}/tools/index"><i class="fa fa-fw fa-wrench hidden-xs hidden-sm"></i> Tools</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-info navbar-btn navbar-right"><i class="fa fa-fw fa-search hidden-xs hidden-sm" aria-hidden="true"></i> Search</button>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
     <div class="container">
         <div class="row spacing-top">
-            <div class="col-sm-4 col-md-4 col-lg-3">
-                <a id="logo" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/gfx/logo.png" alt="CoScale logo" class="img-responsive" /></a>
-                <div class="sidebar">
-                    {% include sidebar.html %}
-                </div>
-            </div>
-            <div class="col-sm-8 col-md-8 col-lg-9">
+            <div class="col-sm-12">
                 <div class="main">
                     {{ content }}
                 </div>
