@@ -18,19 +18,19 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="http://docs.coscale.com">
                     <img src="{{ site.baseurl }}/gfx/logo_white.png" alt="CoScale logo" />
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li {% if current[1] == 'index.html' %}class='active'{% endif %}>
                         <a href="{{ site.baseurl }}/"><i class="fa fa-fw fa-home hidden-xs hidden-sm"></i> Home</a>
@@ -44,8 +44,8 @@
                         <a href="{{ site.baseurl }}/dashboard/index"><i class="fa fa-fw fa-mouse-pointer hidden-xs hidden-sm"></i> Usage</a>
                     </li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <li class="dropdown" id="datasources">
+                        <a href="#datasources" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-fw fa-upload hidden-xs hidden-sm" aria-hidden="true"></i> Datasources <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
