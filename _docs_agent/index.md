@@ -39,6 +39,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mysql"><img src="/gfx/agent/mysql.png" alt="Mysql icon"> Mysql</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cron"><img src="/gfx/agent/CRON.png" alt="Cron icon"> Cron</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker"><img src="/gfx/agent/docker.png" alt="Docker icon"> Docker</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Swarm</a></div>
 </div>
 
 ## Extra
