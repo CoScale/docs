@@ -99,7 +99,7 @@ If you are having problems with customizing the service availability script, or 
     <li>
         <p>Create a new <strong>notification scheme</strong></p>
 
-        <img alt="Create notification scheme screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts1.png" style="margin-bottom: 15px;"/>
+        <img alt="Create notification scheme screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/01-Manage-Alerts.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Notification settings -->
@@ -108,42 +108,40 @@ If you are having problems with customizing the service availability script, or 
 
         <p>The rest of the form is not required but it is worth considering if configuring the optional steps might be beneficial in your situation.</p>
 
-        <img alt="Alert schema screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts2.png" style="margin-bottom: 15px;"/>
+        <img alt="Alert schema screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/02-Edit-Notification-Scheme.png" style="margin-bottom: 15px;"/>
     </li>
 
     <!-- Alert block -->
     <li>
         <p>Now you will see a new alert block. Continue by clicking on the <strong>add new alert</strong> button.</p>
 
-        <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts3.png" style="margin-bottom: 15px;"/>
+        <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/03-Add-New-Alert.png" style="margin-bottom: 15px;"/>
     </li>
 
-    <!-- Fill in the form -->
+    <!-- Configure new alert -->
     <li>
-        Fill in the alert form
+        Configure this new alert
 
         <ul>
-            <li>Fill in the <strong>name</strong> for the alert</li>
-            <li>Fill in the <strong>description</strong>. (optional)</li>
-            <li><strong style="color: red;">!</strong> Leave the <strong>datatype</strong> on <strong>Server metric</strong> because the Generic Script plugin only pushes server metrics.</li>
-            <li><strong style="color: red;">!</strong> Leave ‘<strong>use forecast data</strong>’ turned <strong>off</strong> because it does not apply in this case.</li>
-            <li><strong>Subject</strong>: It is best to leave this set to <strong>all servers</strong> for complete coverage of the alert.</li>
-
-            <li>
-                <strong>Alert rule</strong>:
-                <ul>
-                    <li>Choose the correct metric in the first select box. Look for the same name as you provided in the script.</li>
-                    <li>Set the value to <strong>not equal to 0</strong>. (<span style="color: green;">0 means service available</span>, <span style="color: red;">anything else means service not available</span>)</li>
-                    <li>Set the <strong>period</strong> between <strong>120s</strong> and <strong>180s</strong> to avoid too many false positives.</li>
-                </ul>
+            <li>Select alert type: <strong>Static</strong></li>
+            <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/04-Alert-Type.png" style="margin-bottom: 15px;"/>
+            <li>Select <strong>Server Metric</strong>. The Generic Script plugin only pushes server metrics</li>
+            <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/05-Server-Metric.png" style="margin-bottom: 15px;"/>
+            <li>Configure <strong>alert rule</strong>
+              <ul>
+                <li>Choose the correct metric in the first select box. Look for the same name as you provided in the script.</li>
+                <li>Set the value to <strong>not equal to 0</strong>. (<span style="color: green;">0 means service available</span>, <span style="color: red;">anything else means service not available</span>)</li>
+                <li>Set the <strong>period</strong> between <strong>120s</strong> and <strong>180s</strong> to avoid too many false positives.</li>
+                <li><strong>Auto resolving</strong> is turned on by default and we recommend to leave it on.</li>
+                <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/06-Alert-Rule.png" style="margin-bottom: 15px;"/>
+              </ul>
             </li>
-
-            <li><strong>Auto resolving</strong> is turned on by default and we recommend to leave it on.</li>
+            <li>Give your alert a <strong> name </strong></li>
+            <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/07-Alert-Name.png" style="margin-bottom: 15px;"/>
+            <li>Click on <strong> Finish </strong> and your new alert will be active.</li>
+            <img alt="Add alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/08-Finish.png" style="margin-bottom: 15px;"/>
         </ul>
-
-        <img alt="Setup alert screenshot" src="{{ site.baseurl }}/gfx/tutorials/service-availability-check/alerts4.png" style="margin-bottom: 15px;"/>
     </li>
-
     <!-- Repeat -->
     <li>
         <strong>Repeat</strong> the process of creating an alert for each service for which you wish to receive alerts when it becomes unavailable.
