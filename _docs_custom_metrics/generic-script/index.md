@@ -40,6 +40,7 @@ This is an **example** output of a script in **configuration mode**:
 {% highlight json %}
 {
     "maxruntime": 1000,
+    "period": 60,
     "metrics": [{
         "id": 1,
         "datatype": "DOUBLE",
@@ -80,10 +81,11 @@ This is an **example** output of a script in **configuration mode**:
 |                         |     - Instant: Metric result will be a new value every minute.                                                                                       |
 |                         |     - Average: Metric result will be average over time.                                                                                              |
 | `maxruntime`            | Maximum amount of time in milliseconds the script is allowed to run in data retrieval mode. If runtime exceeds this value the script will be stopped.|
+| `period`                | The interval of which the agent will poll the script for data in seconds.|
 |                         | The maximum value for this is 5000. Your script can only take 5 seconds to run or it will be killed by the agent.                                    |
 | `datatype`              | The data type of created metric. Only `"DOUBLE"` is supported at this moment                                                                         |
 | `groups`                | The metric group that this metric should be added to. Groups inside other groups needs to be separated by a `/`                                      |
-| `tags`                  | You can add a tag to add extra meaning to a metric (i.e. CPU_LOAD). Set as empty string to ignore this. 
+| `tags`                  | You can add a tag to add extra meaning to a metric (i.e. CPU_LOAD). Set as empty string to ignore this.
 | `attributeDescriptions` | The [attribute descriptions]({{ site.baseurl }}/events/custom-attributes/) of the event.                                                              |
 
 ### Data retrieval mode
