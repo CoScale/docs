@@ -6,8 +6,11 @@ description: Overview of CoScale alerting systems
 
 Creating alerts for your application is a very easy procedure, follow the steps below to get started.
 
-1. [Creating a notification scheme]({{ site.baseurl }}/alerting/notificationScheme)
-2. [Adding alerts to a notification scheme]({{ site.baseurl }}/alerting/creatingAlerts)
+1. [Creating a notification scheme]({{ site.baseurl }}/alerting/notification-scheme)
+2. Adding alerts to a notification scheme
+    * [Static alert]({{ site.baseurl}}/alerting/static/creating)
+    * [Forecast alert]({{ site.baseurl}}/alerting/static/forecast)
+    * [Anomaly alert]({{ site.baseurl}}/alerting/anomaly/creating)
 
 
 ## Third party alert integrations
