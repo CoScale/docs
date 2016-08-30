@@ -4,6 +4,9 @@ title: Tutorial
 description: Integration tutorials for CoScale systems.
 ---
 
+## [Using CoScale to monitor your Docker environment]({{ site.baseurl }}/tutorials/docker-monitoring)
+In this tutorial we will describe all the steps required to install CoScale into your Docker environment.
+
 ## [Creating a service availability check using CoScale]({{ site.baseurl }}/tutorials/service-availability-check)
 In this tutorial we will describe all the steps required to create a service availability check using CoScale agents and alerts.
 
