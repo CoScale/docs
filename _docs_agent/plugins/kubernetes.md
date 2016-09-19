@@ -125,6 +125,3 @@ More information on: [http://kubernetes.io/](http://kubernetes.io/)
 | Kubernetes node number of running containers                           | #           |
 | Kubernetes node sync pod operation count                               | #           |
 | Kubernetes node sync pod operation latency sum                         | s           |
-
-
-You can find an example for installing CoScale agent with Kubernetes Daemon Set here: [https://gist.github.com/kidk/53798512dc67c6c85534496ca3e708dc](https://gist.github.com/kidk/53798512dc67c6c85534496ca3e708dc)
