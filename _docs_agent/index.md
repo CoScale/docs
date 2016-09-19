@@ -40,6 +40,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cron"><img src="/gfx/agent/CRON.png" alt="Cron icon"> Cron</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker"><img src="/gfx/agent/docker.png" alt="Docker icon"> Docker</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Swarm</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kubernetes"><img src="/gfx/agent/kubernetes.png" alt="Kubernetes icon"> Kubernetes</a></div>
 </div>
 
 ## Extra
