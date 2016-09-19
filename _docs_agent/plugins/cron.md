@@ -8,18 +8,19 @@ description: Information on how to install the cron plugin and the events collec
 The cron plugin will parse your cron logs and insert them as [events]({{ site.baseurl }}/events/index/) into CoScale.
 The event is called "Cron plugin event". For every cron job that runs on your server we log the following data:
 
- * Start time
- * Stop time
- * command executed
- * exit code
- * execution time
- * user
- * last 50 lines of output in case the exit code was not equal to 0.
+* start time
+* stop time
+* command executed
+* exit code
+* execution time
+* user
 
-There is also a [wrapper script]({{ site.baseurl }}/events/wrappers/linux/index/) available that gives more fine control over the event name and attributes, but misses the output functionality and requires some manual work to set up.
+There is also a [wrapper script]({{ site.baseurl }}/events/wrappers/linux/index/) available that gives more fine control over the event name and attributes, but requires more manual work to set up.
 
-## Prerequisite
+## Requirements
 * [CoScale Agent installed]({{ site.baseurl }}/agent/index)
+
+We currently do not support Redhat < 6.0, you can still use [the cron-wrapper]({{ site.baseurl }}/events/wrappers/linux/index/) for these systems.  
 
 ## Configuration
 
