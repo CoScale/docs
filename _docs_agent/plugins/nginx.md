@@ -4,7 +4,7 @@ title: NGINX plugin
 description: Information on the metrics collected by the CoScale NGINX plugin.
 ---
 
-> nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.
+> NGINX [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.
 
 More information on: [https://nginx.org](https://nginx.org)
 
