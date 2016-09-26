@@ -49,7 +49,12 @@ This is an **example** output of a script in **configuration mode**:
         "groups": "MyMetrics/Category1",
         "unit": "Bytes",
         "tags": "MYTAG1,MYTAG2",
-        "calctype": "Difference"
+        "calctype": "Difference",
+        "dimensions": [
+            {"id": 1, "name":"dimension1"},
+            {"id": 2, "name":"dimension2"},
+            {"id": 3, "name":"dimension3"}
+        ]
     }, {
         "id": 2,
         "datatype": "DOUBLE",
@@ -58,7 +63,11 @@ This is an **example** output of a script in **configuration mode**:
         "groups": "MyMetrics/Category1",
         "unit": "",
         "tags": "MYTAG1,MYTAG2",
-        "calctype": "Instant"
+        "calctype": "Instant",
+        "dimensions": [
+            {"id": 4, "name":"dimension4"},
+            {"id": 5, "name":"dimension5"}
+        ]
     }],
     "events": [{
         "id": 1,
@@ -87,6 +96,7 @@ This is an **example** output of a script in **configuration mode**:
 | `groups`                | The metric group that this metric should be added to. Groups inside other groups needs to be separated by a `/`                                      |
 | `tags`                  | You can add a tag to add extra meaning to a metric (i.e. CPU_LOAD). Set as empty string to ignore this.
 | `attributeDescriptions` | The [attribute descriptions]({{ site.baseurl }}/events/custom-attributes/) of the event.                                                              |
+| `dimensions`            | The dimensions related to the given metric.                                                                                                          |
 
 ### Data retrieval mode
 Once the agent has been started, the Generic Script plugin will gather data once every minute by calling `<script> -d`.
@@ -96,8 +106,8 @@ Once the agent has been started, the Generic Script plugin will gather data once
 Given the above configuration, the following output is an example of the script running in **data retrieval mode**:
 
 {% highlight bash %}
-M1 8.5
-M2 12345.6
+M1 "1:dimension1_value1,2:dimension2_value1,3:dimension3_value1" 8.5
+M2 "4:dimension4_value1,5:dimension5_value1" 12345.6
 E1 -300 0 "65.5" "{"firstAttribute":66}"
 {% endhighlight %}
 
@@ -106,6 +116,7 @@ E1 -300 0 "65.5" "{"firstAttribute":66}"
 | Parameter                   | Description                                                |
 |-----------------------------|------------------------------------------------------------|
 | `M1`                        | 'M' + the id of the metric that data will be inserted for. |
+| `"4:dimension4_value1,5:dimension5_value1"`                        | A comma separated list of dimension ids, double point and name of the dimension value. The outer quotes are required. |
 | `8.5`                       | The value of this metric at this moment.                   |
 
 #### Parameters for events
