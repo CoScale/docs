@@ -7,15 +7,18 @@ description: Information on how to use the CoScale CLI to push custom data.
 ## Prerequisite
 * [CoScale Command line tool]({{ site.baseurl }}/tools/cli/installation)
 
-## An example
-`./coscale-cli data insert --data="M1:A:1456409700:1.2;M2:A:1456409700:3.14"`
+## An insert example
+`./coscale-cli data insert --data="M1:A:[[Dimension1:Value1],[Dimension2:Value2]]:1456409700:1.2;M2:A:1456409700:3.14"`
 
 will store a datapoint for
 
 * metric id: 1
+* subject: A
+* A comma separated list of each time a block of a dimension and a dimensionvalue. The amount of dimension:dimensionvalue must be the same as the amount of dimensions the metric is linked to. If the metric does not have dimensions, this part should not be provided.
     * value: 1.2
     * timestamp: 1456409700 = Feb 25 2016, 9:15:00 AM EST
 * metric id: 2
+* subject: A
     * value: 3.14
     * timestamp: 1456409700 = Feb 25 2016, 9:15:00 AM EST
 
@@ -23,9 +26,9 @@ You can get some more help about the options running the command `./coscale-cli 
 
     Mandatory:
         --data
-            To send data for DOUBLE metric data typ use the following format:
+            To send data for DOUBLE metric data type, use the following format:
                 "M<metric id>:S<subject Id>:<time>:<value/s>"
-                eg:    --data="M1:S100:1454580954:1.2
+                eg:    --data="M1:S100:1454580954:1.2"
 
             To send data for HISTOGRAM metric data type use the following format:
                 "M<metric id>:S<subject Id>:<seconds ago>:[<no of samples>,<percentile width>,[<percentile data>]]"
@@ -38,3 +41,23 @@ You can get some more help about the options running the command `./coscale-cli 
                 Positive numbers are interpreted as unix timestamps in seconds.
                 Zero is interpreted as the current time.
                 Negative numbers are interpreted as a seconds ago from the current time.
+
+## A retrieval example
+`./coscale-cli data get --start=1474632472 --stop=1475062253 --aggregator=AVG --subjects=s1,s2 --metricId=1 --dimensionsSpecs=[[1,"AVG(1,2)"],[2,"5,6"]]`
+
+will get all relevant data for
+
+* metric id 1
+* subjects: Server 1 and Server 2.
+* dimensionSpecs: A JSON array or JSON arrays. Each containing a dimension ID and a string to define the dimensionvalues. * is interpreted as "all dimensionvalue for the related dimension".
+* Between timestamp 1456228800 and 1456315200 (Tue, 23 Feb 2016 12:00:00 PM GMT and Wed, 24 Feb 2016 12:00:00 PM GMT)
+
+The data will be split out per measurement. In case of the example, data will be returned for:
+
+* Server 1, the Average over dimensionvalue 1 and 2, combined with dimensionvalue 5
+
+* Server 1, the Average over dimensionvalue 1 and 2, combined with dimensionvalue 6
+
+* Server 2, the Average over dimensionvalue 1 and 2, combined with dimensionvalue 5
+
+* Server 2, the Average over dimensionvalue 1 and 2, combined with dimensionvalue 6
