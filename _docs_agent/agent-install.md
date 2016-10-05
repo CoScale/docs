@@ -46,8 +46,6 @@ spec:
           value: "replace_this_with_your_access_token"
         - name: TEMPLATE_ID
           value: "replace_this_with_your_template_id"
-        - name: CERTIFICATE
-          value: "replace_this_with_your_certificate"
         volumeMounts:
         - name: dockersocket
           mountPath: /var/run/docker.sock
