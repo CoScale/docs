@@ -17,7 +17,7 @@ To install this agent, download the agent to your server and double click on the
 
 ## Kubernetes
 
-We support installing the CoScale agent through a DaemonSet configuration. You can find an example of this below. Make sure to replace the values for APP_ID, ACCESS_TOKEN, TEMPLATE_ID and CERTIFICATE. You can find these after creating an agent with a Kubernetes plugin.
+We support installing the CoScale agent through a DaemonSet configuration. You can find an example of this below. Make sure to replace the values for APP_ID, ACCESS_TOKEN and  TEMPLATE_ID. You can find these after creating an agent with a Kubernetes plugin.
 
 {% highlight yaml %}
 apiVersion: extensions/v1beta1
