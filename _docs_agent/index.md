@@ -45,6 +45,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/nginx"><img src="/gfx/agent/nginx.png" alt="NGINX icon"> NGINX</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/tomcat"><img src="/gfx/agent/tomcat.png" alt="Tomcat icon"> Tomcat</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Tomcat icon"> Varnish</a></div>
 </div>
 
 ## Extra
