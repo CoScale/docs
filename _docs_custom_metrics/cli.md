@@ -8,7 +8,7 @@ description: Information on how to use the CoScale CLI to push and get custom da
 * [CoScale Command line tool]({{ site.baseurl }}/tools/cli/installation)
 
 ## An insert example
-`./coscale-cli data insert --data="M1:A:1456409700:1.2:{"Queue":"q1","Cluster":"cl1","Server":"serv1"};M2:A:1456409700:3.14"`
+`./coscale-cli data insert --data="M1:A:1456409700:1.2:{"Queue":"q1","Cluster":"cl1"};M2:A:1456409700:3.14"`
 
 Will store a datapoint for:
 
@@ -16,7 +16,7 @@ Will store a datapoint for:
 * subject: A
     * value: 1.2
     * timestamp: 1456409700 = Feb 25 2016, 9:15:00 AM EST
-    * A JSON object with the name of the dimension and the name of the dimensionvalue.
+    * A JSON object with the names of the dimension and the name of the dimensionvalue. In this example, we're pushing data for Queue "q1" on Cluster "cl1".
 * metric id: 2
 * subject: A
     * value: 3.14
