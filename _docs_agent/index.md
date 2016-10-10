@@ -45,10 +45,11 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/nginx"><img src="/gfx/agent/nginx.png" alt="NGINX icon"> NGINX</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/tomcat"><img src="/gfx/agent/tomcat.png" alt="Tomcat icon"> Tomcat</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Tomcat icon"> Varnish</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/oracle"><img src="/gfx/agent/oracle.png" alt="Tomcat icon"> Oracle</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/postgresql"><img src="/gfx/agent/postgresql.png" alt="Tomcat icon"> PostgreSQL</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mongodb"><img src="/gfx/agent/mongodb.png" alt="Tomcat icon"> MongoDB</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Varnish icon"> Varnish</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/oracle"><img src="/gfx/agent/oracle.png" alt="Oracle icon"> Oracle</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/postgresql"><img src="/gfx/agent/postgresql.png" alt="PostgreSQL icon"> PostgreSQL</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mongodb"><img src="/gfx/agent/mongodb.png" alt="MongoDB icon"> MongoDB</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/redis"><img src="/gfx/agent/redis.png" alt="Redis icon"> Redis</a></div>
 </div>
 
 ## Extra
