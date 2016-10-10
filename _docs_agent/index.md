@@ -51,6 +51,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mongodb"><img src="/gfx/agent/mongodb.png" alt="MongoDB icon"> MongoDB</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/redis"><img src="/gfx/agent/redis.png" alt="Redis icon"> Redis</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kafka"><img src="/gfx/agent/kafka.png" alt="Kafka icon"> Kafka</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/memcached"><img src="/gfx/agent/memcached.png" alt="Memcached icon"> Memcached</a></div>
 </div>
 
 ## Extra
