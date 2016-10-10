@@ -47,6 +47,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/tomcat"><img src="/gfx/agent/tomcat.png" alt="Tomcat icon"> Tomcat</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Tomcat icon"> Varnish</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/oracle"><img src="/gfx/agent/oracle.png" alt="Tomcat icon"> Oracle</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/postgresql"><img src="/gfx/agent/postgresql.png" alt="Tomcat icon"> PostgreSQL</a></div>
 </div>
 
 ## Extra
