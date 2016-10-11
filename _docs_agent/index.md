@@ -54,6 +54,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/memcached"><img src="/gfx/agent/memcached.png" alt="Memcached icon"> Memcached</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/rabbitmq"><img src="/gfx/agent/rabbitmq.png" alt="RabbitMQ icon"> RabbitMQ</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/riak"><img src="/gfx/agent/riak.png" alt="Riak icon"> Riak</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/sentry"><img src="/gfx/agent/sentry.png" alt="Sentry icon"> Sentry</a></div>
 </div>
 
 ## Extra
