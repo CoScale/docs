@@ -29,14 +29,14 @@ Overview of all plugins with more information about the metrics gathered and spe
 <div class="row">
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/apache"><img src="/gfx/agent/apache.png" alt="Apache icon"> Apache</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cassandra"><img src="/gfx/agent/cassandra.png" alt="Cassandra icon"> Cassandra</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchdb"><img src="/gfx/agent/couchdb.png" alt="CouchDb icon"> CouchDb</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchdb"><img src="/gfx/agent/couchdb.png" alt="CouchDb icon"> CouchDB</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/elasticsearch"><img src="/gfx/agent/elasticsearch.png" alt="ElasticSearch icon"> ElasticSearch</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/haproxy"><img src="/gfx/agent/haproxy.png" alt="HAProxy icon"> HAProxy</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/iis"><img src="/gfx/agent/iis.png" alt="IIS icon"> IIS</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/log"><img src="/gfx/agent/log_plugin.png" alt="Log icon"> Log</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/magento"><img src="/gfx/agent/magento.png" alt="Magento icon"> Magento</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/custom-metrics/generic-script/index/"><img src="/gfx/agent/genericscript.png" alt="Script icon"> Generic Script</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mysql"><img src="/gfx/agent/mysql.png" alt="Mysql icon"> Mysql</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mysql"><img src="/gfx/agent/mysql.png" alt="Mysql icon"> MySQL</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cron"><img src="/gfx/agent/CRON.png" alt="Cron icon"> Cron</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker"><img src="/gfx/agent/docker.png" alt="Docker icon"> Docker</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Swarm</a></div>
