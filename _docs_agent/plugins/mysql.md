@@ -12,6 +12,7 @@ More information on: [http://www.mysql.com/](http://www.mysql.com/)
 
 * Service state
 
+## Metrics
 
 | Metric name                                                               | Metric unit |
 |---------------------------------------------------------------------------|-------------|
