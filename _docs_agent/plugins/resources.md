@@ -59,15 +59,15 @@ description: Information on the metrics collected by the CoScale Resources plugi
 
 | Metric name                                |Metric unit|
 |--------------------------------------------|-----------|
-| Free disk space on <partition X>           | b         |
-| Free disk space on <partition X> in %      | %         |
+| Free disk space on partition X             | b         |
+| Free disk space on partition X in %        | %         |
 | Free swap space                            | b         |
 | Free swap space in %                       | %         |
-| Total disk space on <partition X>          | b         |
-| Total number of inodes on <partition X>    | #         |
+| Total disk space on partition X            | b         |
+| Total number of inodes on partition X      | #         |
 | Total swap space                           | b         |
-| Used disk space on <partition X>           | b         |
-| Used number of inodes on <partition X>     | #         |
+| Used disk space on partition X             | b         |
+| Used number of inodes on partition X       | #         |
 
 
 ### Memory
