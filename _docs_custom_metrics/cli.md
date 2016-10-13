@@ -16,25 +16,25 @@ Will store a datapoint for:
 * subject: A
     * value: 1.2
     * timestamp: 1456409700 = Feb 25 2016, 9:15:00 AM EST
-    * A JSON object with the names of the dimension and the name of the dimensionvalue. In this example, we're pushing data for Queue "q1" on Cluster "cl1".
+    * a JSON object with the names of the dimension and the name of the dimensionvalue. In this example, we're pushing data for Queue "q1" on Cluster "cl1".
 * metric id: 2
 * subject: A
     * value: 3.14
     * timestamp: 1456409700 = Feb 25 2016, 9:15:00 AM EST
 
-You can get some more help about the options running the command `./coscale-cli data insert --data`. This will give you some more information about the possibilities.
+You can get more help about the options running the command `./coscale-cli data insert --data`. This will give you more information about the parameters and possibilities.
 
     Mandatory:
         --data
-            To send data for DOUBLE metric data type, use the following format:
+            To send data for the DOUBLE metric data type, use the following format:
                 "M<metric id>:S<subject Id>:<time>:<value/s>"
                 eg:    --data="M1:S100:1454580954:1.2"
 
-            To send data for HISTOGRAM metric data type use the following format:
+            To send data for the HISTOGRAM metric data type, use the following format:
                 "M<metric id>:S<subject Id>:<seconds ago>:[<no of samples>,<percentile width>,[<percentile data>]]"
                 eg: --data="M1:S1:-60:[100,50,[1,2,3,4,5,6]]"
 
-            Sending multiple data entries is possible by using semicolon as separator.
+            Sending multiple data entries is possible by using semicolon as separator:
                 eg: --data="M1:S100:-60:1.2;M1:S100:0:2"
 
             The time is formatted as follows:
@@ -49,8 +49,8 @@ Will get all relevant data for:
 
 * metric id 1
 * subjects: The Average over Server 1 and Server 2.
-* dimensionSpecs: A JSON array or JSON arrays. Each containing a dimension ID and a string to define the dimensionvalues. * is interpreted as "All dimensionvalues for the related dimension".
-* Between timestamp 1456228800 and 1456315200 (Tue, 23 Feb 2016 12:00:00 PM GMT and Wed, 24 Feb 2016 12:00:00 PM GMT)
+* dimensionSpecs: One or more JSON arrays, each containing a dimension ID and a string to define the dimensionvalues. * is interpreted as "All dimensionvalues for the related dimension".
+* between timestamp 1456228800 and 1456315200 (Tue, 23 Feb 2016 12:00:00 PM GMT and Wed, 24 Feb 2016 12:00:00 PM GMT)
 
 The data will be split out per measurement. In case of the example, data will be returned for:
 
