@@ -4,7 +4,7 @@ title: MongoDB plugin
 description: Information on the metrics collected by the CoScale MongoDB plugin.
 ---
 
-> MongoDB is an open-source, document database designed for ease of development and scaling.
+> MongoDB is an open-source, document database designed for ease of development and scaling. MongoDB stores data using a flexible document data model that is similar to JSON. Documents contain one or more fields, including arrays, binary data and sub-documents. Fields can vary from document to document. This flexibility allows development teams to evolve the data model rapidly as their application requirements change. When you need to lock down your data model, optional document validation enforces the rules you choose. Unlike most NoSQL databases, MongoDB provides comprehensive secondary indexes, including geospatial and text search, as well as extensive security and aggregation capabilities. 
 
 More information on: [https://www.mongodb.com/](https://www.mongodb.com/)
 

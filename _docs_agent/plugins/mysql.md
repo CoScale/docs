@@ -4,7 +4,7 @@ title: MySQL plugin
 description: Information on the metrics collected by the CoScale MySQL plugin.
 ---
 
->  The world's most popular open source database
+>  The world's most popular open source database. The MySQL™ software delivers a very fast, multi-threaded, multi-user, and robust SQL (Structured Query Language) database server. MySQL Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. The MySQL software is Dual Licensed. Users can choose to use the MySQL software as an Open Source product under the terms of the GNU General Public License (http://www.fsf.org/licenses/) or can purchase a standard commercial license from Oracle.
 
 More information on: [http://www.mysql.com/](http://www.mysql.com/)
 

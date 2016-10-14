@@ -4,7 +4,7 @@ title: Tomcat plugin
 description: Information on the metrics collected by the CoScale Tomcat plugin.
 ---
 
-> The Apache Tomcat® software is an open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies. The Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket specifications are developed under the Java Community Process.
+> The Apache Tomcat® software is an open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies. Apache Tomcat software powers numerous large-scale, mission-critical web applications across a diverse range of industries and organizations.
 
 More information on: [http://tomcat.apache.org/](http://tomcat.apache.org/)
 
