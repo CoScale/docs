@@ -33,7 +33,7 @@ This file contains a JSON string similar to what the CoScale API sends. Use this
 
    Then view all your agent configurations. The following command will pretty-print the response and fix the formatting so it can be used by the custom agent:
 
-   `curl -H "HttpAuthorization: [TOKEN]" "https://app.coscale.com/api/v1/app/[APPID]/agenttemplates/?expand=plugins&fields=name%2Cconfig%2CpluginType" | python -m json.tool | sed -e 's/\\\\/\\/g; s/\\\"/\"/g; s/\"{/{/g; s/}\"/}/g; s/\"config\"/\"Configuration\"/g; s/\"pluginType\"/\"\PluginType"/g'`
+   `curl -H "HttpAuthorization: [TOKEN]" "https://app.coscale.com/api/v1/app/[APPID]/agenttemplates/?expand=plugins&fields=name%2Cconfig%2CpluginType" | sed -e 's/\\\\/\\/g; s/\\\"/\"/g; s/\"{/{/g; s/}\"/}/g; s/\"config\"/\"Configuration\"/g; s/\"pluginType\"/\"\PluginType"/g' | python -m json.tool`
 
    <small>Don't forget filling in [EMAIL], [PASSWORD], [TOKEN] and [APPID].</small>
 
