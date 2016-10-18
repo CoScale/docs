@@ -1,41 +1,49 @@
 ---
 layout: page
-title: CouchDb plugin
-description: Information on the metrics collected by the CoScale CouchDb plugin.
+title: CouchDB plugin
+description: Information on the metrics collected by the CoScale CouchDB plugin.
 ---
 
-The CoScale CouchDb plugin collects the following metrics:
+> Apache CouchDB is open source database software that focuses on ease of use and having an architecture that "completely embraces the Web". It has a document-oriented NoSQL database architecture and is implemented in the concurrency-oriented language Erlang; it uses JSON to store data, JavaScript as its query language using MapReduce, and HTTP for an API.
 
-|               Metric name                |       Metric unit       |
-|------------------------------------------|-------------------------|
-| CouchDb httpd requests                   |                         |
-| CouchDb httpd request methods GET        |                         |
-| CouchDb httpd request methods POST       |                         |
-| CouchDb httpd request methods HEAD       |                         |
-| CouchDb httpd request methods COPY       |                         |
-| CouchDb httpd request methods PUT        |                         |
-| CouchDb httpd request methods DELETE     |                         |
-| CouchDb httpd bulk requests              |                         |
-| CouchDb httpd temporary view reads       |                         |
-| CouchDb httpd clients requesting changes |                         |
-| CouchDb httpd view reads                 |                         |
-| CouchDb httpd status codes 200           |                         |
-| CouchDb httpd status codes 201           |                         |
-| CouchDb httpd status codes 202           |                         |
-| CouchDb httpd status codes 301           |                         |
-| CouchDb httpd status codes 304           |                         |
-| CouchDb httpd status codes 400           |                         |
-| CouchDb httpd status codes 401           |                         |
-| CouchDb httpd status codes 403           |                         |
-| CouchDb httpd status codes 404           |                         |
-| CouchDb httpd status codes 405           |                         |
-| CouchDb httpd status codes 409           |                         |
-| CouchDb httpd status codes 412           |                         |
-| CouchDb httpd status codes 500           |                         |
-| CouchDb couchdb request time             |                         |
-| CouchDb couchdb database writes          |                         |
-| CouchDb couchdb auth cache hits          |                         |
-| CouchDb couchdb open databases           |                         |
-| CouchDb couchdb open os files            |                         |
-| CouchDb couchdb auth cache misses        |                         |
-| CouchDb couchdb database reads           |                         |
+More information on: [http://couchdb.apache.org/](http://couchdb.apache.org/)
+
+## Events
+
+* Service state
+
+## Metrics
+
+| Metric name                                                 | Metric unit |
+|-------------------------------------------------------------|-------------|
+| CouchDb number of HTTP GET requests                         | req/s       |
+| CouchDb length of a request inside CouchDB without MochiWeb | s           |
+| CouchDb number of authentication cache hits                 | hits/s      |
+| CouchDb number of authentication cache misses               | misses/s    |
+| CouchDb number of bulk requests                             | req/s       |
+| CouchDb number of clients for continuous _changes           | req/s       |
+| CouchDb number of file descriptors CouchDB has open         | files/s     |
+| CouchDb number of HTTP 200 OK responses                     | req/s       |
+| CouchDb number of HTTP 201 Created responses                | req/s       |
+| CouchDb number of HTTP 202 Accepted responses               | req/s       |
+| CouchDb number of HTTP 301 Moved Permanently responses      | req/s       |
+| CouchDb number of HTTP 304 Not Modified responses           | req/s       |
+| CouchDb number of HTTP 400 Bad Request responses            | req/s       |
+| CouchDb number of HTTP 401 Unauthorized responses           | req/s       |
+| CouchDb number of HTTP 403 Forbidden responses              | req/s       |
+| CouchDb number of HTTP 404 Not Found responses              | req/s       |
+| CouchDb number of HTTP 405 Method Not Allowed responses     | req/s       |
+| CouchDb number of HTTP 409 Conflict responses               | req/s       |
+| CouchDb number of HTTP 412 Precondition Failed responses    | req/s       |
+| CouchDb number of HTTP 500 Internal Server Error responses  | req/s       |
+| CouchDb number of HTTP COPY requests                        | req/s       |
+| CouchDb number of HTTP DELETE requests                      | req/s       |
+| CouchDb number of HTTP HEAD requests                        | req/s       |
+| CouchDb number of HTTP POST requests                        | req/s       |
+| CouchDb number of HTTP PUT requests                         | req/s       |
+| CouchDb number of HTTP requests                             | req/s       |
+| CouchDb number of open databases                            | conn/s      |
+| CouchDb number of temporary view reads                      | req/s       |
+| CouchDb number of times a database was changed              | writes/s    |
+| CouchDb number of times a document was read from a database | reads/s     |
+| CouchDb number of view reads                                | req/s       |

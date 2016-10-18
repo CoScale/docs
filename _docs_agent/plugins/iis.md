@@ -31,85 +31,85 @@ description: Information on the metrics collected by the CoScale IIS plugin.
 
 ## Metrics
 
-|                    Metric name                  |           Metric unit            |
-|-------------------------------------------------|----------------------------------|
-| IIS current Anonymous Users                     | Amount of users                  |
-| IIS anonymous Users/sec                         | Amount of users per second       |
-| IIS total Anonymous Users                       | Amount of users                  |
-| IIS maximum Anonymous Users                     | Amount of users                  |
-| IIS current NonAnonymous Users                  | Amount of users                  |
-| IIS nonAnonymous Users/sec                      | Amount of users per second       |
-| IIS total NonAnonymous Users                    | Amount of users                  |
-| IIS maximum NonAnonymous Users                  | Amount of users                  |
-| IIS connection Attempts/sec                     | Amount of connections per second |
-| IIS total Connection Attempts (all instances)   | Amount of connections            |
-| IIS current Connections                         | Amount of connections            |
-| IIS maximum Connections                         | Amount of connections            |
-| IIS lock Requests/sec                           | Amount of requests per second    |
-| IIS total Lock Requests                         | Amount of requests               |
-| IIS unlock Requests/sec                         | Amount of requests per second    |
-| IIS total Unlock Requests                       | Amount of requests               |
-| IIS files Sent/sec                              | Amount of files per second       |
-| IIS total Files Sent                            | Amount of files                  |
-| IIS logon Attempts/sec                          |                                  |
-| IIS total Logon Attempts                        |                                  |
-| IIS files Received/sec                          | Amount of files per second       |
-| IIS total Files Received                        | Amount of files                  |
-| IIS post Requests/sec                           | Amount of requests per second    |
-| IIS total Post Requests                         | Amount of requests               |
-| IIS head Requests/sec                           | Amount of requests per second    |
-| IIS total Head Requests                         | Amount of requests               |
-| IIS delete Requests/sec                         | Amount of requests per second    |
-| IIS total Delete Requests                       | Amount of requests               |
-| IIS copy Requests/sec                           | Amount of requests per second    |
-| IIS total Copy Requests                         | Amount of requests               |
-| IIS trace Requests/sec                          | Amount of requests per second    |
-| IIS total Trace Requests                        | Amount of requests               |
-| IIS mkcol Requests/sec                          | Amount of requests per second    |
-| IIS total Mkcol Requests                        | Amount of requests               |
-| IIS proppatch Requests/sec                      | Amount of requests per second    |
-| IIS total Proppatch Requests                    | Amount of requests               |
-| IIS search Requests/sec                         | Amount of requests per second    |
-| IIS total Search Requests                       | Amount of requests               |
-| IIS move Requests/sec                           | Amount of requests per second    |
-| IIS total Move Requests                         | Amount of requests               |
-| IIS total Method Requests/sec                   | Amount of requests per second    |
-| IIS total Method Requests                       | Amount of requests               |
-| IIS put Requests/sec                            | Amount of requests per second    |
-| IIS total Put Requests                          | Amount of requests               |
-| IIS propfind Requests/sec                       | Amount of requests per second    |
-| IIS total Propfind Requests                     | Amount of requests               |
-| IIS options Requests/sec                        | Amount of requests per second    |
-| IIS total Options Requests                      | Amount of requests               |
-| IIS other Request Methods/sec                   | Amount of requests per second    |
-| IIS total Other Request Methods                 | Amount of requests               |
-| IIS bytes Received/sec                          | Amount of bytes per second       |
-| IIS total Bytes Received                        | Amount of bytes                  |
-| IIS bytes Sent/sec                              | Amount of bytes                  |
-| IIS total Bytes Sent                            | Amount of bytes                  |
-| IIS bytes Total/sec                             | Amount of bytes per second       |
-| IIS locked Errors/sec                           | Amount of errors per second      |
-| IIS total Locked Errors                         | Amount of errors                 |
-| IIS total Files Transferred                     | Amount of files                  |
-| Files/sec                                       | Amount of files per second       |
-| IIS set Requests/sec                            | Amount of requests per second    |
-| IIS total Get Requests                          | Amount of requests               |
-| IIS current CGI Requests                        | Amount of requests               |
-| IIS CGI Requests/sec                            | Amount of requests per second    |
-| IIS total CGI Requests                          | Amount of requests               |
-| IIS maximum CGI Requests                        | Amount of requests               |
-| IIS service Uptime                              | Amount of seconds                |
-| IIS total Bytes Transferred                     | Amount of bytes                  |
-| IIS not Found Errors/sec                        | Amount of errors per second      |
-| IIS total Not Found Errors                      | Amount of errors                 |
-| IIS current blocked bandwidth bytes.            | Amount of bytes                  |
-| IIS total blocked bandwidth bytes.              | Amount of bytes                  |
-| IIS measured Async I/O Bandwidth Usage          |                                  |
-| IIS total Allowed Async I/O Requests            | Amount of requests               |
-| IIS current Blocked Async I/O Requests          | Amount of requests               |
-| IIS total Blocked Async I/O Requests            | Amount of requests               |
-| IIS total Rejected Async I/O Requests           | Amount of requests               |
-| IIS current ISAPI Extension Requests            | Amount of requests               |
-| IIS ISAPI Extension Requests/sec                | Amount of requests per second    |
-| IIS total ISAPI Extension Requests              | Amount of requests               |
-| IIS maximum ISAPI Extension Requests            | Amount of requests               |
+| Metric name                                                                                                                                                                                                                                         | Metric unit |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| The number of data bytes that have been sent by the Web service (since service startup).                                                                                                                                                            | b           |
+| Current bytes temporarily blocked due to bandwidth throttling settings.                                                                                                                                                                             | b           |
+| Current requests temporarily blocked due to bandwidth throttling settings.                                                                                                                                                                          | req         |
+| IIS the rate files are transferred, that is, sent and received by the Web service.                                                                                                                                                                  | files/s     |
+| Measured bandwidth of asynchronous I/O averaged over a minute.                                                                                                                                                                                      | b           |
+| Number of data bytes that have been received by the Web service (since service startup).                                                                                                                                                            | b           |
+| The current number of CGI requests being simultaneously processed by the Web service.                                                                                                                                                               | req         |
+| The current number of connections established with the Web service.                                                                                                                                                                                 | conn        |
+| The current number of ISAPI requests being simultaneously processed by the Web service.                                                                                                                                                             | req         |
+| The length of time the Web Service has been running.                                                                                                                                                                                                | s           |
+| The maximum number of CGI requests simultaneously processed by the Web service (since service startup).                                                                                                                                             | req         |
+| The maximum number of concurrent connections established with the Web service (since service startup).                                                                                                                                              | conn        |
+| The maximum number of concurrent non-anonymous connections to the Web service (since service startup).                                                                                                                                              | users       |
+| The maximum number of ISAPI requests simultaneously processed by the Web service (since service startup).                                                                                                                                           | req         |
+| The maximum number of users who established concurrent anonymous connections using the Web service (since service startup).                                                                                                                         | users       |
+| The number of all HTTP requests (since service startup).                                                                                                                                                                                            | req         |
+| The number of connections that have been attempted using the Web service (since service startup).  This counter is for all instances listed.                                                                                                        | conn        |
+| The number of HTTP requests that are not OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, MOVE, COPY, MKCOL, PROPFIND, PROPPATCH, SEARCH, LOCK or UNLOCK methods (since service startup).                                                              | req         |
+| The number of HTTP requests using the COPY method (since service startup).  Copy requests are used for copying files and directories.                                                                                                               | req         |
+| The number of HTTP requests using the DELETE method (since service startup).  Delete requests are generally used for file removals.                                                                                                                 | req         |
+| The number of HTTP requests using the GET method (since service startup).                                                                                                                                                                           | req         |
+| The number of HTTP requests using the HEAD method (since service startup).  Head requests generally indicate a client is querying the state of a document they already have to see if it needs to be refreshed.                                     | req         |
+| The number of HTTP requests using the LOCK method (since service startup).  Lock requests are used to lock a file for one user so that only that use can modify the file.                                                                           | req         |
+| The number of HTTP requests using the MKCOL method (since service startup).  Mkcol requests are used to create directories on the server.                                                                                                           | req         |
+| The number of HTTP requests using the MOVE method (since service startup).  Move requests are used for moving files and directories.                                                                                                                | req         |
+| The number of HTTP requests using the OPTIONS method (since service startup).                                                                                                                                                                       | req         |
+| The number of HTTP requests using the POST method (since service startup).                                                                                                                                                                          | req         |
+| The number of HTTP requests using the PROPFIND method (since service startup).  Propfind requests retrieve property values on files and directories.                                                                                                | req         |
+| The number of HTTP requests using the PROPPATCH method (since service startup).  Proppatch requests set property values on files and directories.                                                                                                   | req         |
+| The number of HTTP requests using the PUT method (since service startup).                                                                                                                                                                           | req         |
+| The number of HTTP requests using the SEARCH method (since service startup).  Search requests are used to query the server to find resources that match a set of conditions provided by the client.                                                 | req         |
+| The number of HTTP requests using the UNLOCK method (since service startup).  Unlock requests are used to remove locks from files.                                                                                                                  | req         |
+| The number of logons attempts to the Web Service (since service startup).                                                                                                                                                                           | #           |
+| The number of requests that couldn't be satisfied by the server because the requested document could not be found (since service startup).  These are generally reported as an HTTP 404 error code to the client.                                   | errors      |
+| The number of requests that couldn't be satisfied by the server because the requested was locked (since service startup).  These are generally reported as an HTTP 423 error code to the client.                                                    | errors      |
+| The number of users who currently have a non-anonymous connection using the Web service.                                                                                                                                                            | users       |
+| The number of users who currently have an anonymous connection using the Web service.                                                                                                                                                               | users       |
+| The rate CGI requests are received by the Web service.                                                                                                                                                                                              | req/s       |
+| The rate data bytes are being sent by the Web service.                                                                                                                                                                                              | b           |
+| The rate files are received by the Web service.                                                                                                                                                                                                     | files/s     |
+| The rate files are sent by the Web service.                                                                                                                                                                                                         | files/s     |
+| The rate HTTP requests are made that do not use the OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, MOVE, COPY, MKCOL, PROPFIND, PROPPATCH, SEARCH, LOCK or UNLOCK methods.                                                                           | req/s       |
+| The rate HTTP requests are received.                                                                                                                                                                                                                | req/s       |
+| The rate HTTP requests using the COPY method are made.  Copy requests are used for copying files and directories.                                                                                                                                   | req/s       |
+| The rate HTTP requests using the DELETE method are made.  Delete requests are generally used for file removals.                                                                                                                                     | req/s       |
+| The rate HTTP requests using the GET method are made                                                                                                                                                                                                | req/s       |
+| The rate HTTP requests using the HEAD method are made.  Head requests generally indicate a client is querying the state of a document they already have to see if it needs tobe refreshed.                                                          | req/s       |
+| The rate HTTP requests using the LOCK method are made.  Lock requests are used to lock a file for one user so that only that user can modify the file.                                                                                              | req/s       |
+| The rate HTTP requests using the MKCOL method are made.  Mkcol requests are used to create directories on the server.                                                                                                                               | req/s       |
+| The rate HTTP requests using the MOVE method are made.  Move requests are used for moving files and directories.                                                                                                                                    | req/s       |
+| The rate HTTP requests using the OPTIONS method are made.                                                                                                                                                                                           | req/s       |
+| The rate HTTP requests using the POST method are made.                                                                                                                                                                                              | req/s       |
+| The rate HTTP requests using the PROPFIND method are made.  Propfind requests retrieve property values on files and directories.                                                                                                                    | req/s       |
+| The rate HTTP requests using the PROPPATCH method are made.  Proppatch requests set property values on files and directories.                                                                                                                       | req/s       |
+| The rate HTTP requests using the PUT method are made.                                                                                                                                                                                               | req/s       |
+| The rate HTTP requests using the SEARCH method are made.  Search requests are used to query the server to find resources that match a set of conditions provided by the client.                                                                     | req/s       |
+| The rate HTTP requests using the TRACE method are made.  Trace requests allow the client to see what is being received at the end of the request chain and use the information for diagnostic purposes.                                             | req/s       |
+| The rate HTTP requests using the UNLOCK method are made.  Unlock requests are used to remove locks from files.                                                                                                                                      | req/s       |
+| The rate of errors due to requests that couldn't be satisfied by the server because the requested document could not be found.  These are generally reported as an HTTP 404 error code to the client.                                               | errors/s    |
+| The rate of errors due to requests that couldn't be satisfied by the server because the requested document was locked.  These are generally reported as an HTTP 423 error code to the client.                                                       | errors/s    |
+| The rate that connections to the Web service are being attempted.                                                                                                                                                                                   | conn/s      |
+| The rate that data bytes are received by the Web service.                                                                                                                                                                                           | b/s         |
+| The rate that ISAPI Extension requests are received by the Web service.                                                                                                                                                                             | req/s       |
+| The rate that logons to the Web service are being attempted.                                                                                                                                                                                        | #/s         |
+| The rate users are making anonymous connections to the Web service.                                                                                                                                                                                 | users/s     |
+| The rate users are making non-anonymous connections to the Web service.                                                                                                                                                                             | users/s     |
+| The sum of Bytes Sent/sec and Bytes Received/sec                                                                                                                                                                                                    | b/s         |
+| The sum of Files Sent and Files Received (since service startup).                                                                                                                                                                                   | files       |
+| The total number of files received by the Web service (since service startup).                                                                                                                                                                      | files       |
+| The total number of files sent by the Web service (since service startup).                                                                                                                                                                          | files       |
+| The total number of users who established a non-anonymous connection with the Web service (since service startup).                                                                                                                                  | users       |
+| The total number of users who established an anonymous connection with the Web service (since service startup).                                                                                                                                     | users       |
+| Total bytes blocked due to bandwidth throttling settings (since service startup).                                                                                                                                                                   | b           |
+| Total bytes either received or sent by the Web service (since service startup).                                                                                                                                                                     | b           |
+| Total ISAPI Extension Requests received (since service startup).                                                                                                                                                                                    | req         |
+| Total number of CGI requests (since service startup).                                                                                                                                                                                               | req         |
+| Total requests allowed by bandwidth throttling settings (since service startup).                                                                                                                                                                    | req         |
+| Total requests rejected due to bandwidth throttling settings (since service startup).                                                                                                                                                               | req         |
+| Total requests temporarily blocked due to bandwidth throttling settings (since service startup).                                                                                                                                                    | req         |
+| Total Trace Requests is the number of HTTP requests using the TRACE method (since service startup).  Trace requests allow the client to see what is being received at the end of the request chain and use the information for diagnostic purposes. | req         |

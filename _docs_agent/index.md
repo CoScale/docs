@@ -29,18 +29,34 @@ Overview of all plugins with more information about the metrics gathered and spe
 <div class="row">
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/apache"><img src="/gfx/agent/apache.png" alt="Apache icon"> Apache</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cassandra"><img src="/gfx/agent/cassandra.png" alt="Cassandra icon"> Cassandra</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchdb"><img src="/gfx/agent/couchdb.png" alt="CouchDb icon"> CouchDb</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchdb"><img src="/gfx/agent/couchdb.png" alt="CouchDb icon"> CouchDB</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/elasticsearch"><img src="/gfx/agent/elasticsearch.png" alt="ElasticSearch icon"> ElasticSearch</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/haproxy"><img src="/gfx/agent/haproxy.png" alt="HAProxy icon"> HAProxy</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/iis"><img src="/gfx/agent/iis.png" alt="IIS icon"> IIS</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/log"><img src="/gfx/agent/log_plugin.png" alt="Log icon"> Log</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/magento"><img src="/gfx/agent/magento.png" alt="Magento icon"> Magento</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/custom-metrics/generic-script/index/"><img src="/gfx/agent/genericscript.png" alt="Script icon"> Generic Script</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mysql"><img src="/gfx/agent/mysql.png" alt="Mysql icon"> Mysql</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mysql"><img src="/gfx/agent/mysql.png" alt="Mysql icon"> MySQL</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cron"><img src="/gfx/agent/CRON.png" alt="Cron icon"> Cron</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker"><img src="/gfx/agent/docker.png" alt="Docker icon"> Docker</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Swarm</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kubernetes"><img src="/gfx/agent/kubernetes.png" alt="Kubernetes icon"> Kubernetes</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/resources"><img src="/gfx/agent/resources.png" alt="Resources icon"> Resources</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/nginx"><img src="/gfx/agent/nginx.png" alt="NGINX icon"> NGINX</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/tomcat"><img src="/gfx/agent/tomcat.png" alt="Tomcat icon"> Tomcat</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Varnish icon"> Varnish</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/oracle"><img src="/gfx/agent/oracle.png" alt="Oracle icon"> Oracle</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/postgresql"><img src="/gfx/agent/postgresql.png" alt="PostgreSQL icon"> PostgreSQL</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mongodb"><img src="/gfx/agent/mongodb.png" alt="MongoDB icon"> MongoDB</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/redis"><img src="/gfx/agent/redis.png" alt="Redis icon"> Redis</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kafka"><img src="/gfx/agent/kafka.png" alt="Kafka icon"> Kafka</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/memcached"><img src="/gfx/agent/memcached.png" alt="Memcached icon"> Memcached</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/rabbitmq"><img src="/gfx/agent/rabbitmq.png" alt="RabbitMQ icon"> RabbitMQ</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/riak"><img src="/gfx/agent/riak.png" alt="Riak icon"> Riak</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/sentry"><img src="/gfx/agent/sentry.png" alt="Sentry icon"> Sentry</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jmx"><img src="/gfx/agent/jmx.png" alt="JMX icon"> JMX</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/collectd"><img src="/gfx/agent/collectd.png" alt="CollectD icon"> CollectD</a></div>
 </div>
 
 ## Extra
