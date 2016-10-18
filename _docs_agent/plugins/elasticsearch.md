@@ -4,120 +4,127 @@ title: ElasticSearch plugin
 description: Information on the metrics collected by the CoScale ElasticSearch plugin.
 ---
 
-The CoScale ElasticSearch plugin collects the following metrics:
+> Search & Analyze Data in Real Time. Distributed, scalable, and highly available. Real-time search and analytics capabilities. Sophisticated RESTful API.
 
-|                 Metric name                  |       Metric unit       |
-|----------------------------------------------|-------------------------|
-| Total ElasticSearch docs                     |                         |
-| ElasticSearch current docs                   |                         |
-| ElasticSearch current size                   | Amount of bytes         |
-| ElasticSearch resident                       | Amount of bytes         |
-| ElasticSearch %s size                        | Amount of bytes         |
-| ElasticSearch %s limit size                  | Amount of bytes         |
-| ElasticSearch %s estimated size              | Amount of bytes         |
-| ElasticSearch %s free                        | Amount of bytes         |
-| ElasticSearch %s used                        | Amount of bytes         |
-| ElasticSearch %s total capacity              | Amount of bytes         |
-| ElasticSearch %s count                       |                         |
-| ElasticSearch %s tripped                     |                         |
-| ElasticSearch %s time                        | Amount of seconds       |
-| ElasticSearch %s throttle time               | Amount of seconds       |
-| ElasticSearch %s collection time             | Amount of seconds       |
-| ElasticSearch %s uptime                      | Amount of seconds       |
-| ElasticSearch %s total time                  | Amount of seconds       |
-| ElasticSearch %s collection count            |                         |
-| ElasticSearch %s evictions                   |                         |
-| ElasticSearch %s overhead                    |                         |
-| ElasticSearch %s current                     |                         |
-| ElasticSearch %s total                       |                         |
-| ElasticSearch %s memory size                 | Amount of bytes         |
-| ElasticSearch %s timestamp                   |                         |
-| ElasticSearch total                          | Amount of bytes         |
-| ElasticSearch memory                         | Amount of bytes         |
-| ElasticSearch memory share                   | Amount of bytes         |
-| ElasticSearch OS used memory                 | Amount of bytes         |
-| ElasticSearch used memory percent            | Percentage              |
-| ElasticSearch used buffered memory           | Amount of bytes         |
-| ElasticSearch fixed bit set memory           | Amount of bytes         |
-| ElasticSearch total capacity buffered memory | Amount of bytes         |
-| ElasticSearch actual free memory             | Amount of bytes         |
-| ElasticSearch total virtual memory           | Amount of bytes         |
-| ElasticSearch cached memory                  | Amount of bytes         |
-| ElasticSearch heap used                      | Amount of bytes         |
-| ElasticSearch heap used percent              | Percentage              |
-| ElasticSearch non heap memory used           | Amount of bytes         |
-| ElasticSearch heap committed                 | Amount of bytes         |
-| ElasticSearch version map memory             | Amount of bytes         |
-| ElasticSearch index writer memory            | Amount of bytes         |
-| ElasticSearch index writer max memory        | Amount of bytes         |
-| ElasticSearch index current                  |                         |
-| ElasticSearch Fetch current                  |                         |
-| ElasticSearch Delete current                 |                         |
-| ElasticSearch current query                  |                         |
-| ElasticSearch current open                   |                         |
-| ElasticSearch tx count                       |                         |
-| ElasticSearch tx size                        | Amount of bytes         |
-| ElasticSearch rx count                       |                         |
-| ElasticSearch rx size                        | Amount of bytes         |
-| ElasticSearch total file system space        | Amount of bytes         |
-| ElasticSearch disk write size                | Amount of bytes         |
-| ElasticSearch disk read size                 | Amount of bytes         |
-| ElasticSearch disk IO size                   | Amount of bytes         |
-| ElasticSearch disk IO op                     |                         |
-| ElasticSearch disk reads                     |                         |
-| ElasticSearch disk writes                    |                         |
-| Total ElasticSearch exists                   |                         |
-| Total ElasticSearch indices merges size      | Amount of bytes         |
-| Total ElasticSearch query number             | Queries per second      |
-| ElasticSearch jvm mem non heap committed     | Amount of bytes         |
-| ElasticSearch jvm heap max memory            | Amount of bytes         |
-| In ElasticSearch errs                        |                         |
-| ElasticSearch open file descriptors          |                         |
-| ElasticSearch out segs                       |                         |
-| ElasticSearch out rsts                       |                         |
-| ElasticSearch noop update total              |                         |
-| ElasticSearch fetch total                    |                         |
-| ElasticSearch active shards                  |                         |
-| ElasticSearch active primary shards          |                         |
-| ElasticSearch initializing shards            |                         |
-| ElasticSearch relocating shards              |                         |
-| ElasticSearch unassigned shards              |                         |
-| ElasticSearch CPU usage                      |                         |
-| ElasticSearch CPU user                       |                         |
-| ElasticSearch CPU stolen                     |                         |
-| ElasticSearch CPU idle                       |                         |
-| ElasticSearch CPU sys                        |                         |
-| ElasticSearch process CPU user               | Amount of seconds       |
-| ElasticSearch total CPU time                 | Amount of seconds       |
-| ElasticSearch index time                     | Amount of seconds       |
-| ElasticSearch query time                     | Amount of seconds       |
-| ElasticSearch delete time                    | Amount of seconds       |
-| ElasticSearch missing time                   | Amount of seconds       |
-| ElasticSearch fetch time                     | Amount of seconds       |
-| ElasticSearch CPU sys time                   | Amount of seconds       |
-| ElasticSearch exists time                    | Amount of seconds       |
-| ElasticSearch open contexts                  |                         |
-| ElasticSearch deleted documents              |                         |
-| Retransmitted ElasticSearch segments         |                         |
-| ElasticSearch requests                       | Requests per second     |
-| ElasticSearch operations                     |                         |
-| ElasticSearch missing number                 |                         |
-| ElasticSearch queries                        |                         |
-| ElasticSearch hit count                      |                         |
-| ElasticSearch server open                    |                         |
-| ElasticSearch total opened                   |                         |
-| ElasticSearch active opens                   |                         |
-| ElasticSearch passive opens                  |                         |
-| ElasticSearch cache miss count               |                         |
-| ElasticSearch peak count                     |                         |
-| ElasticSearch in segs                        |                         |
-| ElasticSearch curr estab                     |                         |
-| ElasticSearch estabresets                    |                         |
-| ElasticSearch number of nodes                |                         |
-| ElasticSearch number of data nodes           |                         |
-| ElasticSearch number of index requests       | Requests per second     |
-| ElasticSearch number of get requests         | Requests per second     |
-| ElasticSearch number of delete requests      | Requests per second     |
-| ElasticSearch CPU percent                    | Percentage              |
-| ElasticSearch free mem percent               | Percentage              |
-| ElasticSearch network attempt fails          |                         |
+More information on: [https://www.elastic.co/products/elasticsearch](https://www.elastic.co/products/elasticsearch)
+
+## Events
+
+* Service state
+
+## Metrics
+
+| Metric name                                                                                          | Metric unit |
+|------------------------------------------------------------------------------------------------------|-------------|
+| ElasticSearch transport tx size                                                                      | b           |
+| Current number of ElasticSearch search queries                                                       |             |
+| ElasticSearch %s collection count                                                                    |             |
+| ElasticSearch %s collection time                                                                     | s           |
+| ElasticSearch %s count                                                                               |             |
+| ElasticSearch %s current                                                                             |             |
+| ElasticSearch %s estimated size                                                                      | b           |
+| ElasticSearch %s evictions                                                                           |             |
+| ElasticSearch %s free                                                                                | b           |
+| ElasticSearch %s limit size                                                                          | b           |
+| ElasticSearch %s memory size                                                                         | b           |
+| ElasticSearch %s overhead                                                                            |             |
+| ElasticSearch %s query cache miss count                                                              |             |
+| ElasticSearch %s querycache hit count                                                                |             |
+| ElasticSearch %s size                                                                                | b           |
+| ElasticSearch %s throttle time                                                                       | s           |
+| ElasticSearch %s time                                                                                | s           |
+| ElasticSearch %s timestamp                                                                           |             |
+| ElasticSearch %s total                                                                               | b           |
+| ElasticSearch %s total capacity                                                                      | b           |
+| ElasticSearch %s total time                                                                          | s           |
+| ElasticSearch %s tripped                                                                             |             |
+| ElasticSearch %s uptime                                                                              | s           |
+| ElasticSearch %s used                                                                                | b           |
+| ElasticSearch active primary shards                                                                  |             |
+| ElasticSearch active shards                                                                          |             |
+| ElasticSearch actual free memory                                                                     | b           |
+| ElasticSearch available file system space of all disks                                               | b           |
+| ElasticSearch cached memory                                                                          | b           |
+| ElasticSearch CPU idle                                                                               |             |
+| ElasticSearch CPU stolen                                                                             |             |
+| ElasticSearch CPU sys                                                                                |             |
+| ElasticSearch CPU sys time                                                                           | s           |
+| ElasticSearch CPU usage                                                                              |             |
+| ElasticSearch CPU user                                                                               |             |
+| ElasticSearch free memory percent                                                                    | %           |
+| ElasticSearch fs total disk write size                                                               | b           |
+| ElasticSearch http current_open                                                                      |             |
+| ElasticSearch http total_opened                                                                      |             |
+| ElasticSearch index time                                                                             | s           |
+| ElasticSearch indexing Delete current number                                                         |             |
+| ElasticSearch indices indexing index current                                                         |             |
+| ElasticSearch indices indexing noop update total                                                     |             |
+| ElasticSearch indices merges current docs                                                            |             |
+| ElasticSearch indices merges current size                                                            | b           |
+| ElasticSearch indices merges total size                                                              | b           |
+| ElasticSearch indices percolate queries                                                              |             |
+| ElasticSearch indices search fetch time                                                              | s           |
+| ElasticSearch indices search fetch total                                                             |             |
+| ElasticSearch indices search open contexts                                                           |             |
+| ElasticSearch indices search queries time                                                            | s           |
+| ElasticSearch indices segments fixed bit set memory                                                  | b           |
+| ElasticSearch indices segments index writer max memory                                               | b           |
+| ElasticSearch indices segments index writer memory                                                   | b           |
+| ElasticSearch indices segments memory                                                                | b           |
+| ElasticSearch indices segments version map memory                                                    | b           |
+| ElasticSearch indices translog operations                                                            |             |
+| ElasticSearch initializing shards                                                                    |             |
+| ElasticSearch jvm heap max memory                                                                    | b           |
+| ElasticSearch jvm heap memory committed                                                              | b           |
+| ElasticSearch jvm heap memory used                                                                   | b           |
+| ElasticSearch jvm heap memory used percent                                                           | %           |
+| ElasticSearch jvm mem non heap committed                                                             | b           |
+| ElasticSearch jvm peak number of threads                                                             |             |
+| ElasticSearch jvm used non heap memory                                                               | b           |
+| ElasticSearch Network tcp attempt fails                                                              |             |
+| ElasticSearch network tcp curr_estab                                                                 |             |
+| ElasticSearch network tcp out_rsts                                                                   |             |
+| ElasticSearch network tcp passive_opens                                                              |             |
+| ElasticSearch number of data nodes                                                                   |             |
+| ElasticSearch number of delete requests                                                              | req/s       |
+| ElasticSearch number of deleted documents                                                            |             |
+| ElasticSearch number of get requests                                                                 | req/s       |
+| ElasticSearch number of index requests                                                               | req/s       |
+| ElasticSearch number of nodes                                                                        |             |
+| ElasticSearch OS memory actual used                                                                  | b           |
+| ElasticSearch process CPU percent                                                                    | %           |
+| ElasticSearch process CPU total time                                                                 | s           |
+| ElasticSearch process CPU user                                                                       | s           |
+| ElasticSearch process memory resident                                                                | b           |
+| ElasticSearch process memory share                                                                   | b           |
+| ElasticSearch process open file descriptors                                                          |             |
+| ElasticSearch process total virtual memory                                                           | b           |
+| ElasticSearch relocating shards                                                                      |             |
+| ElasticSearch requests                                                                               | req/s       |
+| ElasticSearch Search - Fetch current                                                                 |             |
+| ElasticSearch total  gets number for missing indexes                                                 |             |
+| ElasticSearch total capacity buffered memory                                                         | b           |
+| ElasticSearch total disk IO operation size                                                           | b           |
+| ElasticSearch total disk read size                                                                   | b           |
+| ElasticSearch total disk reads                                                                       |             |
+| ElasticSearch total disk writes                                                                      |             |
+| ElasticSearch total gets time for missing indexes                                                    | s           |
+| ElasticSearch transport - server open                                                                |             |
+| ElasticSearch transport rx_count                                                                     |             |
+| ElasticSearch transport rx_size                                                                      | b           |
+| ElasticSearch transport tx_count                                                                     |             |
+| ElasticSearch unassigned shards                                                                      |             |
+| ElasticSearch used buffered memory                                                                   | b           |
+| ElasticSearch used memory percent                                                                    | %           |
+| fs total ElasticSearch disk IO op                                                                    |             |
+| Indexing deletion time                                                                               | s           |
+| Indices merges total ElasticSearch docs                                                              |             |
+| Indices search ElasticSearch queries total number                                                    | queries/s   |
+| Network tcp in ElasticSearch errs                                                                    |             |
+| Number of times ElasticSearch TCP connections have made a transition to CLOSE state from ESTABLISHED |             |
+| TCP network ElasticSearch active_opens number                                                        |             |
+| TCP network ElasticSearch in_segs                                                                    |             |
+| TCP network ElasticSearch out_segs                                                                   |             |
+| TCP network ElasticSearch segment retransmission number                                              |             |
+| Total number of gets on existent indices                                                             |             |
+| Total time for gets on existent indices                                                              | s           |

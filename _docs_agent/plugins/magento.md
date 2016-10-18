@@ -4,6 +4,10 @@ title: Magento plugin
 description: Information on how to install the Magento plugin and the metrics collected by the CoScale Magento plugin.
 ---
 
+>  Magento is the eCommerce software and platform trusted by the world's leading brands. Recognized as the leading eCommerce platform to the 2015 Internet Retailer Top 1000, B2B 300 and Hot 100 lists, Magento Commerce works hand in hand with retailers, brands and branded manufacturers across B2C and B2B industries to successfully integrate digital and physical shopping experiences. In addition to its flagship open source eCommerce platform, Magento Commerce boasts a strong portfolio of cloud-based omnichannel solutions including in-store, retail associate and order management technologies. Magento Commerce is supported by a vast global network of 300+ solution and technology partners and by a highly active global community of more than 66,000 developers as well as the largest eCommerce marketplace for extensions available for download on the Magento Marketplace. 
+
+More information on: [http://www.magento.com/](http://www.magento.com/)
+
 ## How it works
 This plugin connects to the [CoScale Magento extension](https://www.magentocommerce.com/magento-connect/coscale-performance-business-monitoring.html) to gather important metrics and events from Magento.
 
@@ -41,43 +45,45 @@ Magento requires an extension in order to expose metrics to the CoScale platform
 
 ## Collected metrics.
 
-|                  Metric name                    |       Metric unit       |
-|-------------------------------------------------|-------------------------|
-| "Magento %s Customers"                          |  Customers              |
-| Magento Files in var/report/                    | files                   |
-| Magento Logfile var/log/%s                      |  b                      |
-| Magento %s New Order size total                 |  items                  |
-| Magento %s Order size average                   |  items                  |
-| Magento %s New Order amount total               |  #                      |
-| Magento %s Order amount average                 |  #                      |
-| Magento %s Total New Orders                     |  orders                 |
-| Magento %s Order size total                     |  items                  |
-| Magento %s Order size total average             |  items                  |
-| Magento %s Order amount total                   |  #                      |
-| Magento %s Order amount total average           |  #                      |
-| Magento %s Orders                               |  orders                 |
-| Magento %s Orders new                           |  orders                 |
-| Magento %s Orders processing                    |  orders                 |
-| Magento %s Orders completed                     |  orders                 |
-| Magento %s Abandonned carts                     |  cart                   |
-| Magento Amount of messages in the e-mail queue  |  messages               |
-| Magento Products                                |  orders                 |
-| Magento New products today                      |  prods                  |
-| Magento Categories                              |  cat                    |
-| Magento New categories today                    |  cat                    |
-| Magento %s URL Rewrites                         |  rewrites               |
-| Magento %s Total value of abandoned carts       |  #                      |
-| Magento %s Orders pending pick/pack             |  orders                 |
-| Magento %s Orders pick/pac                      |  orders                 |
-| Magento %s Orders completed pick/pack           |  orders                 |
-| Magento %s Picked qty                           |  qty                    |
-| Magento %s Picked time                          |  s                      |
-| Magento %s Avg time pick/pack                   |   s                     |
-| Magento %s Time pending pick/pack               |  s                      |
-| Magento %s Time current pick/pack               |  s                      |
-| Magento %s Total orders processing              |  orders                 |
-| Magento %s Total orders completed               |  orders                 |
-| Magento %s Total orders                         |  orders                 |
-| agento %s Total orders new                      |  orders                 |
-| Magento %s Total orders today                   |  orders                 |
-| Magento %s New customers today                  |  customers              |
+| Metric name                                                                     | Metric unit |
+|---------------------------------------------------------------------------------|-------------|
+| Magento %s The total number of customers in the system                          | customers   |
+| Magento %s Abandonned carts                                                     | cart        |
+| Magento %s Avg time to pick/pack an order                                       | s           |
+| Magento %s New customers today                                                  |             |
+| Magento %s The average amount of an order in the system for this store          | #           |
+| Magento %s The average amount of orders since last collect for this store       | #           |
+| Magento %s The average size of an order in the system for this store            | items       |
+| Magento %s The average size of orders since last collect for this store         | items       |
+| Magento %s The qty of orders picked                                             |             |
+| Magento %s The total amount of an order in the system for this store            | #           |
+| Magento %s The total amount of orders since last collect for this store         | #           |
+| Magento %s The total number of orders in canceled state                         | orders      |
+| Magento %s The total number of orders in completed pick/pack state              | orders      |
+| Magento %s The total number of orders in completed state                        | orders      |
+| Magento %s The total number of orders in completed state                        |             |
+| Magento %s The total number of orders in new state                              | orders      |
+| Magento %s The total number of orders in new state                              |             |
+| Magento %s The total number of orders in pick/pack state                        |             |
+| Magento %s The total number of orders in processing state                       | orders      |
+| Magento %s The total number of orders in processing state                       |             |
+| Magento %s The total number of orders in the system for this store              | orders      |
+| Magento %s The total number of orders in the system for this store              |             |
+| Magento %s The total number of orders in waiting for pick/pack state            | orders      |
+| Magento %s The total number of orders since last collect for this store         | orders      |
+| Magento %s The total number of orders today                                     |             |
+| Magento %s The total number of pageviews for this store                         |             |
+| Magento %s The total size of all order in the system for this store             | items       |
+| Magento %s The total size of orders since last collect for this store           | items       |
+| Magento %s The total time needed to pick/pack current orders in pick/pack state |             |
+| Magento %s The total time needed to pick/pack new orders                        |             |
+| Magento %s Total time to pick/pack                                              |             |
+| Magento %s Total value of abandoned carts                                       |             |
+| Magento %s URL Rewrites                                                         | rewrites    |
+| Magento Amount of messages in the e-mail queue                                  | messages    |
+| Magento Files in var/report/                                                    | files       |
+| Magento Logfile var/log/%s                                                      | b           |
+| Magento The total number of categories created today                            | cat         |
+| Magento The total number of categories in the system                            | cat         |
+| Magento The total number of products created today                              | prods       |
+| Magento The total number of products in the system                              | prods       |
