@@ -134,7 +134,7 @@ Google Container Engine requires a special setup for Kubernetes monitoring. We w
 
 This agent will be configured to monitor the Kubernetes master. It should only contain the Kubernetes plugin configured with "Connect without authentication" and as a hostname the Kubernetes Master IP. 
 
-The Master IP you can find on your local machine or the Kubernetes minions. `~/.kube/config | grep server` will return the IP address of the server. 
+The Master IP you can find on the machine you use to connect with your cluster. `~/.kube/config | grep server` will return the IP address of the server. 
 
 Finish the agent configuration and deploy it using the following Kubernetes config. Don't forget to replace `$APP_ID`, `$ACCESS_TOKEN` and `$TEMPLATE_ID` with the ones you find in the container deployment command.
 
