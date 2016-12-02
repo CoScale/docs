@@ -8,15 +8,21 @@ To install the CoScale command line interface we provide three different methods
 
 * [Install the agent]({{ site.baseurl}}/agent/install) which will download the CLI tool automatically
 * [Download the binary](#download-binary) by using our install script. This method is advised as it requires no additional software installed.
+* [Use Docker image](#docker-container) that is available on Docker Hub.
 * [Compile from scratch](#compile-yourself) with the <a href="https://golang.org/" target="_BLANK">golang</a> compiler.
 
+## Docker Container
+
+We have Docker image available with the CoScale-CLI. You can find it on [Docker Hub](https://hub.docker.com/r/coscale/cli/).
+
+To use, run `docker run coscale/cli [your command] --app-id=[application_id] --access-token=[accesstoken]`. 
+
+Make sure to replace `[your command]`, `[application_id]` and `[accesstoken]` with the required values. You can find application id and accesstoken in your CoScale dashboard. For the command you can leave it empty and you will get a description of all the possible options.
+
+
+## Host installation
+
 {% include alert.html type="warning" text="You need root/sudo access to install the CoScale CLI." %}
-
-## Prerequisite
-
-* CoScale APP_ID and accessToken
-
-## 1. Install
 
 ### Download binary
 
@@ -42,8 +48,6 @@ Add the location of our CLI tool to your PATH variable to run it from anywhere.
 #### Mac OS X
 
 Mac OS X is currently not supported, please contact our support for more information.
-
-
 
 ### Compile yourself
 
