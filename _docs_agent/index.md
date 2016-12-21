@@ -71,3 +71,5 @@ Overview of all plugins with more information about the metrics gathered and spe
     Specific configuration for config management systems.
 * [Refine webrequests]({{ site.baseurl }}/agent/webrequest-method)
     Specific configuration for tracking web requests by their HTTP method.
+* [Remove a server]({{ site.baseurl }}/agent/remove-server)
+    Removing a server or an agent from your application.
