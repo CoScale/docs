@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Automation
-description: Information on how to integrate CoScale with infrastructure automation tools like Chef, Puppet and Salt.
+description: Information on how to integrate CoScale with infrastructure automation tools like Chef, Puppet, Salt and Ansible.
 ---
 
 ## [Chef]({{ site.baseurl }}/events/automation/chef)
@@ -11,6 +11,10 @@ You can integrate CoScale into Chef so that you can push events to CoScale whene
 ## [Puppet]({{ site.baseurl }}/events/automation/puppet)
 
 Puppet integration is also available with CoScale. Our integration will allow you to push events to CoScale whenever you make a configuration change. [More details here]({{ site.baseurl }}/events/automation/puppet)
+
+## [Ansible]({{ site.baseurl }}/events/automation/ansible)
+
+Ansible integration is also available with CoScale. Our integration will allow you to push events to CoScale whenever you make a configuration change. [More details here]({{ site.baseurl }}/events/automation/ansible)
 
 ## [Salt]({{ site.baseurl }}/events/automation/salt)
 
