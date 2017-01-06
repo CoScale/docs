@@ -10,7 +10,7 @@ By default, all CoScale agents communicate with the CoScale platform over a secu
 ## Proxy
 The CoScale agent allows to send data using a proxy. This can be configured by setting an environment variable HTTPS_PROXY.
 
-* For Linux systems this means adding an environment variable to `/opt/coscale/agent/wrapper.sh`
+* For Linux systems this means adding an environment variable to `/etc/default/coscale-agent`
 
     `export https_proxy=http://[ip]:[port]/`
 
