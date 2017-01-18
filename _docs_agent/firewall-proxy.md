@@ -91,4 +91,4 @@ The CoScale agent allows to send data using a proxy. This can be configured by s
       EOF
 
 
-**Note** that this example applies directly to Kubernetes, for OpenShift and Google Container Engine the commands differ slightly. The easiest way to add the proxy is to copy the DaemonSet command from the CoScale UI and add the https_proxy environment variable under “spec > template > spec > containers > env” like in the example above.
+**Note** This example applies directly to Kubernetes. For OpenShift and Google Container Engine the commands differ slightly. The easiest way to add the proxy is to copy the DaemonSet command from the CoScale UI and add the https_proxy environment variable under “spec > template > spec > containers > env” like in the example above.
