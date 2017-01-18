@@ -13,11 +13,14 @@ To install the CoScale command line interface we provide three different methods
 
 ## Docker Container
 
-We have Docker image available with the CoScale-CLI. You can find it on [Docker Hub](https://hub.docker.com/r/coscale/cli/).
+We have a Docker image available with the CoScale-CLI. You can find it on [Docker Hub](https://hub.docker.com/r/coscale/cli/).
 
 To use, run `docker run coscale/cli [your command] --app-id=[application_id] --access-token=[accesstoken]`. 
 
-Make sure to replace `[your command]`, `[application_id]` and `[accesstoken]` with the required values. You can find application id and accesstoken in your CoScale dashboard. For the command you can leave it empty and you will get a description of all the possible options.
+Make sure to replace `[your command]`, `[application_id]` and `[accesstoken]` with the required values. You can find the application id and the access token in your CoScale dashboard. For the command you can leave it empty and you will get a description of all the possible options.
+
+Example:  
+`docker run coscale/cli server list --app-id=000abcde-3e82-43ab-8456-3e269492a7a2 --access-token=d9aff8be-201a-4907-a9a4-aa712358406f`
 
 
 ## Host installation

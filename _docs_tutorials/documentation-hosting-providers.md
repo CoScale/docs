@@ -6,9 +6,9 @@ description: How to introduce CoScale to your hosting provider
 
 ### CUSTOMER
 
-1. Create an account on our platform
+1. Log in to your account
 
-    Visit [CoScale](http://www.coscale.com/) and choose “Free trial”. You will be redirected to a registration page where you’ll be asked to provide basic information: company name, company profile, email, password.
+    If you don't have an account, fill in the form at [CoScale Free Trial](http://www.coscale.com/free-trial). Our team will get in touch with you to help set up the trial. After registering, you will be able to log in to your CoScale account.
 
 2. Invite your Hosting Provider to CoScale
     Click on Users -> Manage -> Invite user
