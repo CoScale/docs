@@ -58,6 +58,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/sentry"><img src="/gfx/agent/sentry.png" alt="Sentry icon"> Sentry</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jmx"><img src="/gfx/agent/jmx.png" alt="JMX icon"> JMX</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/collectd"><img src="/gfx/agent/collectd.png" alt="CollectD icon"> CollectD</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchbase"><img src="/gfx/agent/couchbase.png" alt="Couchbase icon"> Couchbase</a></div>
 </div>
 
 ## Extra
