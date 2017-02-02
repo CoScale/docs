@@ -60,6 +60,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/collectd"><img src="/gfx/agent/collectd.png" alt="CollectD icon"> CollectD</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchbase"><img src="/gfx/agent/couchbase.png" alt="Couchbase icon"> Couchbase</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/constantcontact"><img src="/gfx/agent/constant-contact.png" alt="Constant Contact icon"> Constant Contact</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/campaignmonitor"><img src="/gfx/agent/campaign-monitor.png" alt="Campaign Monitor icon"> Campaign Monitor</a></div>
 </div>
 
 ## Extra
