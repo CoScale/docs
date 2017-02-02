@@ -125,7 +125,7 @@ description: An overview of all CoScale datasources.
 
             <div class="technology">
                 <img alt="Aweber icon" src="{{ site.baseurl}}/gfx/agent/aweber.png"/>
-                <span>Aweber</span>
+                <a href="{{ site.baseurl }}/agent/plugins/aweber"><span>Aweber</span></a>
             </div>
 
             <div class="technology">
