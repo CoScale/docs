@@ -385,7 +385,7 @@ description: An overview of all CoScale datasources.
 
                     <div class="technology">
                         <img alt="Pingdom icon" src="{{ site.baseurl}}/gfx/agent/pingdom.png"/>
-                        <span>Pingdom</span>
+                        <a href="{{site.baseurl}}/agent/plugins/pingdom"><span>Pingdom</span></a>
                     </div>
 
                     <div class="technology">
