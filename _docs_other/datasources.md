@@ -120,7 +120,7 @@ description: An overview of all CoScale datasources.
 
             <div class="technology">
                 <img alt="Google Analytics icon" src="{{ site.baseurl}}/gfx/agent/google-analytics.png"/>
-                <span>Google Analytics</span>
+                <a href="{{ site.baseurl }}/agent/plugins/googleanalytics"><span>Google Analytics</span></a>
             </div>
 
             <div class="technology">
