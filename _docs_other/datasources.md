@@ -135,7 +135,7 @@ description: An overview of all CoScale datasources.
 
             <div class="technology">
                 <img alt="Constant contact icon" src="{{ site.baseurl}}/gfx/agent/constant-contact.png"/>
-                <span>Constant Contact</span>
+                <a href="{{site.baseurl}}/agent/plugins/constantcontact"><span>Constant Contact</span></a>
             </div>
 
             <div class="technology">
