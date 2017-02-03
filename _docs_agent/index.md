@@ -42,6 +42,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker"><img src="/gfx/agent/docker.png" alt="Docker icon"> Docker</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Swarm</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kubernetes"><img src="/gfx/agent/kubernetes.png" alt="Kubernetes icon"> Kubernetes</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/openshift"><img src="/gfx/agent/openshift.png" alt="Openshift icon"> Openshift</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/resources"><img src="/gfx/agent/resources.png" alt="Resources icon"> Resources</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/nginx"><img src="/gfx/agent/nginx.png" alt="NGINX icon"> NGINX</a></div>
@@ -54,13 +55,20 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kafka"><img src="/gfx/agent/kafka.png" alt="Kafka icon"> Kafka</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/memcached"><img src="/gfx/agent/memcached.png" alt="Memcached icon"> Memcached</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/rabbitmq"><img src="/gfx/agent/rabbitmq.png" alt="RabbitMQ icon"> RabbitMQ</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/activemq"><img src="/gfx/agent/activemq.png" alt="ActiveMQ icon"> ActiveMQ</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/riak"><img src="/gfx/agent/riak.png" alt="Riak icon"> Riak</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/sentry"><img src="/gfx/agent/sentry.png" alt="Sentry icon"> Sentry</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jmx"><img src="/gfx/agent/jmx.png" alt="JMX icon"> JMX</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/collectd"><img src="/gfx/agent/collectd.png" alt="CollectD icon"> CollectD</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchbase"><img src="/gfx/agent/couchbase.png" alt="Couchbase icon"> Couchbase</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/aweber"><img src="/gfx/agent/aweber.png" alt="AWeber icon"> AWeber</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/constantcontact"><img src="/gfx/agent/constant-contact.png" alt="Constant Contact icon"> Constant Contact</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/campaignmonitor"><img src="/gfx/agent/campaign-monitor.png" alt="Campaign Monitor icon"> Campaign Monitor</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/googleanalytics"><img src="/gfx/agent/google-analytics.png" alt="Google Analytics icon"> Google Analytics</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mailchimp"><img src="/gfx/agent/mailchimp.png" alt="Mailchimp icon"> Mailchimp</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/pingdom"><img src="/gfx/agent/pingdom.png" alt="Pingdom icon"> Pingdom</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/rollbar"><img src="/gfx/agent/rollbar.png" alt="Rollbar icon"> Rollbar</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/amazoncloudwatch"><img src="/gfx/agent/amazon-aws.png" alt="AWS icon"> Amazon CloudWatch</a></div>
 </div>
 
 ## Extra
