@@ -380,17 +380,17 @@ description: An overview of all CoScale datasources.
 
                     <div class="technology">
                         <img alt="AWS icon" src="{{ site.baseurl}}/gfx/agent/amazon-aws.png"/>
-                        <span>Amazon</span>
+                        <a href="{{site.baseurl}}/agent/plugins/amazoncloudwatch"><span>Amazon CloudWatch</span></a>
                     </div>
 
                     <div class="technology">
                         <img alt="Pingdom icon" src="{{ site.baseurl}}/gfx/agent/pingdom.png"/>
-                        <span>Pingdom</span>
+                        <a href="{{site.baseurl}}/agent/plugins/pingdom"><span>Pingdom</span></a>
                     </div>
 
                     <div class="technology">
                         <img alt="Rollbar icon" src="{{ site.baseurl}}/gfx/agent/rollbar.png"/>
-                        <span>Rollbar</span>
+                        <a href="{{site.baseurl}}/agent/plugins/rollbar"><span>Rollbar</span></a>
                     </div>
 
                     <div class="technology">
