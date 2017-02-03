@@ -390,7 +390,7 @@ description: An overview of all CoScale datasources.
 
                     <div class="technology">
                         <img alt="Rollbar icon" src="{{ site.baseurl}}/gfx/agent/rollbar.png"/>
-                        <span>Rollbar</span>
+                        <a href="{{site.baseurl}}/agent/plugins/rollbar"><span>Rollbar</span></a>
                     </div>
 
                     <div class="technology">
