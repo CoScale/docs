@@ -119,6 +119,11 @@ description: An overview of all CoScale datasources.
             <span class="mute">Data collection of your business metrics and business indicators.</span>
 
             <div class="technology">
+                <img alt="Google Analytics icon" src="{{ site.baseurl}}/gfx/agent/google-analytics.png"/>
+                <a href="{{ site.baseurl }}/agent/plugins/googleanalytics"><span>Google Analytics</span></a>
+            </div>
+
+            <div class="technology">
                 <img alt="Aweber icon" src="{{ site.baseurl}}/gfx/agent/aweber.png"/>
                 <a href="{{ site.baseurl }}/agent/plugins/aweber"><span>Aweber</span></a>
             </div>
