@@ -4,7 +4,7 @@ title: Pingdom plugin
 description: Information on the metrics collected by the CoScale Pingdom plugin.
 ---
 
-> Monitor your website's availability and performance for free with Pingdom and always be the first to know when your website is down. No installation required.
+> Monitor your website's availability and performance with Pingdom and always be the first to know when your website is down. No installation required.
 
 More information on: [https://www.pingdom.com/](https://www.pingdom.com/)
 
