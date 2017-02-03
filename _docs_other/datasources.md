@@ -130,7 +130,7 @@ description: An overview of all CoScale datasources.
             
             <div class="technology">
                 <img alt="Campaign monitor icon" src="{{ site.baseurl}}/gfx/agent/campaign-monitor.png"/>
-                <span>Campaign Monitor</span>
+                <a href="{{site.baseurl}}/agent/plugins/campaignmonitor"><span>Campaign Monitor</span></a>
             </div>
             
             <div class="technology">
