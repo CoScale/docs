@@ -140,7 +140,7 @@ description: An overview of all CoScale datasources.
 
             <div class="technology">
                 <img alt="Mailchimp icon" src="{{ site.baseurl}}/gfx/agent/mailchimp.png"/>
-                <span>Mailchimp</span>
+                <a href="{{site.baseurl}}/agent/plugins/mailchimp"><span>Mailchimp</span></a>
             </div>
             
         </fieldset>
