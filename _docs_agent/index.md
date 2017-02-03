@@ -62,6 +62,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/aweber"><img src="/gfx/agent/aweber.png" alt="AWeber icon"> AWeber</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/constantcontact"><img src="/gfx/agent/constant-contact.png" alt="Constant Contact icon"> Constant Contact</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/rollbar"><img src="/gfx/agent/rollbar.png" alt="Rollbar icon"> Rollbar</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/amazoncloudwatch"><img src="/gfx/agent/amazon-aws.png" alt="AWS icon"> Amazon CloudWatch</a></div>
 </div>
 
 ## Extra

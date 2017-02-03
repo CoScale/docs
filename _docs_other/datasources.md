@@ -380,7 +380,7 @@ description: An overview of all CoScale datasources.
 
                     <div class="technology">
                         <img alt="AWS icon" src="{{ site.baseurl}}/gfx/agent/amazon-aws.png"/>
-                        <span>Amazon</span>
+                        <a href="{{site.baseurl}}/agent/plugins/amazoncloudwatch"><span>Amazon CloudWatch</span></a>
                     </div>
 
                     <div class="technology">
