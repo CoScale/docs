@@ -68,7 +68,17 @@ Inside your dashboard under `Servers` you will now get a list of your running co
 ## Events
 
 * Events reported by Docker
+    * Container created
+    * Container started
+    * Container stopped
+    * Container died
+    * Container destroyed
+    * Container killed
+    * Container attach
 * Events generated when 'docker exec' is called
+    * Creating a plugin inside a container
+    * Starting a plugin inside a container
+    * Command was ran inside a container
 * Docker service state watcher
 
 ## Metrics
