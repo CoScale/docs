@@ -64,3 +64,38 @@ Follow the instructions in our application to install the CoScale agent on your 
 ### Our agent will now collect data
 
 Inside your dashboard under `Servers` you will now get a list of your running containers. All other metrics will be available under the usual metric groups.
+
+## Events
+
+* Events reported by Docker
+    * Container created
+    * Container started
+    * Container stopped
+    * Container died
+    * Container destroyed
+    * Container killed
+    * Container attach
+* Events generated when 'docker exec' is called
+    * Creating a plugin inside a container
+    * Starting a plugin inside a container
+    * Command was ran inside a container
+* Docker service state watcher
+
+## Metrics
+
+| Metric name                                             | Metric unit |
+|---------------------------------------------------------|-------------|
+| Docker running                                          | %           |
+| Docker container total cpu usage                        | %           |
+| Docker container user mode cpu usage                    | %           |
+| Docker container kernel mode cpu usage                  | %           |
+| Docker container network receive errors total           | #           |
+| Docker container network transmit errors total          | #           |
+| Docker container network receive packets dropped total  | #           |
+| Docker container network transmit packets dropped total | #           |
+| Docker container memory usage bytes                     | b           |
+| Docker container memory limit                           | b           |
+| Docker container network receive rate                   | b/s         |
+| Docker container network transmit rate                  | b/s         |
+| Docker container block IO read rate                     | b/s         |
+| Docker container block IO write rate                    | b/s         |
