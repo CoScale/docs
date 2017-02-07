@@ -26,3 +26,5 @@ More information on: [https://www.openshift.com/](https://www.openshift.com/)
 | Openshift number of pending builds        | #           |
 | Openshift number of canceled builds       | #           |
 | Openshift number of errored builds        | #           |
+
+We also gather the following <a href="{{ site.baseurl }}/agent/plugins/kubernetes">Kubernetes metrics.</a>
