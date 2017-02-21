@@ -85,7 +85,7 @@ This is an **example** output of a script in **configuration mode**:
 
 | Parameter               | Description                                                                                                                                          |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `id`                    | Id of the metric / event, this should be the same as when the script is run in **data retrieval** mode.                                                      |
+| `id`                    | ID of the metric / event, this should be the same as when the script is run in **data retrieval** mode. These IDs are local to the script and unrelated to the IDs given by the API.                                                  |
 | `calctype`              | There are currently 3 available options for the `calctype`:                                                                                          |
 |                         |     - Difference: Metric result will be the difference between value from a minute ago and the current value.                                        |
 |                         |     - Instant: Metric result will be a new value every minute.                                                                                       |
