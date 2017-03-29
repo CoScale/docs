@@ -20,4 +20,26 @@ Step 2: Bean configuration:
 
 ## Metrics
 
-There are no default metrics. We gather the metrics specified by the customer.
+| Metric name                    | Metric unit |
+|--------------------------------|-------------|
+| JMX Thread CPU Time            | %           |
+| JMX active check uptime        | %           |
+| JMX BufferPool Memory Used     | b           |
+| JMX Memory Usage Committed     | b           |
+| JMX Memory Usage Init          | b           |
+| JMX Memory Usage Max           | b           |
+| JMX Memory Usage Used          | b           |
+| JMX GC Collection Time         | ms          |
+| JMX Total Process Cpu Time     | ms          |
+| JMX Total Compilation Time     | ms          |
+| JMX Uptime                     | ms          |
+| JMX active check latency       | s           |
+| JMX GC Collection Count        |             |
+| JMX BufferPool Count           |             |
+| JMX Daemon Thread Count        |             |
+| JMX Thread Count               |             |
+| JMX Total Started Thread Count |             |
+| JMX Loaded Class Count         |             |
+| JMX Unloaded Class Count       |             |
+| JMX Max File Descriptor Count  |             |
+| JMX Open File Descriptor Count |             |
