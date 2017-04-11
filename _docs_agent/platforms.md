@@ -86,7 +86,7 @@ description: List of operating systems and services supported by the CoScale pla
             <div class="panel-footer">
                 <b>Supported versions</b>
                 <ul>
-                    <li>949</li>
+                    <li>949 and newer</li>
                 </ul>
             </div>
         </div>
@@ -133,6 +133,14 @@ description: List of operating systems and services supported by the CoScale pla
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
+            <div class="panel-heading">Google Container Engine</div>
+            <div class="panel-body">
+                <img src="{{ site.baseurl }}/gfx/getting-started/platforms/gce.png" alt="Google Container Engine" />
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default">
             <div class="panel-heading">DigitalOcean</div>
             <div class="panel-body">
                 <img src="{{ site.baseurl }}/gfx/getting-started/platforms/digitalocean.png" alt="DigitalOcean" />
@@ -142,4 +150,4 @@ description: List of operating systems and services supported by the CoScale pla
 </div>
 
 <hr />
-<div class="alert alert-info">If you can't find a platform, please send us a message and we will get back to you with more information.</div>
+<div class="alert alert-info">If you can't find a platform, please <a href="mailto:support@coscale.com" class="js-support">send us a message</a> and we will get back to you with more information.</div>
