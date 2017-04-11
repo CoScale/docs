@@ -16,7 +16,7 @@ description: List of operating systems and services supported by the CoScale pla
             <div class="panel-footer">
                 <b>Supported versions</b>
                 <ul>
-                    <li>14.04</li>
+                    <li>12, 14, 15, 16</li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@ description: List of operating systems and services supported by the CoScale pla
             <div class="panel-footer">
                 <b>Supported versions</b>
                 <ul>
-                    <li>6.6</li>
+                    <li>5, 6, 7</li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@ description: List of operating systems and services supported by the CoScale pla
             <div class="panel-footer">
                 <b>Supported versions</b>
                 <ul>
-                    <li>7.0</li>
+                    <li>5, 6, 7</li>
                 </ul>
             </div>
         </div>
@@ -58,7 +58,35 @@ description: List of operating systems and services supported by the CoScale pla
             <div class="panel-footer">
                 <b>Supported versions</b>
                 <ul>
-                    <li>7</li>
+                    <li>7, 8</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">openSUSE</div>
+            <div class="panel-body">
+                <img src="{{ site.baseurl }}/gfx/getting-started/platforms/opensuse.png" alt="openSUSE" />
+            </div>
+            <div class="panel-footer">
+                <b>Supported versions</b>
+                <ul>
+                    <li>SLES 11, 12</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">CoreOS</div>
+            <div class="panel-body">
+                <img src="{{ site.baseurl }}/gfx/getting-started/platforms/coreos.png" alt="CoreOS" />
+            </div>
+            <div class="panel-footer">
+                <b>Supported versions</b>
+                <ul>
+                    <li>949</li>
                 </ul>
             </div>
         </div>
@@ -77,7 +105,7 @@ description: List of operating systems and services supported by the CoScale pla
             <div class="panel-footer">
                 <b>Supported versions</b>
                 <ul>
-                    <li>2012 R2</li>
+                    <li>2012 R2, 2016</li>
                 </ul>
             </div>
         </div>
