@@ -8,6 +8,20 @@ description: Information on the metrics collected by the CoScale Couchbase plugi
 
 More information on: [https://www.couchbase.com/](https://www.couchbase.com/)
 
+## How it works
+
+The Couchbase plugin gathers statistics such as the number of operations, connections, items and a multitude of other useful metrics. This plugins uses the Couchbase API, which is exposed by default and no additional configuration is required. Just provide the connection details for the Couchbase server and the plugin is ready to go.
+
+**The minimal supported version of Couchbase is 2.5**
+
+## Configuration
+
+### Active checks
+
+This plugin can be configured to execute a URI query on your Couchbase. This active monitoring allows us to calculate the uptime of the service and the response time of the query.
+
+A valid URI query (eg. /pools/default) should be provided.
+
 ## Events
 
 * Service state
