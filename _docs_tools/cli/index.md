@@ -58,7 +58,7 @@ It provides easy to use methods for:
 
 ## Examples
 
-#### Working with [events]({{ %site.baseurl% }}/events/index/)
+#### Working with [events]({{ site.baseurl }}/events/index/)
 Creating a basic CoScale event category called "Releases":
 
     ./coscale-cli event new --name "Releases"

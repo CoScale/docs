@@ -106,6 +106,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mailchimp"><img src="/gfx/agent/mailchimp.png" alt="Mailchimp icon"> Mailchimp</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/googleanalytics"><img src="/gfx/agent/google-analytics.png" alt="Google Analytics icon"> Google Analytics</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/amazoncloudwatch"><img src="/gfx/agent/amazon-aws.png" alt="AWS icon"> Amazon CloudWatch</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/azure"><img src="/gfx/agent/azure.png" alt="Azure icon"> Azure</a></div>
 </div>
 
 

@@ -36,22 +36,22 @@ The sum of all the network timings together make up the backend time.
 
 <img alt="RUM back-end time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-backend-time-metric.jpg" />
 
-##Connection time
+## Connection time
 
 <img alt="RUM connection time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-connection-time-metric.jpg" />
 
-##Download time
+## Download time
 
 <img alt="RUM download time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-download-time-metric.jpg" />
 
-##First byte time
+## First byte time
 
 <img alt="RUM first byte time screenshot" src="{{ site.baseurl }}/gfx/rum/rum-first-byte-time-metric.jpg" />
 
-##Load event start
+## Load event start
 
 <img alt="RUM load event start screenshot" src="{{ site.baseurl }}/gfx/rum/rum-load-event-start-metric.jpg" />
 
-##Load event end
+## Load event end
 
 <img alt="RUM load event end screenshot" src="{{ site.baseurl }}/gfx/rum/rum-load-event-end-metric.jpg" />
