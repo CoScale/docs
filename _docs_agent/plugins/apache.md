@@ -68,6 +68,12 @@ Example of a log format configuration with all the information CoScale needs:
 Other examples of log formats that will work:`
 `%V %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%!400{User-agent}i\" %X %I %O %q %D`
 
+### Active checks
+
+This plugin can be configured to perform a HTTP GET on your Apache. This active monitoring allows us to calculate the uptime of the service and the response time of the provided URL.
+
+A full URL (eg. `http://localhost/test_page.php`) should be provided.
+
 ## Events
 
 * Service state
