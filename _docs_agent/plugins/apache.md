@@ -41,7 +41,7 @@ Restart Apache to apply these changes.
 ### Configure your Apache access logs
 The standard access log format for Apache does not include the request latency.
 
-To fix this, update the log format in /etc/httpd/conf/httpd.conf or /etc/httpd/sites-enabled/<virtual host>.conf
+To fix this, update the log format in `/etc/httpd/conf/httpd.conf or /etc/httpd/sites-enabled/<virtual host>.conf`
 
 Replace `CustomLog logs/access.log combined` with `LogFormat "%V \"%r\" %D %s %I %O" coscale
 CustomLog logs/access.log coscale`
