@@ -38,8 +38,8 @@ To enable custom logs on haproxy add next lines to `/etc/haproxy/haproxy.cfg` un
 If you are using a custom log format, make sure that option httplog is not enabled.
 {% highlight haproxy %} 
 defaults
-	mode    http
-	log-format %hr\ %{+Q}r\ %Tt\ %ST\ %B
+    mode    http
+    log-format %hr\ %{+Q}r\ %Tt\ %ST\ %B
     #option httplog
 {% endhighlight %}
 
