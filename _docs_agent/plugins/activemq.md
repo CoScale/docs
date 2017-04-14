@@ -8,9 +8,13 @@ description: Information on the metrics collected by the CoScale ActiveMQ plugin
 
 More information on: [http://activemq.apache.org/](http://activemq.apache.org/)
 
-## Installation
+## How it works
+
+The plugin can get statistics about ActiveMQ topics and queues using the JMX interface.
 
 **The minimal supported version of ActiveMQ is 5.10.0**
+
+## Installation
 
 ### Enable JMX
 
