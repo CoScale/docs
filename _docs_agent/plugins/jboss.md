@@ -42,7 +42,7 @@ With
 </subsystem>
 {% endhighlight %}
 
-Before you can run the JBoss Application Server, you need to ensure that you've configured the JBOSS_HOME environment variable.
+Before you can run the JBoss Application Server, you need to ensure that you've configured the `JBOSS_HOME` environment variable.
 
 #### 2) Updating your JBoss configuration
 
