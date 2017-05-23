@@ -17,8 +17,8 @@ CoScale uses the v2 PagerDuty API.
 ### Get your Service ID
 
 * Go to the Service > Service details page in PagerDuty
-* The URL has this format: https://<NAME>.pagerduty.com/services/<SERVICE ID>
-* Copy the <SERVICE ID> from the URL
+* The URL has this format: `https://<NAME>.pagerduty.com/services/<SERVICE ID>`
+* Copy the `<SERVICE ID>` from the URL
 
 <img alt="" src="{{ site.baseurl }}/gfx/alerting/integrations/pagerduty/02-pagerduty-serviceid.png" class="img-responsive" alt="PagerDuty Service ID" />
 
