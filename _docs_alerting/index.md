@@ -15,14 +15,16 @@ Creating alerts for your application is a very easy procedure, follow the steps 
 
 ## Third party alert integrations
 
+* [Integrate CoScale alerts with PagerDuty]({{ site.baseurl }}/alerting/integrations/pagerduty)
+* [Integrate CoScale alerts with OpsGenie]({{ site.baseurl }}/alerting/integrations/opsgenie)
 * [Sending alerts to Slack]({{ site.baseurl }}/alerting/integrations/slack)
-* [Integration with third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
+* [Send CoScale alerts to third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
 
 ## Anomaly detection
 
 * [What is anomaly detection]({{ site.baseurl }}/alerting/anomaly/index/)
 * [How does our anomaly detection work (video)]({{ site.baseurl }}/alerting/anomaly/video/)
 
-## Static alerts
+<!-- ## Static alerts -->
 
 <!-- * [Forecast alerts]({{ site.baseurl }}/alerting/static/forecast/) -->

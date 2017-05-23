@@ -8,6 +8,18 @@ description: Information on the metrics collected by the CoScale Kubernetes plug
 
 More information on: [http://kubernetes.io/](http://kubernetes.io/)
 
+## Installation
+
+Kubernetes provides multiple ways of connecting and retrieving metrics. 
+
+* Connect without authentication
+* Connect using credentials (username, password)
+* Connect using a token 
+* Connect with client certificate (administration certificate and key)
+
+Kubernetes is configured by default without authentication. When additional credentials are required you can connect with username/password, token or client (X509) certificate. For more information about authentication you can go to [the Kubernetes docs](https://kubernetes.io/docs/admin/authentication/). 
+
+
 ## Events
 
 * Container ready: Events generated when containers change their readiness status
