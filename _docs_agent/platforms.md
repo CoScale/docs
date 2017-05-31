@@ -139,6 +139,22 @@ description: List of operating systems and services supported by the CoScale pla
             </div>
         </div>
     </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Docker Datacenter</div>
+            <div class="panel-body">
+                <img src="{{ site.baseurl }}/gfx/getting-started/platforms/docker-datacenter.png" alt="Docker Datacenter" />
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">IBM Bluemix</div>
+            <div class="panel-body">
+                <img src="{{ site.baseurl }}/gfx/getting-started/platforms/ibm-bluemix.png" alt="IBM Bluemix" />
+            </div>
+        </div>
+    </div>
 </div>
 
 <hr />
