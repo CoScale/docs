@@ -78,7 +78,7 @@ Log rotation has to be configured manually. More information about log rotation 
 
 This plugin can be configured to perform a SQL query on your PostgreSQL. This active monitoring allows us to calculate the uptime of the service and the response time of the query.
 
-A valid SQL query (eg. `select count(*) from my_table;`) should be provided below.
+A valid SQL query (eg. `select count(*) from my_table;`) should be provided.
 
 ## Events
 
