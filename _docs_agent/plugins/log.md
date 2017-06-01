@@ -4,7 +4,9 @@ title: Log plugin
 description: Information on the log plugin.
 ---
 
-The log plugin can collect data from any logs on your server.
+## How it works
+
+The log plugin can collect data from any logs on your server. It uses regular expressions to parse information from a log file. It can count the number of lines that match the expression and get a value from within that line.
 
 ## Configuration
 
