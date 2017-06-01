@@ -8,6 +8,26 @@ description: Information on the metrics collected by the CoScale Memcached plugi
 
 More information on: [https://memcached.org/](https://memcached.org/)
 
+## How it works
+
+The Memcached plugin gathers statistics such as the number of connections, the number of gets, etc. using the Memcached interface.
+
+These statistics are gathered in Memcached by default and no additional configuration is required. Just provide the connection details for the Memcached server and the plugin is ready to go.
+
+**The minimal supported version of Memcached is 1.4.**
+
+## Configuration
+
+### Connection details
+
+Our plugin requires the host and port to the local Memcached service. It is possible to supply multiple if you are running multiple Memcached instances on the same machine.
+
+## Active checks
+
+This plugin can be configured to perform a command on your Memcached. This active monitoring allows us to calculate the uptime of the service and the response time of the command.
+
+A valid Memcached command (eg. get my-test-key) should be provided.
+
 ## Events
 
 * Service state
