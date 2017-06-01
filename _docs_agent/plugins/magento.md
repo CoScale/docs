@@ -9,12 +9,16 @@ description: Information on how to install the Magento plugin and the metrics co
 More information on: [http://www.magento.com/](http://www.magento.com/)
 
 ## How it works
+
 This plugin connects to the [CoScale Magento extension](https://www.magentocommerce.com/magento-connect/coscale-performance-business-monitoring.html) to gather important metrics and events from Magento.
 
 The metrics contain business metrics, such as the number of products, orders, abondoned carts, but also technical metrics such as Magento caching metrics. The events contain Magento admin actions such as page cache flushes, reindexing, etc.
 
-## Installing the Magento CoScale extension.
-Magento requires an extension in order to expose metrics to the CoScale platform. This extension can be added through Magento Connect.
+**The CoScale Magento plugin supports: 1.6.2.0, 1.7, 1.8, 1.8.1, 1.9, 1.9.1, 1.9.2**
+
+### Installation
+
+The CoScale Magento integration requires an extension in order to expose metrics to the CoScale platform. This extension can be added through Magento Connect.
 
 * Visit the [Coscale Magento Connect extension store page](https://www.magentocommerce.com/magento-connect/coscale-performance-business-monitoring.html) and click "Install Now" for the CoScale Performance & Business monitoring plugin. Read and agree to the extension lisence agreement and click the "Get Extension Key" button.
 
