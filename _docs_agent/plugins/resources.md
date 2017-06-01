@@ -6,6 +6,9 @@ description: Information on the metrics collected by the CoScale Resources plugi
 
 > The Resources plugin gathers information about the server resource usage: CPU, Memory, Network, Disk, Filesystem, OS.
 
+## How it works
+
+The plugin gathers OS and hardware metrics from the underlying system. No configuration is required.
 
 ## Metrics
 
