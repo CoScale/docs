@@ -115,15 +115,19 @@
             this.form.submit();
         });
 
-        var searchParameter = getUrlParameter('q').replace("+", " ");
-        $(".search-input").keypress(function(e) {
-            if(e.which == 13) {
-                e.preventDefault();
-                this.form.submit();
-            }
-        }).val(searchParameter);
+        searchParameter = getUrlParameter('q');
+        if (searchParameter) {
+            var searchParameter = getUrlParameter('q').replace("+", " ");
+            $(".search-input").keypress(function(e) {
+                if(e.which == 13) {
+                    e.preventDefault();
+                    this.form.submit();
+                }
+            }).val(searchParameter);
 
-        search(searchParameter);
+            search(searchParameter);
+        }
+        
     });
 
     </script>
