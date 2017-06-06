@@ -10,7 +10,7 @@ More information on: [https://www.oracle.com](https://www.oracle.com)
 
 ## How it works
 
-CouchDB CoScale plugin lets you inspect how Oracle performs. The plugin collects metrics like performance statistics, connections, query performance and throughput. This plugins uses the Oracle API.
+The CoScale Oracle plugin lets you inspect how Oracle performs. The plugin collects metrics like performance statistics, connections, query performance and throughput. This plugins uses the Oracle API.
 
 **The supported versions of Oracle are 11g and 11g.2, please contact support for other versions.**
 
