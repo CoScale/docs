@@ -20,7 +20,7 @@ These statistics are gathered in Memcached by default and no additional configur
 
 ### Connection details
 
-The CoScale plugin requires the host and port to the local Memcached service. It is possible to supply multiple if you are running multiple Memcached instances on the same machine.
+The CoScale plugin requires the host and port to the local Memcached service. It is possible to supply multiple hosts and ports if you are running multiple Memcached instances on the same machine.
 
 ## Active checks
 
