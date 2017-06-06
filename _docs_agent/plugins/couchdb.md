@@ -10,7 +10,7 @@ More information on: [http://couchdb.apache.org/](http://couchdb.apache.org/)
 
 ## How it works
 
-CouchDB CoScale plugin lets you inspect how CouchDB performs. The plugin collects metrics like requests per second, request sizes, httpd requests methods, couchdb database reads/writes and a multitude of other useful metrics. This plugins uses the CouchDB API, which is exposed by default and no additional configuration is required.
+CouchDB CoScale plugin lets you inspect how CouchDB performs. The plugin collects metrics like requests per second, request sizes, http requests methods, CouchDB database reads/writes and a multitude of other useful metrics. This plugins uses the CouchDB API, which is exposed by default and no additional configuration is required.
 
 **The minimal supported version of CouchDB is 1.5**
 
