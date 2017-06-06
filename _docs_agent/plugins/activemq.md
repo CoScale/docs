@@ -34,8 +34,9 @@ The management context needs to be present and enabled
 <managementContext>
     <managementContext createConnector="true" />
 </managementContext>
-The connector will be created in by default on localhost:1099.
 {% endhighlight %}
+
+The connector will be created in by default on localhost:1099.
 
 ### Active checks
 
