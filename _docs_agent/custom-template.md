@@ -19,62 +19,20 @@ This file contains a JSON string similar to what the CoScale API sends. Use this
 
 ### Constructing your configuration
 
-1. Configure a [regular agent]({{ site.baseurl }}/agent/install/) with the plugins you want and save it with a clear name.
+After creating a blank agent you will have the option to create a configuration example for an agent. You can do this by clicking the `Create configuration` button next to the agent name. 
+
+![Create configuration](/gfx/agent/custom-agent/create-configuration.png)
+
+You can now configure your agent with the plugins you want to use to monitor your system. Just click on the plugin you want to activate and follow the instructions on the screen. When you're done with the configuration of the agent you can use the `UI / JSON` toggle to get the content of your `/opt/coscale/agent/plugins.conf` file. 
+
+![UI Toggle](/gfx/agent/custom-agent/toggle-configuration.png)
+
+If in the future you want to change the configuration of an existing agent, you can always paste back the JSON content into the textbox and switch to `UI`. The plugins will then be configured with the information from the JSON. After you make your changes, and get a new JSON.
+
+## Examples
+
+Below you can find some examples of existing configuration with config management tools. We are always looking for other examples, so feel free to send us yours.
+
+* [Ansible](https://github.com/CoScale/coscale-ansible-example)
 
 
-    This will give you an initial configuration which you can change when deploying specific agents.
-
-
-2. Perform an API call to get the configuration of your agents. <small>(This call is not available in our CLI tool)</small>
-
-   First get an authorization token by logging in. This can be done using our <a href="{{ site.baseurl }}/api/#!/Login/post_users_login" data-proofer-ignore>API documentation</a> or by performing the call yourself, for example using curl:
-
-   `curl -d "email=[EMAIL]&password=[PASSWORD]" "https://app.coscale.com/api/v1/users/login/"`
-
-   Then view all your agent configurations. The following command will pretty-print the response and fix the formatting so it can be used by the custom agent:
-
-   `curl -H "HttpAuthorization: [TOKEN]" "https://app.coscale.com/api/v1/app/[APPID]/agenttemplates/?expand=plugins&fields=name%2Cconfig%2CpluginType" | sed -e 's/\\\\/\\/g; s/\\\"/\"/g; s/\"{/{/g; s/}\"/}/g; s/\"config\"/\"Configuration\"/g; s/\"pluginType\"/\"\PluginType"/g' | python -m json.tool`
-
-   <small>Don't forget filling in [EMAIL], [PASSWORD], [TOKEN] and [APPID].</small>
-
-
-#### 3. Copy the plugin configuration:
-   The response is a JSON array. Each index in the array should have the following format:
-   {% highlight javascript %}
-{
-    "Configuration": null,
-    "name": "customAgentTemplate",
-    "plugins": [
-        {
-            "Configuration": {"FILE":["\"/var/log/apache2/access.log\" \"%V \"%r\" %D %s %I %O\""],"STATS URL":["http://localhost/server-status"]},
-            "PluginType": "APACHE"
-        },
-        {
-            "Configuration": {},
-            "PluginType": "RESOURCES"
-        }
-    ]
-}
-   {% endhighlight %}
-
-   Copy the value of the "plugins" key and simply paste in the `/opt/coscale/agent/plugins.conf` file discussed above. The file can be created if it is not yet present. In the end the file should look something like this.
-
-   {% highlight javascript %}
-[
-   {
-       "Configuration": {"FILE":["\"/var/log/apache2/access.log\" \"%V \"%r\" %D %s %I %O\""],"STATS URL":["http://localhost/server-status"]},
-       "PluginType": "APACHE"
-   },
-   {
-       "Configuration": {},
-       "PluginType": "RESOURCES"
-   }
-]
-   {% endhighlight %}
-
-
-#### 4. [Restart]({{ site.baseurl }}/agent/agent-restart/) the agent.
-
-   If everything went well, your custom agent should now be running the plugins configured in the `/opt/coscale/agent/plugins.conf` file. Don't hesitate to <a href="mailto:info@coscale.com" class="js-support">contact us</a> if you have any issues.
-
-   {% include alert.html type="warning" text="If this server previously had an agent installed, it is important to first run the new agent again with an empty configuration!" %}
