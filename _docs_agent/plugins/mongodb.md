@@ -8,6 +8,26 @@ description: Information on the metrics collected by the CoScale MongoDB plugin.
 
 More information on: [https://www.mongodb.com/](https://www.mongodb.com/)
 
+## How it works
+
+MongoDB provides statistics on lock timeouts, lock counts, insert/update/remove actions, total index size, etc through the MongoDB interface.
+
+These statistics are gathered by default and no additional configuration is required. Just provide the connection details and the plugin is ready to go.
+
+**The minimal supported version of MongoDB is 2.2.**
+
+## Configuration
+
+### Connection details
+
+Our plugin requires the host, port, username and password to connect to the local MongoDB service.
+
+### Active checks
+
+This plugin can be configured to perform a command on your MongoDB. This active monitoring allows us to calculate the uptime of the service and the response time of the command.
+
+A valid MongoDB command (eg. `{ "find": "my-collection", "filter": "my-document" }`) should be provided.
+
 ## Events
 
 * Service state

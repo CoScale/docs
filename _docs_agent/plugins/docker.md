@@ -8,69 +8,10 @@ description: Information on how to install the docker plugin and configure your 
 
 More information on: [https://www.docker.com/](https://www.docker.com/)
 
-## Events
-
-* Events reported by Docker
-    * Container created
-    * Container started
-    * Container stopped
-    * Container died
-    * Container destroyed
-    * Container killed
-    * Container attach
-* Events generated when 'docker exec' is called
-    * Creating a plugin inside a container
-    * Starting a plugin inside a container
-    * Command was ran inside a container
-* Docker service state watcher
-
-## Metrics
-
-| Metric name                                                                                               | Metric unit |
-|-----------------------------------------------------------------------------------------------------------|-------------|
-| Docker container total cpu usage                                                                          | %           |
-| Docker container block IO read rate                                                                       | b/s         |
-| Docker container block IO write rate                                                                      | b/s         |
-| Docker container free memory bytes                                                                        | b           |
-| Docker container free memory percentage                                                                   | %           |
-| Docker container kernel mode cpu usage                                                                    | %           |
-| Docker container memory limit                                                                             | b           |
-| Docker container memory usage bytes                                                                       | b           |
-| Docker container memory usage percentage                                                                  | %           |
-| Docker container network receive errors total                                                             | #           |
-| Docker container network receive packets dropped total                                                    | #           |
-| Docker container network receive rate                                                                     | b/s         |
-| Docker container network transmit errors total                                                            | #           |
-| Docker container network transmit packets dropped total                                                   | #           |
-| Docker container network transmit rate                                                                    | b/s         |
-| Docker container number of CLOSE_WAIT connections                                                         | #           |
-| Docker container number of CLOSING connections                                                            | #           |
-| Docker container number of ESTABLISHED connections                                                        | #           |
-| Docker container number of FIN_WAIT1 connections                                                          | #           |
-| Docker container number of FIN_WAIT2 connections                                                          | #           |
-| Docker container number of LAST_ACK connections                                                           | #           |
-| Docker container number of LISTEN connections                                                             | #           |
-| Docker container number of SYN_RECV connections                                                           | #           |
-| Docker container number of SYN_SENT connections                                                           | #           |
-| Docker container number of TIME_WAIT connections                                                          | #           |
-| Docker container pgfault memory failures total                                                            | #           |
-| Docker container pgmajfault memory failures total                                                         | #           |
-| Docker container shm memory free bytes                                                                    | b           |
-| Docker container shm memory free percent                                                                  | %           |
-| Docker container shm memory limit                                                                         | b           |
-| Docker container shm memory used bytes                                                                    | b           |
-| Docker container user mode cpu usage                                                                      | %           |
-| Docker running                                                                                            | %           |
-| Number of bytes of page cache memory                                                                      | b           |
-| The amount of anonymous and swap cache memory(includes transparent hugepages)                             | b           |
-| The amount of swap currently used                                                                         | b           |
-| The amount of working set memory, this includes recently accessed memory, dirty memory, and kernel memory | b           |
-
-
 ## How it works
 The CoScale agent detects running containers on your system. With minimal configuration, it will start the required plugins whenever a running container is detected. These plugins will start within the same namespace as the container, so there is no need to forward ports or mount logfiles to your local filesystem. When a container disappears, the plugin will also automatically stop. Our plugins will do all their work from inside the container and send the data to our agent that will send it through to our platform.
 
-## Installation
+## Configuration
 
 ### Configure the CoScale agent with the Docker plugin
 
@@ -143,3 +84,61 @@ docker run -d --label com.coscale.monitoring='[{"PluginType":"CASSANDRA","Config
 ```
 
 Note that if the container's base image already has the 'com.coscale.monitoring' label, adding it again on `docker run` will overwrite the configuration in the base image. If instead want to extend the list of plugins defined in the base image, you can use a different label name in the `docker run` command, for example `com.coscale.monitoring.extra`.
+
+## Events
+
+* Events reported by Docker
+    * Container created
+    * Container started
+    * Container stopped
+    * Container died
+    * Container destroyed
+    * Container killed
+    * Container attach
+* Events generated when 'docker exec' is called
+    * Creating a plugin inside a container
+    * Starting a plugin inside a container
+    * Command was ran inside a container
+* Docker service state watcher
+
+## Metrics
+
+| Metric name                                                                                               | Metric unit |
+|-----------------------------------------------------------------------------------------------------------|-------------|
+| Docker container total cpu usage                                                                          | %           |
+| Docker container block IO read rate                                                                       | b/s         |
+| Docker container block IO write rate                                                                      | b/s         |
+| Docker container free memory bytes                                                                        | b           |
+| Docker container free memory percentage                                                                   | %           |
+| Docker container kernel mode cpu usage                                                                    | %           |
+| Docker container memory limit                                                                             | b           |
+| Docker container memory usage bytes                                                                       | b           |
+| Docker container memory usage percentage                                                                  | %           |
+| Docker container network receive errors total                                                             | #           |
+| Docker container network receive packets dropped total                                                    | #           |
+| Docker container network receive rate                                                                     | b/s         |
+| Docker container network transmit errors total                                                            | #           |
+| Docker container network transmit packets dropped total                                                   | #           |
+| Docker container network transmit rate                                                                    | b/s         |
+| Docker container number of CLOSE_WAIT connections                                                         | #           |
+| Docker container number of CLOSING connections                                                            | #           |
+| Docker container number of ESTABLISHED connections                                                        | #           |
+| Docker container number of FIN_WAIT1 connections                                                          | #           |
+| Docker container number of FIN_WAIT2 connections                                                          | #           |
+| Docker container number of LAST_ACK connections                                                           | #           |
+| Docker container number of LISTEN connections                                                             | #           |
+| Docker container number of SYN_RECV connections                                                           | #           |
+| Docker container number of SYN_SENT connections                                                           | #           |
+| Docker container number of TIME_WAIT connections                                                          | #           |
+| Docker container pgfault memory failures total                                                            | #           |
+| Docker container pgmajfault memory failures total                                                         | #           |
+| Docker container shm memory free bytes                                                                    | b           |
+| Docker container shm memory free percent                                                                  | %           |
+| Docker container shm memory limit                                                                         | b           |
+| Docker container shm memory used bytes                                                                    | b           |
+| Docker container user mode cpu usage                                                                      | %           |
+| Docker running                                                                                            | %           |
+| Number of bytes of page cache memory                                                                      | b           |
+| The amount of anonymous and swap cache memory(includes transparent hugepages)                             | b           |
+| The amount of swap currently used                                                                         | b           |
+| The amount of working set memory, this includes recently accessed memory, dirty memory, and kernel memory | b           |

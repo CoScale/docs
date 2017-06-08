@@ -8,7 +8,13 @@ description: Information on the metrics collected by the CoScale Kubernetes plug
 
 More information on: [http://kubernetes.io/](http://kubernetes.io/)
 
-## Installation
+## How it works
+
+This plugin monitors your Kubernetes cluster.
+
+It can give you information about your Kubernetes nodes status, services, containers, events and replication controllers.
+
+## Configuration
 
 Kubernetes provides multiple ways of connecting and retrieving metrics. 
 

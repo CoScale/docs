@@ -8,6 +8,20 @@ description: Information on the metrics collected by the CoScale CouchDB plugin.
 
 More information on: [http://couchdb.apache.org/](http://couchdb.apache.org/)
 
+## How it works
+
+CouchDB CoScale plugin lets you inspect how CouchDB performs. The plugin collects metrics like requests per second, request sizes, http requests methods, CouchDB database reads/writes and a multitude of other useful metrics. This plugins uses the CouchDB API, which is exposed by default and no additional configuration is required.
+
+**The minimal supported version of CouchDB is 1.5**
+
+## Configuration
+
+### Active checks
+
+This plugin can be configured to query a view on your CouchDb. This active monitoring allows us to calculate the uptime of the service and the response time of the query.
+
+A database, username, password, design id and view id should be provided.
+
 ## Events
 
 * Service state
