@@ -4,6 +4,37 @@ title: Uninstalling and stopping the CoScale agent
 description: Terminating and uninstalling the CoScale agent.
 ---
 
+## Container
+
+## Terminate / stop
+
+* Docker: `docker stop coscale-agent`
+* Docker Swarm / Docker Datacenter: `docker service rm coscale-agent`
+* Kubernetes: `kubectl delete ds coscale-agent`
+* Azure Container Service: `kubectl delete ds coscale-agent`
+* OpenShift: 
+    
+    `kubectl delete ds coscale-agent`
+    
+    `oc delete serviceaccount coscale`
+    
+    `kubectl delete SecurityContextConstraints coscale-scc`
+    
+    `oc delete project coscale`
+
+* Google Container Engine
+
+    `kubectl delete ds coscale-agent`
+
+    `kubectl delete ds coscale-agent-kubernetes-master`
+
+* IBM Bluemix
+
+    `kubectl delete ds coscale-agent`
+
+    `kubectl delete ds coscale-agent-kubernetes-master`
+    
+
 ## Unix
 
 ### Terminate / stop

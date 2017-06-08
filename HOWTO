@@ -30,3 +30,11 @@ Ex: `<a href="http://app.coscale.com" db-href="/alerts/manage/" class="js-dashbo
 ### Include responsive image
 
 `<img src="{{ site.baseurl}}/gfx/installation/events/custom-attributes/automation_job_overview.png" alt="Event overview" class="img-responsive" />`
+
+### Code highlighting
+
+{% highlight xml %}
+
+{% endhighlight %}
+
+`xml` can be replaced with any language, full list available on http://rouge.jneen.net/

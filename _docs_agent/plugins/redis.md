@@ -8,6 +8,26 @@ description: Information on the metrics collected by the CoScale Redis plugin.
 
 More information on: [http://redis.io/](http://redis.io/)
 
+## How it works
+
+Redis provides statistics on memory usage, client connections, AOF file operations, etc through the Redis interface.
+
+These statistics are gathered by default and no additional configuration is required. Just provide the connection details and the plugin is ready to go.
+
+**The minimal supported version of Redis is 2.6.**
+
+## Configuration
+
+### Connection
+
+The CoScale plugin requires the host, port, username and password to connect to the local Redis service. It is possible to supply multiple if you are running multiple Redis instances on the same machine.
+
+### Active checks
+
+This plugin can be configured to perform a command on your Redis. This active monitoring allows us to calculate the uptime of the service and the response time of the command.
+
+A valid Redis command (eg. GET my-test-key) should be provided.
+
 ## Events
 
 * Service state

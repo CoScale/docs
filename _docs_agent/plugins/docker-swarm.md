@@ -8,6 +8,10 @@ description: Information on the metrics collected by the CoScale Docker Swarm pl
 
 More information on: [https://docs.docker.com/swarm/overview/](https://docs.docker.com/swarm/overview/)
 
+## How it works
+
+This plugin retrieves data from the Docker Swarm API on the distribution of containers, active services, node status, and failed tasks. The Docker API is exposed by default and no additional configuration is required.
+
 ## Events
 
 * When node is draining
