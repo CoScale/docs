@@ -10,6 +10,12 @@ description: How to export CoScale agent logs for debugging and support on Linux
 * Ubuntu: `/var/log/upstart/coscale-agent.log`
 * Centos: `sudo journalctl -u coscale-agent.service`
 
+## Docker
+
+* Docker container: `docker logs $(docker ps | awk '/coscale-agent/ {print $1}')`
+* Docker Swarm / Docker Datacenter: `docker service logs coscale-agent`
+* Kubernetes: `kubectl get pods -n <namespace> | grep coscale-agent` and `kubectl logs -n <namespace> <coscale-agent-pod-name>`
+
 ## Microsoft Windows
 
 1. Launch Event Viewer
