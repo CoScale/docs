@@ -108,5 +108,5 @@ You can use the log plugin to get the count of errors logged in the log file. Fo
 You can use the log plugin to store the latency histogram data of a 3rd party call. For example if the log entry looks like this `CALL LAT 100 ms`, your configuration will be as follows:
 
 * DataType: Histogram
-* Regex: `CALL LAT (?'latency'\d+) ms`
+* Regex: `CALL LAT (?<latency>\d+) ms`
 * Regex group name: `latency`
