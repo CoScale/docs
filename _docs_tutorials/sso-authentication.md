@@ -29,8 +29,8 @@ CoScale supports the HTTP-POST binding for SAML2: urn:oasis:names:tc:SAML:2.0:bi
 CoScale specifies urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress for the format of the NameIDPolicy in Assertion Requests.
 
 You will have to provide the following in your Identity provider:
-* CoScale ACS URL: [https://app.coscale.com/api/v1/sso/acs/](https://app.coscale.com/api/v1/sso/acs/)
-* CoScale Entity ID: [https://app.coscale.com/api/v1/sso/metadata/](https://app.coscale.com/api/v1/sso/metadata/)
+* CoScale ACS URL: https://app.coscale.com/api/v1/sso/acs/
+* CoScale Entity ID: https://app.coscale.com/api/v1/sso/metadata/
 
 In return you will get a SSO Url, Entity ID and Certificate, put these into the form. For the certificate, please omit the first and last line containing BEGIN CERTIFICATE and END CERTIFICATE.
 
