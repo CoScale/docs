@@ -45,6 +45,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/tomcat"><img src="/gfx/agent/tomcat.png" alt="Tomcat icon"> Tomcat</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Varnish icon"> Varnish</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/solr"><img src="/gfx/agent/solr.png" alt="Solr icon"> Solr</a></div>
 </div>    
 
 ### Caching
@@ -64,7 +65,7 @@ Overview of all plugins with more information about the metrics gathered and spe
 
 ### NoSQL
 
-<div class="row"> 
+<div class="row">
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mongodb"><img src="/gfx/agent/mongodb.png" alt="MongoDB icon"> MongoDB</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/redis"><img src="/gfx/agent/redis.png" alt="Redis icon"> Redis</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/couchbase"><img src="/gfx/agent/couchbase.png" alt="Couchbase icon"> Couchbase</a></div>
@@ -76,7 +77,7 @@ Overview of all plugins with more information about the metrics gathered and spe
 
 ### Queueing
 
-<div class="row"> 
+<div class="row">
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/rabbitmq"><img src="/gfx/agent/rabbitmq.png" alt="RabbitMQ icon"> RabbitMQ</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/activemq"><img src="/gfx/agent/activemq.png" alt="ActiveMQ icon"> ActiveMQ</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kafka"><img src="/gfx/agent/kafka.png" alt="Kafka icon"> Kafka</a></div>
