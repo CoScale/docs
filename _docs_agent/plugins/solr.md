@@ -10,7 +10,7 @@ More information on: [http://lucene.apache.org/solr/](http://lucene.apache.org/s
 
 ## How it works
 
-The plugin can get statistics about Solr collections using the JMX interface.
+The plugin can get statistics about Solr collections using the JMX interface. It captures queries and requests statistics, as well as used resources information (CPU load, memory size, swap, etc).
 
 **The minimal supported version of Solr is 5.2.0**
 
