@@ -12,3 +12,6 @@ In this tutorial we will describe all the steps required to create a service ava
 
 ## [How to introduce CoScale to your Hosting Provider]({{ site.baseurl }}/tutorials/documentation-hosting-providers)
 In this tutorial we will describe all the steps required to introduce CoScale to your Hosting Provider.
+
+## [How to enable Single Sign On authentication]({{ site.baseurl }}/tutorials/sso-authentication)
+In this tutorial we will describe all the steps required to enable SSO authentication for your organisation.
