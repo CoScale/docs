@@ -4,6 +4,30 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+#### Release 3.12.0 (12 September 2017)
+
+* Alert page improvements
+    * Many improvements including: Clone alert triggers, create dashboard from alert
+* UX improvements & Small css improvements
+    * Consistency in the plugin dialogs
+    * Improvements to the flow for SSO users
+    * Users can change their application name
+    * Agent page: Always show configure and install instructions buttons
+    * Widgets / Topology: Show the server the container is running on in the tooltip
+* Agents
+    * New plugins: Apache Solr, Jolokia plugin
+    * Optimize sending data when agent has been offline for a while
+    * Resources plugin: added more metrics
+    * JMX plugin
+        * Ability to add multiple endpoints
+        * Support authentication
+    * Docker/Kubernetes plugin
+        * Too few replica events for DaemonSets and StatefulSets
+        * Agent images is not certified for Red Hat
+        * "Docker total host cpu usage" metrics added
+        * Change 'groups' in security context constraint so that only 'system:cluster-admins' are allowed to use it.
+        * Moved POD system containers to another server group
+
 #### Release 3.11.0 (30 June 2017)
 
 * Frontend improvements
