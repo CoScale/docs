@@ -23,7 +23,7 @@ description: A changelog of the most recent changes and additions to the CoScale
         * Support authentication
     * Docker/Kubernetes plugin
         * Too few replica events for DaemonSets and StatefulSets
-        * Agent images is not certified for Red Hat
+        * CoScale Docker images are now certified for Red Hat
         * "Docker total host cpu usage" metrics added
         * Change 'groups' in security context constraint so that only 'system:cluster-admins' are allowed to use it.
         * Moved POD system containers to another server group
