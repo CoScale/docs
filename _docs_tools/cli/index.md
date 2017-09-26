@@ -103,3 +103,7 @@ Resolving an alert from the list. The id is the id of an alert we got from the l
 
     ./coscale-cli alert resolve --id 347482
 
+#### Working with custom data
+
+You can find more information about pushing custom data to CoScale with the CLI on [the custom metrics pages]({{ site.baseurl }}/custom-metrics/cli/).
+
