@@ -4,72 +4,35 @@ title: Custom metrics
 description: Information on how to push custom metrics to the CoScale platform.
 ---
 
-Custom metrics allow you to monitor certain aspects of your application that would otherwise stay hidden to you. CoScale provides a couple of ways of integrating these metrics into our platform. CoScale can pull metrics from [scripts or binary executables]({{ site.baseurl }}/custom-metrics/generic-script/index), or you can [push metrics to CoScale with the help from our CLI tool]({{ site.baseurl }}/custom-metrics/cli/). We also provide integration with third party tools, like [StatsD]({{ site.baseurl }}/custom-metrics/statsd/index).
+Custom metrics allow you to monitor aspects of your application that are not monitored by default with CoScale. CoScale provides a couple of methods of integrating these metrics into our platform. With the [generic script]({{ site.baseurl }}/custom-metrics/generic-script/index), [log plugin]({{ site.baserurl }}/agent/plugins/log/) and [CLI]({{ site.baseurl }}/custom-metrics/cli/) it's possible to write small custom integrations for your environment. CoScale also supports pushing metrics from within your code using [StatsD]({{ site.baseurl }}/custom-metrics/statsd/index), [JMX]({{ site.baserurl }}/agent/plugins/jmx/) or [Prometheus]({{ site.baserurl }}/agent/plugins/prometheus/). 
 
-* [Pulling metrics from your application with generic script]({{ site.baseurl }}/custom-metrics/generic-script/index)
+### Methods
 
-    By running a script or executable every minute the CoScale agent gathers metrics from your application and pushes those to the platform. We provide some example scripts and guide your in configuring it for your application.
+#### [Pulling metrics from your application with generic script]({{ site.baseurl }}/custom-metrics/generic-script/index)
 
-    **Pros**:
+The CoScale agent can execute scripts or executables to gathers metrics from your application and pushes those to the platform. We provide some example scripts and guide your in configuring it for your application.
 
-    * Language agnostic
-    * Easy to setup
+#### [Pushing metrics with our CLI]({{ site.baseurl }}/custom-metrics/cli/)
 
-    **Cons**:
+The CoScale CLI allows you to push multiple metrics at the same time from the command line. You can use it together with Bash scripts to get your custom data inside CoScale. The CoScale CLI is available as an executable or Docker image. When using our CoScale agent package installion it is installed by default.
 
-    * Works best with minute data
-    * Script cannot run longer than 5 seconds
+#### [Pulling metrics with Agent Log plugin]({{ site.baserurl }}/agent/plugins/log/)
 
-* [Pushing metrics with our CLI]({{ site.baseurl }}/custom-metrics/cli/)
+The CoScale agent supports retrieving data from existing log files using a regular expression. The plugin can be used to count the number of lines that match a certain regex, as well as get information from within the log lines. 
 
-    Our CLI allows you to push multiple metrics at the same time from the command line. You can use it together with bash scripts to get your custom data inside CoScale. our CLI is installed automatically with our agent, or you can also install it manually if you don't have an agent installed.
+#### [JMX Plugin]({{ site.baserurl }}/agent/plugins/jmx/)
 
-    **Pros**:
+The CoScale agent can retrieve metrics from JMX endpoints. By default the agent will retrieve JVM related information, but other metrics can be added using the `MBEANS` or `METRICS` format.
 
-    * Can be integrated with existing scripts
-    * Good for long duration commands
+#### [Prometheus Plugin]({{ site.baserurl }}/agent/plugins/prometheus/)
 
-    **Cons**:
+The CoScale agent can retrieve metrics and events from Prometheus endpoints. The plugin will parse all available information coming from the endpoint, including dimensions. 
 
-    * Might be too low-level for some situations.
+#### [StatsD]({{ site.baseurl }}/custom-metrics/statsd/index)
 
-* [Pulling metrics with Agent Log plugin]({{ site.baserurl }}/agent/plugins/log/)
+CoScale provides a StatsD plugin to push data gathered in the StatsD or CollectD daemons immediatly to CoScale.
 
-    The CoScale agent supports retrieving data from existing log files using a regular expression.
+#### [CoScale API]({{ site.baseurl }}/api/)
 
-    **Pros**:
+As a last resort the CoScale API is available for advanced configuration and integration. An SDK is available for Java and PHP. 
 
-    * Language agnostic
-    * Use existing log files
-    * Quick to setup
-
-    Cons:
-
-    * Works best with minute data
-    * Inefficient when you have a lot of custom metrics
-
-* [StatsD]({{ site.baseurl }}/custom-metrics/statsd/index)
-
-    If you are using StatsD you can integrate the CoScale StatsD plugin and it will push all metrics available in the StatsD daemon to the CoScale infrastructure every minute
-
-    **Pros**:
-
-    * Language agnostic
-    * Libraries available for all popular [languages](https://github.com/etsy/statsd/wiki)
-
-    **Cons**:
-
-    * Daemon on machine
-    * Code integration
-
-* [CoScale API]({{ site.baseurl }}/api/)
-
-    Our API provides you with the tools to manage data using your favorite programming language. At the moment you will need to write your own code to manage the whole procedure of communicating with the API. We are investigating possibilities in creating SDKs for the most popular languages.
-
-    **Pros**:
-
-    * Fine grained control
-
-    **Cons**:
-
-    * Requires heavy code integration
