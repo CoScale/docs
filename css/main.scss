@@ -21,6 +21,22 @@ $grid-gutter-width: 30px;
 $breadcrumb-separator: " »";
 $breadcrumb-bg: white;
 
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            32px !default;
+$font-size-h2:            24px !default;
+$font-size-h3:            19px !default;
+$font-size-h4:            16px !default;
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            14px !default;
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
 /*
 * Bootstrap specific
 */
@@ -57,6 +73,7 @@ body {
     img {
         padding: 10px 0 0 20px;
         width: 270px;
+        margin-left: 20px;
     }
 }
 
@@ -65,6 +82,9 @@ body {
 */
 .sidebar {
     margin-top: 30px;
+    border-right: 1px solid #ccc;
+    padding-right: 50px;
+    padding-top: 15px;
 
     /* Sidebar navigation */
     .nav-sidebar {
@@ -169,7 +189,7 @@ body {
 }
 
 .main {
-    margin-top: 100px;
+    margin-top: 130px;
 
     h2 {
         margin-top: 20px;
