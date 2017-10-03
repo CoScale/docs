@@ -274,11 +274,19 @@ body {
     }
 
     .list-index {
-        list-style: none;
-        margin-bottom: 0;
-        margin-top: 10px;
-        li {
-            padding: 5px 5px 5px 0;
+        a {
+            padding: 20px;
+
+            .list-group-item-heading {
+                .fa {
+                    font-size: 30px;
+                    margin-right: 10px;
+                }
+                margin-bottom: 0px;
+            }
+            .list-group-item-text {
+                padding-left: 55px;
+            }
         }
     }
 
