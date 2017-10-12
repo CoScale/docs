@@ -7,15 +7,15 @@
     <li>
         <a href="{{ site.baseurl }}/tutorials/index"><i class="fa fa-fw fa-star"></i> Tutorials</a>
     </li>
-    <li class="nav-sidebar-parent">Application and UI</li>
+    <li class="nav-sidebar-parent">User interface</li>
+    <li {% if current[1] == 'alerting' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-warning"></i> Alerting</a>
+    </li>
     <li {% if current[1] == 'dashboard' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/dashboard/index"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
     </li>
     <li {% if current[1] == 'events' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag"></i> Events</a>
-    </li>
-    <li {% if current[1] == 'alerting' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-warning"></i> Alerting</a>
     </li>
     <li class="nav-sidebar-parent">Datasources</li>
     <li {% if current[1] == 'rum' %}class='active'{% endif %}>
