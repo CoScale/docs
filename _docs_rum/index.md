@@ -52,7 +52,7 @@ Our snippet is fully supported by 66,31% and partially 81,43% supported on all p
             <td class="success">31</td>
             <td class=""></td>
             <td class=""></td>
-            <td class=""></td>
+            <td class="danger">7.1</td>
             <td class=""></td>
             <td class="warning">4.1</td>
             <td class=""></td>
@@ -64,7 +64,7 @@ Our snippet is fully supported by 66,31% and partially 81,43% supported on all p
             <td class="success">43</td>
             <td class=""></td>
             <td class=""></td>
-            <td class="danger">7.1</td>
+            <td class="danger">8.4</td>
             <td class=""></td>
             <td class="warning">4.3</td>
             <td class=""></td>
@@ -74,21 +74,21 @@ Our snippet is fully supported by 66,31% and partially 81,43% supported on all p
             <td class=""></td>
             <td class="success">39</td>
             <td class="success">44</td>
-            <td class=""></td>
+            <td class="warning">9</td>
             <td class="success">31</td>
-            <td class="danger">8.4</td>
+            <td class="warning">9</td>
             <td class=""></td>
             <td class="success">4.4.4</td>
             <td class=""></td>
         </tr>
-        <tr class="current">
+        <tr>
             <td class="success">11</td>
             <td class="success">12</td>
             <td class="success">40</td>
             <td class="success">45</td>
-            <td class="warning">8</td>
+            <td class="warning">10</td>
             <td class="success">32</td>
-            <td class="warning">9</td>
+            <td class="warning">10</td>
             <td class="danger">8</td>
             <td class="success">44</td>
             <td class="success">44</td>
@@ -98,9 +98,9 @@ Our snippet is fully supported by 66,31% and partially 81,43% supported on all p
             <td class="success">13</td>
             <td class="success">41</td>
             <td class="success">46</td>
-            <td class="warning">9</td>
+            <td class="success">11</td>
             <td class="success">33</td>
-            <td class=""></td>
+            <td class="success">11</td>
             <td class=""></td>
             <td class=""></td>
             <td class=""></td>

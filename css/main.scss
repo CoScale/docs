@@ -72,8 +72,7 @@ body {
 #logo {
     img {
         padding: 10px 0 0 20px;
-        width: 270px;
-        margin-left: 20px;
+        width: 220px;
     }
 }
 
@@ -131,8 +130,12 @@ body {
         & > .active > a:focus {
             color: #f5a153;
             background-color: #eee;
-            //color: #fff;
-            //background-color: #f5a153;
+        }
+
+        .nav-sidebar-parent {
+            padding: 15px 0 5px 0;
+            margin-bottom: 5px;
+            font-weight: bold;
         }
     }
 
@@ -274,11 +277,21 @@ body {
     }
 
     .list-index {
-        list-style: none;
-        margin-bottom: 0;
-        margin-top: 10px;
-        li {
-            padding: 5px 5px 5px 0;
+
+        a {
+            border: 0;
+            padding: 20px;
+
+            .list-group-item-heading {
+                .fa {
+                    font-size: 30px;
+                    margin-right: 10px;
+                }
+                margin-bottom: 0px;
+            }
+            .list-group-item-text {
+                padding-left: 55px;
+            }
         }
     }
 

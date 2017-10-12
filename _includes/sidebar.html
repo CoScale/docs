@@ -4,24 +4,30 @@
     <li {% if current[1] == 'index.html' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/"><i class="fa fa-fw fa-home"></i> Home</a>
     </li>
+    <li>
+        <a href="{{ site.baseurl }}/tutorials/index"><i class="fa fa-fw fa-star"></i> Tutorials</a>
+    </li>
+    <li class="nav-sidebar-parent">User interface</li>
+    <li {% if current[1] == 'alerting' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-warning"></i> Alerting</a>
+    </li>
     <li {% if current[1] == 'dashboard' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/dashboard/index"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
-    </li>
-    <li {% if current[1] == 'agent' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a>
-    </li>
-    <li {% if current[1] == 'rum' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a>
     </li>
     <li {% if current[1] == 'events' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag"></i> Events</a>
     </li>
-    <li {% if current[1] == 'alerting' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/alerting/index"><i class="fa fa-fw fa-warning"></i> Alerting</a>
+    <li class="nav-sidebar-parent">Datasources</li>
+    <li {% if current[1] == 'rum' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a>
+    </li>
+    <li {% if current[1] == 'agent' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a>
     </li>
     <li {% if current[1] == 'custom-metrics' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a>
     </li>
+    <li class="nav-sidebar-parent">Extra</li>
     <li {% if current[1] == 'tools' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/tools/index"><i class="fa fa-fw fa-wrench"></i> Tools</a>
     </li>
@@ -31,18 +37,17 @@
     <li>
         <a href="{{ site.baseurl }}/api/"><i class="fa fa-fw fa-book"></i> API Docs</a>
     </li>
+    <li class="nav-sidebar-parent">Search</li>
     <li>
-        <a href="{{ site.baseurl }}/tutorials/index"><i class="fa fa-fw fa-star"></i> Tutorials</a>
+        <form method="get" action="{{ site.baseurl}}/search.html">
+            <input class="js-search-input form-control" type="text" name="q" placeholder="Search"/>
+            <input type="submit" class="hidden js-search-button" />
+        </form>
     </li>
-</ul>
-
-<form method="get" action="{{ site.baseurl}}/search.html">
-    <input class="js-search-input form-control" type="text" name="q" placeholder="Search"/>
-    <input type="submit" class="hidden js-search-button" />
-</form>
-
-<ul class="nav nav-sidebar spacing-top">
-    <li><a href="mailto:support@coscale.com" class="js-support"><i class="fa fa-fw fa-question-circle"></i> Contact support</a></li>
+    <li class="nav-sidebar-parent">Support</li>
+    <li>
+        <a href="mailto:support@coscale.com" class="js-support"><i class="fa fa-fw fa-question-circle"></i> Contact support</a>
+    </li>
 </ul>
 
 <div class="footer spacing-top">

@@ -4,25 +4,38 @@ title: Home
 description: CoScale documentation, tutorials and examples.
 ---
 
-<h1>Getting started</h1>
+<h1>CoScale documentation</h1>
+<p>CoScale provides full stack performance monitoring, optimized for container and microservices environments. The CoScale platform continuously monitors your containerized infrastructure and in-container applications, as well as the impact on user experience and key business metrics. </p>
+
+<p>On our docs you will find information on basic functionality and setup of the CoScale platform, as well as in depth tutorials and advanced configuration. If in doubt about a CoScale feature, please don't hesitate to <a href="mailto:info@coscale.com" class="js-support">contact our support</a>.</p>
+
+<h2>Getting started</h2>
 <div class="row">
     <div class="col-md-12">
         <p>Integrating CoScale into your applications environment is an easy straightforward process, just follow the steps below:</p>
 
-        <ul class="list-index">
-            <li><a href="{{site.baseurl}}/agent/install"><i class="fa fa-fw fa-server"></i> How to install our light-weight agent</a></li>
-            <li><a href="{{site.baseurl}}/rum/install"><i class="fa fa-fw fa-globe"></i> How to enable real user monitoring</a></li>
-            <li><a href="{{site.baseurl}}/events/index"><i class="fa fa-fw fa-flag"></i> How to mark important events like software updates, marketing campaigns, etc. </a></li>
-            <li><a href="{{site.baseurl}}/events/wrappers/index"><i class="fa fa-fw fa-cogs"></i> How to monitor your cron jobs</a></li>
-            <li><a href="{{site.baseurl}}/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> How to push custom metrics that are important for your business</a></li>
-        </ul>
-
-        <p>We have a full overview on what you can monitor what are platform <a href="{{site.baseurl}}/other/datasources">here</a>, use it to guide you on what to install.</p>
-
-        <p>If you have questions or remarks, please don't hesitate to <a href="mailto:info@coscale.com" class="js-support">contact us</a>.</p>
+        <div class="list-group list-index">
+            <a class="list-group-item" href="{{site.baseurl}}/agent/install">
+                <h4 class="list-group-item-heading"><i class="fa fa-fw fa-server"></i> How to install our light-weight agent</h4>
+                <p class="list-group-item-text">The CoScale lightweight agent is used to monitor server infrastructure and services, it uses log parsing and global status pages to gather its data and pushes the data to the CoScale platform through HTTPS calls.</p>
+            </a>
+            <a class="list-group-item" href="{{site.baseurl}}/rum/install">
+                <h4 class="list-group-item-heading"><i class="fa fa-fw fa-globe"></i> How to enable real user monitoring</h4>
+                <p class="list-group-item-text">The CoScale Real User Monitoring service, or RUM for short, is a Javascript snippet that provides insight into the performance on the users computer and devices.</p>
+            </a>
+            <a class="list-group-item" href="{{site.baseurl}}/events/index">
+                <h4 class="list-group-item-heading"><i class="fa fa-fw fa-flag"></i> How to mark important events like software updates, marketing campaigns, etc. </h4>
+                <p class="list-group-item-text">Events are used to annotate data inside the CoScale platform, they provide you with an overview of what happened with your application and can speed up debugging.</p>
+            </a>
+            <a class="list-group-item" href="{{site.baseurl}}/custom-metrics/index">
+                <h4 class="list-group-item-heading"><i class="fa fa-fw fa-area-chart"></i> How to push custom metrics that are important for your business</h4>
+                <p class="list-group-item-text">The CoScale custom metrics options allow you to monitor aspects of your application that are not monitored by default with CoScale. They provide an easy way to extend the CoScale monitoring platform with metrics that are specific to your environment.</p>
+            </a>
+        </div>
     </div>
 </div>
 <h2>Search</h2>
+<p>If you're looking for something specific, try out our search below. It is also always available in the sidebar to quickly search from any page in the documentation.</p>
 <form method="get" action="{{ site.baseurl}}/search.html">
     <div class="row spacing-top">
         <div class="col-md-10"><input class="form-control js-search-input" type="search" name="q" placeholder="Enter keywords..."/></div>
