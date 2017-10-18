@@ -45,7 +45,6 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/tomcat"><img src="/gfx/agent/tomcat.png" alt="Tomcat icon"> Tomcat</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Varnish icon"> Varnish</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/solr"><img src="/gfx/agent/solr.png" alt="Solr icon"> Solr</a></div>
 </div>    
 
 ### Caching
@@ -73,6 +72,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/cassandra"><img src="/gfx/agent/cassandra.png" alt="Cassandra icon"> Cassandra</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/elasticsearch"><img src="/gfx/agent/elasticsearch.png" alt="ElasticSearch icon"> ElasticSearch</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/riak"><img src="/gfx/agent/riak.png" alt="Riak icon"> Riak</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/solr"><img src="/gfx/agent/solr.png" alt="Solr icon"> Solr</a></div>
 </div>
 
 ### Queueing
