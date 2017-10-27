@@ -10,5 +10,7 @@ Information about how are system works and security measures we take to ensure y
 ## [On premise]({{ site.baseurl }}/advanced/onpremise)
 Information about On premise installations of the CoScale platform.
 
+* [Setting up a "reverse proxy" for RUM traffic]({{ site.baseurl }}/advanced/onpremise/reverse-proxy)
+
 ## [Changelog]({{ site.baseurl }}/advanced/changelog)
 A changelog of the most recent changes and additions to the CoScale platform.

@@ -1,22 +1,19 @@
 ---
 layout: page
-title: On premise
-description: Information about On premise installations of the CoScale platform.
+title: Setting up a "reverse proxy" for RUM traffic
+description: Setting up a "reverse proxy" for RUM traffic
 ---
 
-This document contains more technical information about how CoScale works On premise.
-
-## Setting up a "reverse proxy" that only allows RUM traffic
-
 This tutorial explains how to setup an Apache Reverse Proxy on a bastion host that only forwards RUM calls and forbids all other traffic.
+Applicable to on premise installations of CoScale.
 
-### Install Apache2
+## Install Apache2
 
 (We'll be using Ubuntu in this example)
 
 ```apt-install apache2```
 
-### Enable a few Apache2 modules
+## Enable a few Apache2 modules
 
 You might not include all the modules mentioned below. E.g.: if you're not going to use SSL or if you're just forwarding and not interested in blocking (rewrite) anything.
 
@@ -34,7 +31,7 @@ a2enmod proxy_html
 a2enmod ssl
 ```
 
-### Create a site config
+## Create a site config
 
 ```vim  /etc/apache2/sites-available/revproxy.conf```
 
@@ -87,7 +84,7 @@ SSLCertificateKeyFile /etc/letsencrypt/live/coscale.mycompany.com/privkey.pem
 Include /etc/letsencrypt/options-ssl-apache.conf
 ```
 
-### Enable the site and disable the default site
+## Enable the site and disable the default site
 
 ```
 a2ensite revproxy
@@ -96,6 +93,6 @@ restart apache
 service apache2 restart
 ```
 
-### Point the resolving / DNS for the hostname to the bastion host
+## Point the resolving / DNS for the hostname to the bastion host
 
 Make sure the requests cannot go directly to the CoScale environment (firewall /separated network / ...), but to the bastion host. Point the hostname to the IP of the bastion host, in DNS for everyone or in /etc/hosts, only for your host.
