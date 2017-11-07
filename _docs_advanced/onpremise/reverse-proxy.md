@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Setting up a "reverse proxy" for RUM traffic
-description: Setting up a "reverse proxy" for RUM traffic
+title: Setting up a reverse proxy for RUM traffic
+description: Setting up a reverse proxy for RUM traffic
 ---
 
 This tutorial explains how to setup an Apache Reverse Proxy on a bastion host that only forwards RUM calls and forbids all other traffic.
