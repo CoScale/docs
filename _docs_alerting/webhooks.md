@@ -6,6 +6,7 @@ description: Using webhooks to route alerts to other systems
 
 Webhooks allow you to route CoScale alerts to other systems. You can use a webhook on an alert to route it to services that send messages to a team, or any other type of action.
 
+
 In order to use webhooks, follow the steps below:
 
 ## Go to Alerts -> Manage
@@ -16,7 +17,11 @@ Click on the "Create a notification scheme" button.
 
 Select "Webhook" as a contact method.
 
-<img alt="Add notification scheme buttons screenshot" src="{{ site.baseurl }}/gfx/alerting/notificationScheme/webhooks.png"/>
+<img alt="Webhooks screenshot" src="{{ site.baseurl }}/gfx/alerting/notificationScheme/webhooks.png"/>
+
+API is also available, for advanced usage.
+
+<img alt="API screenshot" src="{{ site.baseurl }}/gfx/alerting/notificationScheme/api.png"/>
 
 ## Customize your webhook
 
@@ -31,3 +36,4 @@ You can use the following Alert fields in the body:
 * {LINK}: the link to the alert page
 * {DATE}:  alert date
 * {TIME}: alert time
+* {SHORTHOST}: server hostname (not FQDN)

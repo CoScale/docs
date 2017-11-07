@@ -16,8 +16,6 @@ Creating alerts for your application is an easy procedure, follow the steps belo
 
 ## Third party alert integrations
 
-* [Integrate CoScale alerts with PagerDuty]({{ site.baseurl }}/alerting/integrations/pagerduty)
-* [Integrate CoScale alerts with OpsGenie]({{ site.baseurl }}/alerting/integrations/opsgenie)
 * [Sending alerts to Slack]({{ site.baseurl }}/alerting/integrations/slack)
 * [Send CoScale alerts to third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
 
