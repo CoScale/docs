@@ -4,6 +4,29 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.14.0 (17 October 2017)
+
+* Frontend
+    * Uptime widget: new widget to see the uptime in a clear overview. Works with existing metrics and the new metrics from the HTTP endpoint plugin
+    * Servers set to monitoring OFF are no longer shown in the topology
+    * Dashboard loading optimizations
+    * Possiblity to set a support email
+* Agent plugins
+    * New plugins
+        * Dropwizard: added support for monitoring the Dropwizard Java framework
+        * HTTP endpoint: a plugin to monitor different HTTP endpoints with our agent
+        * Hana DB: new metrics to monitor Hana DB
+    * Kubernetes plugin:
+        * New metric: number of pods created in namespace, in a period of time
+        * Event for Kubelet service restarts
+        * Hostname of the Kubernetes master will now be "kubernetes-master" in COSCALE_KUBE_MON_MASTER environments
+    * Resources plugin
+        * New metric: number of zombie processes
+        * New metrics for network interfaces: network interface up/down, network interface has ipv4, network interface has ipv6, packet loss count
+* On premise
+    * Initial support for easy migrations
+    * Sensible memory limits on all Java processes
+
 ## Release 3.13.0 (25 September 2017)
 
 * Kibana integration
@@ -12,7 +35,7 @@ description: A changelog of the most recent changes and additions to the CoScale
     * New plugin: Calico
     * Jolokia plugin:
         * Added native support for Openshift Jolokia
-    * Kubernetes plugin: 
+    * Kubernetes plugin:
         * Time in state metrics converted to an event, significant performance improvements as a result.
     * Docker plugin:
         * New metric: Total number of containers
@@ -63,7 +86,7 @@ description: A changelog of the most recent changes and additions to the CoScale
 
 ## Release 3.10.0 (17 May 2017)
 
-* Alerts through webhooks. 
+* Alerts through webhooks.
     * Allows integration with many new alert providers (PagerDuty, OpsGenie, Nagios)
 * Agent improvements
     * Docker image detection now supports more flexible regex's
@@ -93,11 +116,11 @@ description: A changelog of the most recent changes and additions to the CoScale
     * Loadbalanced anomalies now also work on latencies
 * General improvements to the frontend
     * Dashboard topbar was redesigned to be more responsive and have reduced clutter
-    * EventList is now has a search field and received many small style improvements 
+    * EventList is now has a search field and received many small style improvements
     * List of dashboards is now autorefreshed.
 * Performance improvements to speed up the api
     * Alerts should no longer trigger on disabled servers
-* Alerts can now be set on the messages of events 
+* Alerts can now be set on the messages of events
 * Billing page now allows for a registration key to be set
 
 ## Release 3.8.0 (10 March 2017)
@@ -131,7 +154,7 @@ description: A changelog of the most recent changes and additions to the CoScale
     * Dashboard dropdown can now be navigated via keyboard navigation.
     * Usability improvements for the event list widget
     * Improved error pages
-* Alerts email now support dimensions 
+* Alerts email now support dimensions
 * OpenShift plugin now has new authentication options
 * Zooming on charts should no longer break
 
