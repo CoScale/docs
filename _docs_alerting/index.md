@@ -4,7 +4,8 @@ title: Alerting
 description: Overview of CoScale alerting systems
 ---
 
-Creating alerts for your application is a very easy procedure, follow the steps below to get started.
+We developed 3 complementary alert systems to inform you whenever a problem occurs or might occur in the future, in your environment: static alerts, predictive alerting and anomaly detection.
+Creating alerts for your application is an easy procedure, follow the steps below to get started.
 
 1. [Creating a notification scheme]({{ site.baseurl }}/alerting/notification-scheme)
 2. Adding alerts to a notification scheme
@@ -15,10 +16,16 @@ Creating alerts for your application is a very easy procedure, follow the steps 
 
 ## Third party alert integrations
 
-* [Integrate CoScale alerts with PagerDuty]({{ site.baseurl }}/alerting/integrations/pagerduty)
-* [Integrate CoScale alerts with OpsGenie]({{ site.baseurl }}/alerting/integrations/opsgenie)
 * [Sending alerts to Slack]({{ site.baseurl }}/alerting/integrations/slack)
 * [Send CoScale alerts to third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
+
+## Webhooks
+
+[Webhooks]({{ site.baseurl }}/alerting/webhooks) allow you to route CoScale alerts to other systems. You can use a webhook on an alert to route it to services that send messages to a team, or any other type of action.
+
+Examples:
+* [PagerDuty]({{ site.baseurl }}/alerting/integrations/pagerduty)
+* [OpsGenie]({{ site.baseurl }}/alerting/integrations/opsgenie)
 
 ## Anomaly detection
 
