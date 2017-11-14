@@ -20,7 +20,7 @@ For gathering global statistics (eg. number of connections, etc.), the metrics p
 
 Add the following lines in your application YAML configuration file:
 
-{% highlight apache %}
+{% highlight dropwizard %}
 server:
   adminConnectors:
     - type: http
@@ -34,7 +34,7 @@ Provide the metrics URL, as you configured it on your server.
 
 Enable the Dropwizard aplication access log format. Add the following lines to your application YAML configuration file:
 
-{% highlight apache %}
+{% highlight dropwizard %}
 server:
   requestLog:
     appenders:
