@@ -61,6 +61,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mssql"><img src="/gfx/agent/mssql.png" alt="Mssql icon"> MSSQL</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/oracle"><img src="/gfx/agent/oracle.png" alt="Oracle icon"> Oracle</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/postgresql"><img src="/gfx/agent/postgresql.png" alt="PostgreSQL icon"> PostgreSQL</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/hana"><img src="/gfx/agent/hanadb.png" alt="Hana icon"> Hana</a></div>
 </div>
 
 ### NoSQL
