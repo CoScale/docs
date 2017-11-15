@@ -94,6 +94,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/collectd"><img src="/gfx/agent/collectd.png" alt="CollectD icon"> CollectD</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jmx"><img src="/gfx/agent/jmx.png" alt="JMX icon"> JMX</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jolokia"><img src="/gfx/agent/jolokia.png" alt="Jolokia icon"> Jolokia</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/calico"><img src="/gfx/agent/calico.png" alt="Calico icon"> Calico</a></div>
 </div>
 
 ### 3rd party integrations
