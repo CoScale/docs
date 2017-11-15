@@ -32,7 +32,7 @@ Provide the metrics URL, as you configured it on your server.
 
 ## Log configuration
 
-Enable the Dropwizard aplication access log format. Add the following lines to your application YAML configuration file:
+Enable the Dropwizard application access log format. Add the following lines to your application YAML configuration file:
 
 {% highlight dropwizard %}
 server:
@@ -44,7 +44,7 @@ server:
         archivedLogFilenamePattern: /var/log/dropwizard-app/accedd-%d.log.gz
 {% endhighlight %}
 
-Restart Dropwizard aplication to apply these changes.  
+Restart Dropwizard application to apply these changes.  
 
 Provide the location of the access log file you configured and the log format.
 
