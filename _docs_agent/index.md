@@ -46,6 +46,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/varnish"><img src="/gfx/agent/varnish.png" alt="Varnish icon"> Varnish</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/nodejs"><img src="/gfx/agent/nodejs.png" alt="Nodejs icon"> Nodejs</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/dropwizard"><img src="/gfx/agent/dropwizard.png" alt="Dropwizard icon"> Dropwizard</a></div>
 </div>    
 
 ### Caching
@@ -61,6 +62,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mssql"><img src="/gfx/agent/mssql.png" alt="Mssql icon"> MSSQL</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/oracle"><img src="/gfx/agent/oracle.png" alt="Oracle icon"> Oracle</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/postgresql"><img src="/gfx/agent/postgresql.png" alt="PostgreSQL icon"> PostgreSQL</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/hana"><img src="/gfx/agent/hanadb.png" alt="Hana icon"> Hana</a></div>
 </div>
 
 ### NoSQL
@@ -94,6 +96,8 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/collectd"><img src="/gfx/agent/collectd.png" alt="CollectD icon"> CollectD</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jmx"><img src="/gfx/agent/jmx.png" alt="JMX icon"> JMX</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jolokia"><img src="/gfx/agent/jolokia.png" alt="Jolokia icon"> Jolokia</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/fluentd"><img src="/gfx/agent/fluentd.png" alt="Fluentd icon"> Fluentd</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/calico"><img src="/gfx/agent/calico.png" alt="Calico icon"> Calico</a></div>
 </div>
 
 ### 3rd party integrations
