@@ -103,17 +103,18 @@ Overview of all plugins with more information about the metrics gathered and spe
 ### 3rd party integrations
 
 <div class="row">
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/magento"><img src="/gfx/agent/magento.png" alt="Magento icon"> Magento</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/amazoncloudwatch"><img src="/gfx/agent/amazon-aws.png" alt="AWS icon"> Amazon CloudWatch</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/azure"><img src="/gfx/agent/azure.png" alt="Azure icon"> Azure</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/prometheus"><img src="/gfx/agent/prometheus.png" alt="Prometheus icon"> Prometheus</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/pingdom"><img src="/gfx/agent/pingdom.png" alt="Pingdom icon"> Pingdom</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/sentry"><img src="/gfx/agent/sentry.png" alt="Sentry icon"> Sentry</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/rollbar"><img src="/gfx/agent/rollbar.png" alt="Rollbar icon"> Rollbar</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/googleanalytics"><img src="/gfx/agent/google-analytics.png" alt="Google Analytics icon"> Google Analytics</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/magento"><img src="/gfx/agent/magento.png" alt="Magento icon"> Magento</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/aweber"><img src="/gfx/agent/aweber.png" alt="AWeber icon"> AWeber</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/constantcontact"><img src="/gfx/agent/constant-contact.png" alt="Constant Contact icon"> Constant Contact</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/campaignmonitor"><img src="/gfx/agent/campaign-monitor.png" alt="Campaign Monitor icon"> Campaign Monitor</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mailchimp"><img src="/gfx/agent/mailchimp.png" alt="Mailchimp icon"> Mailchimp</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/googleanalytics"><img src="/gfx/agent/google-analytics.png" alt="Google Analytics icon"> Google Analytics</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/amazoncloudwatch"><img src="/gfx/agent/amazon-aws.png" alt="AWS icon"> Amazon CloudWatch</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/azure"><img src="/gfx/agent/azure.png" alt="Azure icon"> Azure</a></div>
 </div>
 
 
