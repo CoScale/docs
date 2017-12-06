@@ -47,6 +47,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jboss"><img src="/gfx/agent/jboss.png" alt="JBoss icon"> JBoss</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/nodejs"><img src="/gfx/agent/nodejs.png" alt="Nodejs icon"> Nodejs</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/dropwizard"><img src="/gfx/agent/dropwizard.png" alt="Dropwizard icon"> Dropwizard</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/dotnetcore"><img src="/gfx/agent/dotnetcore.png" alt="Dotnetcore icon"> .NET Core</a></div>
 </div>    
 
 ### Caching
