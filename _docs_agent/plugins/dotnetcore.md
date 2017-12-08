@@ -21,7 +21,7 @@ For gathering global statistics, the AppMetric library is used alongside with th
 
 Add the AppMetrics library and the CoScale extension to the project: `<project-dir>WebApplication1.csproj`:
 
-{% highlight appmetrics %}
+{% highlight xml %}
 <ItemGroup>
     <PackageReference Include="App.Metrics.AspNetCore.Mvc" Version="2.0.0-alpha" />
     <PackageReference Include="App.Metrics.AspNetCore.Tracking" Version="2.0.0-alpha" />
@@ -33,7 +33,7 @@ Add the AppMetrics library and the CoScale extension to the project: `<project-d
 
 Change the `Program.cs` file to enable AppMetrics:
 
-{% highlight program %}
+{% highlight cscharp %}
 public static class Program
 {
     public static IWebHost BuildWebHost(string[] args)
@@ -52,7 +52,7 @@ public static class Program
 
 Change the `Startup.cs` file in order to allow App Metrics to inspect MVC routes:
 
-{% highlight startup %}
+{% highlight cscharp %}
 public class Startup
 {
     public void Configure(IApplicationBuilder app)
