@@ -4,6 +4,55 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.16.0 (12 December 2017)
+
+* Frontend
+    * Deserializing of dashboards is now async, as a result dashboards load smoother
+    * Improvements to the creation of widgets UI
+        * Dimensions are now sorted by name and the values are sorted in the dropdown
+        * Searching now shows matches in other data sources
+        * Metric groups show above metrics
+        * The height of the dimension selector is now responsive
+        * Short form of the server pickers was improved
+    * Dashboard will retry loading if initial loading fails
+* Agent & Plugins
+    * A user can now delete an agent with the servers & containers linked to it
+    * Resource plugin
+        * Get filesystem metrics without having to mount / inside the container
+* Streaming backend & datastore
+
+## Release 3.15.0 (23 November 2017)
+
+* Frontend
+    * New visualizations to for resource quotas for your containers in Kubernetes and OpenShift
+    * Added a widget to show detailed information about the container on the container detail dashboard
+    * Users should now be able to add labels to multiple applications
+    * Servers page now lazy loads the servers
+    * Windows agent install instructions now contain a download link
+
+* API
+    * API should have less issues when big container clusters connect for the first time
+    * Fixed a bug where servers would sometimes not get the HTTP_SERVER attribute
+* Agent & Plugins
+    * New Plugin: .NET Core
+        * Allows you to gather detailed metrics about your containers running .NET
+    * Docker
+        * Plugin now handles servers being turned off and CRON worker will clean up after agents have been turned off
+        * New metric: Number of images
+    * Kubernetes
+        * Namespaces are now in their own server group. Allowing you to differentiate between namespaces and Nodes better
+    * Cassandra
+        * 2 new metrics added (Read requests per second, Write requests per second) and the types of multiple metrics has changed
+    * Log plugin
+        * A wildcard can now be used for the location of the log file
+* Code stability improvements
+    * Upgrade to python3.5
+    * New version of ebean
+    * All javascript is now compiled into 1 file
+    * Upgraded to thirft 0.10
+* On Premise
+    * Removed the warning from the Cassandra container about threshold for batch insertions
+
 ## Release 3.14.0 (17 October 2017)
 
 * Frontend
