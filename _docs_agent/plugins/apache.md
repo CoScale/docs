@@ -25,7 +25,14 @@ For gathering global statistics (eg. number of connections, etc.), the server-st
 
 Add or uncomment the following lines in `/etc/httpd/conf/httpd.conf`
 
-{% highlight apache %} 
+{% highlight apache %}
+# Apache 2.4
+<Location /server-status>
+    SetHandler server-status
+    Require local
+</Location>
+
+# Apache < 2.4
 <Location /server-status>
     SetHandler server-status
     Order deny,allow
@@ -35,7 +42,9 @@ Add or uncomment the following lines in `/etc/httpd/conf/httpd.conf`
 {% endhighlight %}
 
 Make sure the status module is also enabled, add or uncomment the following line in the same file.
+
 `LoadModule status_module modules/mod_status.so`
+
 Restart Apache to apply these changes.
 
 ### Configure your Apache access logs
@@ -43,8 +52,14 @@ The standard access log format for Apache does not include the request latency.
 
 To fix this, update the log format in `/etc/httpd/conf/httpd.conf or /etc/httpd/sites-enabled/<virtual host>.conf`
 
-Replace `CustomLog logs/access.log combined` with `LogFormat "%V \"%r\" %D %s %I %O" coscale
-CustomLog logs/access.log coscale`
+{% highlight apache %}
+# Replace
+CustomLog logs/access.log combined
+
+# With
+LogFormat "%V \"%r\" %D %s %I %O" coscale
+CustomLog logs/access.log coscale
+{% endhighlight %}
 
 Restart Apache to apply these changes.
 
