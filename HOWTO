@@ -2,12 +2,10 @@
 # Installation and running a local version
 
 ## Requirements
-sudo apt-get install ruby-dev node
-sudo gem install bundler
-bundle install
+Docker
 
 ## Run documentation locally
-Run `bundle exec jekyll serve` and open http://localhost:4000
+Run `./run-local.sh` and open http://localhost:4000
 
 # Extra
 
