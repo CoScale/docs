@@ -4,29 +4,51 @@ title: Widgets
 description: Overview of CoScale dashboard widgets
 ---
 
-Widgets are your main visualization tools inside CoScale, we support a wide range of different kinds and allow many customization options. To add widgets and see the array of possibilities you can click the 'Add widget' button inside our dashboards.
+Widgets are your main visualization tool. In CoScale, we support different types of widgets and allow many customization options. To add widgets and see the array of possibilities, follow the steps below.
 
-<img src="{{ site.baseurl }}/gfx/dashboard/widgets/add_widget.png" alt=" screenshot" class="imgs are your main visualization tools inside CoScale, we support a wide range of different kinds and allow many customization options. To add widgets and see the array of possibilities you can click the 'Add widget' button inside our dashboa-responsive" />
+## Add widget
+
+Click the 'Add widget' button on the top right of any dashboard.
+
+<img src="{{ site.baseurl }}/gfx/dashboard/widgets/add_widget.png" alt=" screenshot" class="img-responsive" />
+
+## Select the datasource
+
+<img src="{{ site.baseurl }}/gfx/dashboard/widgets/select_datasource.png" alt=" screenshot" class="img-responsive" />
+
+## Select metrics and events
+
+<img src="{{ site.baseurl }}/gfx/dashboard/widgets/select_metrics.png" alt=" screenshot" class="img-responsive" />
+
+Your selection will also be visible in the right side.
+
+You can search for a metric, using just a keyword / part of the full metric name.
+
+<img src="{{ site.baseurl }}/gfx/dashboard/widgets/search_metric.png" alt=" screenshot" class="img-responsive" />
+
+
+## Choose widget type
+
+Based on your previous selection, only the applicable widget types are available at this step. There are also configuration options below the graph area, for more customization.
+
+<img src="{{ site.baseurl }}/gfx/dashboard/widgets/widget_gauge.png" alt=" screenshot" class="img-responsive" />
+
+Click on Finish and the widget will be diplayed on the dashboard.
 
 ## Settings
 
-<div class="row">
-    <div class="col-sm-7">
-        Widgets have a lot of different settings, most depend on the type. You can find them by clicking the hamburger menu inside the widget. This will open a dropdown containing the options for that widget. Below you can find the more general settings available.
+You can edit the widget's name by clicking on that title, or you can click on the hamburger icon for more options.
 
-        <ul>
-            <li><b>Widget settings</b>: Contains the settings for selected metrics and servers.</li>
-            <li><b>Show legend</b>: Opens the left sidebar containing the legend of the widget. Here you can find an overview of the available metrics.</li>
-            <li><b>Show tooltip</b>: Opens the right sidebar containing the tooltip of the widget. Here you can find the value of the point you are hovering over.</li>
-            <li><b>Enable time lock</b>: Every widget on the page follows the time selector by default, with the time lock you can lock a widget on a certain timerange.</li>
-            <li><b>Delete this widget</b>: Removes the widget from the dashboard.</li>
-        </ul>
+<img src="{{ site.baseurl }}/gfx/dashboard/widgets/widget_settings.png" alt=" screenshot" class="img-responsive" />
 
-    </div>
-    <div class="col-sm-5">
-        <img src="{{ site.baseurl }}/gfx/dashboard/widgets/hamburger_menu.png" alt="class="col-s screenshot" class="img-responsive" />
-    </div>
-</div>
+<ul>
+  <li><b>Widget settings</b>: Contains the settings (metrics, events, widget type, widget options)</li>
+  <li><b>Enable time lock</b>: Every widget on the page follows the time selector by default. With the time lock you can lock a widget on a certain time range.</li>
+  <li><b>Mode</b>: Average, First, Last, Minimum, Maximum, Diff, Sum</li>
+  <li><b>Export data</b>: Exports the information from the selected metrics, in the given time interval.</li>
+  <li><b>Copy widget</b>: Copies the widget.</li>
+  <li><b>Delete this widget</b>: Removes the widget from the dashboard.</li>
+</ul>
 
 ## Types
 <ul class="list-inline">

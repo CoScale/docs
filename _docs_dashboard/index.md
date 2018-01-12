@@ -30,6 +30,8 @@ CoScale supports a number of widgets to visualize your data. Below you can find 
     <li><a href="{{ site.baseurl }}/dashboard/widgets/"><i class="fa fa-list-alt fa-fw"></i> Anomaly timeline</a></li>
 </ul>
 
+Read more about [widgets and how to configure them]({{ site.baseurl }}/dashboard/widgets/).
+
 ## Metrics
 
 * [Changing default latency]({{ site.baseurl }}/dashboard/metrics/web/default-latency/)
