@@ -4,6 +4,19 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.17.0 (16 January 2018)
+
+* Frontend
+    * Container quotas are now shown on the topology widget
+    * Internal components dashboard added for OpenShift
+    * New widget: iFrame widget
+    * Improved CLI install instructions
+    * Usability improvements on the alerts manage page
+    * Session timeout is now 7 days instead of 24 hours
+    * Retry mechanism for dashboards
+* Agent
+    * Install instructions for GCE updated for newer Kubernetes versions
+
 ## Release 3.16.0 (12 December 2017)
 
 * Frontend
