@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.4
 script:
-  - jekyll build
+  - bundle exec jekyll build
   - htmlproof ./_site --only-4xx --check-favicon --check-html --verbose true --ignore-script-embeds --file-ignore ./_site/bower_components/swagger-ui/dist/index.html,./_site/bower_components/swagger-ui/src/main/html/index.html,./_site/bower_components/swagger-ui/dist/o2c.html,./_site/bower_components/swagger-ui/src/main/html/o2c.html,./_site/bower_components/lunr.js/index.html,./_site/bower_components/lunr.js/test/index.html,./_site/bower_components/lunr.js/example/index.html
 env:
   global:
