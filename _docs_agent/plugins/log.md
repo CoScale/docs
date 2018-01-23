@@ -76,6 +76,12 @@ When configuring the log plugin you will have to specify the following attribute
     </tbody>
 </table>
 
+## Working with /dev/stdout and /dev/stderr from Docker containers
+
+ The Log plugin can extract metrics from logs that are written to `/dev/stdout` or `/dev/stderr` in Docker containers. Just provide `/dev/stdout` or `/dev/stderr` in the `File path` field when configuring the Log plugin for a Docker image.
+
+<img alt="Log plugin configuration screenshot" src="{{ site.baseurl }}/gfx/agent/plugins/log/log-stdout.png" />
+
 ## Use-cases and examples
 
 ### Web server logs
