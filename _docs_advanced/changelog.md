@@ -11,7 +11,7 @@ description: A changelog of the most recent changes and additions to the CoScale
 * Add support for Kubernetes / Docker swarm secrets
 * User experience improvements
     * Use dropdown for actions in tables
-    * Improvement to super page (on-premise)
+    * Improvement to on-premise pages
     * Improve dimension support in table widget
     * Clickthroughs that pass dimensions to linked dashboard
     * Various fixes
