@@ -4,6 +4,18 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.18.0 (1 February 2018)
+
+* Added login through LDAP
+* Visualise Kubernetes quotas per namespace
+* Add support for Kubernetes / Docker swarm secrets
+* User experience improvements
+    * Use dropdown for actions in tables
+    * Improvement to super page (on-premise)
+    * Improve dimension support in table widget
+    * Clickthroughs that pass dimensions to linked dashboard
+    * Various fixes
+
 ## Release 3.17.0 (16 January 2018)
 
 * Frontend
