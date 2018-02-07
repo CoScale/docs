@@ -135,3 +135,5 @@ Overview of all plugins with more information about the metrics gathered and spe
     Specific configuration for tracking web requests by their HTTP method.
 * [Remove a server]({{ site.baseurl }}/agent/remove-server)
     Removing a server or an agent from your application.
+* [HOST feature]({{ site.baseurl }}/agent/host-feature)
+    Monitor services that run on a host from our Container Agent.
