@@ -6,18 +6,50 @@ description: Advanced configuration of the CoScale agent by using environment va
 
 ## Environment flags
 
-Add these to `/etc/default/coscale-agent`
+The CoScale agent can be configured using environment variables. The variables are picket up on boot, so an [agent restart]({{ site.baseurl }}/agent/agent-restart/) is required to enable them.
 
-### `export COSCALE_DISABLE_AUTO_UPDATE=true`
+`COSCALE_HOSTNAME=[custom hostname]`
 
-Disable auto updating of the CoScale agent and plugins
+By default the CoScale agent will use the system hostname and will not add a new server if the hostname already exists on our service. Change this value if you would like to set a custom hostname or to force adding a new server to the CoScale environment. This can used in cases where two machines share the same hostname.
 
-### `export COSCALE_HOSTNAME=[custom hostname]`
+`COSCALE_API_LOGLEVEL=debug`
 
-By default the CoScale agent will use the system hostname and will not add a new server if the hostname already exists on our service. Change this value if you would like to set a custom hostname or to force adding a new server to the service.
+Will increase the verbosity of the CoScale agent, this should only be used for debugging purposes or when requested by CoScale support. The possible levels are: `trace`, `debug`, `info`, `warn`, `error`
 
-Example: `export COSCALE_HOSTNAME=webserver`
 
-### `export COSCALE_API_LOGLEVEL=debug`
+## Configuration
 
-Will output more information to logfiles, this should only be used for debugging purposes or when requested by CoScale support.
+### Linux
+
+On the Linux operating systems you can add the environment variables to the `/etc/default/coscale-agent` file.
+
+```
+export COSCALE_HOSTNAME=my-server-name
+export COSCALE_API_LOGLEVEL=debug
+```
+
+### Windows
+
+#### Application level
+
+Application level environment variables are added through the registry. Open the registry editor `regedit` and go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CoScaleAgent`
+
+Now create a new value by rightclicking on the right side on the Window and going to `New` and then `Multi-String Value`. The name of the new item should be `Environment`. You can then edit the item by double clicking on it.
+
+**Example content:**
+```
+COSCALE_HOSTNAME=my-server-name
+COSCALE_API_LOGLEVEL=debug
+```
+
+After changing the file you need to [restart the CoScale agent]({{ site.baseurl }}/agent/agent-restart/).
+
+#### System wide
+
+You can also define [system wide env viriables] (https://msdn.microsoft.com/en-us/library/windows/desktop/ms682653(v=vs.85).aspx).
+
+**Example content:**
+```
+COSCALE_HOSTNAME=my-server-name\0
+COSCALE_API_LOGLEVEL=debug\0
+```
