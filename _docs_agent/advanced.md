@@ -6,11 +6,11 @@ description: Advanced configuration of the CoScale agent by using environment va
 
 ## Environment flags
 
-The CoScale agent can be configured using environment variables. The variables are picket up on boot, so an [agent restart]({{ site.baseurl }}/agent/agent-restart/) is required to enable them.
+The CoScale agent can be configured using environment variables. The variables are picked up on boot, so an [agent restart]({{ site.baseurl }}/agent/agent-restart/) is required to enable them.
 
 `COSCALE_HOSTNAME=[custom hostname]`
 
-By default the CoScale agent will use the system hostname and will not add a new server if the hostname already exists on our service. Change this value if you would like to set a custom hostname or to force adding a new server to the CoScale environment. This can used in cases where two machines share the same hostname.
+By default the CoScale agent will use the system hostname and will not add a new server if the hostname already exists on our service. Change this value if you would like to set a custom hostname or to force adding a new server to the CoScale environment. This can be used in cases when two machines share the same hostname.
 
 `COSCALE_API_LOGLEVEL=debug`
 
