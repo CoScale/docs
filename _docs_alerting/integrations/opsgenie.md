@@ -14,7 +14,7 @@ In CoScale we will use the API integration to create push alerts to OpsGenie.
 
 ### Trigger configuration
 
-{% highlight %}
+{% highlight html %}
 Method: POST
 URL: https://api.opsgenie.com/v1/json/alert
 
@@ -33,7 +33,7 @@ Parse Response: JSON alertId
 
 ### Acknowledge configuration
 
-{% highlight %}
+{% highlight html %}
 Method: POST
 URL: https://api.opsgenie.com/v1/json/alert/acknowledge
 
@@ -49,7 +49,7 @@ Content-type: application/json
 
 ### Resolve configuration
 
-{% highlight %}
+{% highlight html %}
 Method: POST
 URL: https://api.opsgenie.com/v1/json/alert/close
 

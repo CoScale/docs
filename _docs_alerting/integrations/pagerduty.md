@@ -26,7 +26,7 @@ In CoScale we will use the API integration to create push alerts to PagerDuty.
 
 ### Trigger configuration
 
-{% highlight %}
+{% highlight html %}
 Method: POST
 URL: https://api.pagerduty.com/incidents
 
@@ -55,7 +55,7 @@ Parse response: JSON incident.id
 
 ### Acknowledge configuration
 
-{% highlight %}
+{% highlight html %}
 Method: PUT
 URL: https://api.pagerduty.com/incidents
 
@@ -77,7 +77,7 @@ Headers:
 
 ### Resolve configuration
 
-{% highlight %}
+{% highlight html %}
 Method: PUT
 URL: https://api.pagerduty.com/incidents
 Body:
