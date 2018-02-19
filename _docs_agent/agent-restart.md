@@ -24,7 +24,7 @@ Follow these steps to restart the CoScale agent.
 
 ### Commandline
 
-```
+{% highlight cmd %}
 net stop CoScaleAgent
 net start CoScaleAgent
-```
+{% endhighlight %}
