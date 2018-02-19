@@ -23,10 +23,10 @@ Will increase the verbosity of the CoScale agent, this should only be used for d
 
 On the Linux operating systems you can add the environment variables to the `/etc/default/coscale-agent` file.
 
-```
+{% highlight bash %}
 export COSCALE_HOSTNAME=my-server-name
 export COSCALE_API_LOGLEVEL=debug
-```
+{% endhighlight %}
 
 ### Windows
 
@@ -37,19 +37,19 @@ Application level environment variables are added through the registry. Open the
 Now create a new value by rightclicking on the right side on the Window and going to `New` and then `Multi-String Value`. The name of the new item should be `Environment`. You can then edit the item by double clicking on it.
 
 **Example content:**
-```
+{% highlight bash %}
 COSCALE_HOSTNAME=my-server-name
 COSCALE_API_LOGLEVEL=debug
-```
+{% endhighlight %}
 
 After changing the file you need to [restart the CoScale agent]({{ site.baseurl }}/agent/agent-restart/).
 
 #### System wide
 
-You can also define [system wide env viriables] (https://msdn.microsoft.com/en-us/library/windows/desktop/ms682653(v=vs.85).aspx).
+You can also define [system wide env variables](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682653(v=vs.85).aspx).
 
 **Example content:**
-```
+{% highlight bash %}
 COSCALE_HOSTNAME=my-server-name\0
 COSCALE_API_LOGLEVEL=debug\0
-```
+{% endhighlight %}
