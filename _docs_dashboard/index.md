@@ -33,3 +33,7 @@ CoScale supports a number of widgets to visualize your data. Below you can find 
 ## Metrics
 
 * [Changing default latency]({{ site.baseurl }}/dashboard/metrics/web/default-latency/)
+
+## License Key
+
+* [How to register your license key]({{ site.baseurl }}/dashboard/license/)
