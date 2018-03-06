@@ -24,7 +24,7 @@ The CoScale lightweight agent is used to monitor server infrastructure and servi
 * [RAM disk]({{ site.baseurl }}/agent/windows/ram-disk)
 
 ## Plugins
-Overview of all plugins with more information about the metrics gathered and special features.  
+Overview of all plugins with more information about the metrics gathered and special features.
 
 ### Containers
 
@@ -33,7 +33,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Swarm</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kubernetes"><img src="/gfx/agent/kubernetes.png" alt="Kubernetes icon"> Kubernetes</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/openshift"><img src="/gfx/agent/openshift.png" alt="Openshift icon"> Openshift</a></div>
-</div>  
+</div>
 
 ### Web
 
@@ -48,7 +48,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/nodejs"><img src="/gfx/agent/nodejs.png" alt="Nodejs icon"> Nodejs</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/dropwizard"><img src="/gfx/agent/dropwizard.png" alt="Dropwizard icon"> Dropwizard</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/dotnetcore"><img src="/gfx/agent/dotnetcore.png" alt="Dotnetcore icon"> .NET Core</a></div>
-</div>    
+</div>
 
 ### Caching
 
@@ -58,7 +58,7 @@ Overview of all plugins with more information about the metrics gathered and spe
 
 ### Database
 
-<div class="row">    
+<div class="row">
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mysql"><img src="/gfx/agent/mysql.png" alt="Mysql icon"> MySQL</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mssql"><img src="/gfx/agent/mssql.png" alt="Mssql icon"> MSSQL</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/oracle"><img src="/gfx/agent/oracle.png" alt="Oracle icon"> Oracle</a></div>
@@ -99,6 +99,7 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/jolokia"><img src="/gfx/agent/jolokia.png" alt="Jolokia icon"> Jolokia</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/fluentd"><img src="/gfx/agent/fluentd.png" alt="Fluentd icon"> Fluentd</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/calico"><img src="/gfx/agent/calico.png" alt="Calico icon"> Calico</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/golang"><img src="/gfx/agent/golang.png" alt="Golang icon"> Golang</a></div>
 </div>
 
 ### 3rd party integrations
