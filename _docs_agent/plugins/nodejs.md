@@ -87,6 +87,6 @@ The endpoint configured above is available on the default nodejs port (80) with 
 
 `http://localhost:80/metrics`
 
-You can also add a Docker Label to your `Dockerfile` to automatically pick up the Prometheus endpoint:
+You can also add a Docker Label to your `Dockerfile` so that the agent will automatically pick up the Prometheus endpoint when it detects a new container:
 
 `LABEL com.coscale.monitoring='[{"PluginType":"PROMETHEUS","Configuration":{"STATS URL":["http://127.0.0.1/metrics"]}},{"PluginType":"ENDPOINTCHECKER","Configuration":{"ENDPOINT":["http://127.0.0.1/"]}}]'`
