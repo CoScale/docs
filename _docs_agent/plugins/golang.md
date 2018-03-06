@@ -10,13 +10,13 @@ More information on: [https://golang.org/](https://golang.org/)
 
 ## How it works
 
-Because Golang has no default logging or metrics endpoint we need to include one in our application. We will use the [Golang prometheus library](https://github.com/prometheus/client_golang) together with the CoScale Prometheus endpoint parser to retrieve metrics from standard Golang runtime as well as provide a possibility to extend it with custom metrics.
+Because Golang has no default logging or metrics endpoint we need to include one in our application. We will use the [Golang prometheus library](https://github.com/prometheus/client_golang) together with the CoScale Prometheus endpoint parser to retrieve metrics from the standard Golang runtime as well as provide a possibility to extend it with custom metrics.
 
 ## Configuration
 
 ### Configure your Golang application to provide a Prometheus endpoint
 
-Add [client_golang](https://github.com/prometheus/client_golang) to your application using the build it golang import system. You can find an example of the integration below:
+Add [client_golang](https://github.com/prometheus/client_golang) to your application using the built in golang import system. You can find an example of the integration below:
 
 {% highlight golang %}
 // Copyright 2015 The Prometheus Authors
@@ -62,6 +62,6 @@ The endpoint configured above is available on port 8080 with endpoint `/metrics`
 
 `http://localhost:8080/metrics`
 
-You can also add a Docker Label to your `Dockerfile` to automatically pick up the Prometheus endpoint:
+You can also add a Docker Label to your `Dockerfile` so that the agent will automatically pick up the Prometheus endpoint when it detects a new container:
 
 `LABEL com.coscale.monitoring='[{"PluginType":"PROMETHEUS","Configuration":{"STATS URL":["http://127.0.0.1:8080/metrics"]}}]'`
