@@ -15,9 +15,21 @@ Installing the CoScale agent depends a lot on your environment and if it's a con
 
 To install this agent, download the agent to your server and double click on the installer. Follow the instructions.
 
+## Docker Swarm / Docker Enterprise Edition
+
+Docker Swarm and Docker Enterprise Edition is done through a [Docker Service](https://docs.docker.com/engine/reference/commandline/service_create/). The Docker Service starts a secundary container on each host with privileged access. This is done because the services within the Swarm orchestrator cannot run as privileged. Host level metrics are not available in non privileged containers.
+
+{% highlight bash %}
+docker service create \
+--mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+--mode global \
+--name coscale-deploy \
+coscale/coscale-agent /bin/sh -c 'docker rm -f coscale-agent;exec docker run --restart unless-stopped --rm --privileged --net=host --pid=host --name coscale-agent -e APP_ID="xxxx -e ACCESS_TOKEN="xxxx" -e TEMPLATE_ID="xxxx" -v /var/run/docker.sock:/var/run/docker.sock -v /:/host/:ro coscale/coscale-agent'
+{% endhighlight %}
+
 ## Kubernetes
 
-Kubernetes monitoring is done through a DaemonSet and a ReplicaSet in a private `coscale` namespace. The right permissions need to be given to the CoScale agent in RBAC environments. The DaemonSet agent is responsible for container, application and node monitoring. The ReplicaSet retrieves orchestration data from the active Kubernetes master.
+Kubernetes monitoring is done through a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) and a [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) in a private `coscale` namespace. The right permissions need to be given to the CoScale agent in [RBAC](https://kubernetes.io/docs/admin/authorization/rbac/) environments. The DaemonSet agent is responsible for container, application and node monitoring. The ReplicaSet retrieves orchestration data from the active Kubernetes master.
 
 {% highlight bash %}
 kubectl create namespace coscale
@@ -151,7 +163,7 @@ spec:
 
 ## Openshift
 
-Openshift monitoring is done through a DaemonSet and a ReplicaSet in a private `coscale` namespace. The right permissions need to be given to the CoScale agent in Openshift environments using a SecurityContextConstraints, without this our agent cannot communicate with the Openshift platform. The DaemonSet agent is responsible for container, application and node monitoring. The ReplicaSet retrieves orchestration data from the active Openshift master.
+Openshift monitoring is done through a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) and a [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) in a private `coscale` namespace. The right permissions need to be given to the CoScale agent in Openshift environments using a [SecurityContextConstraints](https://docs.openshift.org/latest/admin_guide/manage_scc.html), without this our agent cannot communicate with the Openshift platform. The DaemonSet agent is responsible for container, application and node monitoring. The ReplicaSet retrieves orchestration data from the active Openshift master.
 
 {% highlight yaml %}
 apiVersion: v1
