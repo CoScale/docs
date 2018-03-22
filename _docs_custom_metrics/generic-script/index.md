@@ -139,7 +139,7 @@ Given the configuration above, the following output is an example of the script 
 {% highlight bash %}
 M1 "1:eth0" 8.5
 M2 "2:dimension2_value1,3:dimension3_value1" 12345.6
-E1 -300 0 "The event triggered" "{"Exit code":137}"
+E1 -300 0 "The event triggered" "{"Exit code":137}" S
 {% endhighlight %}
 
 #### Metric format
@@ -160,7 +160,7 @@ M1 "1:eth0" 8.5
 #### Event format
 
 {% highlight bash %}
-E1 -300 0 "The event triggered" "{"Exit code":137}"
+E1 -300 0 "The event triggered" "{"Exit code":137}" S
 {% endhighlight %}
 
 | Field                       | Description                                                                              |
@@ -173,3 +173,5 @@ E1 -300 0 "The event triggered" "{"Exit code":137}"
 | `0`                         | The end time for the event. Same format as the start time applies.                       |
 | `"The event triggered"`     | The message for the event (string). The quotes are required.                             |
 | `"{"Exit code":137}"`       | All [attributes]({{ site.baseurl }}/events/custom-attributes/) for this event. The quotes are required. |
+| `S`                         | Indicates that the event data should be attached to the current server/container.        |
+|                             | Application-level events can be created by putting A instead of S.                       |
