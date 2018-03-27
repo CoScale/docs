@@ -38,7 +38,7 @@ In this section we will explain in detail how you can create a script to generat
 
 When the agent is started, it will execute `<script> -c` to retrieve the metric and events defined by the script. The output should be a json that contains the metrics and events.
 
-{% include alert.html type="warning" text="`<script> -c` should return within 1 second, otherwise it will be killed. The script should return exit code 0. Otherwise, the output will not be parsed and an error will be logged." %}
+{% include alert.html type="warning" text="The script should return within 1 second in configuration mode, otherwise it will be killed. The script should return exit code 0. Otherwise, the output will not be parsed and an error will be logged." %}
 
 This is an **example** output of a script in **configuration mode**:
 
