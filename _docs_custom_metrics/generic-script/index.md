@@ -32,7 +32,7 @@ The configuration can also include parameters, this way you can also provide an 
 
 ## Developing a script
 
-In this section we will explain in detail how you can create a script to generate custom metrics and events. 
+In this section we will explain in detail how you can create a script to generate custom metrics and events.
 
 ### Configuration mode
 
@@ -44,15 +44,12 @@ This is an **example** output of a script in **configuration mode**:
 
 {% highlight json %}
 {
-    "maxruntime": 5000,
-    "period": 60,
     "metrics": [{
         "id": 1,
         "name": "Incoming traffic on interface",
         "description": "Incoming traffic in bytes on network interface",
         "groups": "Networking/Traffic",
         "unit": "b/s",
-        "tags": "NETWORK",
         "datatype": "GUAGE",
         "calctype": "Instant",
         "dimensions": [
@@ -64,7 +61,6 @@ This is an **example** output of a script in **configuration mode**:
         "description": "Description for second metric",
         "groups": "MyMetrics/Category2",
         "unit": "",
-        "tags": "MYTAG1,MYTAG2",
         "datatype": "DOUBLE",
         "calctype": "Difference",
         "dimensions": [
@@ -83,14 +79,6 @@ This is an **example** output of a script in **configuration mode**:
 }
 {% endhighlight %}
 
-#### maxruntime
-
-The maximum amount of time (in milliseconds) the script is allowed to run in data retrieval mode, if the runtime exceeds this value the script will be stopped. The maximum value for maxruntime is 50000 (50 seconds).
-
-#### period
-
-Time interval (in seconds) between agent polls that retrieve the data. The minimum value for period is 60 (1 minute).
-
 
 #### Metric fields
 
@@ -103,7 +91,6 @@ Time interval (in seconds) between agent polls that retrieve the data. The minim
 | `description`           | Description of the metric.                                                                                                                           |
 | `groups`                | The metric groups that this metric should be added to (comma separated). Nested groups should be separated by a `/`.                                 |
 | `unit`                  | The unit for the metric (shown on the Y-axis in the UI).                                                                                             |
-| `tags`                  | You can add a tag to add extra meaning to a metric (i.e. NETWORK).                                                                                   |
 | `datatype`              | The data type of the created metric. The following 3 options are available for the `datatype`:                                                       |
 |                         |     - GAUGE: value at this point in time (eg. memory usage)                                                                                          |
 |                         |     - COUNT: a number per a given interval (eg. number of log lines added)                                                                           |
