@@ -122,19 +122,37 @@ Overview of all plugins with more information about the metrics gathered and spe
 
 ## Extra
 
+### Tips and tricks
+
 * [Cloud environments]({{ site.baseurl }}/agent/cloud/index)
     Specific configuration, agent management and autoscaling tips & tricks for Cloud based providers like Amazon Web Services and Microsoft Azure.
-* [Environment flags]({{ site.baseurl}}/agent/advanced)
-    Advanced environment flags you can use to customize the agent hostname, auto updating functionality and log level.
-* [Firewall / Proxy]({{ site.baseurl }}/agent/firewall-proxy)
-    Information about CoScale agent firewall settings and proxy configuration.
-* [Custom templates]({{ site.baseurl }}/agent/custom-template)
-    Specific configuration for config management systems.
-* [Accept webrequests]({{ site.baseurl }}/agent/accept-webrequests)
-    Manually accept specific web requests.
-* [Refine webrequests]({{ site.baseurl }}/agent/webrequest-method)
-    Specific configuration for tracking web requests by their HTTP method.
+
 * [Remove a server]({{ site.baseurl }}/agent/remove-server)
     Removing a server or an agent from your application.
+
+* [Troubleshooting]({{ site.baseurl }}/agent/troubleshooting)
+    Debugging a running agent to find and fix issues
+
+### Advanced configuration
+
 * [HOST feature]({{ site.baseurl }}/agent/host-feature)
     Monitor services that run on a host from our Container Agent.
+
+* [Firewall / Proxy]({{ site.baseurl }}/agent/firewall-proxy)
+    Information about CoScale agent firewall settings and proxy configuration.
+
+* [Environment flags]({{ site.baseurl}}/agent/advanced)
+    Advanced environment flags you can use to customize the agent hostname, auto updating functionality and log level.
+
+* [Custom templates]({{ site.baseurl }}/agent/custom-template)
+    Specific configuration for config management systems.
+
+### Other
+* [Accept webrequests]({{ site.baseurl }}/agent/accept-webrequests)
+    Manually accept specific web requests.
+
+* [Refine webrequests]({{ site.baseurl }}/agent/webrequest-method)
+    Specific configuration for tracking web requests by their HTTP method.
+
+
+
