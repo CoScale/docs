@@ -70,6 +70,26 @@ rules:
 {% endhighlight %}
 
 {% highlight yaml %}
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  name: coscale-agent
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: coscale-cluster-role
+subjects:
+- kind: ServiceAccount
+  name: coscale-agent
+  namespace: coscale
+EOF
+{% endhighlight %}
+
+{% highlight yaml %}
 apiVersion: extensions/v1beta1
 kind: ReplicaSet
 metadata:

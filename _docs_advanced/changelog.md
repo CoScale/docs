@@ -4,6 +4,16 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.19.0 (12 March 2018)
+
+* Server group based access controls: RBAC
+* Zookeeper plugin
+* Easily test your webhook from the UI
+* User experience improvements
+    * Replaced 'Add widget' button
+    * Overflow for server names in topology widgets
+* Get event data from CLI
+
 ## Release 3.18.0 (1 February 2018)
 
 * Added login through LDAP
