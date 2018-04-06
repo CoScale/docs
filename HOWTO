@@ -35,4 +35,4 @@ Ex: `<a href="http://app.coscale.com" db-href="/alerts/manage/" class="js-dashbo
 
 {% endhighlight %}
 
-`xml` can be replaced with any language, full list available on http://rouge.jneen.net/
+`xml` can be replaced with any language, full list available on https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers

@@ -18,14 +18,14 @@
         <a href="{{ site.baseurl }}/events/index"><i class="fa fa-fw fa-flag"></i> Events</a>
     </li>
     <li class="nav-sidebar-parent">Datasources</li>
-    <li {% if current[1] == 'rum' %}class='active'{% endif %}>
-        <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a>
-    </li>
     <li {% if current[1] == 'agent' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/agent/index"><i class="fa fa-fw fa-server"></i> Agent</a>
     </li>
     <li {% if current[1] == 'custom-metrics' %}class='active'{% endif %}>
         <a href="{{ site.baseurl }}/custom-metrics/index"><i class="fa fa-fw fa-area-chart"></i> Custom metrics</a>
+    </li>
+    <li {% if current[1] == 'rum' %}class='active'{% endif %}>
+        <a href="{{ site.baseurl }}/rum/index"><i class="fa fa-fw fa-globe"></i> Real user monitoring</a>
     </li>
     <li class="nav-sidebar-parent">Extra</li>
     <li {% if current[1] == 'tools' %}class='active'{% endif %}>

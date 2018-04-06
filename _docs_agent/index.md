@@ -13,7 +13,6 @@ The CoScale lightweight agent is used to monitor server infrastructure and servi
 * [Restarting the agent]({{ site.baseurl }}/agent/agent-restart#unix)
 * [Uninstalling the agent]({{ site.baseurl }}/agent/agent-uninstall#unix)
 * [Exporting logs for support]({{ site.baseurl }}/agent/export-logs#unix)
-* [Configure with environment variables]({{ site.baseurl }}/agent/linux/environment-variables)
 
 ## Microsoft Windows
 
@@ -22,6 +21,10 @@ The CoScale lightweight agent is used to monitor server infrastructure and servi
 * [Uninstalling the agent]({{ site.baseurl }}/agent/agent-uninstall#microsoft-windows)
 * [Exporting logs for support]({{ site.baseurl }}/agent/export-logs#microsoft-windows)
 * [RAM disk]({{ site.baseurl }}/agent/windows/ram-disk)
+
+## Advanced configuration
+* [Configure with environment variables]({{ site.baseurl }}/agent/linux/environment-variables)
+* [Configure with secrets]({{ site.baseurl }}/agent/secrets)
 
 ## Plugins
 Overview of all plugins with more information about the metrics gathered and special features.
