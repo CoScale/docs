@@ -30,11 +30,11 @@ In CoScale we will use the API integration to create push alerts to PagerDuty. P
 
 <img src="{{ site.baseurl }}/gfx/alerting/integrations/notificationscheme_edit.png" class="img-responsive" alt="Edit button location" />
 
-After click `Add contact` and select `API`. Copy the instructions below to the API configuration. Make sure your replace the token and email in the configuration when needed.
+After click `Add contact` and select `API`. Copy the instructions below to the API configuration. Make sure your replace the token `[[your token]]` and email `[[your email]]` in the configuration when needed.
 
 #### Trigger configuration
 
-{% highlight html %}
+{% highlight bash %}
 # Method:
 POST
 # URL:
@@ -55,17 +55,18 @@ https://api.pagerduty.com/incidents
 # Headers:
 	Content-Type: application/json
 	Accept: application/vnd.pagerduty+json;version=2
-	Authorization: Token token=your token
-	From: your@email.here
+	Authorization: Token token=[[your token]]
+	From: [[your email]]
 
-Parse response: JSON incident.id
+# Parse response:
+JSON: incident.id
 {% endhighlight %}
 
 <img alt="" src="{{ site.baseurl }}/gfx/alerting/integrations/pagerduty/03-pagerduty-coscale.png" class="img-responsive" alt="PagerDuty CoScale" />
 
 #### Acknowledge configuration
 
-{% highlight html %}
+{% highlight bash %}
 # Method:
 PUT
 # URL:
@@ -83,13 +84,13 @@ https://api.pagerduty.com/incidents
 # Headers:
 	Content-Type: application/json
 	Accept: application/vnd.pagerduty+json;version=2
-	Authorization: Token token=zXg83wYr26nyx_3GVPy7
-	From: your@email.here
+	Authorization: Token token=[[your token]]
+	From: [[your email]]
 {% endhighlight %}
 
 #### Resolve configuration
 
-{% highlight html %}
+{% highlight bash %}
 # Method:
 PUT
 # URL:
@@ -107,8 +108,8 @@ https://api.pagerduty.com/incidents
 # Headers:
 	Content-Type: application/json
 	Accept: application/vnd.pagerduty+json;version=2
-	Authorization: Token token=zXg83wYr26nyx_3GVPy7
-	From: your@email.here
+	Authorization: Token token=[[your token]]
+	From: [[your email]]
 {% endhighlight %}
 
 ### 4. Test CoScale trigger
