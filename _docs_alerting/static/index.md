@@ -4,5 +4,6 @@ title: Static alerts
 description: Information and configuration manuals for CoScale alert system
 ---
 
-<!-- * [Forecast alerts]({{ site.baseurl }}/alerting/static/forecast/) -->
-* [Integration with third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
+* [Static alert]({{ site.baseurl}}/alerting/static/creating)
+* [Forecast alert]({{ site.baseurl}}/alerting/static/forecast)
+* [Anomaly alert]({{ site.baseurl}}/alerting/anomaly/creating)

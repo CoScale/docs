@@ -4,7 +4,7 @@ title: Alerting
 description: Overview of CoScale alerting systems
 ---
 
-We developed 3 complementary alert systems to inform you whenever a problem occurs or might occur in the future, in your environment: static alerts, predictive alerting and anomaly detection.
+CoScale has developed 3 complementary alert systems to inform you whenever a problem occurs or might occur in your environment: Static alerts, Forecast/Predictive alerting and Anomaly detection.
 Creating alerts for your application is an easy procedure, follow the steps below to get started.
 
 1. [Creating a notification scheme]({{ site.baseurl }}/alerting/notification-scheme)
@@ -13,19 +13,17 @@ Creating alerts for your application is an easy procedure, follow the steps belo
     * [Forecast alert]({{ site.baseurl}}/alerting/static/forecast)
     * [Anomaly alert]({{ site.baseurl}}/alerting/anomaly/creating)
 
+## Integrations
 
-## Third party alert integrations
+The CoScale alerting system can be linked to multiple external systems like Pagerduty and Opsgenie. There is also a generic system available for custom development and integration.
 
-* [Sending alerts to Slack]({{ site.baseurl }}/alerting/integrations/slack)
-* [Send CoScale alerts to third party incident managers]({{ site.baseurl }}/alerting/static/third-party/)
-
-## Webhooks
-
-[Webhooks]({{ site.baseurl }}/alerting/webhooks) allow you to route CoScale alerts to other systems. You can use a webhook on an alert to route it to services that send messages to a team, or any other type of action.
-
-Examples:
-* [PagerDuty]({{ site.baseurl }}/alerting/integrations/pagerduty)
-* [OpsGenie]({{ site.baseurl }}/alerting/integrations/opsgenie)
+<div class="row">
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/alerting/integrations/pagerduty"><img src="/gfx/alerting/pagerduty.png" alt="Pagerduty icon"> Pagerduty</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/alerting/integrations/opsgenie"><img src="/gfx/alerting/opsgenie.png" alt="OpsGenie icon"> OpsGenie</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/alerting/integrations/moogsoft"><img src="/gfx/alerting/moogsoft.png" alt="Moogsoft icon"> Moogsoft</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/alerting/integrations/slack"><img src="/gfx/alerting/slack.png" alt="Slack icon"> Slack</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/alerting/webhooks"><img src="/gfx/alerting/webhook.png" alt="Webhook icon"> Webhook</a></div>
+</div>
 
 ## Anomaly detection
 
