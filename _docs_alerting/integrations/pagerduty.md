@@ -1,36 +1,46 @@
 ---
 layout: page
 title: PagerDuty alert integration
-description: Tutorial on how to integrate alerting with PagerDuty
+description: Tutorial on how to integrate CoScale alerting with PagerDuty
 ---
 
-### Get your PagerDuty API Key
+CoScale supports sending alerts to PagerDuty through the CoScale webhook API system. You can find the configuration pages for this on our <a href="http://app.coscale.com" db-href="/alerts/manage/" class="js-dashboard-link">`Alert > Manage`</a> page inside the CoScale application. Keep in mind you need to set this up for each `Notification scheme`.
 
-Go to the Configuration menu and select API Access. Click Create New API Key.
+## Configuration
 
-More info on generating API Token key: <a href="https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key" target="_blank">https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key</a>
+### 1. Get your PagerDuty API Key
 
-CoScale uses the v2 PagerDuty API.
+Go to the Configuration menu and select API Access. Click `Create New API Key` and `v2 Current` as API version.
 
-<img alt="" src="{{ site.baseurl }}/gfx/alerting/integrations/pagerduty/01-pagerduty-apikey.jpg" class="img-responsive" alt="PagerDuty API Key" />
+More info on generating API Token key can be found on Pagerduty documentation <a href="https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key" target="_blank">https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key</a>
 
-### Get your Service ID
+<img src="{{ site.baseurl }}/gfx/alerting/integrations/pagerduty/01-pagerduty-apikey.jpg" class="img-responsive" alt="PagerDuty API Key" />
+
+### 2. Get your Service ID
 
 * Go to the Service > Service details page in PagerDuty
 * The URL has this format: `https://<NAME>.pagerduty.com/services/<SERVICE ID>`
 * Copy the `<SERVICE ID>` from the URL
 
-<img alt="" src="{{ site.baseurl }}/gfx/alerting/integrations/pagerduty/02-pagerduty-serviceid.png" class="img-responsive" alt="PagerDuty Service ID" />
+<img src="{{ site.baseurl }}/gfx/alerting/integrations/pagerduty/02-pagerduty-serviceid.png" class="img-responsive" alt="PagerDuty Service ID" />
 
-In CoScale we will use the API integration to create push alerts to PagerDuty.
+### 3. CoScale Trigger configuration
 
-### Trigger configuration
+In CoScale we will use the API integration to create push alerts to PagerDuty. Please select the notification scheme you would like to push to Pagerduty and click on the `Edit` button.
+
+<img src="{{ site.baseurl }}/gfx/alerting/integrations/notificationscheme_edit.png" class="img-responsive" alt="Edit button location" />
+
+After click `Add contact` and select `API`. Copy the instructions below to the API configuration. Make sure your replace the token and email in the configuration when needed.
+
+#### Trigger configuration
 
 {% highlight html %}
-Method: POST
-URL: https://api.pagerduty.com/incidents
+# Method:
+POST
+# URL:
+https://api.pagerduty.com/incidents
 
-Body:
+# Body:
 {
 	"incident": {
 		"type": "incident",
@@ -42,10 +52,10 @@ Body:
 	}
 }
 
-Headers:
+# Headers:
 	Content-Type: application/json
 	Accept: application/vnd.pagerduty+json;version=2
-	Authorization: Token token=zXg83wYr26nyx_3GVPy7
+	Authorization: Token token=your token
 	From: your@email.here
 
 Parse response: JSON incident.id
@@ -53,13 +63,15 @@ Parse response: JSON incident.id
 
 <img alt="" src="{{ site.baseurl }}/gfx/alerting/integrations/pagerduty/03-pagerduty-coscale.png" class="img-responsive" alt="PagerDuty CoScale" />
 
-### Acknowledge configuration
+#### Acknowledge configuration
 
 {% highlight html %}
-Method: PUT
-URL: https://api.pagerduty.com/incidents
+# Method:
+PUT
+# URL:
+https://api.pagerduty.com/incidents
 
-Body:
+# Body:
 {
 	"incidents": [{
 		"id": "{ID}",
@@ -68,19 +80,22 @@ Body:
 	}]
 }
 
-Headers:
+# Headers:
 	Content-Type: application/json
 	Accept: application/vnd.pagerduty+json;version=2
 	Authorization: Token token=zXg83wYr26nyx_3GVPy7
 	From: your@email.here
 {% endhighlight %}
 
-### Resolve configuration
+#### Resolve configuration
 
 {% highlight html %}
-Method: PUT
-URL: https://api.pagerduty.com/incidents
-Body:
+# Method:
+PUT
+# URL:
+https://api.pagerduty.com/incidents
+
+# Body:
 {
 	"incidents": [{
 		"id": "{ID}",
@@ -89,9 +104,13 @@ Body:
 	}]
 }
 
-Headers:
+# Headers:
 	Content-Type: application/json
 	Accept: application/vnd.pagerduty+json;version=2
 	Authorization: Token token=zXg83wYr26nyx_3GVPy7
 	From: your@email.here
 {% endhighlight %}
+
+### 4. Test CoScale trigger
+
+Use the `Test trigger` button in the configuration window to test the integration with Pagerduty. You should see an alert appear in a couple of seconds.
