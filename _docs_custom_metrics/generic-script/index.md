@@ -104,8 +104,8 @@ Time interval (in seconds) between agent polls that retrieve the data. The minim
 | `groups`                | The metric groups that this metric should be added to (comma separated). Nested groups should be separated by a `/`.                                 |
 | `unit`                  | The unit for the metric (shown on the Y-axis in the UI).                                                                                             |
 | `tags`                  | You can add a tag to add extra meaning to a metric (i.e. NETWORK).                                                                                   |
-| `datatype`              | The data type of the created metric. The following 3 options are available for the `datatype`:                                                       |
-|                         |     - GAUGE: value at this point in time (eg. memory usage)                                                                                          |
+| `datatype`              | The data type of the created metric. The following options are available for the `datatype`:                                                         |
+|                         |     - DOUBLE: value at this point in time (eg. memory usage)                                                                                         |
 |                         |     - COUNT: a number per a given interval (eg. number of log lines added)                                                                           |
 |                         |     - COUNTER: keeps increasing over time (eg. total number of log lines). You can graph the diffs on the totals in the UI.                          |
 |                         | More information about these datatypes can be found on [the metrics 2.0 website](http://metrics20.org/spec/).                                        |
@@ -140,7 +140,7 @@ Given the configuration above, the following output is an example of the script 
 M1 "1:eth0" 8.5
 M2 "2:dimension2_value1,3:dimension3_value1" 12345.6
 M2 "2:dimension2_value2,3:dimension3_value2" 54321.5
-M2 "2:dimension2_value3,3:dimension3_value3" 12543.4
+M2 "2:dimension2_value3,3:dimension3_value3" 12543.6
 E1 -300 0 "The event triggered" "{"Exit code":137}" S
 {% endhighlight %}
 
