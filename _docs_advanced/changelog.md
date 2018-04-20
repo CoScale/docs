@@ -4,6 +4,18 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.20.0 (17 April 2018)
+
+* Agent
+    * Added Spring Boot plugin
+    * Kubernetes
+        * Added support for Jobs, new metrics, dashboards and events
+    * In-container monitoring for Windows Hyper-V containers
+* Frontend
+    * New flows added for to be able to see which pods are running on which node
+    * You can now Ctrl + click dashboards in the dropdown to open in new tab
+    * When switching applications, try to keep same "page"
+
 ## Release 3.19.0 (12 March 2018)
 
 * Server group based access controls: RBAC
