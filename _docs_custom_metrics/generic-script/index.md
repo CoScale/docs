@@ -32,7 +32,7 @@ The configuration can also include parameters, this way you can also provide an 
 
 ## Developing a script
 
-In this section we will explain in detail how you can create a script to generate custom metrics and events. 
+In this section we will explain in detail how you can create a script to generate custom metrics and events.
 
 ### Configuration mode
 
@@ -139,6 +139,8 @@ Given the configuration above, the following output is an example of the script 
 {% highlight bash %}
 M1 "1:eth0" 8.5
 M2 "2:dimension2_value1,3:dimension3_value1" 12345.6
+M2 "2:dimension2_value2,3:dimension3_value2" 54321.5
+M2 "2:dimension2_value3,3:dimension3_value3" 12543.4
 E1 -300 0 "The event triggered" "{"Exit code":137}" S
 {% endhighlight %}
 
