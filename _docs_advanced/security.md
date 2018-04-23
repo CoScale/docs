@@ -15,7 +15,7 @@ All data is stored in a cluster of PostgreSQL and Cassandra databases. Metric da
 
 ## Security & Firewall
 
-By default, all CoScale agents communicate with the CoScale platform over a secured SSL connection, using the default port 443. The agent communicates with one host, api.coscale.com (37.187.86.75). CoScale only requires your firewall to allow outgoing connections to api.coscale.com on TCP port 443. No incoming connections are required.
+By default, all CoScale agents communicate with the CoScale platform over a secured SSL connection, using the default port 443. The agent communicates with one host, api.coscale.com (46.105.51.99, 5.39.67.37, 178.33.227.57 and 176.31.230.12). CoScale only requires your firewall to allow outgoing connections to api.coscale.com on TCP port 443. No incoming connections are required.
 
 All installed agent plugins are digitally signed by CoScale. This signature is verified when installing or updating plugins.
 
