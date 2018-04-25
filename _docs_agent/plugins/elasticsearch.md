@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ElasticSearch plugin
+title: Elasticsearch plugin
 description: Information on the metrics collected by the CoScale ElasticSearch plugin.
 ---
 
@@ -15,6 +15,10 @@ The plugin connects to the ElasticSearch server and uses the node stats call to 
 These statistics include information about the processes, threads, network and JVM. These statistics are gathered by default and no additional configuration is required. Just provide the connection details and the plugin is ready to go.
 
 **The minimal supported version of ElasticSearch is 0.90.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Elasticsearch" %}
 
 ## Configuration
 

@@ -18,6 +18,10 @@ This plugin can also get some global statistics (eg. the number of connections, 
 
 **The minimal supported version of Apache is 2.0.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Apache" %}
+
 ## Configuration
 
 ### Configure Apache server-status

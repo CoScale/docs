@@ -14,6 +14,10 @@ Collectd gathers statistics about the system it is running on and stores this in
 
 The UnixSock collectd plugin opens a UNIX domain socket and accepts connections. Using this socket CoScale Agent can send commands to the daemon and receive information.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="CollectD" %}
+
 ## Configuration
 
 CoScale agent communicates with collectd through UnixSock collectd plugin .
@@ -25,7 +29,7 @@ Uncomment the following line:
 
 Add to the end of the configuration file (before include directive), the following lines:
 
-{% highlight xml %} 
+{% highlight xml %}
 <Plugin unixsock>
     SocketFile "/var/run/csplugin-unixsock"
     SocketGroup "collectd"

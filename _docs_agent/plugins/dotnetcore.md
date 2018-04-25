@@ -14,6 +14,9 @@ This plugin analyzes the performance of your .NET Core application.
 
 **The minimal supported version of .NET Core is 1.1.x.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service=".NET Core" %}
 
 ## Configuration
 

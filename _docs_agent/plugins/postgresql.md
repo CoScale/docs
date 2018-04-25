@@ -18,6 +18,10 @@ Query statistics such as queries per second, latencies and errors are retrieved 
 
 **The minimal supported version of PostgreSQL is 9.0.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="PostgreSQL" %}
+
 ## Configuration
 
 ### Enable pg_stat_statements

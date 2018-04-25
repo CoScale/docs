@@ -18,6 +18,10 @@ Both the access log and JMX proxy require a bit of configuration, see next steps
 
 **The minimal supported version of Tomcat is 7.0.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Tomcat" %}
+
 ## Configuration
 
 ### Configure JMX proxy

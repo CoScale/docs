@@ -16,12 +16,16 @@ The plugin gathers statistics like: number of requests, bytes sent and received,
 
 **The minimal supported version of HaProxy is 1.5.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="HAProxy" %}
+
 ## Configuration
 
 ### Global stats
 For gathering global stats you need to add the next lines in `/etc/haproxy/haproxy.cfg`
 
-{% highlight haproxy %} 
+{% highlight haproxy %}
 listen http-in
     bind localhost:1936
     stats enable
@@ -36,7 +40,7 @@ listen http-in
 To enable custom logs on haproxy add next lines to `/etc/haproxy/haproxy.cfg` under defaults section
 
 If you are using a custom log format, make sure that option httplog is not enabled.
-{% highlight haproxy %} 
+{% highlight haproxy %}
 defaults
     mode    http
     log-format %hr\ %{+Q}r\ %Tt\ %ST\ %B

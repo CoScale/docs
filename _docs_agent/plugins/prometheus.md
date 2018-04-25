@@ -12,6 +12,10 @@ More information on: [https://prometheus.io/](https://prometheus.io/)
 
 This plugin gathers metrics from a Prometheus endpoint. It parses the metrics and dimensions defined by the Prometheus endpoint and pushes them to CoScale.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Prometheus" %}
+
 ## Configuration
 
 ## Prometheus Connection

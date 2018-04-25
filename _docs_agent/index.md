@@ -7,30 +7,14 @@ description: Overview of information on how to configure, install and maintain t
 <a href="{{ site.baseurl }}/agent/install" id="installation" class="btn btn-primary btn-lg pull-right">Create and install the Agent</a>
 The CoScale lightweight agent is used to monitor server infrastructure and services, it uses log parsing and global status pages to gather its data and pushes the data to the CoScale platform through HTTPS calls. Below you can find a list of supported plugins and more advanced features.
 
-## GNU Linux / Unix
-
-* [Installing the agent]({{ site.baseurl }}/agent/agent-install#unix)
-* [Restarting the agent]({{ site.baseurl }}/agent/agent-restart#unix)
-* [Uninstalling the agent]({{ site.baseurl }}/agent/agent-uninstall#unix)
-* [Exporting logs for support]({{ site.baseurl }}/agent/export-logs#unix)
-* [Configure with environment variables]({{ site.baseurl }}/agent/linux/environment-variables)
-
-## Microsoft Windows
-
-* [Installing the agent]({{ site.baseurl }}/agent/agent-install#microsoft-windows)
-* [Restarting the agent]({{ site.baseurl }}/agent/agent-restart#microsoft-windows)
-* [Uninstalling the agent]({{ site.baseurl }}/agent/agent-uninstall#microsoft-windows)
-* [Exporting logs for support]({{ site.baseurl }}/agent/export-logs#microsoft-windows)
-* [RAM disk]({{ site.baseurl }}/agent/windows/ram-disk)
-
-## Plugins
-Overview of all plugins with more information about the metrics gathered and special features.
+## Integrations
+CoScale gathers data from lots of different orchestrators and application services. Click the icons below to get more information on the metrics, events and installation of a certain integrations. Integrations in CoScale are also sometimes referred to as plugins.
 
 ### Containers
 
 <div class="row">
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker"><img src="/gfx/agent/docker.png" alt="Docker icon"> Docker</a></div>
-    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Swarm</a></div>
+    <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/docker-enterprise"><img src="/gfx/agent/dockerswarm.png" alt="Docker icon"> Docker Enterprise/Swarm</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/kubernetes"><img src="/gfx/agent/kubernetes.png" alt="Kubernetes icon"> Kubernetes</a></div>
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/openshift"><img src="/gfx/agent/openshift.png" alt="Openshift icon"> Openshift</a></div>
 </div>
@@ -120,6 +104,21 @@ Overview of all plugins with more information about the metrics gathered and spe
     <div class="col-sm-3"><a href="{{ site.baseurl }}/agent/plugins/mailchimp"><img src="/gfx/agent/mailchimp.png" alt="Mailchimp icon"> Mailchimp</a></div>
 </div>
 
+## GNU Linux / Unix
+
+* [Installing the agent]({{ site.baseurl }}/agent/agent-install#unix)
+* [Restarting the agent]({{ site.baseurl }}/agent/agent-restart#unix)
+* [Uninstalling the agent]({{ site.baseurl }}/agent/agent-uninstall#unix)
+* [Exporting logs for support]({{ site.baseurl }}/agent/export-logs#unix)
+* [Configure with environment variables]({{ site.baseurl }}/agent/linux/environment-variables)
+
+## Microsoft Windows
+
+* [Installing the agent]({{ site.baseurl }}/agent/agent-install#microsoft-windows)
+* [Restarting the agent]({{ site.baseurl }}/agent/agent-restart#microsoft-windows)
+* [Uninstalling the agent]({{ site.baseurl }}/agent/agent-uninstall#microsoft-windows)
+* [Exporting logs for support]({{ site.baseurl }}/agent/export-logs#microsoft-windows)
+* [RAM disk]({{ site.baseurl }}/agent/windows/ram-disk)
 
 ## Extra
 

@@ -14,6 +14,10 @@ This plugin analyzes the performance of your Varnish web server. It captures tra
 
 **The minimal supported version of Varnish is 4.0.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Varnish" %}
+
 ## Configuration
 
 ### Configure your Varnish access logs
