@@ -4,7 +4,21 @@ title: Internet Information Services plugin
 description: Information on the metrics collected by the CoScale IIS plugin.
 ---
 
+> Internet Information Services (IIS) for Windows® Server is a flexible, secure and manageable Web server for hosting anything on the Web. From media streaming to web applications, IIS's scalable and open architecture is ready to handle the most demanding tasks.
+
+More information on: [https://www.iis.net/](https://www.iis.net/)
+
+## How it works
+
+The plugin gathers global statistics using the performance counter client. No configuration is needed. It captures traffic rates, latencies and response codes of requests sent to the web server by parsing the IIS access log file. See next step for more information.
+
+**The minimal supported version of IIS is 7.0.**
+
 ## Installation
+
+{% include_relative _installation.md orchestrator="false" service="IIS" %}
+
+## Configuration
 
 1. Open "Internet Information Services (IIS) Manager"
 

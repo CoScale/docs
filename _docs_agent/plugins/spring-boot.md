@@ -12,6 +12,10 @@ More information on: [https://projects.spring.io/spring-boot/](https://projects.
 
 This plugin analyzes the performance of your SprintBoot web server. It captures traffic rates, latencies and response codes of http requests sent to the web server by parsing the access log file. The plugin can optionally get global statistics (eg. the number of sessions, the number of workers, etc.) and component health status by using the Spring Boot actuator endpoint.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Spring Boot" %}
+
 ## Configuration
 
 ### Configure the actuator endpoint

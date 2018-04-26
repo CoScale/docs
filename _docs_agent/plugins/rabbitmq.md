@@ -14,6 +14,10 @@ The plugin gathers statistics (memory usage, queue length, etc) for RabbitMQ by 
 
 **The minimal supported version of RabbitMQ is 2.7.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="RabbitMQ" %}
+
 ## Configuration
 
 ### Enable RabbitMQ management

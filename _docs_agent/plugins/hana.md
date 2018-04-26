@@ -12,6 +12,10 @@ More information on: [https://www.sap.com/products/hana.html](https://www.sap.co
 
 The plugin gathers statistics for Hana DB.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Hana" %}
+
 ## Configuration
 
 ### Connection

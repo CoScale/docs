@@ -14,6 +14,10 @@ This plugin analyzes the performance of your Riak server. No additional configur
 
 **The minimal supported version of riak-admin is 1.2.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Riak" %}
+
 ## Events
 
 * Service state

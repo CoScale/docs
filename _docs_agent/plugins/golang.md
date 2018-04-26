@@ -12,6 +12,10 @@ More information on: [https://golang.org/](https://golang.org/)
 
 Because Golang has no default logging or metrics endpoint we need to include one in our application. We will use the [Golang prometheus library](https://github.com/prometheus/client_golang) together with the CoScale Prometheus endpoint parser to retrieve metrics from the standard Golang runtime as well as provide a possibility to extend it with custom metrics.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Golang" %}
+
 ## Configuration
 
 ### Configure your Golang application to provide a Prometheus endpoint
