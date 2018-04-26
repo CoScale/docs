@@ -12,6 +12,10 @@ More information on: [https://www.fluentd.org](https://www.fluentd.org)
 
 This plugin gets statistics about Fluentd.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="FluentD" %}
+
 ## Configuration
 
 Fluentd has a monitoring agent to retrieve internal metrics in JSON via HTTP. Please add the following lines to your configuration file:

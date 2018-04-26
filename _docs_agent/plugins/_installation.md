@@ -1,0 +1,5 @@
+The plugin needs to be installed together with a CoScale agent, [instructions on how to install the CoScale agent can be found here]({{ site.baseurl }}/agent/install). If you want to monitor {{ include.service | default: 'your applications' }} inside Docker containers using CoScale, [check out the instructions here]({{ site.baseurl }}/agent/application-monitoring).
+
+{% if include.orchestrator == 'true' %}
+The CoScale orchestrator integration works well together with the [CoScale Docker]({{ site.baseurl }}/agent/plugins/docker) and [CoScale Resources]({{ site.baseurl }}/agent/plugins/resources) plugin. These plugins gather data from all the running Docker containers as well as the host operating system resource metrics. The orchestrator allows us to tie the data together so you can retrieve performance specific metrics for your services or applications. These plugins are installed by default if you follow the [instructions on how to install the CoScale agent]({{ site.baseurl }}/agent/install).
+{% endif %}

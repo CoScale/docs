@@ -14,6 +14,10 @@ The plugin gathers global stats using the performance counter client. The MSSQL 
 
 **The minimal supported version of MSSQL is 2008 R2.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="MSSQL" %}
+
 ## Configuration
 
 ### Database connection

@@ -18,6 +18,10 @@ There are 2 mechanisms to retrieve performance metrics about your queries. The p
 
 **The minimal supported version of MySQL is 5.1 for the slow query log and 5.7 for performance schema.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="MySQL" %}
+
 ## Configuration
 
 ### Global stats

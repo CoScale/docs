@@ -14,6 +14,10 @@ This plugin analyzes the performance of your Dropwizard web application. It capt
 
 **The minimal supported version of Dropwizard is 1.0.0.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Dropwizard" %}
+
 ## Global statistics
 
 For gathering global statistics (eg. number of connections, etc.), the metrics page should be enabled.
@@ -27,7 +31,7 @@ server:
       port: 8081
 {% endhighlight %}
 
-Restart the application to apply these changes.  
+Restart the application to apply these changes.
 Provide the metrics URL, as you configured it on your server.
 
 ## Log configuration
@@ -44,13 +48,13 @@ server:
         archivedLogFilenamePattern: /var/log/dropwizard-app/accedd-%d.log.gz
 {% endhighlight %}
 
-Restart Dropwizard application to apply these changes.  
+Restart Dropwizard application to apply these changes.
 
 Provide the location of the access log file you configured and the log format.
 
 For example,
 
-Filename: `/var/log/dropwizard-app/access.log`  
+Filename: `/var/log/dropwizard-app/access.log`
 Log format: `%h "%r" %D %s %b`
 
 | Value          | Original Value | Remarks                     |

@@ -16,6 +16,10 @@ These statistics are gathered in Memcached by default and no additional configur
 
 **The minimal supported version of Memcached is 1.4.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Memcached" %}
+
 ## Configuration
 
 ### Connection details

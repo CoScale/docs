@@ -16,6 +16,10 @@ These statistics are gathered by default and no additional configuration is requ
 
 **The minimal supported version of Redis is 2.6.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Redis" %}
+
 ## Configuration
 
 ### Connection

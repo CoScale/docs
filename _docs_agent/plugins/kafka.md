@@ -16,6 +16,10 @@ The plugin can get statistics (the number of connections, the number of partitio
 
 **The minimal supported version of Kafka is 0.8.0.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Kafka" %}
+
 ## Configuration
 
 ### JMX Connection

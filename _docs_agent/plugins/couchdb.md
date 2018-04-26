@@ -14,6 +14,10 @@ CouchDB CoScale plugin lets you inspect how CouchDB performs. The plugin collect
 
 **The minimal supported version of CouchDB is 1.5**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="CouchDB" %}
+
 ## Configuration
 
 ### Active checks

@@ -1,16 +1,20 @@
 ---
 layout: page
-title: Docker Swarm plugin
+title: Docker Enterprise plugin
 description: Information on the metrics collected by the CoScale Docker Swarm plugin.
 ---
 
-> Docker Swarm is native clustering for Docker. It turns a pool of Docker hosts into a single, virtual Docker host. Because Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.
+> Docker Enterprise Edition (EE) 2.0 is the only enterprise-ready container platform that enables IT leaders to choose how to cost-effectively build and manage their entire application portfolio at their own pace, without fear of architecture and infrastructure lock-in. Docker’s container platform enables organizations to accelerate digital and multi-cloud initiatives by automating the delivery of legacy and modern applications using an agile operating model with integrated security. Because Docker EE includes services, support and training, organizations have a complete containerization strategy for supporting an ever-changing business environment.
 
-More information on: [https://docs.docker.com/swarm/overview/](https://docs.docker.com/swarm/overview/)
+More information on: [https://www.docker.com/enterprise-edition](https://www.docker.com/enterprise-edition). **This plugin also supports Docker Swarm.**
 
 ## How it works
 
 This plugin retrieves data from the Docker Swarm API on the distribution of containers, active services, node status, and failed tasks. The Docker API is exposed by default and no additional configuration is required.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="true" %}
 
 ## Events
 

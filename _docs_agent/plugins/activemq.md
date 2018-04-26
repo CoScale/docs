@@ -14,6 +14,10 @@ The plugin can get statistics about ActiveMQ topics and queues using the JMX int
 
 **The minimal supported version of ActiveMQ is 5.10.0**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="ActiveMQ" %}
+
 ## Configuration
 
 ### Enable JMX

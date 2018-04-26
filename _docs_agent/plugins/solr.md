@@ -14,6 +14,10 @@ The plugin can get statistics about Solr collections using the JMX interface. It
 
 **The minimal supported version of Solr is 5.2.0**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Solr" %}
+
 ## Configuration
 
 ### Enable JMX

@@ -12,6 +12,10 @@ More information on: [https://www.projectcalico.org](https://www.projectcalico.o
 
 The core Calico component is Felix. Felix exposes metrics through a Prometheus endpoint. This plugin gathers Calico metrics from the Felix metrics endpoint, parses the metrics and pushes them to CoScale.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Calico" %}
+
 ## Configuration
 
 The list of endpoints exposing Calico metrics is required.

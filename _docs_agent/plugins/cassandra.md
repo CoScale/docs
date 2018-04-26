@@ -15,6 +15,10 @@ This plugin gathers some global statistics from your Cassandra server.
 
 It gets these statistics using Cassandra's JMX interface.
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Cassandra" %}
+
 ## Configuration
 
 ### Enable JMX Connection
