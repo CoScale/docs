@@ -11,7 +11,7 @@ More information on: [https://www.docker.com/](https://www.docker.com/)
 ## How it works
 The CoScale agent detects running containers on your system and starts gathering resources without any configuration. To have a more in-depth view on the process within the container you need to active the CoScale incontainer monitoring system.
 
-The in-container system uses CoScale plugins to gather data from the process running in the container. You can find a full [list of our plugins on the Agent page](/agent/index/#plugins). CoScale requires some configuration to be able to detect which containers to monitor. You can find more information in the [configuration section](#configuration)
+The in-container system uses CoScale plugins to gather data from the process running in the container. You can find a full [list of our plugins on the Agent page](/agent/index/#integrations). CoScale requires some configuration to be able to detect which containers to monitor. You can find [more information on our application monitoring documentation]({{ site.baseurl }}/agent/application-monitoring).
 
 The plugin will be started within the namespace of the running container, this has the advantage that you do not have to expose any ports or mount the filesystem for the CoScale in-container monitoring to be able to do its job.
 

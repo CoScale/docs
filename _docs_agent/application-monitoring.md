@@ -10,7 +10,7 @@ For containers our monitoring is launched from inside the container, this has ce
 
 * **Local network access**: Our plugins share the same network space as the container, this means all open ports are accessible, even if not exposed.
 * **File system access**: Our plugins share the same file system as the container, this means container filesystem is accessible, even if not mounted on host.
-* **Docker API access**: Our plugins have access to Docker API through the CoScale agent, this means Docker logs data is available for use as a path (`/dev/stdout`), [secrets and environment variables]({{ site.baseurl }}/agent/environment-variables/) are available for other configuration settings.
+* **Docker API access**: Our plugins have access to Docker API through the CoScale agent, this means Docker logs data is available for use as a path (`/dev/stdout`), [secrets and environment variables]({{ site.baseurl }}/agent/linux/environment-variables/) are available for other configuration settings.
 
 A [full list of our supported technologies can be found on our Agent page]({{ site.baseurl }}/agent/index#integrations), including for each the configuration required to set it up.
 

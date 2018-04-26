@@ -127,17 +127,17 @@ description: An overview of all CoScale datasources.
                 <img alt="Aweber icon" src="{{ site.baseurl}}/gfx/agent/aweber.png"/>
                 <a href="{{ site.baseurl }}/agent/plugins/aweber"><span>Aweber</span></a>
             </div>
-            
+
             <div class="technology">
                 <img alt="Campaign monitor icon" src="{{ site.baseurl}}/gfx/agent/campaign-monitor.png"/>
                 <a href="{{site.baseurl}}/agent/plugins/campaignmonitor"><span>Campaign Monitor</span></a>
             </div>
-            
+
             <div class="technology">
                 <img alt="Constant contact icon" src="{{ site.baseurl}}/gfx/agent/constant-contact.png"/>
                 <a href="{{site.baseurl}}/agent/plugins/constantcontact"><span>Constant Contact</span></a>
             </div>
-            
+
             <div class="technology">
                 <img alt="Google Analytics icon" src="{{ site.baseurl}}/gfx/agent/google-analytics.png"/>
                 <span>Google Analytics</span>
@@ -147,7 +147,7 @@ description: An overview of all CoScale datasources.
                 <img alt="Mailchimp icon" src="{{ site.baseurl}}/gfx/agent/mailchimp.png"/>
                 <a href="{{site.baseurl}}/agent/plugins/mailchimp"><span>Mailchimp</span></a>
             </div>
-            
+
         </fieldset>
     </div>
 
@@ -199,7 +199,7 @@ description: An overview of all CoScale datasources.
             <fieldset class="dotted">
                 <legend align="center"><a href="{{site.baseurl}}/agent/install"><h3>CoScale agent</h3></a></legend>
                 <span class="mute">Data collection from many services running on your machine.</span>
-                
+
                 <div>
                     <fieldset class="inner light">
                         <legend align="center"><h4>Container monitoring</h4></legend>
@@ -212,7 +212,7 @@ description: An overview of all CoScale datasources.
 
                         <div class="technology">
                             <img alt="Docker Swarm icon" src="{{ site.baseurl}}/gfx/agent/dockerswarm.png"/>
-                            <a href="{{ site.baseurl }}/agent/plugins/docker-swarm"><span>Docker Swarm</span></a>
+                            <a href="{{ site.baseurl }}/agent/plugins/docker-enterprise"><span>Docker Swarm</span></a>
                         </div>
 
                         <div class="technology">
@@ -226,7 +226,7 @@ description: An overview of all CoScale datasources.
                         </div>
                     </fieldset>
                 </div>
-                
+
                 <div>
                     <fieldset class="inner light">
                         <legend align="center"><h4>Generic monitoring</h4></legend>
@@ -341,7 +341,7 @@ description: An overview of all CoScale datasources.
                     <fieldset class="inner light">
                         <legend align="center"><h4>NoSQL</h4></legend>
                         <span class="mute">Plugins for NoSQL databases.</span>
-                        
+
                         <div class="technology">
                             <img alt="Riak icon" src="{{ site.baseurl}}/gfx/agent/riak.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/riak"><span>
@@ -349,14 +349,14 @@ description: An overview of all CoScale datasources.
                                 <i class="fa fa-linux error"></i>
                             </span></a>
                         </div>
-                        
+
                         <div class="technology">
                            <img alt="Couchbase icon" src="{{ site.baseurl}}/gfx/agent/couchbase.png"/>
                            <a href="{{ site.baseurl }}/agent/plugins/couchbase"><span>
                                Couchbase
                            </span></a>
                        </div>
-    
+
                        <div class="technology">
                           <img alt="CouchDb icon" src="{{ site.baseurl}}/gfx/agent/couchdb.png"/>
                           <a href="{{ site.baseurl }}/agent/plugins/couchdb"><span>
@@ -364,7 +364,7 @@ description: An overview of all CoScale datasources.
                               <i class="fa fa-linux error"></i>
                           </span></a>
                       </div>
-                      
+
                       <div class="technology">
                           <img alt="Redis icon" src="{{ site.baseurl}}/gfx/agent/redis.png"/>
                           <a href="{{ site.baseurl }}/agent/plugins/redis"><span>
@@ -372,7 +372,7 @@ description: An overview of all CoScale datasources.
                               <i class="fa fa-linux error"></i>
                           </span></a>
                       </div>
-                      
+
                       <div class="technology">
                           <img alt="MongoDB icon" src="{{ site.baseurl}}/gfx/agent/mongodb.png"/>
                           <a href="{{ site.baseurl }}/agent/plugins/mongodb">
@@ -383,7 +383,7 @@ description: An overview of all CoScale datasources.
                          <img alt="Elasticsearch icon" src="{{ site.baseurl}}/gfx/agent/elasticsearch.png"/>
                          <a href="{{ site.baseurl }}/agent/plugins/elasticsearch"><span>Elasticsearch</span></a>
                      </div>
-                     
+
                          <div class="technology">
                             <img alt="Cassandra icon" src="{{ site.baseurl}}/gfx/agent/cassandra.png"/>
                             <a href="{{ site.baseurl }}/agent/plugins/cassandra"><span>Cassandra</span></a>
@@ -395,17 +395,17 @@ description: An overview of all CoScale datasources.
                     <fieldset class="inner light">
                         <legend align="center"><h4>Other</h4></legend>
                         <span class="mute">Plugins for additional services.</span>
-                        
+
                         <div class="technology">
                            <img alt="Magento icon" src="{{ site.baseurl}}/gfx/agent/magento.png"/>
                            <a href="{{ site.baseurl }}/agent/plugins/magento"><span>Magento</span></a>
                        </div>
-                       
+
                         <div class="technology">
                            <img alt="Kafka icon" src="{{ site.baseurl}}/gfx/agent/kafka.png"/>
                            <a href="{{ site.baseurl }}/agent/plugins/kafka"><span>Kafka</span></a>
                        </div>
-                       
+
                        <div class="technology">
                           <img alt="ActiveMQ icon" src="{{ site.baseurl}}/gfx/agent/activemq.png"/>
                           <a href="{{ site.baseurl }}/agent/plugins/activemq"><span>ActiveMQ</span></a>
@@ -480,7 +480,7 @@ description: An overview of all CoScale datasources.
                         <img alt="Cron icon" src="{{ site.baseurl}}/gfx/agent/CRON.png"/>
                         <a href="{{ site.baseurl }}/events/wrappers/linux/index/"><span>Cron jobs</span></a>
                     </div>
-                    
+
                     <div class="technology">
                         <img alt="CLI icon" src="{{ site.baseurl}}/gfx/agent/CLI.png"/>
                         <a href="{{ site.baseurl }}/tools/cli/index/"><span>Coscale CLI</span></a>
