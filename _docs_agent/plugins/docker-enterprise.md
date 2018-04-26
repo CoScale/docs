@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker Orchestration plugin
+title: Docker Enterprise plugin
 description: Information on the metrics collected by the CoScale Docker Swarm plugin.
 ---
 
