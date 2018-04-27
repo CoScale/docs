@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Prometheus plugin
+title: Monitoring and collecting data from Prometheus endpoints
 description: Information on the metrics collected by the CoScale Prometheus plugin.
 ---
 

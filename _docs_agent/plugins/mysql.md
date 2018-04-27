@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MySQL plugin
+title: Monitoring and collecting data from MySQL plugin
 description: Information on the metrics collected by the CoScale MySQL plugin.
 ---
 

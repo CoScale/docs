@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Solr plugin
+title: Monitoring and collecting data from Solr
 description: Information on the metrics collected by the CoScale Solr plugin.
 ---
 

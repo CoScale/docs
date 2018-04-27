@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tomcat plugin
+title: Monitoring and collecting data from Tomcat
 description: Information on the metrics collected by the CoScale Tomcat plugin.
 ---
 

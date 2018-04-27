@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Varnish plugin
+title: Monitoring and collecting data from Varnish
 description: Information on the metrics collected by the CoScale Varnish plugin.
 ---
 

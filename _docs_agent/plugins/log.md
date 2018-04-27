@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Log plugin
+title: Monitoring and collecting data from logfiles
 description: Information on the log plugin.
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cron plugin
+title: Monitoring and collecting data from Cron
 description: Information on how to install the cron plugin and the events collected by the CoScale Cron plugin.
 ---
 

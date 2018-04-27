@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Spring Boot plugin
+title: Monitoring and collecting data from Spring Boot
 description: Information on the metrics collected by the CoScale Spring Boot plugin.
 ---
 
