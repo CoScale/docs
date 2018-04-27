@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PostgreSQL plugin
+title: Monitoring and collecting data from PostgreSQL
 description: Information on the metrics collected by the CoScale PostgreSQL plugin.
 ---
 

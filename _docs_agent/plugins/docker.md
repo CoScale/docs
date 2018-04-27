@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker plugin
+title: Monitoring and collecting data from Docker
 description: Information on how to install the docker plugin and configure your container monitoring
 ---
 

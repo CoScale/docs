@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jolokia plugin
+title: Monitoring and collecting data from Jolokia
 description: Information on the metrics collected by the CoScale Jolokia plugin.
 ---
 

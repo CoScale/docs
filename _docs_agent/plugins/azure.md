@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Azure plugin
+title: Monitoring and collecting data from Azure
 description: Information on the metrics collected by the CoScale Azureh plugin.
 ---
 

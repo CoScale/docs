@@ -1,6 +1,6 @@
 ---
 layout: page
-title: JMX plugin
+title: Monitoring and collecting data from JMX
 description: Information on the metrics collected by the CoScale JMX plugin.
 ---
 

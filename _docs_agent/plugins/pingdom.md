@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pingdom plugin
+title: Monitoring and collecting data from Pingdom
 description: Information on the metrics collected by the CoScale Pingdom plugin.
 ---
 

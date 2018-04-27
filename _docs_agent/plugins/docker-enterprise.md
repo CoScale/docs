@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker Enterprise plugin
+title: Monitoring and collecting data from Docker Enterprise
 description: Information on the metrics collected by the CoScale Docker Swarm plugin.
 ---
 

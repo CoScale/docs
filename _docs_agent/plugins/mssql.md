@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MSSQL plugin
+title: Monitoring and collecting data from MSSQL - Microsoft SQL Server
 description: Information on the metrics collected by the CoScale MSSQL plugin.
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AWeber plugin
+title: Monitoring and collecting data from AWeber
 description: Information on the metrics collected by the CoScale AWeber plugin.
 ---
 

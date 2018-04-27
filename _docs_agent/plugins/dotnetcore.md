@@ -1,6 +1,6 @@
 ---
 layout: page
-title: .NET Core plugin
+title: Monitoring and collecting data from .NET Core
 description: Information on the metrics collected by the CoScale .NET Core plugin.
 ---
 

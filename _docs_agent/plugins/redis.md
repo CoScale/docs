@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Redis plugin
+title: Monitoring and collecting data from Redis
 description: Information on the metrics collected by the CoScale Redis plugin.
 ---
 

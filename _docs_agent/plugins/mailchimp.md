@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mailchimp plugin
+title: Monitoring and collecting data from Mailchimp
 description: Information on the metrics collected by the CoScale Mailchimp plugin.
 ---
 

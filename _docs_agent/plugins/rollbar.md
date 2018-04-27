@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Rollbar plugin
+title: Monitoring and collecting data from Rollbar
 description: Information on the metrics collected by the CoScale Rollbar plugin.
 ---
 

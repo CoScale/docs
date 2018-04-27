@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Constant Contact plugin
+title: Monitoring and collecting data from Constant Contact
 description: Information on the metrics collected by the CoScale Constant Contact plugin.
 ---
 

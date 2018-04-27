@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HAProxy plugin
+title: Monitoring and collecting data from HAProxy
 description: Information on the metrics collected by the CoScale HAProxy plugin.
 ---
 

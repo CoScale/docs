@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CollectD plugin
+title: Monitoring and collecting data from CollectD
 description: Information on the metrics collected by the CoScale CollectD plugin.
 ---
 

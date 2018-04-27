@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Openshift plugin
+title: Monitoring and collecting data from Openshift
 description: Information on the metrics collected by the CoScale Openshift plugin.
 ---
 

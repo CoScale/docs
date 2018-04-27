@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Elasticsearch plugin
+title: Monitoring and collecting data from Elasticsearch
 description: Information on the metrics collected by the CoScale ElasticSearch plugin.
 ---
 

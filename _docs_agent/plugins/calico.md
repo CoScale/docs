@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Calico plugin
+title: Monitoring and collecting data from Calico
 description: Information on the metrics collected by the CoScale Calico plugin.
 ---
 

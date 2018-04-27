@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Golang support
+title: Monitoring and collecting data from Golang
 description: Information on the metrics collected by CoScale for Golang.
 ---
 

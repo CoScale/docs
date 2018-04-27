@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Oracle plugin
+title: Monitoring and collecting data from Oracle Database
 description: Information on the metrics collected by the CoScale Oracle plugin.
 ---
 

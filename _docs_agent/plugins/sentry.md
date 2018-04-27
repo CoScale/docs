@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sentry plugin
+title: Monitoring and collecting data from Sentry
 description: Information on the metrics collected by the CoScale Sentry plugin.
 ---
 

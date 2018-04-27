@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Amazon CloudWatch plugin
+title: Monitoring and collecting data from Amazon CloudWatch
 description: Information on the metrics collected by the CoScale Amazon CloudWatch plugin.
 ---
 

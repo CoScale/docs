@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dropwizard plugin
+title: Monitoring and collecting data from Dropwizard
 description: Information on the metrics collected by the CoScale Dropwizard plugin.
 ---
 

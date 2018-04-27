@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Riak plugin
+title: Monitoring and collecting data from Riak
 description: Information on the metrics collected by the CoScale Riak plugin.
 ---
 

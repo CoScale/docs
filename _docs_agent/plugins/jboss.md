@@ -1,6 +1,6 @@
 ---
 layout: page
-title: JBoss plugin
+title: Monitoring and collecting data from JBoss
 description: Information on the metrics collected by the CoScale JBoss plugin.
 ---
 

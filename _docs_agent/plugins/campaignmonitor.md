@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Campaign Monitor plugin
+title: Monitoring and collecting data from Campaign Monitor
 description: Information on the metrics collected by the CoScale Campaign Monitor plugin.
 ---
 

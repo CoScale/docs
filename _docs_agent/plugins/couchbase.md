@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Couchbase plugin
+title: Monitoring and collecting data from Couchbase
 description: Information on the metrics collected by the CoScale Couchbase plugin.
 ---
 
