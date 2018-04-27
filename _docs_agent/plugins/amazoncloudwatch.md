@@ -8,6 +8,9 @@ description: Information on the metrics collected by the CoScale Amazon CloudWat
 
 More information on: [https://aws.amazon.com/cloudwatch/](https://aws.amazon.com/cloudwatch/)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
 
 ## Metrics
 

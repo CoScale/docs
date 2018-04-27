@@ -8,6 +8,9 @@ description: Information on the metrics collected by the CoScale Google Analytic
 
 More information on: [https://analytics.google.com](https://analytics.google.com)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
 
 ## Metrics
 

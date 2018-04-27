@@ -8,9 +8,11 @@ description: Information on the metrics collected by the CoScale Azureh plugin.
 
 More information on: [https://azure.microsoft.com](https://azure.microsoft.com)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
 
 ## Metrics
-
 
 ### Counters
 

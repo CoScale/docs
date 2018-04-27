@@ -8,6 +8,10 @@ description: Information on the metrics collected by the CoScale Constant Contac
 
 More information on: [https://www.constantcontact.com](https://www.constantcontact.com)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
+
 ## Events
 
 * Start of new Constant Contact campaign

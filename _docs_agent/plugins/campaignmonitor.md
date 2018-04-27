@@ -8,6 +8,10 @@ description: Information on the metrics collected by the CoScale Campaign Monito
 
 More information on: [https://www.campaignmonitor.com/](https://www.campaignmonitor.com/)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
+
 ## Events
 
 * Start of new email campaign

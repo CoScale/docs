@@ -8,6 +8,10 @@ description: Information on the metrics collected by the CoScale Pingdom plugin.
 
 More information on: [https://www.pingdom.com/](https://www.pingdom.com/)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
+
 ## Events
 
 * Pingdom checks

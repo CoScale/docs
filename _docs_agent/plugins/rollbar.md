@@ -8,6 +8,10 @@ description: Information on the metrics collected by the CoScale Rollbar plugin.
 
 More information on: [https://rollbar.com/](https://rollbar.com/)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
+
 ## Events
 
 * New project created

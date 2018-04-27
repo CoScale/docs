@@ -8,6 +8,10 @@ description: Information on the metrics collected by the CoScale Sentry plugin.
 
 More information on: [https://sentry.io/](https://sentry.io/)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
+
 ## Events
 
 * New project created
