@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resources plugin
+title: Monitoring and collecting performance data from your servers
 description: Information on the metrics collected by the CoScale Resources plugin.
 ---
 

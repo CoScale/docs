@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Fluentd plugin
+title: Monitoring and collecting data from Fluentd
 description: Information on the metrics collected by the CoScale Fluentd plugin.
 ---
 

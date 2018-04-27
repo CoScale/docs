@@ -1,0 +1,1 @@
+This integration can be enabled on the `Third party` page under `Datasources` in the sidebar of your CoScale application. Please follow the instructions inside the application, if you require any assistance please don't hesitate to <a href="mailto:info@coscale.com" class="js-support">contact us</a>.

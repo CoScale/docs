@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cassandra plugin
+title: Monitoring and collecting data from Cassandra
 description: Information on the metrics collected by the CoScale Cassandra plugin.
 ---
 

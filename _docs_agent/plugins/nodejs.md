@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nodejs support
+title: Monitoring and collecting data from Nodejs
 description: Information on the metrics collected by CoScale for NodeJS.
 ---
 

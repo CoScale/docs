@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Azure plugin
+title: Monitoring and collecting data from Azure
 description: Information on the metrics collected by the CoScale Azureh plugin.
 ---
 
@@ -8,9 +8,11 @@ description: Information on the metrics collected by the CoScale Azureh plugin.
 
 More information on: [https://azure.microsoft.com](https://azure.microsoft.com)
 
+## Installation
+
+{% include_relative _thirdparty.md %}
 
 ## Metrics
-
 
 ### Counters
 

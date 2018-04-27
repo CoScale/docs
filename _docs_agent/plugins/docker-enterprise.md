@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker Enterprise plugin
+title: Monitoring and collecting data from Docker Enterprise
 description: Information on the metrics collected by the CoScale Docker Swarm plugin.
 ---
 
@@ -27,16 +27,13 @@ This plugin retrieves data from the Docker Swarm API on the distribution of cont
 
 | Metric name                                           | Metric unit |
 |-------------------------------------------------------|-------------|
-| Docker Swarm number of desired replicas for service X | #           |
+| Docker Swarm number of desired replicas per service   | #           |
 | Docker Swarm number of failed nodes                   | #           |
-| Docker Swarm number of failed tasks for service X     | #           |
+| Docker Swarm number of failed tasks per service       | #           |
 | Docker Swarm number of nodes                          | #           |
-| Docker Swarm number of running tasks for service X    | #           |
-| Docker Swarm number of running tasks on node Y        | #           |
+| Docker Swarm number of running tasks per service      | #           |
+| Docker Swarm number of running tasks per node         | #           |
 | Docker Swarm number of services                       | #           |
 | Docker Swarm total number of failed tasks             | #           |
 | Docker Swarm total number of running tasks            | #           |
 
-**X** is replaced by service name
-
-**Y** is replaced by node hostname

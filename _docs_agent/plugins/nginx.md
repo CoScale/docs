@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nginx plugin
+title: Monitoring and collecting data from Nginx
 description: Information on the metrics collected by the CoScale NGINX plugin.
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ActiveMQ plugin
+title: Monitoring and collecting data from ActiveMQ
 description: Information on the metrics collected by the CoScale ActiveMQ plugin.
 ---
 

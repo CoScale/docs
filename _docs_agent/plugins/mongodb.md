@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MongoDB plugin
+title: Monitoring and collecting data from MongoDB
 description: Information on the metrics collected by the CoScale MongoDB plugin.
 ---
 

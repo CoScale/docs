@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Apache plugin
+title: Monitoring and collecting data from Apache
 description: Information on the metrics collected by the CoScale Apache plugin.
 ---
 

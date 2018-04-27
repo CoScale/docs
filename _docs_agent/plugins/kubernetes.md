@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kubernetes plugin
+title: Monitoring and collecting data from Kubernetes
 description: Information on the metrics collected by the CoScale Kubernetes plugin.
 ---
 

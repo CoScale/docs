@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Memcached plugin
+title: Monitoring and collecting data from Memcached
 description: Information on the metrics collected by the CoScale Memcached plugin.
 ---
 

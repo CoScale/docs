@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Internet Information Services plugin
+title: Monitoring and collecting data from IIS - Internet Information Services
 description: Information on the metrics collected by the CoScale IIS plugin.
 ---
 

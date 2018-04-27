@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kafka plugin
+title: Monitoring and collecting data from Kafka
 description: Information on the metrics collected by the CoScale Kafka plugin.
 ---
 

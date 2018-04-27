@@ -1,6 +1,6 @@
 ---
 layout: page
-title: RabbitMQ plugin
+title: Monitoring and collecting data from RabbitMQ
 description: Information on the metrics collected by the CoScale RabbitMQ plugin.
 ---
 
