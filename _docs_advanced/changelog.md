@@ -4,6 +4,18 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.21.0 (15 May 2018)
+
+* Agent
+    * Improves support for Java workloads on Openshift
+    * New JBoss Wildfly plugin
+    * Easy mechanism to add custom JMX metrics
+* Google Cloud Collector
+* Alert configuration improvements: easier metric selection
+* Improves LDAP support with SSL and authentication
+* Added link to Splunk for easy log visualisation
+* Lots of small UX improvements
+
 ## Release 3.20.0 (17 April 2018)
 
 * Agent
