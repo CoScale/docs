@@ -1,6 +1,6 @@
 ---
 layout: page
-title: JBoss plugin
+title: Monitoring and collecting data from JBoss
 description: Information on the metrics collected by the CoScale JBoss plugin.
 ---
 
@@ -16,6 +16,10 @@ It captures traffic rates, latencies and response codes of requests sent to the 
 
 **The minimal supported version of JBoss is 7.1.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="JBoss" %}
+
 ## Configuration
 
 ### Configure your JBoss JMX connection
@@ -27,7 +31,7 @@ To enable collecting general statistics for JBoss, you have to enable JMX. You c
 In your `<jboss-install-dir>` update the following lines in `/standalone/configuration/standalone.xml`
 
 Replace
-{% highlight xml %} 
+{% highlight xml %}
 <subsystem xmlns="urn:jboss:domain:jmx:1.1">
     <show-model value="true"/>
     <remoting-connector/>
@@ -35,7 +39,7 @@ Replace
 {% endhighlight %}
 
 With
-{% highlight xml %} 
+{% highlight xml %}
 <subsystem xmlns="urn:jboss:domain:jmx:1.1">
     <show-model value="true"/>
     <remoting-connector use-management-endpoint="true"/>
@@ -48,7 +52,7 @@ Before you can run the JBoss Application Server, you need to ensure that you've 
 
 Add the following to your JBoss configuration (eg. `<jboss-install-dir>/bin/standalone.conf`). Don't forget to replace the `<jboss-install-dir>` placeholder by your installation path.
 
-{% highlight bash %} 
+{% highlight bash %}
 JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.port=1090 \
     -Dcom.sun.management.jmxremote.authenticate=false \
     -Dcom.sun.management.jmxremote \
@@ -64,14 +68,14 @@ JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.port=1090 \
 
 To measure performance of all http requests, enable the JBoss access log by adding the next lines in the `<virtual-server>` tag in your configuration file:
 
-{% highlight xml %} 
+{% highlight xml %}
 <access-log pattern="%v %B %D &quot;%r&quot; %A %a %t %H %p %U %s %S %T" rotate="true">
     <directory path="." relative-to="jboss.server.log.dir"/>
 </access-log>
 {% endhighlight %}
 
 Example:
-{% highlight xml %} 
+{% highlight xml %}
 <virtual-server name="default-host" enable-welcome-root="true">
     <alias name="localhost"/>
     <alias name="example.com"/>
@@ -104,7 +108,7 @@ Another log format that will work:
 Where `xxx` is a servlet of your choice.
 
 To enable access logging in JBoss version 5 and version 6, uncomment these lines in server.xml:
-{% highlight xml %} 
+{% highlight xml %}
 <Valve className="org.apache.catalina.valves.AccessLogValve"
    prefix="localhost_access_log." suffix=".log"
    pattern="common" directory="${jboss.server.log.dir}"

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kafka plugin
+title: Monitoring and collecting data from Kafka
 description: Information on the metrics collected by the CoScale Kafka plugin.
 ---
 
@@ -15,6 +15,10 @@ This plugin analyzes the performance of your Kafka messaging system.
 The plugin can get statistics (the number of connections, the number of partitions, etc.) using the JMX interface of the Kafka service and consumers.
 
 **The minimal supported version of Kafka is 0.8.0.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Kafka" %}
 
 ## Configuration
 

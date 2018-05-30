@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Solr plugin
+title: Monitoring and collecting data from Solr
 description: Information on the metrics collected by the CoScale Solr plugin.
 ---
 
@@ -13,6 +13,10 @@ More information on: [http://lucene.apache.org/solr/](http://lucene.apache.org/s
 The plugin can get statistics about Solr collections using the JMX interface. It captures queries and requests statistics, as well as used resources information (CPU load, memory size, swap, etc).
 
 **The minimal supported version of Solr is 5.2.0**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Solr" %}
 
 ## Configuration
 

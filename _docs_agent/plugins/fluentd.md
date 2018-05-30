@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Fluentd plugin
+title: Monitoring and collecting data from Fluentd
 description: Information on the metrics collected by the CoScale Fluentd plugin.
 ---
 
@@ -11,6 +11,10 @@ More information on: [https://www.fluentd.org](https://www.fluentd.org)
 ## How it works
 
 This plugin gets statistics about Fluentd.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="FluentD" %}
 
 ## Configuration
 

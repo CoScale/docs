@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MSSQL plugin
+title: Monitoring and collecting data from MSSQL - Microsoft SQL Server
 description: Information on the metrics collected by the CoScale MSSQL plugin.
 ---
 
@@ -13,6 +13,10 @@ More information on: [https://www.microsoft.com/en-us/sql-server/](https://www.m
 The plugin gathers global stats using the performance counter client. The MSSQL performance schema is used to retrieved query stats such as queries per second, latencies and errors.
 
 **The minimal supported version of MSSQL is 2008 R2.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="MSSQL" %}
 
 ## Configuration
 

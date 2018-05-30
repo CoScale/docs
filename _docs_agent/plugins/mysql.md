@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MySQL plugin
+title: Monitoring and collecting data from MySQL plugin
 description: Information on the metrics collected by the CoScale MySQL plugin.
 ---
 
@@ -17,6 +17,10 @@ We gather global statistics (eg. number of connections, open files, ...) by usin
 There are 2 mechanisms to retrieve performance metrics about your queries. The preferred method is the MySQL performance schema, if this is not available, the slow query log can also be used.
 
 **The minimal supported version of MySQL is 5.1 for the slow query log and 5.7 for performance schema.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="MySQL" %}
 
 ## Configuration
 

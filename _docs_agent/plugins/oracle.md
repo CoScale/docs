@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Oracle plugin
+title: Monitoring and collecting data from Oracle Database
 description: Information on the metrics collected by the CoScale Oracle plugin.
 ---
 
@@ -14,13 +14,17 @@ The CoScale Oracle plugin lets you inspect how Oracle performs. The plugin colle
 
 **The supported versions of Oracle are 11g and 11g.2, please contact support for other versions.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Oracle" %}
+
 ## Configuration
 
 ### Authentication
 
 In order for CoScale to be able to access the required data these next few queries need to be executed on the server.
 
-{% highlight sql %} 
+{% highlight sql %}
 CREATE USER coscale IDENTIFIED BY password;
 GRANT CREATE SESSION TO coscale;
 GRANT SELECT ANY DICTIONARY TO coscale;

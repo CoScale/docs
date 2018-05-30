@@ -1,6 +1,6 @@
 ---
 layout: page
-title: NGINX plugin
+title: Monitoring and collecting data from Nginx
 description: Information on the metrics collected by the CoScale NGINX plugin.
 ---
 
@@ -18,6 +18,10 @@ Both the access log and server-status require a bit of configuration, see next s
 
 **The minimal supported version of Nginx is 0.5.38.**
 
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Nginx" %}
+
 ## Configuration
 
 ### Configure Nginx status page
@@ -26,7 +30,7 @@ For gathering global statistics, the `nginx_status` page should be enabled.
 
 Enable the status page by adding the following lines inside the http section of your `<install-dir>/nginx.conf`.
 
-{% highlight nginx %} 
+{% highlight nginx %}
 http {
     ...
     server {
@@ -50,7 +54,7 @@ For the plugin to be able to collect statistics about http requests, the access 
 
 Make sure to update the default access_log `/var/log/nginx/access.log` line with the one provided below.
 
-{% highlight nginx %} 
+{% highlight nginx %}
 http {
     ...
     log_format CoScale '$server_name "$request" $request_time $status $request_length $bytes_sent';

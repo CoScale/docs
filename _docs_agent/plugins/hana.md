@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hana plugin
-description: Information on the metrics collected by the CoScale Hana plugin.
+title: Monitoring and collecting data from SAP HANA
+description: Information on the metrics collected by the CoScale HANA plugin.
 ---
 
 >  SAP HANA is an in-memory, column-oriented, relational database management system developed and marketed by SAP SE. Its primary function as database server is to store and retrieve data as requested by the applications. In addition, it performs advanced analytics (predictive analytics, spatial data processing, text analytics, text search, streaming analytics, graph data processing) and includes ETL capabilities as well as an application server.
@@ -11,6 +11,10 @@ More information on: [https://www.sap.com/products/hana.html](https://www.sap.co
 ## How it works
 
 The plugin gathers statistics for Hana DB.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Hana" %}
 
 ## Configuration
 

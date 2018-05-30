@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Calico plugin
+title: Monitoring and collecting data from Calico
 description: Information on the metrics collected by the CoScale Calico plugin.
 ---
 
@@ -11,6 +11,10 @@ More information on: [https://www.projectcalico.org](https://www.projectcalico.o
 ## How it works
 
 The core Calico component is Felix. Felix exposes metrics through a Prometheus endpoint. This plugin gathers Calico metrics from the Felix metrics endpoint, parses the metrics and pushes them to CoScale.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Calico" %}
 
 ## Configuration
 

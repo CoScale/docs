@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cron plugin
+title: Monitoring and collecting data from Cron
 description: Information on how to install the cron plugin and the events collected by the CoScale Cron plugin.
 ---
 
@@ -20,7 +20,11 @@ There is also a [wrapper script]({{ site.baseurl }}/events/wrappers/linux/index/
 ## Requirements
 * [CoScale Agent installed]({{ site.baseurl }}/agent/index)
 
-We currently do not support Redhat < 6.0, you can still use [the cron-wrapper]({{ site.baseurl }}/events/wrappers/linux/index/) for these systems.  
+We currently do not support Redhat < 6.0, you can still use [the cron-wrapper]({{ site.baseurl }}/events/wrappers/linux/index/) for these systems.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Cron" %}
 
 ## Configuration
 

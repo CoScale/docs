@@ -1,12 +1,16 @@
 ---
 layout: page
-title: Log plugin
+title: Monitoring and collecting data from logfiles
 description: Information on the log plugin.
 ---
 
 ## How it works
 
 The log plugin can collect data from any logs on your server. It uses regular expressions to parse information from a log file. It can count the number of lines that match the expression and get a value from within that line.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="logs" %}
 
 ## Configuration
 

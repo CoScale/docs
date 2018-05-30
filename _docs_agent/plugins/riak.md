@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Riak plugin
+title: Monitoring and collecting data from Riak
 description: Information on the metrics collected by the CoScale Riak plugin.
 ---
 
@@ -13,6 +13,10 @@ More information on: [http://basho.com/](http://basho.com/)
 This plugin analyzes the performance of your Riak server. No additional configuration is required.
 
 **The minimal supported version of riak-admin is 1.2.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Riak" %}
 
 ## Events
 

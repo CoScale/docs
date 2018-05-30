@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Redis plugin
+title: Monitoring and collecting data from Redis
 description: Information on the metrics collected by the CoScale Redis plugin.
 ---
 
@@ -15,6 +15,10 @@ Redis provides statistics on memory usage, client connections, AOF file operatio
 These statistics are gathered by default and no additional configuration is required. Just provide the connection details and the plugin is ready to go.
 
 **The minimal supported version of Redis is 2.6.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Redis" %}
 
 ## Configuration
 

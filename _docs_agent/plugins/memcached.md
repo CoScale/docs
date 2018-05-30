@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Memcached plugin
+title: Monitoring and collecting data from Memcached
 description: Information on the metrics collected by the CoScale Memcached plugin.
 ---
 
@@ -15,6 +15,10 @@ The Memcached plugin gathers statistics such as the number of connections, the n
 These statistics are gathered in Memcached by default and no additional configuration is required. Just provide the connection details for the Memcached server and the plugin is ready to go.
 
 **The minimal supported version of Memcached is 1.4.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Memcached" %}
 
 ## Configuration
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nodejs support
+title: Monitoring and collecting data from Nodejs
 description: Information on the metrics collected by CoScale for NodeJS.
 ---
 
@@ -11,6 +11,10 @@ More information on: [https://nodejs.org/en/](https://nodejs.org/en/)
 ## How it works
 
 Because NodeJS has no logging or status page by default we need to include one in our application. The configuration and setup depends on the framework being used. At the moment CoScale supports [express.js](http://expressjs.com/) together with [prom-client](https://github.com/siimon/prom-client) to retrieve performance and request data.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Nodejs" %}
 
 ## Configuration
 

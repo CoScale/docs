@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Prometheus plugin
+title: Monitoring and collecting data from Prometheus endpoints
 description: Information on the metrics collected by the CoScale Prometheus plugin.
 ---
 
@@ -11,6 +11,10 @@ More information on: [https://prometheus.io/](https://prometheus.io/)
 ## How it works
 
 This plugin gathers metrics from a Prometheus endpoint. It parses the metrics and dimensions defined by the Prometheus endpoint and pushes them to CoScale.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Prometheus" %}
 
 ## Configuration
 

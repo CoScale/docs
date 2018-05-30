@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jolokia plugin
+title: Monitoring and collecting data from Jolokia
 description: Information on the metrics collected by the CoScale Jolokia plugin.
 ---
 
@@ -9,6 +9,10 @@ description: Information on the metrics collected by the CoScale Jolokia plugin.
 ## How it works
 
 This plugin will allow you to extract metrics from Jolokia compatible APIs. It will capture the metrics from the metrics endpoint specified.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Jolokia" %}
 
 ## Configuration
 

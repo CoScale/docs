@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Varnish plugin
+title: Monitoring and collecting data from Varnish
 description: Information on the metrics collected by the CoScale Varnish plugin.
 ---
 
@@ -13,6 +13,10 @@ More information on: [https://varnish-cache.org/](https://varnish-cache.org/)
 This plugin analyzes the performance of your Varnish web server. It captures traffic rates, latencies and response codes of http requests sent to the web server by parsing the Varnish access log file.
 
 **The minimal supported version of Varnish is 4.0.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Varnish" %}
 
 ## Configuration
 

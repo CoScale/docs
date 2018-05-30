@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Openshift plugin
+title: Monitoring and collecting data from Openshift
 description: Information on the metrics collected by the CoScale Openshift plugin.
 ---
 
@@ -10,11 +10,15 @@ More information on: [https://www.openshift.com/](https://www.openshift.com/)
 
 ## How it works
 
-The plugin analyzes the performance of your Openshift environment. It retrieves the same information as the [Kubernetes plugin](/agent/plugins/kubernetes/), and is therefore configured in a similar matter. 
+The plugin analyzes the performance of your Openshift environment. It retrieves the same information as the [Kubernetes plugin](/agent/plugins/kubernetes/), and is therefore configured in a similar matter.
 
 In addition to standard Kubernetes metrics, the Openshift plugin also retrieves information on the projects, builds, and deployments within Openshift.
 
 For more information, check out [our documentation on Kubernetes](/agent/plugins/kubernetes/).
+
+## Installation
+
+{% include_relative _installation.md orchestrator="true" service="Openshift" %}
 
 ## Metrics
 

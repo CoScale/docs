@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ActiveMQ plugin
+title: Monitoring and collecting data from ActiveMQ
 description: Information on the metrics collected by the CoScale ActiveMQ plugin.
 ---
 
@@ -13,6 +13,10 @@ More information on: [http://activemq.apache.org/](http://activemq.apache.org/)
 The plugin can get statistics about ActiveMQ topics and queues using the JMX interface.
 
 **The minimal supported version of ActiveMQ is 5.10.0**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="ActiveMQ" %}
 
 ## Configuration
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tomcat plugin
+title: Monitoring and collecting data from Tomcat
 description: Information on the metrics collected by the CoScale Tomcat plugin.
 ---
 
@@ -17,6 +17,10 @@ The plugin can optionally get global statistics (eg. the number of connections, 
 Both the access log and JMX proxy require a bit of configuration, see next steps.
 
 **The minimal supported version of Tomcat is 7.0.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Tomcat" %}
 
 ## Configuration
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dropwizard plugin
+title: Monitoring and collecting data from Dropwizard
 description: Information on the metrics collected by the CoScale Dropwizard plugin.
 ---
 
@@ -13,6 +13,10 @@ More information on: [http://www.dropwizard.io](http://www.dropwizard.io)
 This plugin analyzes the performance of your Dropwizard web application. It captures traffic rates, latencies and response codes of http requests sent to the web server by parsing the Dropwizard access log file. The plugin can optionally get global statistics (eg. the number of connections, JVM metrics, etc.) by parsing the metrics reported by AdminServlet of the Dropwizard application. Both, the access log and AdminServlet require a bit of configuration, see steps below.
 
 **The minimal supported version of Dropwizard is 1.0.0.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Dropwizard" %}
 
 ## Global statistics
 
@@ -27,7 +31,7 @@ server:
       port: 8081
 {% endhighlight %}
 
-Restart the application to apply these changes.  
+Restart the application to apply these changes.
 Provide the metrics URL, as you configured it on your server.
 
 ## Log configuration
@@ -44,13 +48,13 @@ server:
         archivedLogFilenamePattern: /var/log/dropwizard-app/accedd-%d.log.gz
 {% endhighlight %}
 
-Restart Dropwizard application to apply these changes.  
+Restart Dropwizard application to apply these changes.
 
 Provide the location of the access log file you configured and the log format.
 
 For example,
 
-Filename: `/var/log/dropwizard-app/access.log`  
+Filename: `/var/log/dropwizard-app/access.log`
 Log format: `%h "%r" %D %s %b`
 
 | Value          | Original Value | Remarks                     |

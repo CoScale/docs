@@ -20,17 +20,17 @@ The type of agent to choose depends on your environment. In general when running
 
 ### Option 1: Container
 
-1.1. Select your deployment/orchestration system
+#### 1.1. Select your deployment/orchestration system
 
 <img alt="Deployment type" src="{{ site.baseurl }}/gfx/agent/install/06-orchestration.png" style="img-responsive"/>
 
-1.2. Add images
+#### 1.2. Add images
 
-The default configuration of the agent will allow CoScale to gather general metrics about the deployment system. We can also gather detailed metrics about the services running inside your Docker containers. Use the `Add image` button to add a set of plugins that run inside of your containers to gather metrics of the running services.
+The default configuration of the agent will allow CoScale to gather general metrics about the deployment system. We can also gather detailed metrics about the services running inside your Docker containers. Use the `Add image` button to add a set of plugins that run inside of your containers to gather metrics of the running services. [More information about this system can be found here]({{ site.baseurl }}/agent/application-monitoring).
 
 <img alt="Deployment type" src="{{ site.baseurl }}/gfx/agent/install/07-add-image.png" style="img-responsive"/>
 
-1.3. Configure plugins for images
+#### 1.3. Configure plugins for images
 
 <img alt="Deployment type" src="{{ site.baseurl }}/gfx/agent/install/08-image.png" style="img-responsive"/>
 
@@ -38,13 +38,13 @@ Provide the image name and tag (* can be used for tag). Select the plugin type a
 
 <img alt="Deployment type" src="{{ site.baseurl }}/gfx/agent/install/09-container-images.png" style="img-responsive"/>
 
-1.4. Review & download
+#### 1.4. Review & download
 
 Give your agent a clear, recognizable name and press the `Save` button.
 
 <img alt="Deployment type" src="{{ site.baseurl }}/gfx/agent/install/10-review-download.png" style="img-responsive"/>
 
-1.5. Install instructions
+#### 1.5. Install instructions
 
 Copy the install instructions on the screen to start the CoScale agent in a Docker container. The CoScale agent will run in the foreground. Typically our users use systemd/upstart to make the agent start on every boot.
 
@@ -56,14 +56,14 @@ You've now created and installed your first CoScale agent. To check if the agent
 
 ### Option 2: Package/Executable
 
-2.1.Select the operating system on which the agent will be installed.
+#### 2.1.Select the operating system on which the agent will be installed.
 
 <img alt="Deployment type" src="{{ site.baseurl }}/gfx/agent/install/02-operating-system.png" style="img-responsive"/>
 
 {% include alert.html type="info" text="We only support 64 bit operating systems, <a href=\"mailto:info@coscale.com\" class=\"js-support\">contact support</a> for more information" %}
 
 
-2.2. Enable some plugins
+#### 2.2. Enable some plugins
 
 Enable all plugins you want to activate for this agent. The resource plugin is enabled by default, but you probably also want to enable other plugins. For a web server running Tomcat i.e. you would enable the Tomcat plugin by clicking on it. You can enable as many plugins as you like.
 
@@ -74,13 +74,13 @@ If necessary, apply the proposed changes to the server as shown in the instructi
 
 {% include alert.html type="info" text="You can easily activate more plugins later and reconfigure them without having to re-install the agent." %}
 
-2.3. Review & download
+#### 2.3. Review & download
 
 Give your agent a clear, recognizable name: i.e. ‘Webserver’ and press the `Save` button.
 
 <img alt="Deployment type" src="{{ site.baseurl }}/gfx/agent/install/04-agent-name.png" style="img-responsive"/>
 
-2.4. Download & install
+#### 2.4. Download & install
 
 You have now created an agent which you can deploy on as many servers as you'd like. A "Download Agent" button is available with the installation files for your operating system. The instructions for installing the agent on your operating system are also shown on this screen.
 

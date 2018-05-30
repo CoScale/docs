@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PostgreSQL plugin
+title: Monitoring and collecting data from PostgreSQL
 description: Information on the metrics collected by the CoScale PostgreSQL plugin.
 ---
 
@@ -17,6 +17,10 @@ We gather global statistics (eg. number of connections, open files, ...) by usin
 Query statistics such as queries per second, latencies and errors are retrieved from the slow query log. By default, PostgreSQL does not track slow queries, the PostgreSQL configuration has to be changed to enable this.
 
 **The minimal supported version of PostgreSQL is 9.0.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="PostgreSQL" %}
 
 ## Configuration
 

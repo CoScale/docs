@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Apache plugin
+title: Monitoring and collecting data from Apache
 description: Information on the metrics collected by the CoScale Apache plugin.
 ---
 
@@ -17,6 +17,10 @@ It captures traffic rates, latencies and response codes of http requests sent to
 This plugin can also get some global statistics (eg. the number of connections, the number of workers, etc.) by parsing the server-status page of the Apache web server.
 
 **The minimal supported version of Apache is 2.0.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Apache" %}
 
 ## Configuration
 

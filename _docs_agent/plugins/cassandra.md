@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cassandra plugin
+title: Monitoring and collecting data from Cassandra
 description: Information on the metrics collected by the CoScale Cassandra plugin.
 ---
 
@@ -14,6 +14,10 @@ More information on: [http://cassandra.apache.org/](http://cassandra.apache.org/
 This plugin gathers some global statistics from your Cassandra server.
 
 It gets these statistics using Cassandra's JMX interface.
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="Cassandra" %}
 
 ## Configuration
 

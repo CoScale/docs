@@ -1,6 +1,6 @@
 ---
 layout: page
-title: RabbitMQ plugin
+title: Monitoring and collecting data from RabbitMQ
 description: Information on the metrics collected by the CoScale RabbitMQ plugin.
 ---
 
@@ -13,6 +13,10 @@ More information on: [https://www.rabbitmq.com/](https://www.rabbitmq.com/)
 The plugin gathers statistics (memory usage, queue length, etc) for RabbitMQ by connecting to the RabbitMQ management plugin. This plugin is not installed by default, see next steps.
 
 **The minimal supported version of RabbitMQ is 2.7.**
+
+## Installation
+
+{% include_relative _installation.md orchestrator="false" service="RabbitMQ" %}
 
 ## Configuration
 

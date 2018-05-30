@@ -436,6 +436,23 @@ body {
     }
 }
 
+// Custom for agent/index page
+.row .technology {
+    padding: 10px;
+    height: 105px;
+    img {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 5px;
+    }
+    text-align: center;
+}
+.technology-hide-headers {
+    .technology-header, .technology-duplicate  {
+        display: none;
+    }
+}
+
 /*
 * Custom for technologies page
 */
