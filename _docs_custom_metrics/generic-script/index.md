@@ -99,7 +99,7 @@ This is an **example** output of a script in **configuration mode**:
 | `calctype`              | The calculation performed on the data returned by the script. The following 3 options are available for the `calctype`:                              |
 |                         |     - Instant: the metric data is the data returned by the script.                                                                                   |
 |                         |     - Difference: the metric data is the difference between the last value returned by the script and the current value.                             |
-| `dimensions`            | The dimensions for the metric. The dimension `id` will be used in the **data retreival** mode.                                                       |
+| `dimensions`            | The dimensions for the metric. The dimension `id` will be used in the **data retrieval** mode.                                                       |
 
 
 
