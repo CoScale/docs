@@ -12,15 +12,9 @@ More information on: [https://sentry.io/](https://sentry.io/)
 
 {% include_relative _thirdparty.md %}
 
-## Events
 
-* New project created
-* Project was removed
-* New event received
-* Error was fixed
-
-## Metrics
-
-| Metric name                                           | Metric unit |
-|-------------------------------------------------------|-------------|
-| Total number of events detected                       | #           |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/sentry.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

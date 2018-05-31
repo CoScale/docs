@@ -47,47 +47,9 @@ The CoScale Magento integration requires an extension in order to expose metrics
 * Configure a CoScale agent with the Magento plugin and install it on your Magento servers.
 
 
-## Collected metrics.
 
-| Metric name                                                                     | Metric unit |
-|---------------------------------------------------------------------------------|-------------|
-| Magento %s The total number of customers in the system                          | customers   |
-| Magento %s Abandonned carts                                                     | cart        |
-| Magento %s Avg time to pick/pack an order                                       | s           |
-| Magento %s New customers today                                                  |             |
-| Magento %s The average amount of an order in the system for this store          | #           |
-| Magento %s The average amount of orders since last collect for this store       | #           |
-| Magento %s The average size of an order in the system for this store            | items       |
-| Magento %s The average size of orders since last collect for this store         | items       |
-| Magento %s The qty of orders picked                                             |             |
-| Magento %s The total amount of an order in the system for this store            | #           |
-| Magento %s The total amount of orders since last collect for this store         | #           |
-| Magento %s The total number of orders in canceled state                         | orders      |
-| Magento %s The total number of orders in completed pick/pack state              | orders      |
-| Magento %s The total number of orders in completed state                        | orders      |
-| Magento %s The total number of orders in completed state                        |             |
-| Magento %s The total number of orders in new state                              | orders      |
-| Magento %s The total number of orders in new state                              |             |
-| Magento %s The total number of orders in pick/pack state                        |             |
-| Magento %s The total number of orders in processing state                       | orders      |
-| Magento %s The total number of orders in processing state                       |             |
-| Magento %s The total number of orders in the system for this store              | orders      |
-| Magento %s The total number of orders in the system for this store              |             |
-| Magento %s The total number of orders in waiting for pick/pack state            | orders      |
-| Magento %s The total number of orders since last collect for this store         | orders      |
-| Magento %s The total number of orders today                                     |             |
-| Magento %s The total number of pageviews for this store                         |             |
-| Magento %s The total size of all order in the system for this store             | items       |
-| Magento %s The total size of orders since last collect for this store           | items       |
-| Magento %s The total time needed to pick/pack current orders in pick/pack state |             |
-| Magento %s The total time needed to pick/pack new orders                        |             |
-| Magento %s Total time to pick/pack                                              |             |
-| Magento %s Total value of abandoned carts                                       |             |
-| Magento %s URL Rewrites                                                         | rewrites    |
-| Magento Amount of messages in the e-mail queue                                  | messages    |
-| Magento Files in var/report/                                                    | files       |
-| Magento Logfile var/log/%s                                                      | b           |
-| Magento The total number of categories created today                            | cat         |
-| Magento The total number of categories in the system                            | cat         |
-| Magento The total number of products created today                              | prods       |
-| Magento The total number of products in the system                              | prods       |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/magento.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

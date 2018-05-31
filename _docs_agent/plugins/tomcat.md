@@ -79,19 +79,8 @@ This plugin can be configured to perform a HTTP GET on your JBoss. This active m
 
 A full URL (eg. `http://localhost/TestPage.jsp`) should be provided.
 
-## Events
-
-* Service state
-
-## Metrics
-
-| Metric name                                           | Metric unit |
-|-------------------------------------------------------|-------------|
-| Tomcat total number of accesses                       | access      |
-| Tomcat total number of hits                           | hits        |
-| Total number of bytes sent by Tomcat                  | b           |
-| Total number of bytes received by Tomcat              | b           |
-| Total number of requests to Tomcat                    | req         |
-| Total number of Tomcat threads busy                   | threads     |
-| Number of seconds that the Tomcat server has been up  | s           |
-| Total Tomcat processes CPU Time                       | s           |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/tomcat.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

@@ -12,16 +12,9 @@ More information on: [https://rollbar.com/](https://rollbar.com/)
 
 {% include_relative _thirdparty.md %}
 
-## Events
 
-* New project created
-* Project removed
-* New error received
-* Error fixed
-
-
-## Metrics
-
-| Metric name                       | Metric unit |
-|-----------------------------------|-------------|
-| Total number of error occurrences |             |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/rollbar.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>
