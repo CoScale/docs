@@ -31,7 +31,7 @@ def readMetrics(plugin, directory):
         if line.startswith('METRIC'):
             m = re.search('^METRIC:[0-9]+ ([A-Z]+) "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" ([0-9]+)$', line)
         else:
-            m = re.search('^([A-Z]+) "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" ([0-9]+) "[A-z]+"$', line)
+            m = re.search('^([A-Z]+) "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" ([0-9]+) "[A-z\s]+"$', line)
 
         if m is not None:
             dimensions = []
