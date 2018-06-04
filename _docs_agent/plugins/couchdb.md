@@ -26,42 +26,9 @@ This plugin can be configured to query a view on your CouchDb. This active monit
 
 A database, username, password, design id and view id should be provided.
 
-## Events
 
-* Service state
-
-## Metrics
-
-| Metric name                                                 | Metric unit |
-|-------------------------------------------------------------|-------------|
-| CouchDb number of HTTP GET requests                         | req/s       |
-| CouchDb length of a request inside CouchDB without MochiWeb | s           |
-| CouchDb number of authentication cache hits                 | hits/s      |
-| CouchDb number of authentication cache misses               | misses/s    |
-| CouchDb number of bulk requests                             | req/s       |
-| CouchDb number of clients for continuous _changes           | req/s       |
-| CouchDb number of file descriptors CouchDB has open         | files/s     |
-| CouchDb number of HTTP 200 OK responses                     | req/s       |
-| CouchDb number of HTTP 201 Created responses                | req/s       |
-| CouchDb number of HTTP 202 Accepted responses               | req/s       |
-| CouchDb number of HTTP 301 Moved Permanently responses      | req/s       |
-| CouchDb number of HTTP 304 Not Modified responses           | req/s       |
-| CouchDb number of HTTP 400 Bad Request responses            | req/s       |
-| CouchDb number of HTTP 401 Unauthorized responses           | req/s       |
-| CouchDb number of HTTP 403 Forbidden responses              | req/s       |
-| CouchDb number of HTTP 404 Not Found responses              | req/s       |
-| CouchDb number of HTTP 405 Method Not Allowed responses     | req/s       |
-| CouchDb number of HTTP 409 Conflict responses               | req/s       |
-| CouchDb number of HTTP 412 Precondition Failed responses    | req/s       |
-| CouchDb number of HTTP 500 Internal Server Error responses  | req/s       |
-| CouchDb number of HTTP COPY requests                        | req/s       |
-| CouchDb number of HTTP DELETE requests                      | req/s       |
-| CouchDb number of HTTP HEAD requests                        | req/s       |
-| CouchDb number of HTTP POST requests                        | req/s       |
-| CouchDb number of HTTP PUT requests                         | req/s       |
-| CouchDb number of HTTP requests                             | req/s       |
-| CouchDb number of open databases                            | conn/s      |
-| CouchDb number of temporary view reads                      | req/s       |
-| CouchDb number of times a database was changed              | writes/s    |
-| CouchDb number of times a document was read from a database | reads/s     |
-| CouchDb number of view reads                                | req/s       |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/couchdb.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

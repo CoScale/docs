@@ -34,26 +34,9 @@ This plugin can be configured to perform a HTTP GET on your Jolokia endpoint. Th
 
 <img src="/gfx/agent/plugins/jolokia/03-Jolokia-Active-Checks.png" alt="Jolokia Configuration Step 3">
 
-## Metrics
 
-| Metric name                        | Metric unit |
-|------------------------------------|-------------|
-| Jolokia BufferPool Count           |             |
-| Jolokia BufferPool Memory Used     | b           |
-| Jolokia Compilation Time           | ms          |
-| Jolokia Daemon Thread Count        |             |
-| Jolokia Garbage Collections        |             |
-| Jolokia GC Collection Time         | ms          |
-| Jolokia Loaded Class Count         |             |
-| Jolokia Max File Descriptor Count  |             |
-| Jolokia Memory Usage Committed     | b           |
-| Jolokia Memory Usage Init          | b           |
-| Jolokia Memory Usage Max           | b           |
-| Jolokia Memory Usage Used          | b           |
-| Jolokia Open File Descriptor Count |             |
-| Jolokia Process CPU time           | ms          |
-| Jolokia Started Threads            |             |
-| Jolokia Thread Count               |             |
-| Jolokia Thread CPU Time            | %           |
-| Jolokia Unloaded Class Count       |             |
-| Jolokia Uptime                     | ms          |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/jolokia.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

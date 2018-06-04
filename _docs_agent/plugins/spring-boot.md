@@ -102,50 +102,8 @@ This plugin can be configured to perform a HTTP GET on your Spring Boot. This ac
 
 A full URL (eg. `http://localhost/test_page`) should be provided.
 
-## Events
-
-* Service state
-
-## Metrics
-
-| Metric name                                           | Metric unit |
-|-------------------------------------------------------|-------------|
-| Spring Boot uptime | s
-| Spring Boot application context uptime | s
-| Spring Boot commited heap memory | b
-| Spring Boot initial heap memory | b
-| Spring Boot used heap memory | b
-| Spring Boot max heap memory | b
-| Spring Boot commited non heap memory | b
-| Spring Boot initial non heap memory | b
-| Spring Boot used non heap memory | b
-| Spring Boot max non heap memory | b
-| Spring Boot processors count | #
-| Spring Boot total memory | b
-| Spring Boot free memory | b
-| Spring Boot peak thread count | threads
-| Spring Boot daemon thread count | threads
-| Spring Boot total started thread count | threads
-| Spring Boot thread count | threads
-| Spring Boot total classes count | classes
-| Spring Boot loaded classes count | classes
-| Spring Boot unloaded classes count | classes
-| Spring Boot GC collection count | #
-| Spring Boot GC collection time | s
-| Spring Boot active http sessions | sessions
-| Spring Boot max http sessions | sessions
-| Spring Boot tomcat expired sessions | sessions
-| Spring Boot average system load |
-| Spring Boot datasource number of active connections | connections
-| Spring Boot datasource current usage of the connection pool | #
-| Spring Boot request counts | requests
-| Spring Boot gc max size of old generation memory pool | b
-| Spring Boot gc memory allocated | b
-| Spring Boot size of old generation memory pool after a full gc | b
-| Spring Boot jvm buffer pool memory usage | b
-| Spring Boot tomcat max threads | threads
-| Spring Boot tomcat bytes sent per second | b/s
-| Spring Boot tomcat bytes received per second | b/s
-| Spring Boot response time | s
-| Spring Boot active check uptime | %
-| Spring Boot active check uptime | s
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/springboot.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

@@ -12,30 +12,9 @@ More information on: [https://www.constantcontact.com](https://www.constantconta
 
 {% include_relative _thirdparty.md %}
 
-## Events
 
-* Start of new Constant Contact campaign
-* End of email campaign
-
-## Metrics
-
-| Metric name                                                            | Metric unit |
-|------------------------------------------------------------------------|-------------|
-| Number of recipients who unsubscribed from this campaign.              |             |
-| Total number of unique recipients who forwarded a email campaign.      |             |
-| Total number of unique recipients who clicked a email campaign.        |             |
-| Number of unique recipients who opened this email campaign.            |             |
-| Number of email address bounces for this campaign.                     |             |
-| Total number of unique recipients who opened a email campaign.         |             |
-| Number of recipients this email campaign was sent to.                  |             |
-| Number of unique recipients who forwarded this email campaign.         |             |
-| Total number of recipients who unsubscribed from email campaigns.      |             |
-| Average number of unique recipients who clicked.                       |             |
-| Average number of recipients a email campaign was sent to.             |             |
-| Total number of recipients a email campaign was sent to.               |             |
-| Number of unique recipients who clicked a link in this email campaign. |             |
-| Average number of email address bounces.                               |             |
-| Average number of unique recipients who opened a email campaign.       |             |
-| Average number of unique recipients who forwarded a email campaign.    |             |
-| Average number of recipients who unsubscribed from email campaigns.    |             |
-| Number of email address bounces for all campaigns.                     |             |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/constant_contact.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

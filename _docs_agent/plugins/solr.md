@@ -40,43 +40,8 @@ This plugin can be configured to perform a HTTP GET on your Solr. This active mo
 
 A full URL (eg. `http://localhost:8983/solr/gettingstarted/select?q=*&wt=json`) should be provided.
 
-## Events
-
-* Service state
-
-## Metrics
-
-| Metric name                                                 | Metric unit |
-|-------------------------------------------------------------|-------------|
-| Solr heap memory size                                       | b           |
-| Number of seconds that the Solr server has been up          | s           |
-| Solr auto commits per second                                | req/s       |
-| Solr cache evictions per second                             | req/s       |
-| Solr cache hit ratio                                        | %           |
-| Solr cache inserts per second                               | req/s       |
-| Solr commits per second                                     | req/s       |
-| Solr ConcurrentMarkSweep garbage collector collection count | #           |
-| Solr ConcurrentMarkSweep garbage collector collection time  | s           |
-| Solr CPU Time                                               | s           |
-| Solr deleted docs per second                                | doc/s       |
-| Solr deletes by id per second                               | req/s       |
-| Solr deletes by query per second                            | req/s       |
-| Solr docs per second                                        | doc/s       |
-| Solr errors per second                                      | req/s       |
-| Solr free physical memory size                              | b           |
-| Solr free swap space size                                   | b           |
-| Solr highlight per second                                   | req/s       |
-| Solr non heap memory size                                   | b           |
-| Solr ParNew garbage collector collection count              | #           |
-| Solr ParNew garbage collector collection time               | s           |
-| Solr Process CPU Load                                       |             |
-| Solr requests per second                                    | req/s       |
-| Solr select time per request                                | s           |
-| Solr soft auto commits per second                           | req/s       |
-| Solr System CPU Load                                        |             |
-| Solr System load average                                    |             |
-| Solr threading daemon thread count                          | threads     |
-| Solr threading Peak thread count                            | threads     |
-| Solr threading thread count                                 | threads     |
-| Solr threading total started thread count                   | threads     |
-| Solr total swap space size                                  | b           |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/solr.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

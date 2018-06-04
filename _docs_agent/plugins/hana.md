@@ -31,23 +31,9 @@ The plugin gathers statistics about the percentage used, free and size of the fi
 This plugin can be configured to perform a SQL query on your Hana DB. This active monitoring allows us to calculate the uptime of the service and the response time of the query.
 A valid SQL query (eg. `select count(*) from my_table;`) should be provided.
 
-## Events
 
-* Service state
-
-## Metrics
-
-| Metric name                        | Metric unit |
-|------------------------------------|-------------|
-| Hana DB CPU Usage                  | s           |
-| Hana DB system alert               | #           |
-| Hana DB system alert count         | #           |
-| Hana DB version                    | #           |
-| Hana DB process status             | %           |
-| Hana DB active check uptime        | %           |
-| Hana DB filesystem size            | b           |
-| Hana DB filesystem used            | b           |
-| Hana DB filesystem available       | b           |
-| Hana DB filesystem percentage used | b           |
-| Hana DB host memory                | b           |
-| Hana DB active check latency       | s           |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/hanadb.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

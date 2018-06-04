@@ -16,24 +16,9 @@ This plugin retrieves data from the Docker Swarm API on the distribution of cont
 
 {% include_relative _installation.md orchestrator="true" %}
 
-## Events
 
-* When node is draining
-* When services change their desired replicas count
-* When tasks start/stop
-* When a service doesn't have enough actual replicas
-
-## Metrics
-
-| Metric name                                           | Metric unit |
-|-------------------------------------------------------|-------------|
-| Docker Swarm number of desired replicas per service   | #           |
-| Docker Swarm number of failed nodes                   | #           |
-| Docker Swarm number of failed tasks per service       | #           |
-| Docker Swarm number of nodes                          | #           |
-| Docker Swarm number of running tasks per service      | #           |
-| Docker Swarm number of running tasks per node         | #           |
-| Docker Swarm number of services                       | #           |
-| Docker Swarm total number of failed tasks             | #           |
-| Docker Swarm total number of running tasks            | #           |
-
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/dockerswarm.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

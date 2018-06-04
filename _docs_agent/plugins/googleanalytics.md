@@ -12,34 +12,9 @@ More information on: [https://analytics.google.com](https://analytics.google.com
 
 {% include_relative _thirdparty.md %}
 
-## Metrics
 
-| Metric name                  | Metric unit    |
-|------------------------------|----------------|
-| Average Order Value          |                |
-| Average QTY                  |                |
-| Bounce rate                  | %              |
-| Buy-to-Detail Rate           | %              |
-| Cart-to-Detail Rate          | %              |
-| Ecommerce Conversion Rate    | %              |
-| Goal Abandonment Rate        | %              |
-| Goal Completions             | goals/h        |
-| Goal Conversion Rate         | %              |
-| Goal Value                   | value/h        |
-| Internal Promotion Clicks    | clicks/h       |
-| Internal Promotion CTR       | %              |
-| Internal Promotion Views     | views/h        |
-| New sessions                 | %              |
-| Pages / Session              |                |
-| Pageviews                    | views/h        |
-| Per Session Value            |                |
-| Product List CTR             | %              |
-| Product Revenue per Purchase |                |
-| Refunds                      | refunds/h      |
-| Revenue per User             |                |
-| Session duration             | s              |
-| Sessions                     | sessions/h     |
-| Total Value                  | value/h        |
-| Transactions                 | transactions/h |
-| Transactions per User        |                |
-| Users                        | users/h        |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/google_analytics.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>
