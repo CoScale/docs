@@ -20,4 +20,5 @@
 | Name | Description | Attributes |
 |------|-------------|------------|
 | POSTGRESQL service state watcher | State watcher | status |
+| POSTGRES Service state watcher | State watcher | status |
 

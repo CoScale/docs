@@ -27,4 +27,5 @@
 | Name | Description | Attributes |
 |------|-------------|------------|
 | MYSQL service state watcher | State watcher | status |
+| MYSQL Service state watcher | State watcher | status |
 

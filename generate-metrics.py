@@ -7,24 +7,27 @@ from functools import cmp_to_key
 import json
 
 # Helper to read file
-def read(plugin, directory, file):
-    content = []
-    location = "%s/%s/%s" % (directory, plugin, file)
-    try:
-        with open(location) as f:
-            content = f.readlines()
+def read(plugin, directory, files):
+    results = []
 
-        # you may also want to remove whitespace characters like `\n` at the end of each line
-        content = [x.strip() for x in content]
-    except FileNotFoundError:
-        print('\t\t! No %s file found' % location)
+    for file in files:
+        location = "%s/%s/%s" % (directory, plugin, file)
+        try:
+            with open(location) as f:
+                content = f.readlines()
 
-    return content
+            # you may also want to remove whitespace characters like `\n` at the end of each line
+            results = results + [x.strip() for x in content]
+        except FileNotFoundError:
+            print('\t\t! No %s file found' % location)
+
+    return results
 
 # Helper to read metrics
 def readMetrics(plugin, directory):
     metrics = []
-    for line in read(plugin, directory, 'metrics'):
+    names = []
+    for line in read(plugin, directory, ['metrics', 'metrics.windows']):
         if line.startswith('METRIC'):
             m = re.search('^METRIC:[0-9]+ ([A-Z]+) "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" "(.*)" ([0-9]+)$', line)
         else:
@@ -35,17 +38,20 @@ def readMetrics(plugin, directory):
             if m.group(7) != '':
                 dimensions = [x.split(':')[1] for x in m.group(7).split(',')]
 
-            result = {
-                'type': m.group(1),
-                'name': m.group(2),
-                'description': m.group(3),
-                'group': m.group(4),
-                'unit': m.group(5),
-                'unknown': m.group(6),
-                'dimensions': ', '.join(dimensions),
-                'interval': m.group(8) or ''
-            }
-            metrics.append(result)
+            name = m.group(2)
+            if name not in names:
+                result = {
+                    'type': m.group(1),
+                    'name': name,
+                    'description': m.group(3),
+                    'group': m.group(4),
+                    'unit': m.group(5),
+                    'unknown': m.group(6),
+                    'dimensions': ', '.join(dimensions),
+                    'interval': m.group(8) or ''
+                }
+                metrics.append(result)
+                names.append(name)
 
 
     metrics = sorted(metrics, key=lambda k: (k['group'].lower(), k['name'].lower()))
@@ -56,7 +62,8 @@ def readMetrics(plugin, directory):
 # Helper to read events
 def readEvents(plugin, directory):
     events = []
-    for line in read(plugin, directory, 'events'):
+    names = []
+    for line in read(plugin, directory, ['events', 'events.windows']):
         m = re.search('^EVENT:([0-9]+) "([^"]*)" "([^"]*)" "(\[.*])" "([^"]*)"( ".*")?$', line)
 
         if m is not None:
@@ -66,15 +73,18 @@ def readEvents(plugin, directory):
                 print(jsonData)
                 attributes = [x['name'] for x in jsonData]
 
-            result = {
-                'id': m.group(1),
-                '?': m.group(2),
-                'name': m.group(3),
-                'attributes': ', '.join(attributes),
-                'description': m.group(5),
-                'plugin': m.group(6)
-            }
-            events.append(result)
+            name = m.group(3)
+            if name not in names:
+                result = {
+                    'id': m.group(1),
+                    '?': m.group(2),
+                    'name': name,
+                    'attributes': ', '.join(attributes),
+                    'description': m.group(5),
+                    'plugin': m.group(6)
+                }
+                events.append(result)
+                names.append(name)
 
     print('\t\t%s events found' % len(events))
 

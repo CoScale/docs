@@ -155,3 +155,129 @@
 | Number of users connected | users |  |
 | Total number of allocated file handles | files |  |
 
+### Resources / Windows / CPU 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| CPU DPC Rate | msg/s | CPU |
+| CPU DPCs Queued Per Sec | msg/s | CPU |
+| CPU Interrupts Per Sec | int/s | CPU |
+| CPU Percent DPC Time | % | CPU |
+| CPU Percent Interrupt Time | % | CPU |
+| CPU Percent Privileged Time | % | CPU |
+| CPU Percent Processor Time | % | CPU |
+| CPU Percent User Time | % | CPU |
+| Number Of Threads | threads |  |
+| Total DPC Rate | msg/s |  |
+| Total DPCs Queued Per Sec | msg/s |  |
+| Total Interrupts Per Sec | int/s |  |
+| Total Percent DPC Time | % |  |
+| Total Percent Interrupt Time | % |  |
+| Total Percent Privileged Time | % |  |
+| Total Percent Processor Time | % |  |
+| Total Percent User Time | % |  |
+
+### Resources / Windows / Filesystem 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Total Avg Queue Length | % |  |
+| Total Avg Read Queue Length | b |  |
+| Total Avg Sec Per Read | s |  |
+| Total Avg Sec Per Transfer | s |  |
+| Total Avg Sec Per Write | s |  |
+| Total Avg Write Queue Length | b |  |
+| Total Bytes Per Sec | b/s |  |
+| Total Current Queue Length | b |  |
+| Total Free Bytes | b |  |
+| Total Percent Free Space | % |  |
+| Total Percent Idle Time | % |  |
+| Total Percent Read Time | % |  |
+| Total Percent Time | % |  |
+| Total Percent Write Time | % |  |
+| Total Read Bytes Per Sec | b/s |  |
+| Total Reads Per Sec | reads/s |  |
+| Total Split IO Per Sec | splits/s |  |
+| Total Transfers Per Sec | trans/s |  |
+| Total Write Bytes Per Sec | b/s |  |
+| Total Writes Per Sec | writes/s |  |
+| Volume Avg Queue Length | b | Volume |
+| Volume Avg Read Queue Length | b | Volume |
+| Volume Avg Sec Per Read | s | Volume |
+| Volume Avg Sec Per Transfer | s | Volume |
+| Volume Avg Sec Per Write | s | Volume |
+| Volume Avg Write Queue Length | b | Volume |
+| Volume Bytes Per Sec | b/s | Volume |
+| Volume Current Queue Length | b | Volume |
+| Volume Free Bytes | b | Volume |
+| Volume Percent Free Space | % | Volume |
+| Volume Percent Idle Time | % | Volume |
+| Volume Percent Read Time | % | Volume |
+| Volume Percent Time | % | Volume |
+| Volume Percent Write Time | % | Volume |
+| Volume Read Bytes Per Sec | b/s | Volume |
+| Volume Reads Per Sec | reads/s | Volume |
+| Volume Split IO Per Sec | splits/s | Volume |
+| Volume Transfers Per Sec | trans/s | Volume |
+| Volume Write Bytes Per Sec | b/s | Volume |
+| Volume Writes Per Sec | writes/s | Volume |
+
+### Resources / Windows / Memory 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| % Committed Bytes In Use | % |  |
+| Available Bytes | b |  |
+| Cache Bytes | b |  |
+| Cache Bytes Peak | b |  |
+| Committed Bytes | b |  |
+| Free Physical Memory | b |  |
+| Free Physical Memory Percentage | % |  |
+| Free Virtual Memory | b |  |
+| Free Virtual Memory Percentage | % |  |
+| Page Faults Per Sec | faults/s |  |
+| Page File Usage | % |  |
+| Pages Input Per Sec | pages/s |  |
+| Pages Output Per Sec | pages/s |  |
+| Pages Per Sec | pages/sec |  |
+| Pool Non Paged Bytes | b |  |
+| Pool Paged Bytes | b |  |
+| Pool Paged Resident Bytes | b |  |
+| System Cache Resident Bytes | b |  |
+| System Code Resident Bytes | b |  |
+| System Code Total Bytes | b |  |
+| System Driver Resident Bytes | b |  |
+| System Driver Total Bytes | b |  |
+| Total Virtual Memory Size | b |  |
+| Total Visible Memory Size | b |  |
+| Used Physical Memory | b |  |
+| Used Physical Memory Percentage | % |  |
+| Used Virtual Memory | b |  |
+| Used Virtual Memory Percentage | % |  |
+
+### Resources / Windows / Network 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Network Interface Bytes Received Per Sec | b/s | Interface |
+| Network Interface Bytes Sent Per Sec | b/s | Interface |
+| Network Interface Bytes Total Per Sec | b/s | Interface |
+| Network Interface Current Bandwidth | b | Interface |
+| Network Interface Output Queue Length | b | Interface |
+| Network Interface Packets Outbound Discarded | # | Interface |
+| Network Interface Packets Outbound Errors | errors | Interface |
+| Network Interface Packets Per Sec | pack/s | Interface |
+| Network Interface Packets Received Discarded | # | Interface |
+| Network Interface Packets Received Errors | errors | Interface |
+| Network Interface Packets Received Per Sec | pack/s | Interface |
+| Network Interface Packets Received Unknown | # | Interface |
+| Network Interface Packets Sent Per Sec | pack/s | Interface |
+| Total Bytes Received Per Sec | b/s |  |
+| Total Bytes Sent Per Sec | b/s |  |
+
+### Resources / Windows / Processes 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Number Of Processes | procs |  |
+
