@@ -8,7 +8,7 @@ description: Information on the metrics collected by the CoScale Resources plugi
 
 ## How it works
 
-The plugin gathers OS and hardware metrics from the underlying system. No configuration is required. Below you can find the metrics list for [Linux](#linux-metrics) and [Windows](#windows-metrics).
+The plugin gathers OS and hardware metrics from the underlying system. No configuration is required. Below you can find the metrics list for [Linux](#resources--linux--cpu) and [Windows](#resources--windows--cpu).
 
 ## Installation
 
