@@ -81,36 +81,9 @@ This plugin can be configured to perform a HTTP GET on your .NET Core applicatio
 
 A full URL (eg. `http://localhost/test_page`) should be provided.
 
-## Metrics
 
-| Metric name                                               | Metric unit |
-|-----------------------------------------------------------|-------------|
-| .NET Core active check latency                            | s           |
-| .NET Core active check uptime                             | %           |
-| .NET Core Active Requests                                 | #           |
-| .NET Core Application Performance Index                   |             |
-| .NET Core Application Performance Index score             |             |
-| .NET Core Average POST Size                               | b           |
-| .NET Core Average PUT Size                                | b           |
-| .NET Core GC last GC time                                 | s           |
-| .NET Core GC total collection count                       | #           |
-| .NET Core GC total memory                                 | b           |
-| .NET Core One Minute Error Percentage Rate                | req         |
-| .NET Core Process maximum physical memory set             | b           |
-| .NET Core Process nonpaged system memory size             | b           |
-| .NET Core Process paged memory size                       | b           |
-| .NET Core Process peak paged memory size                  | b           |
-| .NET Core Process peak working set                        | b           |
-| .NET Core Process threads count                           | #           |
-| .NET Core Process total processor time                    | %           |
-| .NET Core Process user processor time                     | %           |
-| .NET Core Process virtual memory size                     | b           |
-| .NET Core Process working set                             | b           |
-| .NET Core Request Error count                             | #           |
-| .NET Core Request Error Rate                              | req         |
-| .NET Core Request Error Rate Per Endpoint                 | req         |
-| .NET Core Request Error Rate Per Endpoint And Status Code | req         |
-| .NET Core Total Transactions                              | req         |
-| .NET Core Total Transactions duration                     | s           |
-| .NET Core Transactions Per Endpoint                       | req         |
-| .NET Core Transactions Per Endpoint duration              | s           |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/netcore.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

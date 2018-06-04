@@ -91,19 +91,9 @@ This plugin can be configured to perform a HTTP GET on your Nginx. This active m
 
 A full URL (eg. `http://localhost/test_page`) should be provided.
 
-## Events
 
-* Service state
-
-## Metrics
-
-| Metric name                                           | Metric unit |
-|-------------------------------------------------------|-------------|
-| Number of all open connections to Nginx               | conn        |
-| Total accepted connections to Nginx                   | conn        |
-| Total handled connections to Nginx                    | conn        |
-| Number of requests to Nginx                           | req         |
-| Requests per connection to Nginx handled              | req/conn    |
-| Number of reading connections to Nginx                | conn        |
-| Number of writing connections to Nginx                | conn        |
-| Number of waiting connections to Nginx                | conn        |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/nginx.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

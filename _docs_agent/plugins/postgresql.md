@@ -84,19 +84,9 @@ This plugin can be configured to perform a SQL query on your PostgreSQL. This ac
 
 A valid SQL query (eg. `select count(*) from my_table;`) should be provided.
 
-## Events
 
-* Service state
-
-## Metrics
-
-| Metric name                                              | Metric unit |
-|----------------------------------------------------------|-------------|
-| Number of bytes read by all PostgreSQL processes         | b           |
-| Number of bytes written by all PostgreSQL processes      | b           |
-| Number of connection to PostgreSQL                       | conn        |
-| Number of PostgreSQL processes                           | procs       |
-| Number of seconds spent by CPU processing                | s           |
-| Number of seconds that the PostgreSQL server has been up | s           |
-| Number of statements executed                            | queries     |
-| Total number of seconds spent in statements              | s           |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/postgresql.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

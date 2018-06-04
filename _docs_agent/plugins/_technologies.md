@@ -38,6 +38,7 @@
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/rabbitmq"><img src="/gfx/agent/rabbitmq.png" alt="RabbitMQ icon"> RabbitMQ</a></div>
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/activemq"><img src="/gfx/agent/activemq.png" alt="ActiveMQ icon"> ActiveMQ</a></div>
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/kafka"><img src="/gfx/agent/kafka.png" alt="Kafka icon"> Kafka</a></div>
+    <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/zookeeper"><img src="/gfx/agent/zookeeper.png" alt="Zookeeper icon"> Zookeeper</a></div>
     <div class="col-sm-3 col-md-2 technology technology-duplicate"><a href="{{ site.baseurl }}/agent/plugins/redis"><img src="/gfx/agent/redis.png" alt="Redis icon"> Redis</a></div>
     <div class="col-sm-12 technology-header"><h3>Resource monitoring</h3></div>
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/resources"><img src="/gfx/agent/resources.png" alt="Resources icon"> Resources</a></div>

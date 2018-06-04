@@ -30,12 +30,9 @@ Fluentd has a monitoring agent to retrieve internal metrics in JSON via HTTP. Pl
 
 Also, provide the hostname and port.
 
-## Metrics
 
-| Metric name                  | Metric unit |
-|------------------------------|-------------|
-| FluentD buffer queue length  | #           |
-| FluentD buffer queue size    | b           |
-| FluentD retry count          | #           |
-| FluentD active check uptime  | %           |
-| FluentD active check latency | s           |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/fluentd.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

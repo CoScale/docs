@@ -12,34 +12,9 @@ More information on: [https://www.pingdom.com/](https://www.pingdom.com/)
 
 {% include_relative _thirdparty.md %}
 
-## Events
 
-* Pingdom checks
-
-## Metrics
-
-| Metric name                  | Metric unit |
-|------------------------------|-------------|
-| Autofill sms amount          |             |
-| Autofill sms when left       |             |
-| Available checks             |             |
-| Available rum sites          |             |
-| Available sms                |             |
-| Available sms tests          |             |
-| Average response time        | ms          |
-| Check limit                  |             |
-| Downtime                     | s           |
-| Filtered number of checks    |             |
-| Global average response time | s           |
-| Limited number of checks     |             |
-| Max rum filters              |             |
-| Max rum page views           |             |
-| Total downtime               | s           |
-| Total number of checks       |             |
-| Total unmonitored            | s           |
-| Total uptime                 | s           |
-| Unmonitored                  | s           |
-| Uptime                       | s           |
-| Used default                 |             |
-| Used rum sites               |             |
-| Used transaction             |             |
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/pingdom.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>

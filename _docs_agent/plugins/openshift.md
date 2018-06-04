@@ -20,23 +20,11 @@ For more information, check out [our documentation on Kubernetes](/agent/plugins
 
 {% include_relative _installation.md orchestrator="true" service="Openshift" %}
 
-## Metrics
+<!-- Auto generated metrics view -->
+<div class="metrics">
+{% capture my_include %}{% include plugins/openshift.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>
 
-| Metric name                               | Metric unit |
-|-------------------------------------------|-------------|
-| Openshift number of projects              | #           |
-| Openshift number of active projects       | #           |
-| Openshift number of deployment configs    | #           |
-| Openshift number of running deployments   | #           |
-| Openshift number of completed deployments | #           |
-| Openshift number of failed deployments    | #           |
-| Openshift number of build configs         | #           |
-| Openshift number of builds                | #           |
-| Openshift number of failed builds         | #           |
-| Openshift number of completed builds      | #           |
-| Openshift number of running builds        | #           |
-| Openshift number of pending builds        | #           |
-| Openshift number of canceled builds       | #           |
-| Openshift number of errored builds        | #           |
 
 We also gather the following <a href="{{ site.baseurl }}/agent/plugins/kubernetes">Kubernetes metrics.</a>
