@@ -38,13 +38,17 @@ def readMetrics(plugin, directory):
             if m.group(7) != '':
                 dimensions = [x.split(':')[1] for x in m.group(7).split(',')]
 
+            group = m.group(4)
+            if group[:2] == 's|':
+                group = group.split('|')[2]
+
             name = m.group(2)
             if name not in names:
                 result = {
                     'type': m.group(1),
                     'name': name,
                     'description': m.group(3),
-                    'group': m.group(4),
+                    'group': group,
                     'unit': m.group(5),
                     'unknown': m.group(6),
                     'dimensions': ', '.join(dimensions),
