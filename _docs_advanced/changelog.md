@@ -4,6 +4,23 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.22.0 (21 June 2018)
+
+* Frontend
+    * Interactive dimensions: Selecting values in one dimensions will now filter other dimensions to only show relevant related dimensions.
+    * New legend design for charts
+    * Many improvements to the sign up flow, simplifying the process
+    * The alert emails received an overhaul and should not contain more details when you receive an alert
+    * The container detail widget now supports showing detailed information about replication controllers/services etc.
+* Agents
+    * Added GlusterFS plugin
+    * Resources plugin
+        * Added meric: 'Available memory'
+    * Docker/Kubernetes plugin
+        * Metrics and metric groups were re-organized for better usability
+* CLI
+    * Added retrieving server group by path
+
 ## Release 3.21.0 (15 May 2018)
 
 * Agent
