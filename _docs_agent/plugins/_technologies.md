@@ -43,6 +43,7 @@
     <div class="col-sm-12 technology-header"><h3>Resource monitoring</h3></div>
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/resources"><img src="/gfx/agent/resources.png" alt="Resources icon"> Resources</a></div>
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/docker"><img src="/gfx/agent/docker.png" alt="Docker icon"> Docker</a></div>
+    <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/glusterfs"><img src="/gfx/agent/glusterfs.png" alt="GlusterFS icon"> GlusterFS</a></div>
     <div class="col-sm-12 technology-header"><h3>Custom monitoring</h3></div>
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/agent/plugins/cron"><img src="/gfx/agent/CRON.png" alt="Cron icon"> Cron</a></div>
     <div class="col-sm-3 col-md-2 technology"><a href="{{ site.baseurl }}/custom-metrics/generic-script/index/"><img src="/gfx/agent/genericscript.png" alt="Script icon"> Generic Script</a></div>

@@ -26,8 +26,8 @@
 | Number of processes currently running on CPUs | procs |  |
 | Number of servicing softirqs | int |  |
 | Number of zombie processes | procs |  |
-| Processor load | % |  |
-| System load | % |  |
+| System load |  |  |
+| System load percentage | % |  |
 | Total CPU idle time | % |  |
 | Total CPU iowait time | % |  |
 | Total CPU nice time | % |  |
@@ -104,6 +104,7 @@
 | Name | Unit | Dimensions |
 |------|------|------------|
 | % Active memory | % |  |
+| % Available memory | % |  |
 | % Buffered memory | % |  |
 | % Cached memory | % |  |
 | % Free memory | % |  |
@@ -112,6 +113,7 @@
 | Active memory | b |  |
 | Amount of memory swapped in from disk | b/s |  |
 | Amount of memory swapped to disk | b/s |  |
+| Available memory | b |  |
 | Buffers memory | b |  |
 | Cached memory | b |  |
 | Free memory | b |  |
