@@ -1,66 +1,23 @@
 ## Metrics
 
-### Kubernetes / Master 
+### Kubernetes / Containers 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
-| Kubernetes capacity for persistent volume | # | Persistent volume |
-| Kubernetes internal service health status |  | Service name |
-| Kubernetes max number of pods in namespace | # | Namespace |
 | Kubernetes number containers in pod | # | Pod |
-| Kubernetes number of bound persistent volumes | # |  |
-| Kubernetes number of bound persistent volumes claims | # |  |
 | Kubernetes number of containers | # |  |
-| Kubernetes number of containers in namespace | # | Namespace |
-| Kubernetes number of daemon sets | # |  |
-| Kubernetes number of daemon sets in namespace | # | Namespace |
-| Kubernetes number of deployments | # |  |
-| Kubernetes number of failed jobs | # |  |
-| Kubernetes number of failed nodes | # |  |
-| Kubernetes number of failed persistent volumes | # |  |
-| Kubernetes number of jobs | # |  |
-| Kubernetes number of namespaces | # |  |
-| Kubernetes number of nodes | # |  |
-| Kubernetes number of pending persistent volumes claims | # |  |
-| Kubernetes number of persistent volumes | # |  |
-| Kubernetes number of persistent volumes claims | # |  |
-| Kubernetes number of pods | # |  |
-| Kubernetes number of pods created in namespace | # | Namespace |
-| Kubernetes number of pods in container creating state for 5 minutes | # |  |
-| Kubernetes number of pods in container pending state for 5 minutes | # |  |
-| Kubernetes number of pods in namespace | # | Namespace |
-| Kubernetes number of pods templates in namespace | # | Namespace |
-| Kubernetes number of podTemplates | # |  |
 | Kubernetes number of ready containers | # |  |
-| Kubernetes number of ready containers in namespace | # | Namespace |
-| Kubernetes number of ready nodes | # |  |
-| Kubernetes number of released persistent volumes | # |  |
-| Kubernetes number of replica sets | # |  |
-| Kubernetes number of replica sets in namespace | # | Namespace |
-| Kubernetes number of replication controllers | # |  |
-| Kubernetes number of replication controllers in namespace | # | Namespace |
 | Kubernetes number of running containers | # |  |
-| Kubernetes number of running containers in namespace | # | Namespace |
-| Kubernetes number of running jobs | # |  |
-| Kubernetes number of running pods | # |  |
-| Kubernetes number of services | # |  |
-| Kubernetes number of services in namespace | # | Namespace |
-| Kubernetes number of stateful(pet) sets | # |  |
-| Kubernetes number of stateful(pet) sets in namespace | # | Namespace |
-| Kubernetes number of successful jobs | # |  |
 | Kubernetes number ready containers in pod | # | Pod |
 | Kubernetes number running containers in pod | # | Pod |
-| Kubernetes size for persistent volume claim | # | Persistent volume claim |
-| Number of executions per cron job | # | Cron job |
-| Number of failed executions per cron job | # | Cron job |
-| Number of successful executions per cron job | # | Cron job |
 
-### Kubernetes / Master / Daemon sets 
+### Kubernetes / Daemon sets 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
 | Kubernetes number of actual replicas in daemon set | # | Namespace, Daemon set |
 | Kubernetes number of containers in daemon set | # | Namespace, Daemon set |
+| Kubernetes number of daemon sets | # |  |
 | Kubernetes number of desired replicas in daemon set | # | Namespace, Daemon set |
 | Kubernetes number of failed containers in daemon set | # | Namespace, Daemon set |
 | Kubernetes number of failed pods in daemon set | # | Namespace, Daemon set |
@@ -69,12 +26,13 @@
 | Kubernetes number of running containers in daemon set | # | Namespace, Daemon set |
 | Kubernetes number of running pods in daemon set | # | Namespace, Daemon set |
 
-### Kubernetes / Master / Deployments 
+### Kubernetes / Deployments 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
 | Kubernetes number of actual replicas in deployment | # | Namespace, Deployment |
 | Kubernetes number of containers in deployment | # | Namespace, Deployment |
+| Kubernetes number of deployments | # |  |
 | Kubernetes number of desired replicas in deployment | # | Namespace, Deployment |
 | Kubernetes number of failed containers in deployment | # | Namespace, Deployment |
 | Kubernetes number of failed pods in deployment | # | Namespace, Deployment |
@@ -83,7 +41,54 @@
 | Kubernetes number of running containers in deployment | # | Namespace, Deployment |
 | Kubernetes number of running pods in deployment | # | Namespace, Deployment |
 
-### Kubernetes / Master / Quotas 
+### Kubernetes / Jobs 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Kubernetes number of failed jobs | # |  |
+| Kubernetes number of jobs | # |  |
+| Kubernetes number of running jobs | # |  |
+| Kubernetes number of successful jobs | # |  |
+| Number of executions per cron job | # | Cron job |
+| Number of failed executions per cron job | # | Cron job |
+| Number of successful executions per cron job | # | Cron job |
+
+### Kubernetes / Namespace 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Kubernetes number of containers in namespace | # | Namespace |
+| Kubernetes number of daemon sets in namespace | # | Namespace |
+| Kubernetes number of namespaces | # |  |
+| Kubernetes number of pods created in namespace | # | Namespace |
+| Kubernetes number of pods in namespace | # | Namespace |
+| Kubernetes number of pods templates in namespace | # | Namespace |
+| Kubernetes number of ready containers in namespace | # | Namespace |
+| Kubernetes number of replica sets in namespace | # | Namespace |
+| Kubernetes number of replication controllers in namespace | # | Namespace |
+| Kubernetes number of running containers in namespace | # | Namespace |
+| Kubernetes number of services in namespace | # | Namespace |
+
+### Kubernetes / Nodes 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Kubernetes internal service health status |  | Service name |
+| Kubernetes number of failed nodes | # |  |
+| Kubernetes number of nodes | # |  |
+| Kubernetes number of ready nodes | # |  |
+
+### Kubernetes / Pods 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Kubernetes number of pods | # |  |
+| Kubernetes number of pods in container creating state for 5 minutes | # |  |
+| Kubernetes number of pods in container pending state for 5 minutes | # |  |
+| Kubernetes number of podTemplates | # |  |
+| Kubernetes number of running pods | # |  |
+
+### Kubernetes / Quotas 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
@@ -97,6 +102,7 @@
 | Kubernetes available memory requests per namespace | b | Namespace |
 | Kubernetes available pods per node | # |  |
 | Kubernetes available storage requests per namespace | b | Namespace |
+| Kubernetes max number of pods in namespace | # | Namespace |
 | Kubernetes maximum object count per namespace | # | Namespace, Object type |
 | Kubernetes object count percentage per namespace | % | Namespace, Object type |
 | Kubernetes percentage of max pods per node | % |  |
@@ -119,7 +125,7 @@
 | Kubernetes used storage requests per namespace | b | Namespace |
 | Kubernetes used storage requests percentage per namespace | % | Namespace |
 
-### Kubernetes / Master / Replica sets 
+### Kubernetes / Replica sets 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
@@ -130,10 +136,11 @@
 | Kubernetes number of failed pods in replica set | # | Namespace, Replica set |
 | Kubernetes number of missing replicas in replica set | # | Namespace, Replica set |
 | Kubernetes number of pods in replica set | # | Namespace, Replica set |
+| Kubernetes number of replica sets | # |  |
 | Kubernetes number of running containers in replica set | # | Namespace, Replica set |
 | Kubernetes number of running pods in replica set | # | Namespace, Replica set |
 
-### Kubernetes / Master / Replication controllers 
+### Kubernetes / Replication controllers 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
@@ -144,18 +151,20 @@
 | Kubernetes number of failed pods in replication controller | # | Namespace, Replication controller |
 | Kubernetes number of missing replicas in replication controller | # | Namespace, Replication controller |
 | Kubernetes number of pods in replication controller | # | Namespace, Replication controller |
+| Kubernetes number of replication controllers | # |  |
 | Kubernetes number of running containers in replication controller | # | Namespace, Replication controller |
 | Kubernetes number of running pods in replication controller | # | Namespace, Replication controller |
 
-### Kubernetes / Master / Services 
+### Kubernetes / Services 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
 | Kubernetes number of containers in service | # | Namespace, Service |
 | Kubernetes number of failed containers in service | # | Namespace, Service |
 | Kubernetes number of running containers in service | # | Namespace, Service |
+| Kubernetes number of services | # |  |
 
-### Kubernetes / Master / Stateful sets 
+### Kubernetes / Stateful(pet) sets 
 
 | Name | Unit | Dimensions |
 |------|------|------------|
@@ -168,6 +177,22 @@
 | Kubernetes number of pods in stateful(pet) set | # | Namespace, Stateful set |
 | Kubernetes number of running containers in stateful(pet) set | # | Namespace, Stateful set |
 | Kubernetes number of running pods in stateful(pet) set | # | Namespace, Stateful set |
+| Kubernetes number of stateful(pet) sets | # |  |
+| Kubernetes number of stateful(pet) sets in namespace | # | Namespace |
+
+### Kubernetes / Volumes 
+
+| Name | Unit | Dimensions |
+|------|------|------------|
+| Kubernetes capacity for persistent volume | # | Persistent volume |
+| Kubernetes number of bound persistent volumes | # |  |
+| Kubernetes number of bound persistent volumes claims | # |  |
+| Kubernetes number of failed persistent volumes | # |  |
+| Kubernetes number of pending persistent volumes claims | # |  |
+| Kubernetes number of persistent volumes | # |  |
+| Kubernetes number of persistent volumes claims | # |  |
+| Kubernetes number of released persistent volumes | # |  |
+| Kubernetes size for persistent volume claim | # | Persistent volume claim |
 
 ## Events
 
