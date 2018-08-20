@@ -4,6 +4,27 @@ title: Changelog
 description: A changelog of the most recent changes and additions to the CoScale platform.
 ---
 
+## Release 3.24.0 (30 July 2018)
+
+* Frontend
+    * Improved table widget: thresholds & compact view
+    * Improved auto-complete for Organisations
+    * Small UX fixes
+* Agents
+    * Add additional JMX metrics
+    * Add Number of blocked processes per container
+* Alerting
+    * New OutOfDisk alert for Kubernetes nodes
+
+## Release 3.23.0 (5 July 2018)
+
+* Frontend
+    * Keep history of dashboards
+* Agents
+    * Pick up Prometheus & OpenShift annotations
+* Reporting
+    * Reporter now attaches an image of the dashboard when it is sent
+
 ## Release 3.22.0 (21 June 2018)
 
 * Frontend
